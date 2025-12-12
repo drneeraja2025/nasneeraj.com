@@ -199,6 +199,56 @@ This makes `www.nasneeraj.com` work too.
    - **Target:** `cname.vercel-dns.com`
    - Click **"Save"**
 
+### Squarespace (Your Registrar!)
+
+1. Log in to [account.squarespace.com](https://account.squarespace.com)
+2. Go to **"Domains"** → Select **"nasneeraj.com"**
+3. Click on **"DNS Settings"** in the left sidebar
+4. Scroll down to **"Custom records"** section
+
+**IMPORTANT: You have existing A records pointing to Squarespace. You need to replace them:**
+
+#### Option 1: Replace Squarespace A Records (Recommended)
+
+1. **Delete existing Squarespace A records:**
+   - In **"Squarespace Defaults"** section
+   - Click the **trash can icon** (🗑️) next to each A record:
+     - Delete: `@` → `198.185.159.145`
+     - Delete: `@` → `198.185.159.144`
+     - Delete: `@` → `198.49.23.144`
+     - Delete: `@` → `198.49.23.145`
+
+2. **Add Vercel A record:**
+   - In **"Custom records"** section, click **"ADD RECORD"**
+   - Fill in:
+     - **HOST:** `@`
+     - **TYPE:** `A` (select from dropdown)
+     - **PRIORITY:** `0` (or leave default)
+     - **TTL:** `4 hrs` (or your preferred value)
+     - **DATA:** `76.76.21.21`
+   - Click **"SAVE"**
+
+3. **Update www CNAME:**
+   - In **"Squarespace Defaults"** section
+   - Find the `www` CNAME record pointing to `ext-sq.squarespace.com`
+   - Click the **trash can icon** to delete it
+   - In **"Custom records"**, click **"ADD RECORD"**
+   - Fill in:
+     - **HOST:** `www`
+     - **TYPE:** `CNAME` (select from dropdown)
+     - **PRIORITY:** `0`
+     - **TTL:** `4 hrs`
+     - **DATA:** `cname.vercel-dns.com`
+   - Click **"SAVE"**
+
+#### Option 2: Add Vercel Records (Keep Squarespace - Not Recommended)
+
+If you want to keep Squarespace records (not recommended for Vercel):
+- Add Vercel A record in Custom records
+- Vercel record should take precedence, but conflicts may occur
+
+**Note:** The HTTPS record in Squarespace Defaults can stay - it won't interfere with Vercel.
+
 ---
 
 ## ⏱️ Step 6: Wait for DNS Propagation
