@@ -50,6 +50,12 @@
         .nav-logo img {
             height: 50px;
             width: auto;
+            transition: transform 0.3s;
+        }
+
+        .nav-logo:hover img {
+            transform: rotate(5deg) scale(1.1);
+            animation: aiGlow 1s ease-in-out infinite;
         }
 
         .nav-logo-text {
@@ -118,6 +124,74 @@
             50% { transform: scale(1.1); opacity: 0.8; }
         }
 
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes aiGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(102, 126, 234, 0.6), 0 0 40px rgba(118, 75, 162, 0.4);
+            }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -129,12 +203,14 @@
             font-size: 3.5em;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
         }
 
         .hero p {
             font-size: 1.5em;
             margin-bottom: 40px;
             opacity: 0.95;
+            animation: fadeInUp 1s ease-out 0.3s both;
         }
 
         .hero-buttons {
@@ -142,6 +218,7 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .btn {
@@ -196,6 +273,7 @@
             text-align: center;
             padding-bottom: 20px;
             border-bottom: 3px solid #667eea;
+            animation: fadeInUp 0.8s ease-out;
         }
 
         .products-grid {
@@ -212,11 +290,18 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border-left: 5px solid #667eea;
             transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.8s ease-out both;
+            opacity: 0;
         }
 
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.2s; }
+        .product-card:nth-child(3) { animation-delay: 0.3s; }
+
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+            animation: aiGlow 2s ease-in-out infinite;
         }
 
         .product-badge {
@@ -300,6 +385,17 @@
             background: rgba(255,255,255,0.1);
             border-radius: 10px;
             backdrop-filter: blur(10px);
+            animation: scaleIn 0.6s ease-out both;
+            transition: transform 0.3s;
+        }
+
+        .contact-item:nth-child(1) { animation-delay: 0.1s; }
+        .contact-item:nth-child(2) { animation-delay: 0.2s; }
+        .contact-item:nth-child(3) { animation-delay: 0.3s; }
+
+        .contact-item:hover {
+            transform: scale(1.05);
+            background: rgba(255,255,255,0.15);
         }
 
         .contact-item h3 {
@@ -345,6 +441,41 @@
             color: #667eea;
         }
 
+        /* AI Badge Animation */
+        .ai-badge {
+            display: inline-block;
+            position: relative;
+            padding: 5px 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            animation: aiGlow 3s ease-in-out infinite;
+        }
+
+        .ai-badge::before {
+            content: '🤖';
+            margin-right: 5px;
+            animation: rotate 3s linear infinite;
+            display: inline-block;
+        }
+
+        /* Section Animation */
+        .section {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        /* Nav Logo Animation */
+        .nav-logo img {
+            transition: transform 0.3s;
+        }
+
+        .nav-logo:hover img {
+            transform: rotate(5deg) scale(1.1);
+            animation: aiGlow 1s ease-in-out infinite;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -366,6 +497,18 @@
 
             .content {
                 padding: 40px 20px;
+            }
+
+            .logo {
+                animation: logoFloat 2s ease-in-out infinite;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
             }
         }
     </style>
@@ -394,7 +537,10 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Neeraj's AI Software</h1>
-            <p>Innovative Software Solutions Powered by Artificial Intelligence</p>
+            <p>
+                Innovative Software Solutions 
+                <span class="ai-badge">Powered by AI</span>
+            </p>
             <div class="hero-buttons">
                 <a href="sislms.html" class="btn btn-primary">Explore SISLMS</a>
                 <a href="demo.html" class="btn btn-secondary">Request Demo</a>
@@ -402,10 +548,10 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="content">
-        <div class="section">
-            <h2 class="section-title">About NAS</h2>
+        <!-- About Section -->
+        <section class="content">
+            <div class="section" style="animation: fadeInUp 0.8s ease-out;">
+                <h2 class="section-title">About NAS</h2>
             <p style="font-size: 1.2em; text-align: center; max-width: 900px; margin: 0 auto; line-height: 1.8; color: #555;">
                 <strong>Neeraj's AI Software (NAS)</strong> is a forward-thinking software development company 
                 specializing in intelligent, cloud-based solutions. Founded by <strong>Dr. Neeraj Agrawal</strong>, 
