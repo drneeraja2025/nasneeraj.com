@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - NAS | Business Analysis, Architecture & Software Planning</title>
+    <meta name="description" content="NAS offers comprehensive business analysis, architectural analysis, and software planning services. We help organizations design and develop custom software solutions.">
+    <link rel="icon" type="image/png" href="assets/NASlogonew.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-logo-text {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+            background: #f0f0f0;
+        }
+
+        .nav-links .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            padding: 10px 25px;
+            border-radius: 25px;
+        }
+
+        .nav-links .cta-button:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .process-section {
+            background: #e3f2fd;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin: 60px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .process-step {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .process-step h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .documentation-section {
+            background: #fff3cd;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin: 60px 0;
+            border-left: 5px solid #ffc107;
+        }
+
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .doc-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .doc-card h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .doc-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .doc-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .doc-card li::before {
+            content: '📄';
+            position: absolute;
+            left: 0;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: 600;
+            margin: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid, .process-steps, .doc-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/NASlogonew.png" alt="NAS Logo">
+                <span class="nav-logo-text">NAS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sislms.html">SISLMS</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="demo.html">Request Demo</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html" class="cta-button">Sign Up</a></li>
+                <li><a href="https://sislms.nasneeraj.com" target="_blank" class="cta-button" style="background: #28a745;">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>NAS Professional Services</h1>
+        <p>Comprehensive Business Analysis, Architectural Analysis, and Software Planning Services</p>
+    </section>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Overview -->
+        <div class="section">
+            <h2 class="section-title">Our Services</h2>
+            <p style="font-size: 1.2em; text-align: center; max-width: 900px; margin: 0 auto 40px; line-height: 1.8; color: #555;">
+                NAS offers comprehensive consulting services to help organizations analyze their business needs, 
+                design robust software architectures, and create detailed software development plans. Our proven 
+                methodology, demonstrated through the successful development of SISLMS, ensures your software 
+                project is well-planned, properly architected, and ready for successful implementation.
+            </p>
+
+            <div class="services-grid">
+                <!-- Business Analysis -->
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>Business Analysis</h3>
+                    <p>
+                        Comprehensive analysis of your business needs, processes, and requirements to identify 
+                        opportunities for software solutions that drive real value.
+                    </p>
+                    <ul class="service-features">
+                        <li>Requirements gathering and analysis</li>
+                        <li>Business process mapping</li>
+                        <li>Stakeholder interviews and workshops</li>
+                        <li>Gap analysis and opportunity identification</li>
+                        <li>ROI and value proposition analysis</li>
+                        <li>Competitive analysis</li>
+                        <li>Market research and validation</li>
+                        <li>Business case development</li>
+                    </ul>
+                </div>
+
+                <!-- Architectural Analysis -->
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Architectural Analysis</h3>
+                    <p>
+                        Design robust, scalable, and secure software architectures tailored to your specific 
+                        needs, following industry best practices and modern design patterns.
+                    </p>
+                    <ul class="service-features">
+                        <li>System architecture design</li>
+                        <li>Technology stack selection</li>
+                        <li>Security architecture planning</li>
+                        <li>Scalability and performance analysis</li>
+                        <li>Integration architecture design</li>
+                        <li>Data architecture and modeling</li>
+                        <li>Infrastructure planning</li>
+                        <li>Compliance and standards alignment</li>
+                    </ul>
+                </div>
+
+                <!-- Software Planning -->
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Software Planning</h3>
+                    <p>
+                        Create comprehensive software development plans with detailed roadmaps, timelines, 
+                        resource requirements, and implementation strategies.
+                    </p>
+                    <ul class="service-features">
+                        <li>Project roadmap development</li>
+                        <li>Phase-based implementation planning</li>
+                        <li>Resource and team planning</li>
+                        <li>Timeline and milestone definition</li>
+                        <li>Risk assessment and mitigation</li>
+                        <li>Quality assurance planning</li>
+                        <li>Deployment and rollout strategy</li>
+                        <li>Post-launch support planning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Process -->
+        <div class="process-section">
+            <h2 class="section-title" style="color: #667eea;">Our Proven Process</h2>
+            <p style="text-align: center; font-size: 1.1em; color: #555; margin-bottom: 40px;">
+                Based on our successful development of SISLMS, we follow a structured, proven methodology:
+            </p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Discovery & Analysis</h4>
+                    <p>Understand your business, requirements, and goals through comprehensive analysis</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Architecture Design</h4>
+                    <p>Design scalable, secure architecture tailored to your specific needs</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Planning & Roadmap</h4>
+                    <p>Create detailed development plan with phases, timelines, and milestones</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Documentation</h4>
+                    <p>Deliver comprehensive documentation including architecture, SDLS, and specifications</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4>Implementation Support</h4>
+                    <p>Provide ongoing support during development and implementation</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documentation Deliverables -->
+        <div class="documentation-section">
+            <h2 class="section-title" style="color: #856404;">Comprehensive Documentation Deliverables</h2>
+            <p style="text-align: center; font-size: 1.1em; color: #856404; margin-bottom: 40px;">
+                Based on our SISLMS project, we deliver comprehensive documentation following industry standards:
+            </p>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <h4>📐 Architecture Documentation</h4>
+                    <ul>
+                        <li>System Architecture Document</li>
+                        <li>Technology Stack Analysis</li>
+                        <li>Security Architecture</li>
+                        <li>Data Architecture</li>
+                        <li>Integration Architecture</li>
+                        <li>Deployment Architecture</li>
+                        <li>Scalability Analysis</li>
+                    </ul>
+                </div>
+                <div class="doc-card">
+                    <h4>📋 SDLS (Software Development Lifecycle)</h4>
+                    <ul>
+                        <li>Development Methodology</li>
+                        <li>Development Phases</li>
+                        <li>Tools and Technologies</li>
+                        <li>Code Quality Standards</li>
+                        <li>Testing Strategy</li>
+                        <li>Version Control Workflow</li>
+                        <li>Release Management</li>
+                    </ul>
+                </div>
+                <div class="doc-card">
+                    <h4>📝 Requirements & Specifications</h4>
+                    <ul>
+                        <li>Software Requirements Specification (SRS)</li>
+                        <li>Functional Requirements</li>
+                        <li>Non-Functional Requirements</li>
+                        <li>System Constraints</li>
+                        <li>External Interface Requirements</li>
+                        <li>Quality Attributes</li>
+                    </ul>
+                </div>
+                <div class="doc-card">
+                    <h4>🎨 Design Documentation</h4>
+                    <ul>
+                        <li>UML Diagrams (Class, Sequence, Component)</li>
+                        <li>Database Schema Design</li>
+                        <li>User Interface Mockups</li>
+                        <li>API Specifications</li>
+                        <li>Component Diagrams</li>
+                        <li>Deployment Diagrams</li>
+                    </ul>
+                </div>
+                <div class="doc-card">
+                    <h4>👥 User Documentation</h4>
+                    <ul>
+                        <li>User Guides (by role)</li>
+                        <li>Administrator Guide</li>
+                        <li>End-User Manuals</li>
+                        <li>Training Materials</li>
+                        <li>FAQ Documentation</li>
+                    </ul>
+                </div>
+                <div class="doc-card">
+                    <h4>🔧 Developer Documentation</h4>
+                    <ul>
+                        <li>Developer's Guide</li>
+                        <li>API Documentation</li>
+                        <li>Code Structure Guide</li>
+                        <li>Testing Guide</li>
+                        <li>Deployment Guide</li>
+                        <li>Troubleshooting Guide</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SISLMS Case Study -->
+        <div class="section">
+            <h2 class="section-title">Proven Track Record: SISLMS</h2>
+            <p style="font-size: 1.2em; text-align: center; max-width: 900px; margin: 0 auto 40px; line-height: 1.8; color: #555;">
+                Our methodology has been proven through the successful development of <strong>SISLMS by NAS</strong>, 
+                a comprehensive Student Information System and Learning Management System. This project demonstrates 
+                our ability to:
+            </p>
+            <div class="services-grid">
+                <div class="service-card" style="border-left-color: #28a745;">
+                    <h3 style="color: #28a745;">✅ Complete Documentation</h3>
+                    <p>
+                        SISLMS includes comprehensive documentation covering architecture, SDLS, requirements, 
+                        user guides, and developer documentation - all following industry best practices.
+                    </p>
+                </div>
+                <div class="service-card" style="border-left-color: #28a745;">
+                    <h3 style="color: #28a745;">✅ Modern Architecture</h3>
+                    <p>
+                        Built with React, TypeScript, Supabase, and modern cloud infrastructure, demonstrating 
+                        expertise in scalable, secure architecture design.
+                    </p>
+                </div>
+                <div class="service-card" style="border-left-color: #28a745;">
+                    <h3 style="color: #28a745;">✅ Production Ready</h3>
+                    <p>
+                        Successfully deployed and operational, serving schools with comprehensive features including 
+                        student management, LMS, reporting, and compliance.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose NAS -->
+        <div class="section">
+            <h2 class="section-title">Why Choose NAS for Your Project?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI-Assisted Development</h3>
+                    <p>
+                        We leverage cutting-edge AI tools (Cursor AI) combined with human expertise to deliver 
+                        high-quality solutions faster and more efficiently.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Comprehensive Documentation</h3>
+                    <p>
+                        We don't just build software - we document everything thoroughly, ensuring your project 
+                        is maintainable and scalable long-term.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔐</div>
+                    <h3>Security-First Approach</h3>
+                    <p>
+                        Security and compliance are built into every aspect of our analysis and design, from 
+                        architecture to implementation.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Agile Methodology</h3>
+                    <p>
+                        We follow proven Agile/Iterative development practices, ensuring flexibility and 
+                        continuous delivery of value.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud-Native Expertise</h3>
+                    <p>
+                        Deep expertise in modern cloud platforms (Vercel, Supabase, AWS) for scalable, 
+                        reliable solutions.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Business-Focused</h3>
+                    <p>
+                        We understand that software must solve real business problems and deliver measurable 
+                        value to your organization.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align: center; margin: 60px 0; padding: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+            <h2 style="font-size: 2.5em; margin-bottom: 20px; color: white;">Ready to Start Your Project?</h2>
+            <p style="font-size: 1.3em; margin-bottom: 40px; opacity: 0.95;">
+                Let us help you analyze your needs, design the right architecture, and create a comprehensive 
+                software development plan for your organization.
+            </p>
+            <a href="contact.html" class="btn" style="background: white; color: #667eea;">Get Started</a>
+            <a href="demo.html" class="btn" style="background: transparent; color: white; border: 2px solid white;">Schedule Consultation</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Neeraj's AI Software. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="sislms.html">SISLMS</a>
+            <a href="services.html">Services</a>
+            <a href="demo.html">Request Demo</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em;">
+            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a> | 
+            Phone: <a href="tel:+12623521845" style="color: #667eea;">(262) 352-1845</a>
+        </p>
+    </footer>
+</body>
+</html>
+
