@@ -27,6 +27,10 @@
     {
       "source": "/contact",
       "destination": "/contact.html"
+    },
+    {
+      "source": "/hotl-research",
+      "destination": "/hotl-research.html"
     }
   ],
   "headers": [
