@@ -31,6 +31,26 @@
     {
       "source": "/hotl-research",
       "destination": "/hotl-research.html"
+    },
+    {
+      "source": "/security-compliance",
+      "destination": "/security-compliance.html"
+    },
+    {
+      "source": "/wsdpa",
+      "destination": "/wsdpa.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/disclaimer",
+      "destination": "/disclaimer.html"
     }
   ],
   "headers": [

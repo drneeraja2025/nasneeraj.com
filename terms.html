@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - NAS | SISLMS</title>
+    <meta name="description" content="Terms of Service and Data Governance for SISLMS by NAS. Platform disclosure, data retention policies, and Wisconsin legal mandates.">
+    <link rel="icon" type="image/png" href="assets/NASlogonew.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .nav-logo img { height: 50px; width: auto; }
+        .nav-logo-text { font-size: 1.3em; font-weight: bold; color: #667eea; }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.95em;
+        }
+        .nav-links a:hover { color: #667eea; background: #f0f0f0; }
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: white;
+        }
+        h1 { color: #667eea; font-size: 2.5em; margin-bottom: 20px; }
+        h2 { color: #667eea; font-size: 2em; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+        h3 { color: #555; font-size: 1.5em; margin-top: 30px; margin-bottom: 15px; }
+        p { margin-bottom: 15px; color: #555; }
+        ul, ol { margin: 15px 0; padding-left: 30px; }
+        li { margin-bottom: 10px; color: #555; }
+        .highlight { background: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 4px solid #667eea; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border: 1px solid #ddd; }
+        th { background: #667eea; color: white; }
+        .footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 40px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .footer-links a { color: #ccc; text-decoration: none; }
+        .footer-links a:hover { color: #667eea; }
+        @media (max-width: 768px) {
+            .content { padding: 40px 20px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/NASlogonew.png" alt="NAS Logo">
+                <span class="nav-logo-text">NAS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sislms.html">SISLMS</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="hotl-research.html">Research on HOTL by NAS</a></li>
+                <li><a href="demo.html">Request Demo</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Terms of Service & Data Governance</h1>
+        <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">
+            <strong>Last Updated:</strong> November 20, 2025<br>
+            <strong>Service:</strong> SISLMS by NAS (Student Information & Learning Management System)<br>
+            <strong>Provider:</strong> NAS (Neeraj's AI Services)
+        </p>
+
+        <h2>1. Service Scope and Architecture</h2>
+        <p>This Terms of Service agreement governs your use of the SISLMS by NAS application, operated by Neeraj's AI Services (NAS). This service is provided solely for educational, administrative, and data governance functions as authorized by the school administration.</p>
+
+        <h3>Platform Disclosure (Headless NAS Protocol)</h3>
+        <p>This application operates on a secure, multi-platform technology stack. NAS acts as the Data Controller and manages the security of all third-party vendors listed below.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Vendor / Platform</th>
+                    <th>Role</th>
+                    <th>GNA Protocol Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Cursor</strong></td>
+                    <td>Primary coder and AI technology</td>
+                    <td>Development Tool</td>
+                </tr>
+                <tr>
+                    <td><strong>Supabase</strong></td>
+                    <td>Primary Database and Authentication Backend (DB-as-Truth)</td>
+                    <td>Fully Controlled and Secured</td>
+                </tr>
+                <tr>
+                    <td><strong>Vercel</strong></td>
+                    <td>Front-End Hosting and Deployment (Git-as-Truth)</td>
+                    <td>Fully Controlled and deployed from GitHub</td>
+                </tr>
+                <tr>
+                    <td><strong>Make</strong></td>
+                    <td>External Logic and Automation (e.g., scheduled notifications)</td>
+                    <td>Future Use</td>
+                </tr>
+                <tr>
+                    <td><strong>Bubble</strong></td>
+                    <td>External Logic and Specialized Dashboards</td>
+                    <td>Future Use</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>2. Data Retention and Disposition (Wisconsin Legal Mandate)</h2>
+        <p>NAS strictly adheres to the data retention mandates of the State of Wisconsin for public educational records.</p>
+
+        <h3>Minimum Retention Period (Wis. Stat. § 16.61)</h3>
+        <div class="highlight">
+            <p>We are legally required to retain all public educational records for a period of <strong>not less than seven (7) years</strong> from the date of creation, as mandated by State Public Records Law.</p>
+        </div>
+
+        <h3>Data Destruction Protocol</h3>
+        <p>When data is required to be permanently destroyed (e.g., after the 7-year minimum period):</p>
+        <ul>
+            <li>NAS and the school district must adhere to the <strong>60-day written notification process</strong> to the Wisconsin State Historical Society before the final destruction of public records.</li>
+            <li>All data destruction procedures must comply with Wisconsin state law.</li>
+            <li>Written confirmation of data destruction will be provided to the school district.</li>
+        </ul>
+
+        <h2>3. Data Ownership and Security</h2>
+        <h3>Data Ownership</h3>
+        <div class="highlight">
+            <p><strong>All student data and educational records entered into the SISLMS by NAS platform are and shall remain the property of the student and the school district.</strong></p>
+        </div>
+        <p>NAS acknowledges that it has no ownership rights to student data. The school district and students retain full ownership and control of all educational records.</p>
+
+        <h3>Security Standard (RLS)</h3>
+        <p>All access to data is secured by <strong>Row-Level Security (RLS)</strong> policies applied directly to the Supabase database. Access is strictly controlled based on the user's verified role (Admin, Teacher, Guardian).</p>
+        <ul>
+            <li>RLS policies are enforced at the database level, ensuring security even if application code has vulnerabilities</li>
+            <li>Users can only access data they are authorized to view based on their role and school assignment</li>
+            <li>All data access is logged and auditable</li>
+        </ul>
+
+        <h3>Prohibited Actions</h3>
+        <p>Users are strictly forbidden from:</p>
+        <ul>
+            <li>Attempting to bypass RLS security policies</li>
+            <li>Performing unauthorized data scraping or extraction</li>
+            <li>Sharing login credentials with unauthorized persons</li>
+            <li>Accessing data outside of their authorized scope</li>
+        </ul>
+        <p><strong>Any such attempt is considered a material breach of these terms.</strong></p>
+
+        <h2>4. Account Termination</h2>
+        <p>NAS reserves the right to suspend or terminate any user account that:</p>
+        <ul>
+            <li>Violates RLS policies</li>
+            <li>Attempts unauthorized data access</li>
+            <li>Violates the spirit of these terms</li>
+            <li>Engages in any activity that compromises system security</li>
+        </ul>
+
+        <h2>5. Governing Law</h2>
+        <p>These Terms are governed by the laws of the State of Wisconsin, U.S.A.</p>
+
+        <h2>6. Contact Information</h2>
+        <div class="highlight">
+            <p><strong>For questions about these Terms of Service:</strong></p>
+            <p>
+                <strong>Dr. Neeraj Agrawal, Founder & CEO</strong><br>
+                NAS (Neeraj's AI Services)<br>
+                Email: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a><br>
+                Website: <a href="http://nasneeraj.com" style="color: #667eea;">nasneeraj.com</a>
+            </p>
+        </div>
+
+        <p style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #ddd; color: #999; font-size: 0.9em;">
+            <strong>Last Updated:</strong> November 20, 2025
+        </p>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Neeraj's AI Software. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="sislms.html">SISLMS</a>
+            <a href="services.html">Services</a>
+            <a href="demo.html">Request Demo</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em;">
+            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>
+
