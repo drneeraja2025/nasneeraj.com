@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISLMS vs Competitors - NAS | Comparison</title>
+    <meta name="description" content="Compare SISLMS by NAS with PowerSchool, Infinite Campus, Skyward, and other SIS solutions. See why SISLMS offers better value, features, and support.">
+    <link rel="icon" type="image/png" href="assets/NASlogonew.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        .nav-logo img { height: 50px; width: auto; }
+        .nav-logo-text { font-size: 1.3em; font-weight: bold; color: #667eea; }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.95em;
+        }
+        .nav-links a:hover { color: #667eea; background: #f0f0f0; }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3em; margin-bottom: 20px; }
+        .hero p { font-size: 1.3em; opacity: 0.95; max-width: 800px; margin: 0 auto; }
+        .content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: white;
+        }
+        h2 { color: #667eea; font-size: 2.5em; margin-bottom: 30px; text-align: center; border-bottom: 3px solid #667eea; padding-bottom: 20px; }
+        h3 { color: #555; font-size: 1.8em; margin-top: 40px; margin-bottom: 20px; }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow-x: auto;
+            display: block;
+        }
+        .comparison-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .comparison-table th {
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .comparison-table td {
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        .comparison-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .comparison-table tbody tr:hover {
+            background: #e3f2fd;
+        }
+        .check { color: #28a745; font-weight: bold; font-size: 1.2em; }
+        .cross { color: #dc3545; font-weight: bold; font-size: 1.2em; }
+        .partial { color: #ffc107; font-weight: bold; }
+        .winner {
+            background: #d4edda !important;
+            border-left: 4px solid #28a745;
+            font-weight: 600;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f0f4ff 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            margin: 30px 0;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        .feature-card h4 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        .pricing-comparison {
+            background: #fff3cd;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #ffc107;
+            margin: 40px 0;
+        }
+        .footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 40px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .footer-links a { color: #ccc; text-decoration: none; }
+        .footer-links a:hover { color: #667eea; }
+        @media (max-width: 768px) {
+            .comparison-table { font-size: 0.85em; }
+            .comparison-table th, .comparison-table td { padding: 10px; }
+            .hero h1 { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/NASlogonew.png" alt="NAS Logo">
+                <span class="nav-logo-text">NAS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sislms.html">SISLMS</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="hotl-research.html">Research on HOTL by NAS</a></li>
+                <li><a href="demo.html">Request Demo</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>SISLMS vs Competitors</h1>
+        <p>See how SISLMS by NAS compares to PowerSchool, Infinite Campus, Skyward, and other leading SIS solutions</p>
+    </section>
+
+    <div class="content">
+        <div class="highlight-box">
+            <h2 style="border: none; margin-top: 0; text-align: left;">Why Choose SISLMS?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">
+                SISLMS by NAS offers <strong>enterprise-grade features at a fraction of the cost</strong> of traditional SIS solutions. 
+                Built with modern technology, designed for Wisconsin schools, and backed by local support.
+            </p>
+            <ul style="font-size: 1.1em;">
+                <li>✅ <strong>40-60% Cost Savings</strong> compared to PowerSchool and Infinite Campus</li>
+                <li>✅ <strong>Modern Cloud Architecture</strong> - No legacy system limitations</li>
+                <li>✅ <strong>Local Wisconsin Support</strong> - Direct access to development team</li>
+                <li>✅ <strong>WSDPA Ready</strong> - Immediate compliance with Wisconsin privacy laws</li>
+                <li>✅ <strong>AI-Assisted Development</strong> - Faster feature updates and improvements</li>
+                <li>✅ <strong>Comprehensive Features</strong> - Everything you need, nothing you don't</li>
+            </ul>
+        </div>
+
+        <h2>Feature Comparison</h2>
+        <div style="overflow-x: auto;">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th class="winner">SISLMS by NAS</th>
+                        <th>PowerSchool</th>
+                        <th>Infinite Campus</th>
+                        <th>Skyward</th>
+                        <th>Gradelink</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Student Information Management</strong></td>
+                        <td class="winner"><span class="check">✓</span> Full SIS</td>
+                        <td><span class="check">✓</span> Full SIS</td>
+                        <td><span class="check">✓</span> Full SIS</td>
+                        <td><span class="check">✓</span> Full SIS</td>
+                        <td><span class="check">✓</span> Basic SIS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Learning Management System (LMS)</strong></td>
+                        <td class="winner"><span class="check">✓</span> Integrated LMS</td>
+                        <td><span class="partial">~</span> Separate module</td>
+                        <td><span class="partial">~</span> Separate module</td>
+                        <td><span class="partial">~</span> Separate module</td>
+                        <td><span class="cross">✗</span> Limited</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Classroom Integration</strong></td>
+                        <td class="winner"><span class="check">✓</span> Native integration</td>
+                        <td><span class="partial">~</span> Third-party</td>
+                        <td><span class="partial">~</span> Third-party</td>
+                        <td><span class="partial">~</span> Third-party</td>
+                        <td><span class="cross">✗</span> No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Multi-Language Support</strong></td>
+                        <td class="winner"><span class="check">✓</span> EN, MR, HI</td>
+                        <td><span class="partial">~</span> Limited</td>
+                        <td><span class="partial">~</span> Limited</td>
+                        <td><span class="partial">~</span> Limited</td>
+                        <td><span class="cross">✗</span> English only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Real-Time Reporting & Analytics</strong></td>
+                        <td class="winner"><span class="check">✓</span> 12+ report types</td>
+                        <td><span class="check">✓</span> Advanced</td>
+                        <td><span class="check">✓</span> Advanced</td>
+                        <td><span class="check">✓</span> Advanced</td>
+                        <td><span class="partial">~</span> Basic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Financial Management</strong></td>
+                        <td class="winner"><span class="check">✓</span> Integrated</td>
+                        <td><span class="check">✓</span> Separate module</td>
+                        <td><span class="check">✓</span> Separate module</td>
+                        <td><span class="check">✓</span> Separate module</td>
+                        <td><span class="cross">✗</span> Limited</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Messaging & Notifications</strong></td>
+                        <td class="winner"><span class="check">✓</span> Built-in</td>
+                        <td><span class="partial">~</span> Add-on</td>
+                        <td><span class="partial">~</span> Add-on</td>
+                        <td><span class="partial">~</span> Add-on</td>
+                        <td><span class="cross">✗</span> No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Row-Level Security (RLS)</strong></td>
+                        <td class="winner"><span class="check">✓</span> 100% coverage</td>
+                        <td><span class="check">✓</span> Yes</td>
+                        <td><span class="check">✓</span> Yes</td>
+                        <td><span class="check">✓</span> Yes</td>
+                        <td><span class="partial">~</span> Basic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FERPA Compliance</strong></td>
+                        <td class="winner"><span class="check">✓</span> Full compliance</td>
+                        <td><span class="check">✓</span> Full compliance</td>
+                        <td><span class="check">✓</span> Full compliance</td>
+                        <td><span class="check">✓</span> Full compliance</td>
+                        <td><span class="check">✓</span> Full compliance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WSDPA Ready (Wisconsin)</strong></td>
+                        <td class="winner"><span class="check">✓</span> Ready to sign</td>
+                        <td><span class="partial">~</span> Generic</td>
+                        <td><span class="partial">~</span> Generic</td>
+                        <td><span class="partial">~</span> Generic</td>
+                        <td><span class="partial">~</span> Generic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cloud-Based Architecture</strong></td>
+                        <td class="winner"><span class="check">✓</span> Modern cloud-native</td>
+                        <td><span class="check">✓</span> Cloud/On-premise</td>
+                        <td><span class="check">✓</span> Cloud/On-premise</td>
+                        <td><span class="check">✓</span> Cloud/On-premise</td>
+                        <td><span class="check">✓</span> Cloud</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile Access</strong></td>
+                        <td class="winner"><span class="check">✓</span> Responsive web</td>
+                        <td><span class="check">✓</span> Native apps</td>
+                        <td><span class="check">✓</span> Native apps</td>
+                        <td><span class="check">✓</span> Native apps</td>
+                        <td><span class="partial">~</span> Responsive web</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Setup & Implementation</strong></td>
+                        <td class="winner"><span class="check">✓</span> Days (not months)</td>
+                        <td><span class="partial">~</span> 3-6 months</td>
+                        <td><span class="partial">~</span> 3-6 months</td>
+                        <td><span class="partial">~</span> 3-6 months</td>
+                        <td><span class="check">✓</span> Weeks</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Customization</strong></td>
+                        <td class="winner"><span class="check">✓</span> High flexibility</td>
+                        <td><span class="partial">~</span> Limited</td>
+                        <td><span class="partial">~</span> Limited</td>
+                        <td><span class="partial">~</span> Limited</td>
+                        <td><span class="partial">~</span> Low</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Support & Training</strong></td>
+                        <td class="winner"><span class="check">✓</span> Direct to developer</td>
+                        <td><span class="partial">~</span> Support tickets</td>
+                        <td><span class="partial">~</span> Support tickets</td>
+                        <td><span class="partial">~</span> Support tickets</td>
+                        <td><span class="partial">~</span> Email support</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data Export</strong></td>
+                        <td class="winner"><span class="check">✓</span> CSV, JSON, Excel</td>
+                        <td><span class="check">✓</span> Multiple formats</td>
+                        <td><span class="check">✓</span> Multiple formats</td>
+                        <td><span class="check">✓</span> Multiple formats</td>
+                        <td><span class="partial">~</span> CSV</td>
+                    </tr>
+                    <tr>
+                        <td><strong>API Access</strong></td>
+                        <td class="winner"><span class="check">✓</span> RESTful API</td>
+                        <td><span class="check">✓</span> API available</td>
+                        <td><span class="check">✓</span> API available</td>
+                        <td><span class="check">✓</span> API available</td>
+                        <td><span class="cross">✗</span> Limited</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Pricing Comparison</h2>
+        <div class="pricing-comparison">
+            <h3 style="margin-top: 0;">Annual Cost for 100 Students</h3>
+            <table class="comparison-table" style="margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>Solution</th>
+                        <th>Pricing Model</th>
+                        <th>Annual Cost (100 students)</th>
+                        <th>Setup Fees</th>
+                        <th>Total Year 1</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="winner">
+                        <td><strong>SISLMS by NAS</strong></td>
+                        <td>Monthly subscription</td>
+                        <td><strong>$600 - $1,200</strong></td>
+                        <td>$0</td>
+                        <td><strong>$600 - $1,200</strong></td>
+                    </tr>
+                    <tr>
+                        <td>PowerSchool</td>
+                        <td>Per student</td>
+                        <td>$800 - $1,200</td>
+                        <td>$5,000 - $15,000</td>
+                        <td>$5,800 - $16,200</td>
+                    </tr>
+                    <tr>
+                        <td>Infinite Campus</td>
+                        <td>Per student</td>
+                        <td>$600 - $1,000</td>
+                        <td>$5,000 - $15,000</td>
+                        <td>$5,600 - $16,000</td>
+                    </tr>
+                    <tr>
+                        <td>Skyward</td>
+                        <td>Per student</td>
+                        <td>$700 - $1,100</td>
+                        <td>$5,000 - $15,000</td>
+                        <td>$5,700 - $16,100</td>
+                    </tr>
+                    <tr>
+                        <td>Gradelink</td>
+                        <td>Per student</td>
+                        <td>$400 - $800</td>
+                        <td>$1,000 - $3,000</td>
+                        <td>$1,400 - $3,800</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 20px; font-size: 1.1em;">
+                <strong>💡 SISLMS Savings:</strong> Save $4,200 - $15,000 in Year 1 compared to enterprise solutions, 
+                with no setup fees and transparent monthly pricing.
+            </p>
+        </div>
+
+        <h2>Key Differentiators</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>💰 Cost Efficiency</h4>
+                <p><strong>40-60% lower cost</strong> than PowerSchool and Infinite Campus, with no hidden setup fees. 
+                Transparent monthly pricing that scales with your school size.</p>
+            </div>
+            <div class="feature-card">
+                <h4>⚡ Fast Implementation</h4>
+                <p><strong>Days, not months.</strong> Get up and running quickly with our streamlined setup process. 
+                No lengthy implementation projects or expensive consultants required.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🏠 Local Wisconsin Support</h4>
+                <p><strong>Direct access</strong> to the development team. Wisconsin-based support means faster response 
+                times and understanding of local requirements.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🔐 WSDPA Compliance</h4>
+                <p><strong>Ready to sign</strong> Wisconsin Student Data Privacy Agreement immediately. 
+                Pre-prepared contract template with all required provisions.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🤖 Modern Technology</h4>
+                <p><strong>Cloud-native architecture</strong> built with React, TypeScript, and Supabase. 
+                No legacy system limitations or technical debt.</p>
+            </div>
+            <div class="feature-card">
+                <h4>📚 Integrated LMS</h4>
+                <p><strong>Built-in Learning Management System</strong> - no need for separate LMS subscriptions. 
+                Seamless integration between SIS and LMS functionality.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🌐 Multi-Language Support</h4>
+                <p><strong>English, Marathi, and Hindi</strong> support built-in. Perfect for diverse school communities 
+                and international students.</p>
+            </div>
+            <div class="feature-card">
+                <h4>🔄 Continuous Innovation</h4>
+                <p><strong>AI-assisted development</strong> means faster feature updates and improvements. 
+                Regular updates based on user feedback and modern best practices.</p>
+            </div>
+        </div>
+
+        <h2>Total Cost of Ownership (TCO) Comparison</h2>
+        <div class="highlight-box">
+            <h3 style="margin-top: 0;">3-Year TCO for 100-Student School</h3>
+            <table class="comparison-table" style="margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th>Solution</th>
+                        <th>Year 1</th>
+                        <th>Year 2</th>
+                        <th>Year 3</th>
+                        <th>3-Year Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="winner">
+                        <td><strong>SISLMS by NAS</strong></td>
+                        <td>$600 - $1,200</td>
+                        <td>$600 - $1,200</td>
+                        <td>$600 - $1,200</td>
+                        <td><strong>$1,800 - $3,600</strong></td>
+                    </tr>
+                    <tr>
+                        <td>PowerSchool</td>
+                        <td>$5,800 - $16,200</td>
+                        <td>$800 - $1,200</td>
+                        <td>$800 - $1,200</td>
+                        <td>$7,400 - $18,600</td>
+                    </tr>
+                    <tr>
+                        <td>Infinite Campus</td>
+                        <td>$5,600 - $16,000</td>
+                        <td>$600 - $1,000</td>
+                        <td>$600 - $1,000</td>
+                        <td>$6,800 - $18,000</td>
+                    </tr>
+                    <tr>
+                        <td>Skyward</td>
+                        <td>$5,700 - $16,100</td>
+                        <td>$700 - $1,100</td>
+                        <td>$700 - $1,100</td>
+                        <td>$7,100 - $18,300</td>
+                    </tr>
+                    <tr>
+                        <td>Gradelink</td>
+                        <td>$1,400 - $3,800</td>
+                        <td>$400 - $800</td>
+                        <td>$400 - $800</td>
+                        <td>$2,200 - $5,400</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 20px; font-size: 1.1em;">
+                <strong>💡 SISLMS 3-Year Savings:</strong> Save $400 - $15,000 over 3 years compared to competitors, 
+                with better features and local support.
+            </p>
+        </div>
+
+        <h2>Implementation & Support Comparison</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th class="winner">SISLMS by NAS</th>
+                    <th>PowerSchool</th>
+                    <th>Infinite Campus</th>
+                    <th>Skyward</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Implementation Time</strong></td>
+                    <td class="winner">Days</td>
+                    <td>3-6 months</td>
+                    <td>3-6 months</td>
+                    <td>3-6 months</td>
+                </tr>
+                <tr>
+                    <td><strong>Setup Fees</strong></td>
+                    <td class="winner">$0</td>
+                    <td>$5,000 - $15,000</td>
+                    <td>$5,000 - $15,000</td>
+                    <td>$5,000 - $15,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Training Required</strong></td>
+                    <td class="winner">Minimal (intuitive UI)</td>
+                    <td>Extensive</td>
+                    <td>Extensive</td>
+                    <td>Extensive</td>
+                </tr>
+                <tr>
+                    <td><strong>Support Response Time</strong></td>
+                    <td class="winner">24 hours (direct to dev)</td>
+                    <td>2-5 business days</td>
+                    <td>2-5 business days</td>
+                    <td>2-5 business days</td>
+                </tr>
+                <tr>
+                    <td><strong>Custom Development</strong></td>
+                    <td class="winner">Available & affordable</td>
+                    <td>Expensive</td>
+                    <td>Expensive</td>
+                    <td>Expensive</td>
+                </tr>
+                <tr>
+                    <td><strong>Feature Requests</strong></td>
+                    <td class="winner">Directly to development team</td>
+                    <td>Product roadmap (slow)</td>
+                    <td>Product roadmap (slow)</td>
+                    <td>Product roadmap (slow)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Why Schools Choose SISLMS</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>✅ Proven Track Record</h4>
+                <p>SISLMS is already serving schools with comprehensive features including student management, 
+                LMS, reporting, and compliance. Production-ready and battle-tested.</p>
+            </div>
+            <div class="feature-card">
+                <h4>✅ Comprehensive Documentation</h4>
+                <p>Complete documentation covering architecture, SDLS, requirements, user guides, and developer 
+                documentation - all following industry best practices.</p>
+            </div>
+            <div class="feature-card">
+                <h4>✅ Security First</h4>
+                <p>100% Row-Level Security (RLS) coverage, enterprise-grade encryption, and comprehensive 
+                audit logging. SOC 2 Type 2 certified infrastructure.</p>
+            </div>
+            <div class="feature-card">
+                <h4>✅ No Vendor Lock-In</h4>
+                <p>Easy data export in multiple formats. Your data, your control. No proprietary formats 
+                that make it difficult to switch later.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 60px 0; padding: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
+            <h2 style="color: white; border: none; margin-bottom: 20px;">Ready to Make the Switch?</h2>
+            <p style="font-size: 1.3em; margin-bottom: 40px; opacity: 0.95;">
+                See why schools are choosing SISLMS over expensive enterprise solutions. 
+                Get better features, better support, and better value.
+            </p>
+            <a href="signup.html" style="background: white; color: #667eea; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block; margin: 10px;">Get Started</a>
+            <a href="demo.html" style="background: transparent; color: white; border: 2px solid white; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block; margin: 10px;">Request Demo</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Neeraj's AI Software. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="sislms.html">SISLMS</a>
+            <a href="services.html">Services</a>
+            <a href="demo.html">Request Demo</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em;">
+            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>
+

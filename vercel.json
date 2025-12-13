@@ -51,6 +51,14 @@
     {
       "source": "/disclaimer",
       "destination": "/disclaimer.html"
+    },
+    {
+      "source": "/compare",
+      "destination": "/compare.html"
+    },
+    {
+      "source": "/video-script",
+      "destination": "/video-script.html"
     }
   ],
   "headers": [
