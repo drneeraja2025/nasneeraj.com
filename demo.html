@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Demo - SISLMS by NAS</title>
+    <meta name="description" content="Request a personalized demo of SISLMS by NAS. See how our Student Information System can transform your school operations.">
+    <link rel="icon" type="image/png" href="assets/NASlogonew.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-logo-text {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+            background: #f0f0f0;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 60px 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .info-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 5px solid #28a745;
+            display: none;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/NASlogonew.png" alt="NAS Logo">
+                <span class="nav-logo-text">NAS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sislms.html">SISLMS</a></li>
+                <li><a href="demo.html">Request Demo</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>Request a Demo</h1>
+        <p class="subtitle">See SISLMS in action with a personalized demonstration</p>
+
+        <div class="success-message" id="successMessage">
+            <strong>Thank you!</strong> Your demo request has been submitted. We'll contact you within 24 hours to schedule your demonstration.
+        </div>
+
+        <form id="demoForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="title">Title/Position *</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="school">School/Organization Name *</label>
+                <input type="text" id="school" name="school" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="students">Estimated Number of Students</label>
+                <input type="text" id="students" name="students" placeholder="e.g., 50, 100, 200+">
+            </div>
+
+            <div class="form-group">
+                <label for="preferredDate">Preferred Demo Date</label>
+                <input type="text" id="preferredDate" name="preferredDate" placeholder="e.g., Next week, Anytime">
+            </div>
+
+            <div class="form-group">
+                <label for="preferredTime">Preferred Time</label>
+                <select id="preferredTime" name="preferredTime">
+                    <option value="">Select a time</option>
+                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                    <option value="evening">Evening (5 PM - 8 PM)</option>
+                    <option value="flexible">Flexible</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="timezone">Timezone</label>
+                <select id="timezone" name="timezone">
+                    <option value="CST">Central Standard Time (CST)</option>
+                    <option value="EST">Eastern Standard Time (EST)</option>
+                    <option value="PST">Pacific Standard Time (PST)</option>
+                    <option value="MST">Mountain Standard Time (MST)</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Additional Information or Questions</label>
+                <textarea id="message" name="message" placeholder="Tell us about your specific needs, questions, or what you'd like to see in the demo..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Demo Request</button>
+        </form>
+
+        <div class="info-box">
+            <h3>What to Expect</h3>
+            <ul>
+                <li>We'll contact you within 24 hours to confirm your demo</li>
+                <li>Demos typically last 30-45 minutes</li>
+                <li>We'll customize the demo to show features relevant to your needs</li>
+                <li>You'll have time to ask questions and discuss your specific requirements</li>
+                <li>No obligation - demos are free and informative</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="background: #fff3cd; border-left-color: #ffc107;">
+            <h3 style="color: #856404;">Demo Topics</h3>
+            <p style="color: #856404; margin-bottom: 15px;">
+                During your demo, we can cover:
+            </p>
+            <ul style="color: #856404;">
+                <li>Student information management</li>
+                <li>Course and assignment management</li>
+                <li>Daily logs and attendance tracking</li>
+                <li>Reports and analytics</li>
+                <li>Parent/guardian portal</li>
+                <li>Financial management</li>
+                <li>Security and compliance features</li>
+                <li>Pricing and implementation process</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Neeraj's AI Software. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="sislms.html">SISLMS</a>
+            <a href="demo.html">Request Demo</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em;">
+            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a> | 
+            Phone: <a href="tel:+12623521845" style="color: #667eea;">(262) 352-1845</a>
+        </p>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create email subject and body
+            const subject = `[SISLMS Demo Request] ${data.school}`;
+            const body = `Demo Request Details:
+
+Name: ${data.name}
+Title: ${data.title}
+School/Organization: ${data.school}
+Email: ${data.email}
+Phone: ${data.phone}
+Estimated Students: ${data.students || 'Not specified'}
+Preferred Date: ${data.preferredDate || 'Not specified'}
+Preferred Time: ${data.preferredTime || 'Not specified'}
+Timezone: ${data.timezone || 'Not specified'}
+
+Additional Information:
+${data.message || 'None'}
+
+---
+This demo request was submitted from nasneeraj.com/demo.html`;
+
+            // Create mailto link
+            const mailtoLink = `mailto:nas.neeraj@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Scroll to success message
+            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+            
+            // Reset form after a delay
+            setTimeout(() => {
+                event.target.reset();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+

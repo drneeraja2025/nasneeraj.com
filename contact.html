@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NAS</title>
+    <meta name="description" content="Contact Neeraj's AI Software (NAS). Get in touch with Dr. Neeraj Agrawal for questions about SISLMS, demos, or support.">
+    <link rel="icon" type="image/png" href="assets/NASlogonew.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-logo-text {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+            background: #f0f0f0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            opacity: 0.95;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 40px;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .contact-card h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .contact-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .form-section {
+            background: #f8f9fa;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin: 60px 0;
+        }
+
+        .form-section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: 600;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .info-section {
+            background: #e3f2fd;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .info-section h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .info-section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/NASlogonew.png" alt="NAS Logo">
+                <span class="nav-logo-text">NAS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sislms.html">SISLMS</a></li>
+                <li><a href="demo.html">Request Demo</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Get In Touch</h1>
+        <p>We're here to help. Contact us for questions, support, or to learn more about our products.</p>
+    </section>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Contact Information -->
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <a href="mailto:nas.neeraj@gmail.com">nas.neeraj@gmail.com</a>
+                <p>We typically respond within 24 hours</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Phone</h3>
+                <a href="tel:+12623521845">(262) 352-1845</a>
+                <p>Available during business hours</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">👨‍💼</div>
+                <h3>Contact Person</h3>
+                <p style="font-size: 1.2em; color: #667eea; font-weight: 600;">Dr. Neeraj Agrawal</p>
+                <p>Founder & CEO<br>NAS (Neeraj's AI Services)</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-section">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Information Section -->
+        <div class="info-section">
+            <h3>NAS (Neeraj's AI Services)</h3>
+            <p>
+                <strong>Dr. Neeraj Agrawal, Founder & CEO</strong><br>
+                Email: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a><br>
+                Phone: <a href="tel:+12623521845" style="color: #667eea;">(262) 352-1845</a><br>
+                Website: <a href="http://nasneeraj.com" style="color: #667eea;">nasneeraj.com</a>
+            </p>
+            <p style="margin-top: 20px;">
+                <strong>Response Time:</strong> We typically respond to all inquiries within 24 hours during business days.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>For SISLMS Support:</strong> If you're an existing SISLMS customer, please use the support features 
+                within your SISLMS account or contact us directly for priority support.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="info-section" style="background: #fff3cd; border-left-color: #ffc107;">
+            <h3 style="color: #856404;">Quick Links</h3>
+            <p style="color: #856404;">
+                <a href="sislms.html" style="color: #856404; text-decoration: underline; margin-right: 20px;">Learn About SISLMS</a>
+                <a href="demo.html" style="color: #856404; text-decoration: underline; margin-right: 20px;">Request a Demo</a>
+                <a href="signup.html" style="color: #856404; text-decoration: underline;">Sign Up for SISLMS</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Neeraj's AI Software. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="sislms.html">SISLMS</a>
+            <a href="demo.html">Request Demo</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9em;">
+            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a> | 
+            Phone: <a href="tel:+12623521845" style="color: #667eea;">(262) 352-1845</a>
+        </p>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create email subject and body
+            const subject = `[NAS Contact Form] ${data.subject}`;
+            const body = `Contact Form Submission:
+
+Name: ${data.name}
+Email: ${data.email}
+Subject: ${data.subject}
+
+Message:
+${data.message}
+
+---
+This message was submitted from nasneeraj.com/contact.html`;
+
+            // Create mailto link
+            const mailtoLink = `mailto:nas.neeraj@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message (you can add a success div if needed)
+            alert('Your email client should open with your message. Please review and send.');
+            
+            // Reset form
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
+
