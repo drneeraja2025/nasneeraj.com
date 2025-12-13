@@ -9,6 +9,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/pricing",
+      "destination": "/pricing.html"
+    },
+    {
       "source": "/sislms",
       "destination": "/sislms.html"
     },
