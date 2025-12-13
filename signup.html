@@ -27,12 +27,13 @@
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: nowrap;
         }
 
         .nav-logo {
@@ -56,9 +57,10 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 20px;
             list-style: none;
             align-items: center;
+            flex-wrap: nowrap;
         }
 
         .nav-links a {
@@ -66,8 +68,10 @@
             color: #333;
             font-weight: 500;
             transition: color 0.3s;
-            padding: 8px 15px;
+            padding: 8px 12px;
             border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.95em;
         }
 
         .nav-links a:hover {
@@ -412,8 +416,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="contactPhone">Phone Number <span class="required">*</span></label>
-                    <input type="tel" id="contactPhone" name="contactPhone" required>
                 </div>
 
                 <div class="form-group">
@@ -488,8 +490,7 @@
             <a href="contact.html">Contact</a>
         </div>
         <p style="margin-top: 20px; font-size: 0.9em;">
-            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a> | 
-            Phone: <a href="tel:+12623521845" style="color: #667eea;">(262) 352-1845</a>
+            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a>
         </p>
     </footer>
 
@@ -538,7 +539,6 @@ Subscription Tier: ${data.subscriptionTier}
 CONTACT INFORMATION:
 Name: ${data.contactName}
 Email: ${data.contactEmail}
-Phone: ${data.contactPhone}
 Title/Position: ${data.contactTitle || 'N/A'}
 
 ADDITIONAL INFORMATION:
