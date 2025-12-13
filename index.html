@@ -294,7 +294,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border-left: 5px solid #667eea;
             transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 0.8s ease-out both;
+            animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
         }
 
@@ -305,7 +305,8 @@
         .product-card:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
-            animation: aiGlow 2s ease-in-out infinite;
+            animation: aiGlow 2s ease-in-out infinite, fadeInUp 0.8s ease-out forwards;
+            opacity: 1 !important;
         }
 
         .product-badge {
