@@ -54,3 +54,4 @@ The repository is **ready for deployment** to `nasneeraj.com`.
 - Documentation files (`.md`) can be kept or removed based on preference
 - All image paths use relative URLs and will work correctly when deployed
 
+

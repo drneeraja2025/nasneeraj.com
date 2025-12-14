@@ -59,6 +59,10 @@
     {
       "source": "/video-script",
       "destination": "/video-script.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html"
     }
   ],
   "headers": [
