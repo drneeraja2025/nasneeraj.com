@@ -52,11 +52,53 @@
             height: 50px;
             width: auto;
             transition: transform 0.3s;
+            position: relative;
+            animation: logoFuturisticGlow 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5)) drop-shadow(0 0 20px rgba(118, 75, 162, 0.3));
+        }
+
+        .nav-logo img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: logoShimmer 2s infinite;
         }
 
         .nav-logo:hover img {
             transform: rotate(5deg) scale(1.1);
-            animation: aiGlow 1s ease-in-out infinite;
+            animation: logoFuturisticGlow 2s ease-in-out infinite, logoHoverGlow 1s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.8)) drop-shadow(0 0 30px rgba(118, 75, 162, 0.5)) drop-shadow(0 0 40px rgba(102, 126, 234, 0.3));
+        }
+
+        @keyframes logoFuturisticGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5)) drop-shadow(0 0 20px rgba(118, 75, 162, 0.3));
+            }
+            50% {
+                filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.8)) drop-shadow(0 0 30px rgba(118, 75, 162, 0.5)) drop-shadow(0 0 40px rgba(102, 126, 234, 0.3));
+            }
+        }
+
+        @keyframes logoHoverGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.8)) drop-shadow(0 0 30px rgba(118, 75, 162, 0.5)) drop-shadow(0 0 40px rgba(102, 126, 234, 0.3));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(102, 126, 234, 1)) drop-shadow(0 0 40px rgba(118, 75, 162, 0.7)) drop-shadow(0 0 60px rgba(102, 126, 234, 0.5));
+            }
+        }
+
+        @keyframes logoShimmer {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
         }
 
         .nav-logo-text {
@@ -589,11 +631,15 @@
         /* Nav Logo Animation */
         .nav-logo img {
             transition: transform 0.3s;
+            position: relative;
+            animation: logoFuturisticGlow 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.5)) drop-shadow(0 0 20px rgba(118, 75, 162, 0.3));
         }
 
         .nav-logo:hover img {
             transform: rotate(5deg) scale(1.1);
-            animation: aiGlow 1s ease-in-out infinite;
+            animation: logoFuturisticGlow 2s ease-in-out infinite, logoHoverGlow 1s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.8)) drop-shadow(0 0 30px rgba(118, 75, 162, 0.5)) drop-shadow(0 0 40px rgba(102, 126, 234, 0.3));
         }
 
         /* Responsive */
