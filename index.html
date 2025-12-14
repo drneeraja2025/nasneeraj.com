@@ -447,37 +447,80 @@
         }
 
         /* AI Badge Animation */
-        .ai-badge {
+        .ai-badge-futuristic {
             display: inline-block;
             position: relative;
-            padding: 5px 15px;
+            padding: 8px 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: bold;
-            animation: aiGlow 3s ease-in-out infinite;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: futuristicGlow 2s ease-in-out infinite, textShimmer 3s linear infinite;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5), 0 0 40px rgba(118, 75, 162, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
         }
 
-        .ai-badge::before {
-            content: '🤖';
-            margin-right: 5px;
-            animation: rotate 3s linear infinite;
-            display: inline-block;
+        .ai-badge-futuristic::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes futuristicGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(102, 126, 234, 0.5), 0 0 40px rgba(118, 75, 162, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.5), 0 0 80px rgba(102, 126, 234, 0.3);
+            }
+        }
+
+        @keyframes textShimmer {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
         }
 
         .wisconsin-badge {
             display: inline-flex;
             align-items: center;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 24px;
+            background: white;
             color: #155724;
             border-radius: 25px;
-            font-size: 0.95em;
+            font-size: 1em;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
             border: 2px solid #28a745;
             animation: fadeInUp 1s ease-out 0.2s both;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .wisconsin-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
         }
 
         .wisconsin-badge svg {
@@ -613,19 +656,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
-                <div class="wisconsin-badge">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
-                        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#28a745"/>
-                        <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#28a745"/>
-                    </svg>
-                    <span>Wisconsin Compliant</span>
-                </div>
-            </div>
             <h1>Neeraj's AI Software</h1>
             <p>
                 Innovative Software Solutions 
-                <span class="ai-badge">Powered by AI</span>
+                <span class="ai-badge-futuristic">Powered by AI</span>
             </p>
             <div class="hero-buttons">
                 <a href="sislms.html" class="btn btn-primary">Explore SISLMS</a>
@@ -636,6 +670,15 @@
 
     <!-- Trusted By Section -->
     <section class="trusted-by-section">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+            <div class="wisconsin-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#28a745"/>
+                    <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#28a745"/>
+                </svg>
+                <span>Wisconsin Compliant</span>
+            </div>
+        </div>
         <h2>Trusted By</h2>
         <div class="trusted-by-logos">
             <div class="trusted-logo">
