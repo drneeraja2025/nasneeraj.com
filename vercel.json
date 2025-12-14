@@ -75,6 +75,10 @@
     {
       "source": "/testimonials",
       "destination": "/testimonials.html"
+    },
+    {
+      "source": "/vision",
+      "destination": "/vision.html"
     }
   ],
   "headers": [
