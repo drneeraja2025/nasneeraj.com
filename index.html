@@ -466,6 +466,78 @@
             display: inline-block;
         }
 
+        .wisconsin-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #155724;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid #28a745;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .wisconsin-badge svg {
+            flex-shrink: 0;
+        }
+
+        .trusted-by-section {
+            background: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .trusted-by-section h2 {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .trusted-by-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .trusted-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.3s;
+        }
+
+        .trusted-logo:hover {
+            transform: translateY(-5px);
+        }
+
+        .trusted-logo img {
+            max-height: 80px;
+            max-width: 200px;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: filter 0.3s;
+        }
+
+        .trusted-logo:hover img {
+            filter: grayscale(0%);
+        }
+
+        .trusted-logo p {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 500;
+            margin: 0;
+        }
+
         /* Section Animation */
         .section {
             animation: fadeIn 0.8s ease-out;
@@ -541,6 +613,15 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
+                <div class="wisconsin-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#28a745"/>
+                        <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#28a745"/>
+                    </svg>
+                    <span>Wisconsin Compliant</span>
+                </div>
+            </div>
             <h1>Neeraj's AI Software</h1>
             <p>
                 Innovative Software Solutions 
@@ -549,6 +630,25 @@
             <div class="hero-buttons">
                 <a href="sislms.html" class="btn btn-primary">Explore SISLMS</a>
                 <a href="demo.html" class="btn btn-secondary">Request Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-by-section">
+        <h2>Trusted By</h2>
+        <div class="trusted-by-logos">
+            <div class="trusted-logo">
+                <img src="assets/BMM-Shala-Logo.jpg" alt="Brihan Maharshtral Mandal Schools">
+                <p>Brihan Maharshtral Mandal Schools</p>
+            </div>
+            <div class="trusted-logo">
+                <img src="assets/MMSlogo.jpg" alt="Milwaukee Marathi School">
+                <p>Milwaukee Marathi School</p>
+            </div>
+            <div class="trusted-logo">
+                <img src="assets/sewalogo.png" alt="SEWA USA Sponsored Schools">
+                <p>SEWA USA Sponsored Schools</p>
             </div>
         </div>
     </section>
