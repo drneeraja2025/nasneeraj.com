@@ -371,7 +371,7 @@
             <strong>Error:</strong> There was a problem submitting your form. Please try again or contact us directly at nas.neeraj@gmail.com
         </div>
 
-        <form id="signupForm">
+        <form id="signupForm" action="https://formspree.io/f/YOUR_SIGNUP_FORM_ID" method="POST">
             <!-- School Information -->
             <div class="form-section">
                 <h2>School Information</h2>
@@ -544,50 +544,43 @@
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
-            // Create email content
+            // Create email subject
             const emailSubject = `[SISLMS Sign-Up Request] ${data.schoolName}`;
-            const emailBody = `New SISLMS Sign-Up Request
-
-SCHOOL INFORMATION:
-School Name: ${data.schoolName}
-School Type: ${data.schoolType}
-Number of Schools: ${data.numberOfSchools || 'N/A'}
-Estimated Students: ${data.estimatedStudents}
-Subscription Tier: ${data.subscriptionTier}
-
-CONTACT INFORMATION:
-Name: ${data.contactName}
-Email: ${data.contactEmail}
-Title/Position: ${data.contactTitle || 'N/A'}
-
-ADDITIONAL INFORMATION:
-Non-Profit Status: ${data.nonprofitStatus ? 'Yes (20% discount eligible)' : 'No'}
-Message: ${data.message || 'None'}
-
----
-Submitted from: nasneeraj.com/signup.html
-Timestamp: ${new Date().toLocaleString()}`;
 
             try {
-                // Try using Formspree or similar service first
-                // For now, use mailto as primary method with fallback
-                const mailtoLink = `mailto:nas.neeraj@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                // Submit to Formspree
+                const formDataToSend = new FormData(this);
                 
-                // Create a temporary link and click it
-                const link = document.createElement('a');
-                link.href = mailtoLink;
-                link.style.display = 'none';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                // Add hidden fields for better email formatting
+                formDataToSend.append('_subject', emailSubject);
+                formDataToSend.append('_replyto', data.contactEmail);
+                formDataToSend.append('_next', window.location.origin + window.location.pathname + '?success=true');
                 
-                // Show success message
-                successMessage.style.display = 'block';
-                this.reset();
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formDataToSend,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
                 
-                // Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
+                if (response.ok) {
+                    // Show success message
+                    successMessage.style.display = 'block';
+                    this.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Update URL without reload
+                    window.history.pushState({}, '', window.location.pathname + '?success=true');
+                } else {
+                    const responseData = await response.json();
+                    if (responseData.errors) {
+                        throw new Error(responseData.errors.map(e => e.message).join(', '));
+                    }
+                    throw new Error('Form submission failed');
+                }
             } catch (error) {
                 console.error('Error submitting form:', error);
                 errorMessage.style.display = 'block';

@@ -275,7 +275,11 @@
             <strong>Thank you!</strong> Your demo request has been submitted. We'll contact you within 24 hours to schedule your demonstration.
         </div>
 
-        <form id="demoForm" onsubmit="handleSubmit(event)">
+        <div class="error-message" id="errorMessage" style="display: none; background: #f8d7da; color: #721c24; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #dc3545;">
+            <strong>Error:</strong> There was a problem submitting your demo request. Please try again or contact us directly at nas.neeraj@gmail.com
+        </div>
+
+        <form id="demoForm" action="https://formspree.io/f/YOUR_DEMO_FORM_ID" method="POST">
             <div class="form-group">
                 <label for="name">Name *</label>
                 <input type="text" id="name" name="name" required>
@@ -384,48 +388,80 @@
     </footer>
 
     <script>
-        function handleSubmit(event) {
+        document.getElementById('demoForm').addEventListener('submit', async function(event) {
             event.preventDefault();
             
-            // Get form data
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
+            const form = event.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
             
-            // Create email subject and body
-            const subject = `[SISLMS Demo Request] ${data.school}`;
-            const body = `Demo Request Details:
-
-Name: ${data.name}
-Title: ${data.title}
-School/Organization: ${data.school}
-Email: ${data.email}
-Estimated Students: ${data.students || 'Not specified'}
-Preferred Date: ${data.preferredDate || 'Not specified'}
-Preferred Time: ${data.preferredTime || 'Not specified'}
-Timezone: ${data.timezone || 'Not specified'}
-
-Additional Information:
-${data.message || 'None'}
-
----
-This demo request was submitted from nasneeraj.com/demo.html`;
-
-            // Create mailto link
-            const mailtoLink = `mailto:nas.neeraj@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            // Hide previous messages
+            if (successMessage) successMessage.style.display = 'none';
+            if (errorMessage) errorMessage.style.display = 'none';
             
-            // Open email client
-            window.location.href = mailtoLink;
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
             
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-            
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
-            
-            // Reset form after a delay
-            setTimeout(() => {
-                event.target.reset();
-            }, 1000);
+            try {
+                const formData = new FormData(form);
+                
+                // Add hidden fields for better email formatting
+                formData.append('_subject', `[SISLMS Demo Request] ${formData.get('school')}`);
+                formData.append('_replyto', formData.get('email'));
+                formData.append('_next', window.location.origin + window.location.pathname + '?success=true');
+                
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Update URL without reload
+                    window.history.pushState({}, '', window.location.pathname + '?success=true');
+                } else {
+                    const data = await response.json();
+                    if (data.errors) {
+                        throw new Error(data.errors.map(e => e.message).join(', '));
+                    }
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                if (errorMessage) {
+                    errorMessage.style.display = 'block';
+                    errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert('There was an error submitting your demo request. Please try again or email us directly at nas.neeraj@gmail.com');
+                }
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        });
+        
+        // Show success message if redirected from Formspree
+        if (window.location.search.includes('success=true')) {
+            const successMsg = document.getElementById('successMessage');
+            if (successMsg) {
+                successMsg.style.display = 'block';
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         }
     </script>
 </body>
