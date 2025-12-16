@@ -98,10 +98,17 @@
             flex-wrap: nowrap;
         }
 
+        @media (max-width: 1200px) {
+            .nav-logo-text {
+                font-size: 0.8em;
+            }
+        }
+
         .nav-logo {
             display: flex;
-            align-items: center;
-            gap: 15px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
             text-decoration: none;
             color: #333;
         }
@@ -160,9 +167,11 @@
         }
 
         .nav-logo-text {
-            font-size: 1.3em;
+            font-size: 0.9em;
             font-weight: bold;
             color: #667eea;
+            line-height: 1.2;
+            white-space: nowrap;
         }
 
         .nav-links {
@@ -706,6 +715,11 @@
             height: auto;
             display: block;
             border-radius: 20px;
+            background: #000;
+        }
+
+        .video-container video::-webkit-media-controls-panel {
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .video-section h2 {
@@ -749,6 +763,15 @@
             .nav-links {
                 flex-direction: column;
                 gap: 15px;
+            }
+
+            .nav-logo {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .nav-logo-text {
+                font-size: 0.75em;
             }
 
             .hero-welcome {
@@ -836,9 +859,10 @@
         <h2 class="section-title">See NAS in Action</h2>
         <p>Discover how Neeraj's AI Software is transforming education technology with innovative, AI-powered solutions.</p>
         <div class="video-container">
-            <video controls autoplay muted loop playsinline>
+            <video controls autoplay muted loop playsinline preload="metadata">
+                <source src="assets/NAS%20promo.mp4" type="video/mp4">
                 <source src="assets/NAS promo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                Your browser does not support the video tag. Please <a href="assets/NAS%20promo.mp4" download>download the video</a> to view it.
             </video>
         </div>
     </section>
@@ -1033,5 +1057,28 @@
             Innovative Software Solutions Powered by Artificial Intelligence
         </p>
     </footer>
+
+    <script>
+        // Video loading error handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.video-container video');
+            if (video) {
+                video.addEventListener('error', function(e) {
+                    console.error('Video loading error:', e);
+                    const container = document.querySelector('.video-container');
+                    if (container) {
+                        container.innerHTML = '<p style="padding: 40px; color: #666;">Video is loading. If it doesn\'t appear, please refresh the page.</p>';
+                    }
+                });
+
+                video.addEventListener('loadeddata', function() {
+                    console.log('Video loaded successfully');
+                });
+
+                // Try to load the video
+                video.load();
+            }
+        });
+    </script>
 </body>
 </html>
