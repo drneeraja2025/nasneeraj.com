@@ -695,7 +695,7 @@
 
         /* Video Section */
         .video-section {
-            background: white;
+                background: white;
             padding: 80px 40px;
             text-align: center;
         }
@@ -704,16 +704,22 @@
             max-width: 1000px;
             margin: 0 auto;
             position: relative;
-            border-radius: 20px;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
             overflow: hidden;
+            border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             animation: fadeInUp 1s ease-out 0.3s both;
+            background: #000;
         }
 
-        .video-container video {
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
             border-radius: 20px;
             background: #000;
         }
@@ -836,7 +842,7 @@
                 <li><a href="demo.html">Request Demo</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
+            </div>
     </nav>
 
     <!-- Hero Section -->
@@ -846,7 +852,7 @@
             <h1>Neeraj's AI Software</h1>
             <div style="text-align: center; margin-bottom: 40px;">
                 <span class="ai-badge-futuristic">Powered by AI</span>
-            </div>
+        </div>
             <div class="hero-buttons">
                 <a href="sislms.html" class="btn btn-primary">Explore SISLMS</a>
                 <a href="demo.html" class="btn btn-secondary">Request Demo</a>
@@ -858,11 +864,29 @@
     <section class="video-section">
         <h2 class="section-title">See NAS in Action</h2>
         <p>Discover how Neeraj's AI Software is transforming education technology with innovative, AI-powered solutions.</p>
-        <div class="video-container">
-            <video controls autoplay muted loop playsinline preload="metadata">
+        <div class="video-container" id="videoContainer">
+            <!-- YouTube Embed (Recommended - Replace VIDEO_ID with your YouTube video ID) -->
+            <!-- Uncomment and use this if you upload to YouTube:
+            <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=1&rel=0" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px;">
+            </iframe>
+            -->
+            
+            <!-- Local Video (Currently not working due to Git LFS issue on Vercel) -->
+            <video controls autoplay muted loop playsinline preload="metadata" id="promoVideo">
                 <source src="assets/NAS-promo.mp4" type="video/mp4">
-                Your browser does not support the video tag. Please <a href="assets/NAS-promo.mp4" download>download the video</a> to view it.
+                Your browser does not support the video tag.
             </video>
+            <div id="videoError" style="display: none; padding: 40px; text-align: center; color: #666;">
+                <p style="font-size: 1.2em; margin-bottom: 20px;">Video is loading...</p>
+                <p style="font-size: 0.9em;">If the video doesn't appear, it may need to be hosted externally (YouTube/Vimeo).</p>
+            </div>
         </div>
     </section>
 
@@ -929,8 +953,8 @@
                             </ul>
                     <div class="product-actions">
                         <a href="sislms.html" class="btn btn-primary btn-small">Learn More</a>
+                        </div>
                     </div>
-                </div>
 
                 <!-- Non Profit ERP -->
                 <div class="product-card">
@@ -966,16 +990,16 @@
                         <li>Development resources</li>
                         <li>Collaboration features</li>
                         <li>Deployment tools</li>
-                    </ul>
+                            </ul>
                     <div class="product-actions">
                         <a href="contact.html" class="btn btn-secondary btn-small">Get Notified</a>
+                        </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </section>
 
-        <!-- Services Section -->
+            <!-- Services Section -->
         <section class="content" style="background: white;">
             <div class="section">
                 <h2 class="section-title">Professional Services</h2>
@@ -992,7 +1016,7 @@
                         </p>
                         <div class="product-actions">
                             <a href="services.html" class="btn btn-primary btn-small">Learn More</a>
-                        </div>
+                    </div>
                     </div>
                     <div class="product-card">
                         <h3>🏗️ Architectural Analysis</h3>
@@ -1013,12 +1037,12 @@
                         <div class="product-actions">
                             <a href="services.html" class="btn btn-primary btn-small">Learn More</a>
                     </div>
-                    </div>
-                </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="services.html" class="btn btn-primary">View All Services</a>
                 </div>
             </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="services.html" class="btn btn-primary">View All Services</a>
+        </div>
+                </div>
         </section>
 
         <!-- Contact Section -->
@@ -1035,11 +1059,11 @@
             <div class="contact-item">
                 <h3>👨‍💼 Contact Person</h3>
                 <p>Dr. Neeraj Agrawal<br>Founder & CEO</p>
-            </div>
-        </div>
+                </div>
+                    </div>
         <div style="margin-top: 40px;">
             <a href="contact.html" class="btn btn-primary">Contact Us</a>
-        </div>
+                </div>
     </section>
 
         <!-- Footer -->
@@ -1053,29 +1077,74 @@
             <a href="contact.html">Contact</a>
         </div>
         <p style="margin-top: 20px; font-size: 0.9em;">
-            Innovative Software Solutions Powered by Artificial Intelligence
-        </p>
+                Innovative Software Solutions Powered by Artificial Intelligence
+            </p>
     </footer>
 
     <script>
         // Video loading error handling
         document.addEventListener('DOMContentLoaded', function() {
-            const video = document.querySelector('.video-container video');
+            const video = document.getElementById('promoVideo');
+            const errorDiv = document.getElementById('videoError');
+            
             if (video) {
+                // Check if video file exists and is valid
                 video.addEventListener('error', function(e) {
                     console.error('Video loading error:', e);
-                    const container = document.querySelector('.video-container');
-                    if (container) {
-                        container.innerHTML = '<p style="padding: 40px; color: #666;">Video is loading. If it doesn\'t appear, please refresh the page.</p>';
+                    console.log('Video source:', video.currentSrc);
+                    console.log('Video networkState:', video.networkState);
+                    
+                    // Show error message
+                    if (errorDiv) {
+                        errorDiv.style.display = 'block';
+                        video.style.display = 'none';
                     }
+                    
+                    // Check file size - if it's the LFS pointer (very small), show helpful message
+                    fetch(video.currentSrc || 'assets/NAS-promo.mp4')
+                        .then(response => {
+                            const contentLength = response.headers.get('content-length');
+                            if (contentLength && parseInt(contentLength) < 10000) {
+                                // File is too small, likely LFS pointer
+                                if (errorDiv) {
+                                    errorDiv.innerHTML = `
+                                        <p style="font-size: 1.2em; margin-bottom: 20px; color: #667eea;">Video Hosting Required</p>
+                                        <p style="font-size: 1em; margin-bottom: 15px;">The video file is too large for direct hosting. Please:</p>
+                                        <ol style="text-align: left; max-width: 500px; margin: 0 auto; font-size: 0.95em;">
+                                            <li style="margin-bottom: 10px;">Upload to YouTube (recommended - free)</li>
+                                            <li style="margin-bottom: 10px;">Get the video ID</li>
+                                            <li style="margin-bottom: 10px;">Update the iframe embed code in index.html</li>
+                                        </ol>
+                                        <p style="font-size: 0.9em; margin-top: 20px; color: #999;">See VIDEO_HOSTING_SOLUTION.md for details.</p>
+                                    `;
+                                }
+                            }
+                        })
+                        .catch(err => {
+                            console.error('Error checking video file:', err);
+                        });
                 });
 
                 video.addEventListener('loadeddata', function() {
                     console.log('Video loaded successfully');
+                    if (errorDiv) {
+                        errorDiv.style.display = 'none';
+                    }
                 });
 
                 // Try to load the video
                 video.load();
+                
+                // Timeout check - if video doesn't load in 10 seconds, show error
+                setTimeout(function() {
+                    if (video.readyState < 2) { // HAVE_CURRENT_DATA
+                        console.warn('Video taking too long to load');
+                        if (errorDiv && video.networkState === 3) { // NETWORK_NO_SOURCE
+                            errorDiv.style.display = 'block';
+                            video.style.display = 'none';
+                        }
+                    }
+                }, 10000);
             }
         });
     </script>
