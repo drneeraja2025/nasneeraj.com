@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "git lfs pull",
+  "buildCommand": null,
   "outputDirectory": ".",
   "framework": null,
   "rewrites": [
