@@ -684,6 +684,47 @@
             margin: 0;
         }
 
+        /* Video Section */
+        .video-section {
+            background: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .video-section h2 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .video-section p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
         /* Section Animation */
         .section {
             animation: fadeIn 0.8s ease-out;
@@ -724,6 +765,18 @@
 
             .content {
                 padding: 40px 20px;
+            }
+
+            .video-section {
+                padding: 40px 20px;
+            }
+
+            .video-section h2 {
+                font-size: 2em;
+            }
+
+            .video-section p {
+                font-size: 1em;
             }
 
             .logo {
@@ -775,6 +828,18 @@
                 <a href="sislms.html" class="btn btn-primary">Explore SISLMS</a>
                 <a href="demo.html" class="btn btn-secondary">Request Demo</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Promotional Video Section -->
+    <section class="video-section">
+        <h2 class="section-title">See NAS in Action</h2>
+        <p>Discover how Neeraj's AI Software is transforming education technology with innovative, AI-powered solutions.</p>
+        <div class="video-container">
+            <video controls autoplay muted loop playsinline>
+                <source src="assets/NAS promo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
