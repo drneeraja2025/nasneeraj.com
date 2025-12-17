@@ -79,6 +79,10 @@
     {
       "source": "/vision",
       "destination": "/vision.html"
+    },
+    {
+      "source": "/studio-tutoring",
+      "destination": "/studio-tutoring.html"
     }
   ],
   "headers": [
