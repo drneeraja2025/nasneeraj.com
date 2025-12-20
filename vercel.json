@@ -81,8 +81,12 @@
       "destination": "/vision.html"
     },
     {
+      "source": "/gurukul",
+      "destination": "/gurukul.html"
+    },
+    {
       "source": "/studio-tutoring",
-      "destination": "/studio-tutoring.html"
+      "destination": "/gurukul.html"
     }
   ],
   "headers": [
