@@ -432,12 +432,67 @@
         }
 
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                z-index: 999;
+                max-height: calc(100vh - 70px);
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid #eee;
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 15px 0;
+                width: 100%;
+            }
+
+            .nav-dropdown .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background: #f8f9fa;
+                margin: 10px 0;
+                padding: 0;
+            }
+
+            .nav-dropdown:hover .dropdown-menu {
+                transform: none;
+            }
+
             .pricing-grid {
                 grid-template-columns: 1fr;
-            }
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
             }
         }
     </style>
@@ -740,5 +795,36 @@
             Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a>
         </p>
     </footer>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navLinks.contains(event.target);
+                const isClickOnToggle = menuToggle.contains(event.target);
+                
+                if (!isClickInsideNav && !isClickOnToggle && navLinks.classList.contains('active')) {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+            
+            // Close menu when clicking a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
