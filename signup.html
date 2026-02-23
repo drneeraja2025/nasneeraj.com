@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up for SISLMS - NAS</title>
-    <meta name="description" content="Sign up for SISLMS by NAS - Student Information System and Learning Management System for schools.">
+    <title>Sign Up - NAS | SISLMS & GuruVidyaZen</title>
+    <meta name="description" content="Sign up for SISLMS or GuruVidyaZen by NAS - Intelligent management systems for schools and academies.">
     <link rel="icon" type="image/png" href="assets/NASlogonew.png">
     
     <!-- Google Analytics 4 -->
@@ -357,8 +357,8 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>Sign Up for SISLMS</h1>
-        <p>Get started with SISLMS by NAS - Modern SIS/LMS for Wisconsin Schools</p>
+        <h1>Sign Up</h1>
+        <p>Get started with SISLMS or GuruVidyaZen by NAS - Modern Platforms for Learning Institutions</p>
     </section>
 
     <!-- Content -->
@@ -368,16 +368,29 @@
         </div>
 
         <div class="error-message" id="errorMessage">
-            <strong>Error:</strong> There was a problem submitting your form. Please try again or contact us directly at nas.neeraj@gmail.com
+            <strong>Error:</strong> There was a problem submitting your form. Please try again or contact us directly at neeraj@nasneeraj.com
         </div>
 
         <form id="signupForm" action="https://formspree.io/f/YOUR_SIGNUP_FORM_ID" method="POST">
-            <!-- School Information -->
+            <!-- Product Selection -->
             <div class="form-section">
-                <h2>School Information</h2>
+                <h2>Product Selection</h2>
+                <div class="form-group">
+                    <label for="product">Product <span class="required">*</span></label>
+                    <select id="product" name="product" required>
+                        <option value="">Select a product</option>
+                        <option value="sislms">SISLMS (School Information System)</option>
+                        <option value="gurukul">GuruVidyaZen (Academy Management)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Institution Information -->
+            <div class="form-section">
+                <h2>Institution Information</h2>
                 
                 <div class="form-group">
-                    <label for="schoolName">School Name <span class="required">*</span></label>
+                    <label for="schoolName">Institution Name <span class="required">*</span></label>
                     <input type="text" id="schoolName" name="schoolName" required>
                 </div>
 
@@ -500,7 +513,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Neeraj's AI Software. All rights reserved.</p>
+        <p>&copy; 2026 Neeraj's AI Software. All rights reserved.</p>
         <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="sislms.html">SISLMS</a>
@@ -509,7 +522,7 @@
             <a href="contact.html">Contact</a>
         </div>
         <p style="margin-top: 20px; font-size: 0.9em;">
-            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a>
+            Contact: <a href="mailto:neeraj@nasneeraj.com" style="color: #667eea;">neeraj@nasneeraj.com</a>
         </p>
     </footer>
 
@@ -594,3 +607,4 @@
     </script>
 </body>
 </html>
+

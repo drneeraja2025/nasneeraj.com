@@ -31,7 +31,7 @@ All paths in `index.html` are correct for deployment:
 - ✅ Title: "Neeraj's AI Software - Innovative Software Solutions"
 - ✅ Company name: Neeraj's AI Software
 - ✅ Founder: Dr. Neeraj Agrawal
-- ✅ Email: nas.neeraj@gmail.com
+- ✅ Email: neeraj@nasneeraj.com
 - ✅ Domain: nasneeraj.com
 - ✅ Products: SISLMS, Non Profit ERP, NAS Portal
 - ✅ Technology stack: Complete list
@@ -53,4 +53,5 @@ The repository is **ready for deployment** to `nasneeraj.com`.
 - `NAS_BROCHURE.html` is kept as a backup/reference
 - Documentation files (`.md`) can be kept or removed based on preference
 - All image paths use relative URLs and will work correctly when deployed
+
 

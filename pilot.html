@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilot Program - GuruVidyaZen by NAS</title>
+    <meta name="description" content="Welcome pilot partners. Access onboarding resources and guidance for the GuruVidyaZen Pilot Program.">
+    <link rel="icon" type="image/png" href="assets/NASlogonew.png">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,
+        'cookie_flags': 'SameSite=None;Secure'
+      });
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1e293b;
+            background: #fff;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 900;
+            font-size: 1.25rem;
+        }
+
+        .nav-logo img { height: 40px; }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+
+        .btn-ghost { color: #475569; }
+        .btn-ghost:hover { background: #f1f5f9; }
+
+        .btn-amber {
+            background: #78350f;
+            color: white;
+        }
+        .btn-amber:hover { background: #92400e; }
+
+        .hero {
+            padding: 160px 20px 80px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            color: #0f172a;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #475569;
+            margin-bottom: 2.5rem;
+        }
+
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 100px;
+        }
+
+        .note-section {
+            background: #f8fafc;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .note-section h2 {
+            font-size: 1.75rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .note-section ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            color: #334155;
+        }
+
+        .note-section li { margin-bottom: 0.75rem; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            border: 1px solid #f1f5f9;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 900;
+            margin-bottom: 0.75rem;
+        }
+
+        .card ol {
+            list-style: decimal;
+            margin-left: 1.5rem;
+            color: #334155;
+        }
+
+        .card li { margin-bottom: 0.5rem; }
+
+        .footer {
+            border-top: 1px solid #e2e8f0;
+            padding: 60px 20px;
+            text-align: center;
+            background: #f8fafc;
+        }
+
+        code {
+            background: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/GurukulbyNASlogo.png" alt="GuruVidyaZen Logo">
+                <span>GuruVidyaZen</span>
+            </a>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="gurukul.html" class="btn btn-ghost">Back to Info</a>
+                <a href="signup.html" class="btn btn-amber">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Pilot Program</h1>
+        <p>Welcome pilot partners. This page contains pilot-only guidance, links, and onboarding resources. You are joined to the live production integrations for realistic testing.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+            <a href="contact.html" class="btn btn-amber">Contact Support</a>
+            <a href="demo.html" class="btn btn-ghost" style="border: 1px solid #e2e8f0;">Request Sync</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="note-section">
+            <h2>Pilot Notes</h2>
+            <ul>
+                <li>Pilot accounts are tagged with <code>pilot=true</code> and trial expiry is managed by ops.</li>
+                <li>Integrations (Stripe/Zoom/Google) are active — treat test transactions as realistic flows.</li>
+                <li>If you need isolated testing, request a demo/staging workspace via <a href="mailto:neeraj@nasneeraj.com" style="color: #78350f; font-weight: 600;">neeraj@nasneeraj.com</a>.</li>
+            </ul>
+        </section>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Onboarding checklist</h3>
+                <ol>
+                    <li>Confirm admin email & timezone.</li>
+                    <li>Seed minimal data or request white-glove import.</li>
+                    <li>Schedule 30-minute onboarding call.</li>
+                </ol>
+            </div>
+            <div class="card">
+                <h3>Support</h3>
+                <p style="margin-bottom: 1.5rem; color: #475569;">For pilot support and account requests, please reach out directly to our engineering team.</p>
+                <a href="mailto:neeraj@nasneeraj.com" class="btn btn-amber" style="width: 100%; text-align: center;">Email Support</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Neeraj's AI Software. All rights reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.875rem; color: #64748b;">
+            Empowering traditional arts through domain-intelligent technology.
+        </p>
+    </footer>
+</body>
+</html>

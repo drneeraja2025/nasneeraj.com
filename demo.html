@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Request Demo - SISLMS by NAS</title>
-    <meta name="description" content="Request a personalized demo of SISLMS by NAS. See how our Student Information System can transform your school operations.">
+    <title>Request Demo - NAS | SISLMS & GuruVidyaZen</title>
+    <meta name="description" content="Request a personalized demo of SISLMS or GuruVidyaZen by NAS. See how our intelligent management systems can transform your school or academy.">
     <link rel="icon" type="image/png" href="assets/NASlogonew.png">
     
     <!-- Google Analytics 4 -->
@@ -270,17 +270,28 @@
     <!-- Content -->
     <div class="content">
         <h1>Request a Demo</h1>
-        <p class="subtitle">See SISLMS in action with a personalized demonstration</p>
+        <p class="subtitle">See our platforms in action with a personalized demonstration</p>
 
         <div class="success-message" id="successMessage">
             <strong>Thank you!</strong> Your demo request has been submitted. We'll contact you within 24 hours to schedule your demonstration.
         </div>
 
         <div class="error-message" id="errorMessage" style="display: none; background: #f8d7da; color: #721c24; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #dc3545;">
-            <strong>Error:</strong> There was a problem submitting your demo request. Please try again or contact us directly at nas.neeraj@gmail.com
+            <strong>Error:</strong> There was a problem submitting your demo request. Please try again or contact us directly at neeraj@nasneeraj.com
         </div>
 
         <form id="demoForm" action="https://formspree.io/f/YOUR_DEMO_FORM_ID" method="POST">
+            <div class="form-group">
+                <label for="product">Product of Interest *</label>
+                <select id="product" name="product" required>
+                    <option value="">Select a product</option>
+                    <option value="sislms">SISLMS (School Information System)</option>
+                    <option value="gurukul">GuruVidyaZen (Academy Management)</option>
+                    <option value="services">Professional Services / Consultation</option>
+                    <option value="other">Other / Multiple</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <label for="name">Name *</label>
                 <input type="text" id="name" name="name" required>
@@ -361,21 +372,17 @@
                 During your demo, we can cover:
             </p>
             <ul style="color: #856404;">
-                <li>Student information management</li>
-                <li>Course and assignment management</li>
-                <li>Daily logs and attendance tracking</li>
-                <li>Reports and analytics</li>
-                <li>Parent/guardian portal</li>
-                <li>Financial management</li>
-                <li>Security and compliance features</li>
-                <li>Pricing and implementation process</li>
+                <li><strong>For Schools:</strong> Student info, LMS, reports, parent portal, and compliance.</li>
+                <li><strong>For Academies:</strong> Repertoire vaults, CCE matrices, and AI stylistic analysis.</li>
+                <li><strong>Security:</strong> Row-Level Security (RLS), data encryption, and audit logs.</li>
+                <li><strong>Process:</strong> Pricing, implementation timeline, and custom development.</li>
             </ul>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Neeraj's AI Software. All rights reserved.</p>
+        <p>&copy; 2026 Neeraj's AI Software. All rights reserved.</p>
         <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="sislms.html">SISLMS</a>
@@ -384,7 +391,7 @@
             <a href="contact.html">Contact</a>
         </div>
         <p style="margin-top: 20px; font-size: 0.9em;">
-            Contact: <a href="mailto:nas.neeraj@gmail.com" style="color: #667eea;">nas.neeraj@gmail.com</a>
+            Contact: <a href="mailto:neeraj@nasneeraj.com" style="color: #667eea;">neeraj@nasneeraj.com</a>
         </p>
     </footer>
 
@@ -447,7 +454,7 @@
                     errorMessage.style.display = 'block';
                     errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
-                    alert('There was an error submitting your demo request. Please try again or email us directly at nas.neeraj@gmail.com');
+                    alert('There was an error submitting your demo request. Please try again or email us directly at neeraj@nasneeraj.com');
                 }
             } finally {
                 // Re-enable button
@@ -467,4 +474,5 @@
     </script>
 </body>
 </html>
+
 
