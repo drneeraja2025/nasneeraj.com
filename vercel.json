@@ -3,6 +3,18 @@
   "buildCommand": "bash build.sh || git lfs pull || echo 'LFS fetch attempted'",
   "outputDirectory": ".",
   "framework": null,
+  "redirects": [
+    {
+      "source": "/guruvidyazen",
+      "destination": "https://guruvidyazen.nasneeraj.com/",
+      "permanent": false
+    },
+    {
+      "source": "/guruvidyazen/",
+      "destination": "https://guruvidyazen.nasneeraj.com/",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
