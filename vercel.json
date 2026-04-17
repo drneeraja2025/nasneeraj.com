@@ -69,6 +69,18 @@
       "destination": "/compare.html"
     },
     {
+      "source": "/compare-gvz",
+      "destination": "/compare-gvz.html"
+    },
+    {
+      "source": "/sismms",
+      "destination": "/sismms.html"
+    },
+    {
+      "source": "/pilot",
+      "destination": "/pilot.html"
+    },
+    {
       "source": "/video-script",
       "destination": "/video-script.html"
     },

@@ -7,7 +7,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://nasneeraj.com/</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -15,7 +15,7 @@
     <!-- SISLMS Product Page -->
     <url>
         <loc>https://nasneeraj.com/sislms.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
@@ -23,7 +23,7 @@
     <!-- Services -->
     <url>
         <loc>https://nasneeraj.com/services.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -31,7 +31,7 @@
     <!-- Comparison Page -->
     <url>
         <loc>https://nasneeraj.com/compare.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -39,7 +39,7 @@
     <!-- FAQ -->
     <url>
         <loc>https://nasneeraj.com/faq.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -47,7 +47,7 @@
     <!-- Contact -->
     <url>
         <loc>https://nasneeraj.com/contact.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -55,7 +55,7 @@
     <!-- Demo Request -->
     <url>
         <loc>https://nasneeraj.com/demo.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -63,7 +63,7 @@
     <!-- Signup -->
     <url>
         <loc>https://nasneeraj.com/signup.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -71,7 +71,7 @@
     <!-- HOTL Research -->
     <url>
         <loc>https://nasneeraj.com/hotl-research.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -79,7 +79,7 @@
     <!-- Security & Compliance -->
     <url>
         <loc>https://nasneeraj.com/security-compliance.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -87,7 +87,7 @@
     <!-- WSDPA -->
     <url>
         <loc>https://nasneeraj.com/wsdpa.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -95,7 +95,7 @@
     <!-- Terms of Service -->
     <url>
         <loc>https://nasneeraj.com/terms.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -103,7 +103,7 @@
     <!-- Privacy Policy -->
     <url>
         <loc>https://nasneeraj.com/privacy.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -111,7 +111,7 @@
     <!-- Disclaimer -->
     <url>
         <loc>https://nasneeraj.com/disclaimer.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -119,7 +119,7 @@
     <!-- Video Script -->
     <url>
         <loc>https://nasneeraj.com/video-script.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.4</priority>
     </url>
@@ -127,7 +127,7 @@
     <!-- Testimonials -->
     <url>
         <loc>https://nasneeraj.com/testimonials.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -135,9 +135,57 @@
     <!-- Vision -->
     <url>
         <loc>https://nasneeraj.com/vision.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <lastmod>2026-04-17</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- GuruVidyaZen extended info (reference) -->
+    <url>
+        <loc>https://nasneeraj.com/gurukul.html</loc>
+        <lastmod>2026-04-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <!-- GuruVidyaZen comparison -->
+    <url>
+        <loc>https://nasneeraj.com/compare-gvz.html</loc>
+        <lastmod>2026-04-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- SISMMS product page -->
+    <url>
+        <loc>https://nasneeraj.com/sismms.html</loc>
+        <lastmod>2026-04-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- GuruVidyaZen pilot program -->
+    <url>
+        <loc>https://nasneeraj.com/pilot.html</loc>
+        <lastmod>2026-04-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Bridge to flagship GuruVidyaZen subdomain -->
+    <url>
+        <loc>https://nasneeraj.com/guruvidyazen.html</loc>
+        <lastmod>2026-04-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Marketing brochure -->
+    <url>
+        <loc>https://nasneeraj.com/NAS_BROCHURE.html</loc>
+        <lastmod>2026-04-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.55</priority>
     </url>
     
 </urlset>
