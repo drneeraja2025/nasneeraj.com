@@ -81,6 +81,14 @@
       "destination": "/pilot.html"
     },
     {
+      "source": "/NAS_BROCHURE",
+      "destination": "/NAS_BROCHURE.html"
+    },
+    {
+      "source": "/brochure",
+      "destination": "/NAS_BROCHURE.html"
+    },
+    {
       "source": "/video-script",
       "destination": "/video-script.html"
     },
