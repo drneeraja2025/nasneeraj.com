@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAS - Neeraj's AI Software | Innovative Software Solutions</title>
-    <meta name="description" content="Neeraj's AI Software (NAS) - Innovative software solutions including SISLMS for schools, GuruVidyaZen for academies, and AI-native platforms. Contact Dr. Neeraj Agrawal.">
+    <title>NAS — Neeraj's AI Software | School SISLMS, Academies &amp; Riyaz Studio</title>
+    <meta name="description" content="Neeraj's AI Software (NAS) — AI-native education software: GuruVidyaZen School SISLMS, SISMMS, Riyaz Studio demo, and GuruVidyaZen for arts academies. Wisconsin-aware, domain-intelligent platforms.">
     <meta name="keywords" content="student information system, SIS, LMS, school management software, academy management, GuruVidyaZen, SISLMS, FERPA compliant, Wisconsin schools, educational software">
     <link rel="icon" type="image/png" href="assets/NASlogonew.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nasneeraj.com/">
-    <meta property="og:title" content="NAS - Neeraj's AI Software | Innovative Software Solutions">
-    <meta property="og:description" content="Neeraj's AI Software (NAS) - Innovative software solutions including SISLMS for schools, GuruVidyaZen for academies, and AI-native platforms.">
+    <meta property="og:title" content="NAS — Neeraj's AI Software | School SISLMS, Academies &amp; Riyaz Studio">
+    <meta property="og:description" content="Neeraj's AI Software (NAS) — School SISLMS, SISMMS, GuruVidyaZen for academies, and Riyaz Studio — AI-assisted, domain-intelligent edtech.">
     <meta property="og:image" content="https://nasneeraj.com/assets/NASlogonew.png">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://nasneeraj.com/">
-    <meta property="twitter:title" content="NAS - Neeraj's AI Software | Innovative Software Solutions">
-    <meta property="twitter:description" content="Neeraj's AI Software (NAS) - Innovative software solutions including SISLMS for schools, GuruVidyaZen for academies, and AI-native platforms.">
+    <meta property="twitter:title" content="NAS — Neeraj's AI Software | School SISLMS, Academies &amp; Riyaz Studio">
+    <meta property="twitter:description" content="Neeraj's AI Software (NAS) — School SISLMS, SISMMS, GuruVidyaZen, Riyaz Studio — modern AI for schools and academies.">
     <meta property="twitter:image" content="https://nasneeraj.com/assets/NASlogonew.png">
     
     <!-- Structured Data (JSON-LD) -->
@@ -31,7 +34,7 @@
       "alternateName": "NAS",
       "url": "https://nasneeraj.com",
       "logo": "https://nasneeraj.com/assets/NASlogonew.png",
-      "description": "Innovative software solutions including SISLMS for schools, GuruVidyaZen for academies, and AI-native platforms.",
+      "description": "AI-native education software: GuruVidyaZen School SISLMS, SISMMS, Riyaz Studio, and specialized academy management for schools and learning organizations.",
       "foundingDate": "2024",
       "founder": {
         "@type": "Person",
@@ -65,6 +68,16 @@
     </script>
     
     <style>
+        :root {
+            --nas-ink: #0f172a;
+            --nas-ink-soft: #475569;
+            --nas-indigo: #4f46e5;
+            --nas-violet: #7c3aed;
+            --nas-cyan: #06b6d4;
+            --nas-cream: #f1f5f9;
+            --nas-radius: 1.25rem;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -72,7 +85,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
             line-height: 1.6;
             color: #333;
             background: #f5f5f5;
@@ -306,23 +319,38 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 40px;
-            text-align: center;
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            background:
+                radial-gradient(ellipse 90% 70% at 100% 0%, rgba(124, 58, 237, 0.28) 0%, transparent 55%),
+                radial-gradient(ellipse 80% 55% at 0% 100%, rgba(6, 182, 212, 0.22) 0%, transparent 50%),
+                linear-gradient(165deg, #0b1020 0%, #1e1b4b 38%, #312e81 100%);
+            color: #f8fafc;
+            padding: clamp(3.5rem, 8vw, 5.5rem) clamp(1.5rem, 4vw, 2.5rem);
+            text-align: left;
             position: relative;
             overflow: hidden;
         }
 
         .hero::before {
-            content: '';
+            content: "";
             position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 20s infinite;
+            inset: 0;
+            background:
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v1H0z' fill='%23ffffff' fill-opacity='0.04'/%3E%3Cpath d='M0 0v60h1V0z' fill='%23ffffff' fill-opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.9;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 90%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 60%);
+            animation: pulse 24s ease-in-out infinite;
+            pointer-events: none;
         }
 
         @keyframes pulse {
@@ -405,28 +433,125 @@
             z-index: 1;
         }
 
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: clamp(2rem, 5vw, 3.5rem);
+            align-items: center;
+        }
+
+        .hero-copy { max-width: 38rem; }
+
         .hero-welcome {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            opacity: 0.9;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.75rem;
+            color: rgba(226, 232, 240, 0.85);
+            font-weight: 600;
             animation: fadeInUp 1s ease-out 0.1s both;
-            font-weight: 400;
-            letter-spacing: 2px;
         }
 
         .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: clamp(2.1rem, 4.2vw, 3.15rem);
+            line-height: 1.12;
+            margin-bottom: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
             animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero h1 .hero-highlight {
+            background: linear-gradient(120deg, #67e8f9 0%, #a78bfa 45%, #c4b5fd 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-sub {
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            line-height: 1.7;
+            color: rgba(226, 232, 240, 0.92);
+            margin-bottom: 1.25rem;
+            max-width: 40rem;
+            font-weight: 500;
+            animation: fadeInUp 1s ease-out 0.35s both;
+        }
+
+        .hero-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.65rem;
+            margin-bottom: 1.75rem;
+            animation: fadeInUp 1s ease-out 0.45s both;
+        }
+
+        .hero-chip {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.4rem 0.9rem;
+            border-radius: 999px;
+            color: #e0e7ff;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 280px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-figure {
+            margin: 0;
+            border-radius: var(--nas-radius);
+            overflow: hidden;
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            aspect-ratio: 4 / 3;
+        }
+
+        .hero-figure--1 {
+            position: relative;
+            z-index: 1;
+            transform: rotate(-1.5deg);
+            max-width: 92%;
+            margin-left: auto;
+        }
+
+        .hero-figure--2 {
+            position: absolute;
+            bottom: -8%;
+            left: 0;
+            z-index: 2;
+            max-width: 68%;
+            transform: rotate(2deg);
+            border: 3px solid rgba(15, 23, 42, 0.85);
+        }
+
+        .hero-figure figcaption {
+            font-size: 0.7rem;
+            padding: 0.5rem 0.75rem;
+            color: #cbd5e1;
+            background: rgba(15, 23, 42, 0.65);
         }
 
         .hero-buttons {
             display: flex;
-            gap: 20px;
-            justify-content: center;
+            gap: 14px 18px;
+            justify-content: flex-start;
             flex-wrap: wrap;
+            align-items: center;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
@@ -444,7 +569,7 @@
 
         .btn-primary {
             background: white;
-            color: #667eea;
+            color: #4f46e5;
         }
 
         .btn-primary:hover {
@@ -455,12 +580,61 @@
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid white;
+            border: 2px solid rgba(255, 255, 255, 0.85);
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: #667eea;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .hero .btn-primary {
+            background: linear-gradient(135deg, #22d3ee 0%, #4f46e5 50%, #7c3aed 100%);
+            color: #fff;
+            box-shadow: 0 8px 28px rgba(79, 70, 229, 0.45);
+            border: none;
+        }
+
+        .hero .btn-primary:hover {
+            box-shadow: 0 12px 36px rgba(6, 182, 212, 0.35);
+        }
+
+        .hero .btn-secondary {
+            border-color: rgba(255, 255, 255, 0.5);
+            color: #f1f5f9;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .hero .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.14);
+            color: #fff;
+        }
+
+        .content .btn-primary,
+        .product-card .btn-primary,
+        .contact-section .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+
+        .content .btn-primary:hover,
+        .product-card .btn-primary:hover,
+        .contact-section .btn-primary:hover {
+            box-shadow: 0 5px 18px rgba(102, 126, 234, 0.35);
+        }
+
+        .content .btn-secondary,
+        .product-card .btn-secondary {
+            background: rgba(255, 255, 255, 0.95);
+            color: #4f46e5;
+            border: 2px solid #667eea;
+        }
+
+        .content .btn-secondary:hover,
+        .product-card .btn-secondary:hover {
+            background: #667eea;
+            color: #fff;
         }
 
         /* Content Sections */
@@ -476,12 +650,15 @@
         }
 
         .section-title {
-            font-size: 2.5em;
-            color: #667eea;
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: 2.35em;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #4f46e5;
             margin-bottom: 30px;
             text-align: center;
             padding-bottom: 20px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #6366f1;
             animation: fadeInUp 0.8s ease-out;
         }
 
@@ -506,6 +683,9 @@
         .product-card:nth-child(1) { animation-delay: 0.1s; }
         .product-card:nth-child(2) { animation-delay: 0.2s; }
         .product-card:nth-child(3) { animation-delay: 0.3s; }
+        .product-card:nth-child(4) { animation-delay: 0.35s; }
+        .product-card:nth-child(5) { animation-delay: 0.4s; }
+        .product-card:nth-child(6) { animation-delay: 0.45s; }
 
         .product-card:hover {
             transform: translateY(-10px) scale(1.02);
@@ -656,18 +836,19 @@
             display: inline-block;
             position: relative;
             padding: 8px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: rgba(255, 255, 255, 0.08);
+            color: #e0f2fe;
             border-radius: 25px;
-            font-size: 0.95em;
+            font-size: 0.85em;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
             animation: futuristicGlow 2s ease-in-out infinite, textShimmer 3s linear infinite;
-            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5), 0 0 40px rgba(118, 75, 162, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 12px 40px rgba(6, 182, 212, 0.15);
+            border: 1px solid rgba(103, 232, 249, 0.35);
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(8px);
         }
 
         .ai-badge-futuristic::before {
@@ -683,10 +864,10 @@
 
         @keyframes futuristicGlow {
             0%, 100% {
-                box-shadow: 0 0 20px rgba(102, 126, 234, 0.5), 0 0 40px rgba(118, 75, 162, 0.3);
+                box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(6, 182, 212, 0.12);
             }
             50% {
-                box-shadow: 0 0 30px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.5), 0 0 80px rgba(102, 126, 234, 0.3);
+                box-shadow: 0 0 0 1px rgba(103, 232, 249, 0.35), 0 12px 40px rgba(124, 58, 237, 0.2);
             }
         }
 
@@ -873,12 +1054,46 @@
                 font-size: 0.75em;
             }
 
+            .hero {
+                text-align: center;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-copy {
+                max-width: none;
+            }
+
+            .hero-chips,
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                order: -1;
+                min-height: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-figure--1,
+            .hero-figure--2 {
+                position: relative;
+                transform: none;
+                max-width: 100%;
+                left: auto;
+                bottom: auto;
+                margin: 0 auto 0.75rem;
+            }
+
             .hero-welcome {
-                font-size: 1.1em;
+                font-size: 0.75rem;
             }
 
             .hero h1 {
-                font-size: 2.5em;
+                font-size: 2.2em;
             }
 
             .products-grid {
@@ -942,8 +1157,8 @@
                 <li class="nav-dropdown">
                     <a href="compare.html">Compare</a>
                     <div class="dropdown-menu">
-                        <a href="compare.html">SISLMS Comparison</a>
-                        <a href="compare-gvz.html">GuruVidyaZen Comparison</a>
+                        <a href="compare.html">School SISLMS comparison</a>
+                        <a href="compare-gvz.html">GuruVidyaZen comparison</a>
                     </div>
                 </li>
                 <li><a href="services.html">Services</a></li>
@@ -959,23 +1174,56 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-welcome">Welcome to</div>
-            <h1>Neeraj's AI Software</h1>
-            <div style="text-align: center; margin-bottom: 40px;">
-                <span class="ai-badge-futuristic">Powered by AI</span>
-        </div>
-            <div class="hero-buttons">
-                <a href="sislms.html" class="btn btn-primary">Explore SISLMS</a>
-                <a href="demo.html" class="btn btn-secondary">Request Demo</a>
+        <div class="hero-content hero-grid">
+            <div class="hero-copy">
+                <div class="hero-welcome">Wisconsin · domain-intelligent edtech</div>
+                <h1>AI-native software for <span class="hero-highlight">schools &amp; academies</span></h1>
+                <p class="hero-sub">
+                    From <strong>GuruVidyaZen School SISLMS</strong> (K–8 school hub) and <strong>SISMMS by NAS</strong> for daily operations, to
+                    <strong>Riyaz Studio</strong> for practice and pedagogy—built as focused products, not generic one-size software.
+                </p>
+                <div class="hero-chips" role="list">
+                    <span class="hero-chip" role="listitem">Live apps on guruvidyazen.nasneeraj.com</span>
+                    <span class="hero-chip" role="listitem">Comparisons &amp; pilot program</span>
+                </div>
+                <div style="margin-bottom: 1.25rem;">
+                    <span class="ai-badge-futuristic">Powered by AI</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="sislms.html" class="btn btn-primary">School SISLMS overview</a>
+                    <a href="https://guruvidyazen.nasneeraj.com/gurukul/signup?intent=school_sislms" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">School sign up</a>
+                    <a href="demo.html" class="btn btn-secondary">Request a demo</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-label="Product imagery">
+                <figure class="hero-figure hero-figure--1">
+                    <img
+                        src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&amp;q=80&amp;auto=format&amp;fit=crop"
+                        width="400"
+                        height="300"
+                        alt="Students and technology working together in a learning environment"
+                        loading="eager"
+                    />
+                    <figcaption>Data-informed, human-centered school tools</figcaption>
+                </figure>
+                <figure class="hero-figure hero-figure--2">
+                    <img
+                        src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=700&amp;q=80&amp;auto=format&amp;fit=crop"
+                        width="400"
+                        height="300"
+                        alt="Piano and arts learning, reflecting academy and Gurukul-style programs"
+                        loading="eager"
+                    />
+                    <figcaption>Academies, arts &amp; practice</figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
     <!-- Promotional Video Section -->
     <section class="video-section">
-        <h2 class="section-title">See NAS in Action</h2>
-        <p>Discover how Neeraj's AI Software is transforming education technology with innovative, AI-powered solutions.</p>
+        <h2 class="section-title">See NAS in action</h2>
+        <p style="max-width: 44rem; margin: 0 auto; color: #555; line-height: 1.7;">A short walkthrough of how we combine domain expertise with modern UX—across <strong>schools</strong>, <strong>academies</strong>, and <strong>practice &amp; pedagogy</strong> experiences.</p>
         <div class="video-container" id="videoContainer">
             <!-- YouTube Embed -->
             <iframe 
@@ -1026,64 +1274,79 @@
         </div>
     </section>
 
+    <div class="content">
         <!-- About Section -->
-            <div class="section" style="animation: fadeInUp 0.8s ease-out;">
-                <h2 class="section-title">About NAS</h2>
-                <p style="font-size: 1.2em; text-align: center; max-width: 900px; margin: 0 auto; line-height: 1.8; color: #555;">
-                    <strong>Neeraj's AI Software (NAS)</strong> is a forward-thinking software development company 
-                    specializing in domain-intelligent, cloud-based legacy systems. Founded by <strong>Dr. Neeraj Agrawal</strong>, 
-                    we've successfully developed flagship platforms like <strong>SISLMS</strong> for schools and 
-                    <strong>GuruVidyaZen</strong> for specialized academies, bridging the gap between modern technology 
-                    and traditional excellence.
-                </p>
-            </div>
+        <div class="section" style="animation: fadeInUp 0.8s ease-out;">
+            <h2 class="section-title">About NAS</h2>
+            <p style="font-size: 1.15em; text-align: center; max-width: 920px; margin: 0 auto; line-height: 1.85; color: #555;">
+                <strong>Neeraj's AI Software (NAS)</strong> builds <strong>domain-intelligent, cloud-based</strong> products—not generic off-the-shelf templates.
+                Under <strong>Dr. Neeraj Agrawal</strong>, we ship <strong>GuruVidyaZen School SISLMS</strong> for K–8 school hubs (with honest
+                <a href="compare.html" style="color: #667eea;">stack comparisons</a>), <strong>SISMMS by NAS</strong> for SIS + MMS style administration,
+                the flagship <strong>GuruVidyaZen</strong> app for 17+ academy types, and a live <a href="https://demo.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer" style="color: #667eea;">Riyaz Studio</a> demo.
+                Arts academies can also review <a href="compare-gvz.html" style="color: #667eea;">GuruVidyaZen vs. other tools</a>; early partners can follow the
+                <a href="pilot.html" style="color: #667eea;">pilot program</a> for structured onboarding.
+            </p>
+        </div>
 
-            <!-- Products Section -->
-            <div class="section">
-                <h2 class="section-title">Our Products</h2>
+        <!-- Products Section -->
+        <div class="section">
+            <h2 class="section-title">Our products</h2>
             <div class="products-grid">
-                <!-- SISLMS -->
+                <!-- School SISLMS -->
                 <div class="product-card">
-                    <span class="product-badge">FLAGSHIP PRODUCT</span>
-                    <h3>SISLMS by NAS</h3>
+                    <span class="product-badge">K–8 SCHOOLS</span>
+                    <h3>GuruVidyaZen School SISLMS</h3>
                     <p>
-                        <strong>Student Information System & Learning Management System</strong> - A robust, 
-                        cloud-based platform empowering schools like Milwaukee Marathi School.
+                        <strong>Family-friendly school &amp; learning hub</strong> on GuruVidyaZen—enrollment, classes, daily logs, and assignments
+                        with the same sign-on patterns as the rest of the platform. <em>Positioned for elementary &amp; middle (K–8).</em>
                     </p>
                     <ul class="product-features">
-                        <li>Student enrollment & academic history</li>
-                        <li>Digital Gradebook & formative feedback</li>
-                        <li>Assignment Hub with multi-file support</li>
-                        <li>Secure Row-Level Security (RLS)</li>
-                        <li>School Calendar & automated notifications</li>
-                        <li>FERPA and SOC 2 compliance ready</li>
-                        <li>Multi-language support</li>
+                        <li>Public School SISLMS story: warm copy, compare table, and deep links to GuruVidyaZen</li>
+                        <li>Row-level security by school, aligned with the live app</li>
+                        <li>Live host: sislms.guruvidyazen.nasneeraj.com</li>
+                        <li>See how the stack lines up: School SISLMS vs. a reference SISMMS-style data shape</li>
                     </ul>
                     <div class="product-actions">
-                        <a href="sislms.html" class="btn btn-primary btn-small">Learn More</a>
-                        <a href="https://sislms.guruvidyazen.nasneeraj.com/" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">Live SISLMS</a>
-                        </div>
+                        <a href="sislms.html" class="btn btn-primary btn-small">School overview</a>
+                        <a href="https://sislms.guruvidyazen.nasneeraj.com/" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">Open live SISLMS</a>
                     </div>
+                </div>
+
+                <!-- SISMMS -->
+                <div class="product-card">
+                    <span class="product-badge">SCHOOL ADMIN</span>
+                    <h3>SISMMS by NAS</h3>
+                    <p>
+                        <strong>Student information + management</strong> for leaders who juggle rosters, compliance, and daily operations.
+                        Promoted on its own product page for administrators comparing scope with School SISLMS.
+                    </p>
+                    <ul class="product-features">
+                        <li>Standalone product page for administrators scoping SIS + MMS work</li>
+                        <li>Complements the K–8 School SISLMS marketing lane</li>
+                        <li>Same trust, privacy, and security posture as the rest of NAS</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="sismms.html" class="btn btn-primary btn-small">SISMMS page</a>
+                    </div>
+                </div>
 
                 <!-- GuruVidyaZen -->
                 <div class="product-card">
-                    <span class="product-badge">NEW RELEASE</span>
+                    <span class="product-badge">ACADEMIES &amp; ARTS</span>
                     <h3>GuruVidyaZen by NAS</h3>
                     <p>
-                        <strong>The Digitized Legacy System</strong> - A domain-intelligent system for 17+ academy types, 
-                        bridging tradition with modern business.
+                        <strong>The digitized legacy system</strong> for music, dance, and specialized training—17+ academy types, repertoire,
+                        CCE, payments, and AI-assisted practice insights where enabled.
                     </p>
                     <ul class="product-features">
-                        <li>7-Year Master Repertoire Vaults</li>
-                        <li>Traditional Arts CCE & Evaluation Matrices</li>
-                        <li>Examiner Portal & Student QR Portfolios</li>
-                        <li>AI Stylistic Analysis for practice videos</li>
-                        <li>Financial Ledger Pro with Stripe</li>
-                        <li>Global Localization (11+ Languages)</li>
-                        <li>Quick Start Wizard (24hr Setup)</li>
+                        <li>7-year master repertoire vaults &amp; CCE matrices</li>
+                        <li>Examiner tools &amp; student QR portfolios</li>
+                        <li>AI stylistic analysis for practice media (where product allows)</li>
+                        <li>Financial ledger, Stripe, and 11+ locales</li>
                     </ul>
                     <div class="product-actions">
-                        <a href="https://guruvidyazen.nasneeraj.com/" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer">Explore Platform</a>
+                        <a href="https://guruvidyazen.nasneeraj.com/" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer">Open platform</a>
+                        <a href="pilot.html" class="btn btn-secondary btn-small">Pilot program</a>
                     </div>
                 </div>
 
@@ -1123,12 +1386,12 @@
                         <a href="contact.html" class="btn btn-secondary btn-small">Get Notified</a>
                     </div>
                 </div>
-                    </div>
-                </div>
-    </section>
+            </div>
+        </div>
+    </div>
 
-            <!-- Services Section -->
-        <section class="content" style="background: white;">
+    <!-- Services Section -->
+    <section class="content" style="background: white;">
             <div class="section">
                 <h2 class="section-title">Professional Services</h2>
                 <p style="font-size: 1.2em; text-align: center; max-width: 900px; margin: 0 auto 40px; line-height: 1.8; color: #555;">
@@ -1199,7 +1462,7 @@
             <p>&copy; 2026 Neeraj's AI Software. All rights reserved.</p>
         <div class="footer-links">
             <a href="index.html">Home</a>
-            <a href="sislms.html">SISLMS</a>
+            <a href="sislms.html">School SISLMS</a>
             <a href="services.html">Services</a>
             <a href="demo.html">Request Demo</a>
             <a href="contact.html">Contact</a>
