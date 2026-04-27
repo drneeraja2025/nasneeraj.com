@@ -1,940 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISLMS by NAS - Student Information & Learning Management System</title>
-    <meta name="description" content="SISLMS by NAS - Comprehensive cloud-based Student Information System and Learning Management System for schools. FERPA compliant, feature-rich, and affordable.">
-    <meta name="keywords" content="SISLMS, student information system, learning management system, school management software, FERPA compliant, COPPA compliant, WSDPA, Wisconsin schools, cloud-based SIS">
-    <link rel="icon" type="image/png" href="assets/NASlogonew.png">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nasneeraj.com/sislms.html">
-    <meta property="og:title" content="SISLMS by NAS - Student Information & Learning Management System">
-    <meta property="og:description" content="Comprehensive cloud-based Student Information System and Learning Management System for schools. FERPA compliant, feature-rich, and affordable.">
-    <meta property="og:image" content="https://nasneeraj.com/assets/NASlogonew.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nasneeraj.com/sislms.html">
-    <meta property="twitter:title" content="SISLMS by NAS - Student Information & Learning Management System">
-    <meta property="twitter:description" content="Comprehensive cloud-based Student Information System and Learning Management System for schools. FERPA compliant, feature-rich, and affordable.">
-    <meta property="twitter:image" content="https://nasneeraj.com/assets/NASlogonew.png">
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "SISLMS",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "url": "https://nasneeraj.com/demo.html"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "1"
-      },
-      "description": "Comprehensive cloud-based Student Information System and Learning Management System for schools. FERPA compliant, feature-rich, and affordable.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Neeraj's AI Software",
-        "url": "https://nasneeraj.com"
-      },
-      "featureList": [
-        "Student Management",
-        "Course Management",
-        "Assignment System",
-        "Daily Logs",
-        "Comprehensive Reporting",
-        "Google Classroom Integration",
-        "Financial Management",
-        "Parent Portal"
-      ]
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="GuruVidyaZen School SISLMS — a friendly, secure school hub for families, teachers, and small schools. Student information and learning tools in one place." />
+  <title>GuruVidyaZen School SISLMS — School &amp; learning hub for families</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #fffbf5;
+      --sky: #7ec8e3;
+      --sky-deep: #4aa8c9;
+      --lavender: #c4b5fd;
+      --lavender-deep: #8b7cf6;
+      --peach: #fec89a;
+      --mint: #86efac;
+      --sun: #fde047;
+      --ink: #1e293b;
+      --ink-soft: #475569;
+      --white: #ffffff;
+      --shadow: 0 12px 40px rgba(30, 41, 59, 0.08);
+      --radius: 1.5rem;
+      --radius-lg: 2.25rem;
     }
-    </script>
-    
-    <!-- Google Analytics 4 -->
-    <!-- Replace 'G-XXXXXXXXXX' with your actual GA4 Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX', {
-        'anonymize_ip': true,
-        'cookie_flags': 'SameSite=None;Secure'
-      });
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-
-        .navbar {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 0;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .nav-logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        .nav-logo-text {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-            padding: 8px 12px;
-            border-radius: 5px;
-            white-space: nowrap;
-            font-size: 0.95em;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-            background: #f0f0f0;
-        }
-
-        /* Dropdown Menu */
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .nav-dropdown > a {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .nav-dropdown > a::after {
-            content: '▼';
-            font-size: 0.7em;
-            margin-left: 5px;
-            transition: transform 0.3s;
-        }
-
-        .nav-dropdown:hover > a::after {
-            transform: rotate(180deg);
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            min-width: 220px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            margin-top: 5px;
-            padding: 8px 0;
-        }
-
-        .nav-dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 12px 20px;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s;
-            border-radius: 0;
-        }
-
-        .dropdown-menu a:hover {
-            background: #f0f4ff;
-            color: #667eea;
-            padding-left: 25px;
-        }
-
-        .nav-links .cta-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white !important;
-            padding: 10px 25px;
-            border-radius: 25px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 40px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.3em;
-            margin-bottom: 40px;
-            opacity: 0.95;
-        }
-
-        .btn {
-            padding: 15px 40px;
-            font-size: 1.1em;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            font-weight: 600;
-            margin: 10px;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #667eea;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #667eea;
-        }
-
-        .content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 40px;
-            background: white;
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: 2.5em;
-            color: #667eea;
-            margin-bottom: 30px;
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .feature-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-list li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .feature-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .screenshot-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .screenshot {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        }
-
-        .pricing-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 60px 40px;
-            border-radius: 15px;
-            margin: 40px 0;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .pricing-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            border: 3px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .pricing-card:hover {
-            border-color: #667eea;
-            transform: translateY(-5px);
-        }
-
-        .pricing-card.recommended {
-            border-color: #667eea;
-            position: relative;
-        }
-
-        .pricing-card.recommended::before {
-            content: 'RECOMMENDED';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #667eea;
-            color: white;
-            padding: 5px 20px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            font-weight: bold;
-        }
-
-        .pricing-card h3 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .price {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #333;
-            margin: 20px 0;
-        }
-
-        .price span {
-            font-size: 0.5em;
-            color: #666;
-        }
-
-        .compliance-badge {
-            display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            margin: 10px 5px;
-            font-size: 0.9em;
-        }
-
-        .help-links {
-            background: #e3f2fd;
-            padding: 40px;
-            border-radius: 15px;
-            margin: 40px 0;
-        }
-
-        .help-links h3 {
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-
-        .help-links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .help-link-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .help-link-card a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
-            display: inline-block;
-            transition: color 0.3s;
-        }
-        
-        .help-link-card a:hover {
-            color: #764ba2;
-            text-decoration: underline;
-        }
-
-        .help-link-card a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: #667eea;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes aiGlow {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
-            }
-            50% {
-                box-shadow: 0 0 30px rgba(102, 126, 234, 0.6), 0 0 40px rgba(118, 75, 162, 0.4);
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .feature-card {
-            animation: fadeInUp 0.6s ease-out both;
-        }
-
-        .feature-card:nth-child(1) { animation-delay: 0.1s; }
-        .feature-card:nth-child(2) { animation-delay: 0.2s; }
-        .feature-card:nth-child(3) { animation-delay: 0.3s; }
-        .feature-card:nth-child(4) { animation-delay: 0.4s; }
-        .feature-card:nth-child(5) { animation-delay: 0.5s; }
-        .feature-card:nth-child(6) { animation-delay: 0.6s; }
-
-        .feature-card:hover {
-            animation: aiGlow 2s ease-in-out infinite;
-        }
-
-        .pricing-card {
-            animation: scaleIn 0.6s ease-out both;
-        }
-
-        .pricing-card:nth-child(1) { animation-delay: 0.1s; }
-        .pricing-card:nth-child(2) { animation-delay: 0.2s; }
-        .pricing-card:nth-child(3) { animation-delay: 0.3s; }
-        .pricing-card:nth-child(4) { animation-delay: 0.4s; }
-
-        .pricing-card:hover {
-            animation: aiGlow 2s ease-in-out infinite;
-        }
-
-        .screenshot {
-            animation: fadeInUp 0.8s ease-out both;
-            transition: transform 0.3s;
-        }
-
-        .screenshot:nth-child(1) { animation-delay: 0.1s; }
-        .screenshot:nth-child(2) { animation-delay: 0.2s; }
-        .screenshot:nth-child(3) { animation-delay: 0.3s; }
-        .screenshot:nth-child(4) { animation-delay: 0.4s; }
-
-        .screenshot:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-        }
-
-        .compliance-badge {
-            animation: scaleIn 0.5s ease-out both;
-            transition: transform 0.3s;
-        }
-
-        .compliance-badge:hover {
-            transform: scale(1.1);
-            animation: aiGlow 2s ease-in-out infinite;
-        }
-
-        .nav-logo img {
-            transition: transform 0.3s;
-        }
-
-        .nav-logo:hover img {
-            transform: rotate(5deg) scale(1.1);
-            animation: aiGlow 1s ease-in-out infinite;
-        }
-
-        .hero h1 {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero p {
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .section-title {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        @media (max-width: 768px) {
-            .screenshot-grid {
-                grid-template-columns: 1fr;
-            }
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-        }
-    </style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .float-slow, .twinkle { animation: none !important; }
+    }
+    body {
+      margin: 0;
+      font-family: "Nunito", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .skip { position: absolute; left: -9999px; top: auto; }
+    .skip:focus { left: 1rem; top: 1rem; z-index: 9999; padding: .5rem 1rem; background: var(--white); border-radius: .5rem; outline: 3px solid var(--lavender-deep); }
+    a { color: var(--sky-deep); font-weight: 600; }
+    a:hover { text-decoration: underline; color: var(--lavender-deep); }
+    /* dreamy sky background */
+    .bg-sky {
+      background:
+        radial-gradient(120% 80% at 10% -10%, rgba(196, 181, 253, 0.45) 0%, transparent 55%),
+        radial-gradient(90% 60% at 90% 0%, rgba(126, 200, 227, 0.5) 0%, transparent 50%),
+        radial-gradient(70% 50% at 50% 100%, rgba(254, 200, 154, 0.35) 0%, transparent 45%),
+        linear-gradient(180deg, #e0f2fe 0%, var(--cream) 55%, #fef3c7 100%);
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem clamp(1rem, 4vw, 2.5rem);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: "Fredoka", sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .brand-badge {
+      width: 2.5rem; height: 2.5rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sun), var(--peach));
+      display: grid; place-items: center;
+      font-size: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+    nav { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; }
+    nav a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-weight: 600;
+      font-size: .95rem;
+      padding: .35rem .6rem;
+      border-radius: 999px;
+    }
+    nav a:hover { background: rgba(255,255,255,.7); color: var(--ink); text-decoration: none; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
+      padding: .85rem 1.35rem;
+      border-radius: 999px;
+      font-family: "Fredoka", sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease;
+      box-shadow: 0 4px 14px rgba(74, 168, 201, 0.35);
+    }
+    .btn:hover { transform: translateY(-2px); text-decoration: none; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--sky-deep), var(--lavender-deep));
+      color: var(--white);
+    }
+    .btn-sun {
+      background: linear-gradient(135deg, var(--sun), var(--peach));
+      color: var(--ink);
+      box-shadow: 0 4px 14px rgba(253, 224, 71, 0.45);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,.85);
+      color: var(--ink);
+      box-shadow: var(--shadow);
+    }
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: clamp(1.5rem, 5vw, 4rem) clamp(1rem, 4vw, 2.5rem) 3rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (min-width: 900px) {
+      .hero { grid-template-columns: 1.1fr .9fr; }
+    }
+    .hero h1 {
+      font-family: "Fredoka", sans-serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .hero .tag {
+      display: inline-block;
+      padding: .35rem .85rem;
+      background: rgba(255,255,255,.75);
+      border-radius: 999px;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--lavender-deep);
+      margin-bottom: 1rem;
+      border: 2px dashed rgba(139, 124, 246, 0.35);
+    }
+    .hero p.lead {
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      color: var(--ink-soft);
+      max-width: 36ch;
+      margin: 0 0 1.5rem;
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+    .art-panel {
+      position: relative;
+      min-height: 280px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(160deg, rgba(255,255,255,.9), rgba(224, 242, 254, .85));
+      box-shadow: var(--shadow);
+      border: 3px solid rgba(255,255,255,.9);
+      overflow: hidden;
+    }
+    .float-slow { animation: float 7s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .hill {
+      position: absolute;
+      bottom: -40px;
+      left: -20%;
+      width: 140%;
+      height: 120px;
+      background: linear-gradient(90deg, var(--mint), #6ee7b7);
+      border-radius: 50% 50% 0 0;
+      opacity: .9;
+    }
+    .cloud {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      opacity: .95;
+      filter: drop-shadow(0 6px 12px rgba(0,0,0,.06));
+    }
+    .cloud.c1 { width: 100px; height: 36px; top: 18%; left: 8%; }
+    .cloud.c1::before, .cloud.c1::after {
+      content: ""; position: absolute; background: #fff; border-radius: 50%;
+    }
+    .cloud.c1::before { width: 44px; height: 44px; top: -18px; left: 14px; }
+    .cloud.c1::after { width: 56px; height: 56px; top: -26px; left: 44px; }
+    .cloud.c2 { width: 80px; height: 28px; top: 42%; right: 12%; }
+    .cloud.c2::before { content: ""; position: absolute; width: 38px; height: 38px; background: #fff; border-radius: 50%; top: -14px; left: 10px; }
+    .cloud.c2::after { content: ""; position: absolute; width: 48px; height: 48px; background: #fff; border-radius: 50%; top: -22px; left: 32px; }
+    .twinkle {
+      position: absolute;
+      width: 10px; height: 10px;
+      background: var(--sun);
+      border-radius: 50%;
+      animation: tw 3s ease-in-out infinite;
+      box-shadow: 0 0 12px var(--sun);
+    }
+    .twinkle.t1 { top: 12%; right: 22%; animation-delay: 0s; }
+    .twinkle.t2 { top: 28%; right: 38%; animation-delay: .6s; width: 7px; height: 7px; }
+    .twinkle.t3 { bottom: 38%; left: 18%; animation-delay: 1.2s; }
+    @keyframes tw { 0%, 100% { opacity: .35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.2); } }
+    .sun-face {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -58%);
+      width: clamp(120px, 28vw, 180px);
+      height: clamp(120px, 28vw, 180px);
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #fff9c4, var(--sun) 45%, #f59e0b 100%);
+      box-shadow: inset -8px -12px 24px rgba(245, 158, 11, 0.25), 0 16px 40px rgba(251, 191, 36, 0.35);
+    }
+    .sun-face .eye {
+      position: absolute;
+      width: 12%; height: 14%;
+      background: var(--ink);
+      border-radius: 50%;
+      top: 38%;
+    }
+    .sun-face .eye.l { left: 28%; }
+    .sun-face .eye.r { right: 28%; }
+    .sun-face .smile {
+      position: absolute;
+      left: 50%;
+      bottom: 28%;
+      transform: translateX(-50%);
+      width: 38%;
+      height: 18%;
+      border: 5px solid transparent;
+      border-bottom-color: var(--ink);
+      border-radius: 50%;
+    }
+    .ribbon {
+      max-width: 1200px;
+      margin: -1rem auto 2rem;
+      padding: 0 clamp(1rem, 4vw, 2.5rem);
+    }
+    .ribbon-inner {
+      background: linear-gradient(90deg, var(--lavender), var(--sky));
+      color: var(--white);
+      padding: .85rem 1.25rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      text-align: center;
+      font-size: clamp(.9rem, 2vw, 1.05rem);
+      box-shadow: var(--shadow);
+    }
+    section { padding: 2.5rem clamp(1rem, 4vw, 2.5rem); }
+    .section-title {
+      font-family: "Fredoka", sans-serif;
+      font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+      text-align: center;
+      margin: 0 0 .5rem;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--ink-soft);
+      max-width: 52ch;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+    .cards {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border: 2px solid rgba(255,255,255,.8);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -40% -20%;
+      height: 80px;
+      background: radial-gradient(ellipse, rgba(196, 181, 253, 0.2), transparent 70%);
+      pointer-events: none;
+    }
+    .card-icon {
+      font-size: 2.25rem;
+      line-height: 1;
+      margin-bottom: .75rem;
+    }
+    .card h3 {
+      font-family: "Fredoka", sans-serif;
+      margin: 0 0 .5rem;
+      font-size: 1.2rem;
+    }
+    .card p { margin: 0; color: var(--ink-soft); font-size: .98rem; }
+    .kids-strip {
+      background: linear-gradient(135deg, #fef9c3, #fce7f3);
+      border-radius: var(--radius-lg);
+      max-width: 900px;
+      margin: 2rem auto 0;
+      padding: 1.5rem 1.75rem;
+      border: 3px dotted rgba(236, 72, 153, 0.25);
+    }
+    .kids-strip h2 {
+      font-family: "Fredoka", sans-serif;
+      margin: 0 0 .75rem;
+      font-size: 1.35rem;
+      color: #9d174d;
+    }
+    .kids-strip p { margin: 0; color: #831843; font-size: 1.05rem; }
+    .compliance {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255,255,255,.75);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+    .badges { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin-bottom: 1rem; }
+    .badge {
+      padding: .4rem .85rem;
+      border-radius: 999px;
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .03em;
+      background: #f1f5f9;
+      color: var(--ink);
+      border: 1px solid #e2e8f0;
+    }
+    .compliance p { margin: 0; color: var(--ink-soft); font-size: .95rem; text-align: center; }
+    .links-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .link-tile {
+      background: var(--white);
+      border-radius: 1rem;
+      padding: 1rem 1.15rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(0,0,0,.05);
+      border: 2px solid transparent;
+      display: block;
+    }
+    .link-tile:hover { border-color: var(--lavender); text-decoration: none; color: var(--lavender-deep); }
+    .link-tile span { display: block; font-weight: 600; font-size: .85rem; color: var(--ink-soft); margin-top: .25rem; }
+    footer {
+      margin-top: 2rem;
+      padding: 2rem clamp(1rem, 4vw, 2.5rem);
+      background: linear-gradient(180deg, #e0f2fe, #f8fafc);
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: .95rem;
+    }
+    footer a { color: var(--lavender-deep); }
+  </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/NASlogonew.png" alt="NAS Logo">
-                <span class="nav-logo-text">NAS</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="nav-dropdown">
-                    <a href="#">Products</a>
-                    <div class="dropdown-menu">
-                        <a href="https://sislms.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen SISLMS</a>
-                        <a href="sismms.html">SISMMS by NAS</a>
-                        <a href="https://guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen by NAS</a>
-                        <a href="https://demo.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen Riyaz Studio</a>
-                    </div>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="compare.html">Compare</a>
-                    <div class="dropdown-menu">
-                        <a href="compare.html">SISLMS Comparison</a>
-                        <a href="compare-gvz.html">GuruVidyaZen Comparison</a>
-                    </div>
-                </li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="hotl-research.html">Research on HOTL by NAS</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="vision.html">Vision</a></li>
-                <li><a href="demo.html">Request Demo</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="signup.html" class="cta-button">SISLMS Sign Up</a></li>
-                <li><a href="https://sislms.guruvidyazen.nasneeraj.com/auth" target="_blank" class="cta-button" style="background: #28a745;">Login (Current Subscribers)</a></li>
-            </ul>
-        </div>
+<body class="bg-sky">
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header>
+    <a class="brand" href="https://nasneeraj.com/">
+      <span class="brand-badge" aria-hidden="true">✦</span>
+      <span>NAS — GuruVidyaZen School</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="https://nasneeraj.com/">Home</a>
+      <a href="compare.html">Compare schools</a>
+      <a href="https://guruvidyazen.nasneeraj.com/gurukul/login?intent=school_sislms">Log in</a>
+      <a class="btn btn-primary" style="padding:.55rem 1.1rem;font-size:.95rem;" href="https://guruvidyazen.nasneeraj.com/gurukul/signup?intent=school_sislms">School sign up</a>
     </nav>
+  </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1>School Information System by NAS</h1>
-        <p>Student Information System & Learning Management System</p>
-        <p style="font-size: 1.1em; max-width: 800px; margin: 0 auto 40px; opacity: 0.9;">
-            Empowering schools like Milwaukee Marathi School with a robust, secure, and intuitive platform for 
-            student management, grading, and school communications.
+  <main id="main">
+    <div class="hero">
+      <div>
+        <span class="tag">Main entry for School SISLMS on GuruVidyaZen</span>
+        <h1>Your school’s happy learning hub</h1>
+        <p class="lead">
+          <strong>GuruVidyaZen School SISLMS</strong> helps grown-ups run classes, grades, and messages—while students get a calmer, clearer day at school.
+          Built for community schools, language programs, small privates, and nonprofits.
         </p>
-        <div>
-            <a href="signup.html" class="btn btn-primary">Sign Up Now</a>
-            <a href="demo.html" class="btn btn-secondary">Request Demo</a>
-            <a href="https://sislms.guruvidyazen.nasneeraj.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.6);">Open live SISLMS</a>
+        <div class="hero-cta" role="group" aria-label="Primary actions">
+          <a class="btn btn-primary" href="https://guruvidyazen.nasneeraj.com/gurukul/signup?intent=school_sislms">Start a school space</a>
+          <a class="btn btn-sun" href="mailto:neeraj@nasneeraj.com?subject=School%20SISLMS%20demo">Request a colorful tour</a>
+          <a class="btn btn-ghost" href="https://guruvidyazen.nasneeraj.com/gurukul/login?intent=school_sislms">School log in</a>
         </div>
-        <p style="margin-top: 28px; font-size: 0.95em; opacity: 0.9; max-width: 640px; margin-left: auto; margin-right: auto;">
-            Current subscribers sign in at <a href="https://sislms.guruvidyazen.nasneeraj.com/auth" target="_blank" rel="noopener noreferrer" style="color: #fff; text-decoration: underline;">sislms.guruvidyazen.nasneeraj.com</a>.
-        </p>
-    </section>
-
-    <!-- Content -->
-    <div class="content">
-        <!-- Overview -->
-        <div class="section">
-            <h2 class="section-title">Comprehensive School Management Platform</h2>
-            <p style="font-size: 1.2em; text-align: center; max-width: 900px; margin: 0 auto; line-height: 1.8; color: #555;">
-                School Information System by NAS is a modern, cloud-based platform designed specifically for schools 
-                and educational institutions. Bridging the gap between administrators, teachers, and guardians 
-                with integrated SIS and LMS functionality.
-            </p>
+      </div>
+      <div class="art-panel float-slow" aria-hidden="true">
+        <div class="twinkle t1"></div>
+        <div class="twinkle t2"></div>
+        <div class="twinkle t3"></div>
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="hill"></div>
+        <div class="sun-face">
+          <span class="eye l"></span>
+          <span class="eye r"></span>
+          <span class="smile"></span>
         </div>
-
-        <!-- Key Features -->
-        <div class="section">
-            <h2 class="section-title">Core Management Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>👥 Student Management</h3>
-                    <ul class="feature-list">
-                        <li>Complete student profiles</li>
-                        <li>Enrollment & academic history</li>
-                        <li>Student records tracking</li>
-                        <li>Bulk import/export</li>
-                        <li>Multi-language support</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h3>📚 Digital Gradebook</h3>
-                    <ul class="feature-list">
-                        <li>Secure grade entry</li>
-                        <li>Formative feedback</li>
-                        <li>Progress reporting</li>
-                        <li>Daily logs & attendance</li>
-                        <li>Google Classroom integration</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h3>📋 Assignment Hub</h3>
-                    <ul class="feature-list">
-                        <li>Streamlined posting system</li>
-                        <li>Multi-file submission support</li>
-                        <li>Parental oversight</li>
-                        <li>Deadline tracking</li>
-                        <li>Automated notifications</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h3>🔐 Secure RLS Access</h3>
-                    <ul class="feature-list">
-                        <li>Advanced Row-Level Security</li>
-                        <li>Authorized personnel only</li>
-                        <li>FERPA & COPPA compliant</li>
-                        <li>Role-Based Access Control</li>
-                        <li>Data encryption at rest</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h3>📅 School Calendar</h3>
-                    <ul class="feature-list">
-                        <li>School events tracking</li>
-                        <li>Academic deadlines</li>
-                        <li>Holiday management</li>
-                        <li>Real-time sync</li>
-                        <li>Mobile-friendly access</li>
-                    </ul>
-                </div>
-                <div class="feature-card">
-                    <h3>🚀 Simplified Onboarding</h3>
-                    <ul class="feature-list">
-                        <li>Easy account creation</li>
-                        <li>Role assignment</li>
-                        <li>Quick start guides</li>
-                        <li>Video tutorials</li>
-                        <li>Dedicated support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Screenshots -->
-        <div class="section">
-            <h2 class="section-title">See SISLMS in Action</h2>
-            <div class="screenshot-grid">
-                <div>
-                    <img src="screenshots/brochurelogin.jpg" alt="SISLMS Login" class="screenshot">
-                    <p style="text-align: center; margin-top: 10px; color: #666;">Secure Login & Authentication</p>
-                </div>
-                <div>
-                    <img src="screenshots/Screenshot 2025-12-12 150729.jpg" alt="SISLMS Dashboard" class="screenshot">
-                    <p style="text-align: center; margin-top: 10px; color: #666;">Main Dashboard</p>
-                </div>
-                <div>
-                    <img src="screenshots/Screenshot 2025-12-12 150810.jpg" alt="Student Management" class="screenshot">
-                    <p style="text-align: center; margin-top: 10px; color: #666;">Student Management</p>
-                </div>
-                <div>
-                    <img src="screenshots/Screenshot 2025-12-12 150841.jpg" alt="Reports" class="screenshot">
-                    <p style="text-align: center; margin-top: 10px; color: #666;">Reports & Analytics</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Request Demo -->
-        <div class="pricing-section">
-            <h2 class="section-title">Request a Demo</h2>
-            <p style="font-size: 1.2em; text-align: center; max-width: 800px; margin: 0 auto 40px; line-height: 1.8; color: #555;">
-                See SISLMS in action! Schedule a personalized demo to explore how our platform can transform your school's operations. 
-                Our team will walk you through all the features and answer any questions you have.
-            </p>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="demo.html" class="btn btn-primary" style="font-size: 1.2em; padding: 18px 50px;">Request a Demo</a>
-            </div>
-            <div style="max-width: 600px; margin: 40px auto 0; padding: 30px; background: white; border-radius: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
-                <h3 style="color: #667eea; text-align: center; margin-bottom: 20px; font-size: 1.5em;">What to Expect</h3>
-                <ul class="feature-list" style="text-align: left;">
-                    <li>Personalized walkthrough of SISLMS features</li>
-                    <li>Live demonstration of key functionalities</li>
-                    <li>Discussion of your school's specific needs</li>
-                    <li>Customized pricing information</li>
-                    <li>Q&A session with our team</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Compliance -->
-        <div class="section">
-            <h2 class="section-title">Compliance & Security</h2>
-            <div style="text-align: center; margin: 40px 0;">
-                <span class="compliance-badge">FERPA Compliant</span>
-                <span class="compliance-badge">COPPA Compliant</span>
-                <span class="compliance-badge">SOC 2 Type 2</span>
-                <span class="compliance-badge">WSDPA Ready</span>
-                <span class="compliance-badge">Wisconsin Statute § 118.125</span>
-            </div>
-            <p style="font-size: 1.1em; text-align: center; max-width: 900px; margin: 0 auto; line-height: 1.8; color: #555;">
-                SISLMS is built with security and compliance as top priorities. We use enterprise-grade infrastructure, 
-                implement comprehensive security measures, and are ready to sign WSDPA contracts with Wisconsin school districts. 
-                All student data is encrypted, access-controlled, and fully audited.
-            </p>
-        </div>
-
-        <!-- Help & Resources -->
-        <div class="help-links">
-            <h3 style="text-align: center; font-size: 2em; margin-bottom: 30px;">Help & Resources</h3>
-            <p style="text-align: center; margin-bottom: 30px; color: #666; max-width: 800px; margin-left: auto; margin-right: auto;">
-                School Information System provides comprehensive documentation and support resources for all users. 
-                Current subscribers can access these resources after logging into their account.
-            </p>
-            <div class="help-links-grid">
-                <div class="help-link-card">
-                    <h4>📚 Getting Started</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">First-time login guide, quick start tutorial, and system requirements</p>
-                    <p style="font-size: 0.85em; color: #999; font-style: italic; margin-top: 15px;">Available to current SISLMS subscribers</p>
-                </div>
-                <div class="help-link-card">
-                    <h4>👥 User Guides</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">Complete guides for administrators, teachers, guardians, and superintendents</p>
-                    <p style="font-size: 0.85em; color: #999; font-style: italic; margin-top: 15px;">Available to current SISLMS subscribers</p>
-                </div>
-                <div class="help-link-card">
-                    <h4>🔐 Security & Compliance</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">Comprehensive security whitepaper covering FERPA, COPPA, WSDPA compliance, encryption, access controls, and infrastructure security</p>
-                    <a href="security-compliance.html" style="color: #667eea; text-decoration: none; font-weight: 600; margin-top: 15px; display: inline-block;">View Security & Compliance Whitepaper →</a>
-                </div>
-                <div class="help-link-card">
-                    <h4>📋 WSDPA Contract</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">Wisconsin Student Data Privacy Agreement template ready to sign with Wisconsin school districts. Includes all required provisions for FERPA and state compliance</p>
-                    <a href="wsdpa.html" style="color: #667eea; text-decoration: none; font-weight: 600; margin-top: 15px; display: inline-block;">View WSDPA Contract →</a>
-                </div>
-                <div class="help-link-card">
-                    <h4>📄 Terms of Service</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">Terms of Service and Data Governance including platform disclosure, data retention policies, and Wisconsin legal mandates</p>
-                    <a href="terms.html" style="color: #667eea; text-decoration: none; font-weight: 600; margin-top: 15px; display: inline-block;">View Terms of Service →</a>
-                </div>
-                <div class="help-link-card">
-                    <h4>🔒 Privacy Policy</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">Privacy Policy covering FERPA and COPPA compliance, data collection practices, parental rights, and data sharing policies</p>
-                    <a href="privacy.html" style="color: #667eea; text-decoration: none; font-weight: 600; margin-top: 15px; display: inline-block;">View Privacy Policy →</a>
-                </div>
-                <div class="help-link-card">
-                    <h4>⚠️ Disclaimer</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">Legal disclaimer including open source software notices, compliance information, third-party services, and limitation of liability</p>
-                    <a href="disclaimer.html" style="color: #667eea; text-decoration: none; font-weight: 600; margin-top: 15px; display: inline-block;">View Disclaimer →</a>
-                </div>
-                <div class="help-link-card">
-                    <h4>❓ FAQs</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">Frequently asked questions, troubleshooting, and account help</p>
-                    <p style="font-size: 0.85em; color: #999; font-style: italic; margin-top: 15px;">Available to current SISLMS subscribers</p>
-                </div>
-                <div class="help-link-card">
-                    <h4>📖 API Documentation</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">API reference, integration guides, and developer resources</p>
-                    <p style="font-size: 0.85em; color: #999; font-style: italic; margin-top: 15px;">Available to current SISLMS subscribers</p>
-                </div>
-                <div class="help-link-card">
-                    <h4>💬 Support</h4>
-                    <p style="font-size: 0.9em; color: #666; margin: 10px 0;">Contact support, video tutorials, system status, and release notes</p>
-                    <p style="font-size: 0.85em; color: #999; font-style: italic; margin-top: 15px;">Available to current SISLMS subscribers</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #e3f2fd 0%, #f0f4ff 100%); border-radius: 15px; border: 2px solid #667eea;">
-                <h4 style="color: #667eea; font-size: 1.5em; margin-bottom: 15px;">Current Subscribers</h4>
-                <p style="color: #666; margin-bottom: 20px; font-size: 1.1em;">
-                    Access your account to view all documentation, guides, and support resources.
-                </p>
-                <a href="https://sislms.guruvidyazen.nasneeraj.com/auth" target="_blank" class="btn btn-primary" style="background: #28a745; border-color: #28a745;">
-                    Login to School Information System
-                </a>
-                <p style="color: #999; font-size: 0.9em; margin-top: 15px;">
-                    This login is for current subscribers only
-                </p>
-            </div>
-        </div>
-
-        <!-- Comparison Section -->
-        <div class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 60px 40px; border-radius: 15px; margin: 60px 0;">
-            <h2 class="section-title" style="border: none; margin-bottom: 30px;">See How SISLMS Compares</h2>
-            <p style="text-align: center; font-size: 1.2em; color: #666; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                Wondering how School Information System stacks up against PowerSchool, Infinite Campus, Skyward, and other SIS solutions? 
-                See our detailed comparison including features, pricing, implementation time, and total cost of ownership.
-            </p>
-            <div style="text-align: center;">
-                <a href="compare.html" class="btn btn-primary" style="font-size: 1.1em; padding: 15px 40px;">View Full Comparison</a>
-            </div>
-        </div>
-
-        <!-- CTA -->
-        <div style="text-align: center; margin: 60px 0;">
-            <h2 style="color: #667eea; margin-bottom: 30px; font-size: 2.5em;">Ready to Get Started?</h2>
-            <p style="font-size: 1.2em; margin-bottom: 40px; color: #666;">
-                Join schools across Wisconsin using School Information System to streamline their operations.
-            </p>
-            <a href="signup.html" class="btn btn-primary">Sign Up Now</a>
-            <a href="demo.html" class="btn btn-secondary">Request a Demo</a>
-        </div>
+      </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 Neeraj's AI Software. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="sislms.html">School Information System</a>
-            <a href="https://guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen by NAS</a>
-            <a href="services.html">Services</a>
-            <a href="demo.html">Request Demo</a>
-            <a href="contact.html">Contact</a>
-            <a href="signup.html">SISLMS Sign Up</a>
-            <a href="https://sislms.guruvidyazen.nasneeraj.com/auth" target="_blank">Login (Current Subscribers)</a>
-        </div>
-        <p style="margin-top: 20px; font-size: 0.9em;">
-            Contact: <a href="mailto:neeraj@nasneeraj.com" style="color: #667eea;">neeraj@nasneeraj.com</a>
+    <div class="ribbon">
+      <div class="ribbon-inner">
+        Same warm login you already use on GuruVidyaZen — we just painted the front door for schools.
+        <br />
+        <a href="https://sislms.guruvidyazen.nasneeraj.com/" style="color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;">Open the School SISLMS welcome page (GuruVidyaZen subdomain)</a>
+        ·
+        <a href="https://guruvidyazen.nasneeraj.com/gurukul/school-sislms" style="color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;">In-app School hub (after sign-in domain)</a>
+      </div>
+    </div>
+
+    <section aria-labelledby="for-whom">
+      <h2 id="for-whom" class="section-title">Made for real school weeks</h2>
+      <p class="section-sub">Big smiles for little campuses: fewer tabs, clearer roles, and room to grow.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🌏</div>
+          <h3>Heritage &amp; language schools</h3>
+          <p>Weekend classes, multi-language families, and proud traditions—tools that respect your rhythm.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🏫</div>
+          <h3>Small private &amp; community programs</h3>
+          <p>Rosters, assignments, and reports without the giant-district maze.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🤝</div>
+          <h3>Nonprofits &amp; caring teams</h3>
+          <p>Volunteer-friendly flows so helpers can support students safely.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🎨</div>
+          <h3>Arts-friendly when you need it</h3>
+          <p>GuruVidyaZen grows with you—performing arts tools stay available where your roles allow.</p>
+        </article>
+      </div>
+      <div class="kids-strip">
+        <h2>For kids (read with a grown-up)</h2>
+        <p>
+          Your teachers use this tool to keep class organized—like a tidy backpack for assignments, grades, and news.
+          Only the right adults can see student information, and your school decides what to share with families.
         </p>
-    </footer>
+      </div>
+    </section>
+
+    <section aria-labelledby="features">
+      <h2 id="features" class="section-title">What schools can explore</h2>
+      <p class="section-sub">Features depend on your school’s setup and approvals—your admin is the guide.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🧒</div>
+          <h3>Student stories in one place</h3>
+          <p>Rosters, enrollment notes, and history that honor each learner.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📘</div>
+          <h3>Gradebook &amp; gentle feedback</h3>
+          <p>Progress snapshots, formative notes, and daily-style logs where enabled.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📎</div>
+          <h3>Assignment corner</h3>
+          <p>Post work, collect files, and nudge deadlines with kindness.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🔐</div>
+          <h3>Private by design</h3>
+          <p>Row-level security patterns so each school sees only its own world.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📅</div>
+          <h3>School calendar</h3>
+          <p>Events, holidays, and “don’t forget” days in friendly view.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🚀</div>
+          <h3>Guided onboarding</h3>
+          <p>Checklists and videos so your team never feels alone on day one.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="trust">
+      <h2 id="trust" class="section-title">Safety &amp; trust</h2>
+      <p class="section-sub">Short words, serious care—school leaders can dive deeper anytime.</p>
+      <div class="compliance">
+        <div class="badges" role="list">
+          <span class="badge" role="listitem">FERPA-aware workflows</span>
+          <span class="badge" role="listitem">COPPA-conscious design</span>
+          <span class="badge" role="listitem">Encryption &amp; access rules</span>
+          <span class="badge" role="listitem">Wisconsin-friendly options</span>
+        </div>
+        <p>
+          We build with school privacy statutes in mind (including Wisconsin pupil records rules where they apply).
+          Enterprise-style infrastructure and careful subprocessors help us stay transparent—see the whitepaper and agreements linked below.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="resources">
+      <h2 id="resources" class="section-title">Helpful links</h2>
+      <p class="section-sub">Some resources unlock after your school is onboard—your admin knows the path.</p>
+      <div class="links-grid">
+        <a class="link-tile" href="https://nasneeraj.com/compare.html">See how we compare<span>Honest feature stacks for busy principals</span></a>
+        <a class="link-tile" href="https://guruvidyazen.nasneeraj.com/gurukul/login?intent=school_sislms">Subscriber login<span>GuruVidyaZen School SISLMS</span></a>
+        <a class="link-tile" href="mailto:neeraj@nasneeraj.com?subject=School%20SISLMS%20question">Email the team<span>neeraj@nasneeraj.com</span></a>
+        <a class="link-tile" href="https://nasneeraj.com/">NAS home<span>Products &amp; research</span></a>
+      </div>
+      <p style="text-align:center;margin-top:2rem;color:var(--ink-soft);max-width:60ch;margin-left:auto;margin-right:auto;">
+        Legal packs (terms, privacy, disclaimer, WSDPA) live on the main NAS site—share them with your board when you are ready.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>GuruVidyaZen School SISLMS</strong> — part of the GuruVidyaZen family on NAS.</p>
+    <p style="margin-top:.75rem;">
+      © <span id="y"></span> Neeraj’s AI Software. All rights reserved.
+      · <a href="https://nasneeraj.com/">Home</a>
+      · <a href="compare.html">Compare</a>
+      · <a href="https://guruvidyazen.nasneeraj.com/">GuruVidyaZen app</a>
+    </p>
+  </footer>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
