@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --cream: #fffbf5;
@@ -51,44 +52,76 @@
         radial-gradient(70% 50% at 50% 100%, rgba(254, 200, 154, 0.35) 0%, transparent 45%),
         linear-gradient(180deg, #e0f2fe 0%, var(--cream) 55%, #fef3c7 100%);
     }
-    header {
+    /* Sticky top bar — aligned with nasneeraj.com index toolbar */
+    .site-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    }
+    .site-topbar-inner {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 1rem clamp(1rem, 4vw, 2.5rem);
+      padding: 14px clamp(1rem, 4vw, 2.5rem);
       max-width: 1200px;
       margin: 0 auto;
     }
-    .brand {
+    .site-topbar .brand {
       display: flex;
       align-items: center;
       gap: .75rem;
       text-decoration: none;
-      color: var(--ink);
-      font-family: "Fredoka", sans-serif;
+      color: #1e293b;
+      font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
       font-weight: 700;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
     }
-    .brand-badge {
-      width: 2.5rem; height: 2.5rem;
+    .site-topbar .brand-badge {
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--sun), var(--peach));
-      display: grid; place-items: center;
-      font-size: 1.35rem;
-      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      box-shadow: 0 4px 14px rgba(102, 126, 234, 0.35);
     }
-    nav { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: center; }
-    nav a {
+    .site-topbar nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1rem;
+      align-items: center;
+    }
+    .site-topbar nav a {
       text-decoration: none;
-      color: var(--ink-soft);
-      font-weight: 600;
+      color: #333;
+      font-weight: 500;
       font-size: .95rem;
-      padding: .35rem .6rem;
-      border-radius: 999px;
+      padding: 8px 12px;
+      border-radius: 6px;
     }
-    nav a:hover { background: rgba(255,255,255,.7); color: var(--ink); text-decoration: none; }
+    .site-topbar nav a:hover {
+      color: #667eea;
+      background: #f0f0f0;
+      text-decoration: none;
+    }
+    .site-topbar .btn.btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+      color: #fff !important;
+      box-shadow: 0 4px 14px rgba(102, 126, 234, 0.35);
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif !important;
+      border: none !important;
+    }
+    .site-topbar .btn.btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
     .btn {
       display: inline-flex;
       align-items: center;
@@ -374,18 +407,20 @@
 <body class="bg-sky">
   <a class="skip" href="#main">Skip to main content</a>
 
-  <header>
-    <a class="brand" href="https://nasneeraj.com/">
-      <span class="brand-badge" aria-hidden="true">✦</span>
-      <span>NAS — GuruVidyaZen School</span>
-    </a>
-    <nav aria-label="Main">
-      <a href="https://nasneeraj.com/">Home</a>
-      <a href="compare.html">Compare schools</a>
-      <a href="https://guruvidyazen.nasneeraj.com/gurukul/login?intent=school_sislms">Log in</a>
-      <a class="btn btn-primary" style="padding:.55rem 1.1rem;font-size:.95rem;" href="https://guruvidyazen.nasneeraj.com/gurukul/signup?intent=school_sislms">School sign up</a>
-    </nav>
-  </header>
+  <div class="site-topbar">
+    <header class="site-topbar-inner">
+      <a class="brand" href="https://nasneeraj.com/">
+        <span class="brand-badge" aria-hidden="true">✦</span>
+        <span>NAS — GuruVidyaZen School</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="https://nasneeraj.com/">Home</a>
+        <a href="compare.html">Compare schools</a>
+        <a href="https://guruvidyazen.nasneeraj.com/gurukul/login?intent=school_sislms">Log in</a>
+        <a class="btn btn-primary" style="padding:.55rem 1.1rem;font-size:.95rem;" href="https://guruvidyazen.nasneeraj.com/gurukul/signup?intent=school_sislms">School sign up</a>
+      </nav>
+    </header>
+  </div>
 
   <main id="main">
     <div class="hero">
@@ -395,6 +430,10 @@
         <p class="lead">
           <strong>GuruVidyaZen School SISLMS</strong> helps grown-ups run classes, grades, and messages—while students get a calmer, clearer day at school.
           Built for community schools, language programs, small privates, and nonprofits.
+        </p>
+        <p class="lead" style="max-width: 52ch; font-size: 1rem;">
+          <strong>School SISLMS v1</strong> (this school lane) focuses on a <strong>K–8 class hub</strong>, <strong>daily log</strong>, <strong>assignments</strong>, <strong>non–performing-arts CCE</strong>, and <strong>imports</strong>—available in the app for <strong>School</strong> tenants where your admin enables each area.
+          The wider <strong>GuruVidyaZen</strong> product still serves dance, music, yoga, and other academy types; those programs may show performing-arts tools, different CCE shapes, and other modules your school shell does not surface by default.
         </p>
         <div class="hero-cta" role="group" aria-label="Primary actions">
           <a class="btn btn-primary" href="https://guruvidyazen.nasneeraj.com/gurukul/signup?intent=school_sislms">Start a school space</a>
@@ -419,11 +458,13 @@
 
     <div class="ribbon">
       <div class="ribbon-inner">
-        Same warm login you already use on GuruVidyaZen — we just painted the front door for schools.
+        Same warm login as the rest of GuruVidyaZen — use <strong>School sign up</strong> / <strong>Log in</strong> above for the school intent. Official app entry points:
         <br />
-        <a href="https://sislms.guruvidyazen.nasneeraj.com/" style="color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;">Open the School SISLMS welcome page (GuruVidyaZen subdomain)</a>
+        <a href="https://sislms.guruvidyazen.nasneeraj.com/" style="color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;">sislms.guruvidyazen.nasneeraj.com</a>
         ·
-        <a href="https://guruvidyazen.nasneeraj.com/gurukul/school-sislms" style="color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;">In-app School hub (after sign-in domain)</a>
+        <a href="https://guruvidyazen.nasneeraj.com/" style="color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;">guruvidyazen.nasneeraj.com</a>
+        ·
+        <a href="https://guruvidyazen.vercel.app/" style="color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px;">guruvidyazen.vercel.app</a>
       </div>
     </div>
 
@@ -448,8 +489,8 @@
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">🎨</div>
-          <h3>Arts-friendly when you need it</h3>
-          <p>GuruVidyaZen grows with you—performing arts tools stay available where your roles allow.</p>
+          <h3>Other academy lanes stay on GuruVidyaZen</h3>
+          <p>School SISLMS v1 is built around general K–8 workflows. Dance, music, yoga, and fine-arts tools remain part of GuruVidyaZen for other academy types—see in-app Help for what your tenant and roles can open.</p>
         </article>
       </div>
       <div class="kids-strip">
@@ -463,7 +504,7 @@
 
     <section aria-labelledby="features">
       <h2 id="features" class="section-title">What schools can explore</h2>
-      <p class="section-sub">Features depend on your school’s setup and approvals—your admin is the guide.</p>
+      <p class="section-sub">What you see depends on your school’s tenant, roles, and what your admin enables—<strong>in-app Help</strong> carries the live, authoritative list.</p>
       <div class="cards">
         <article class="card">
           <div class="card-icon" aria-hidden="true">🧒</div>
@@ -477,8 +518,8 @@
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">📎</div>
-          <h3>Assignment corner</h3>
-          <p>Post work, collect files, and nudge deadlines with kindness.</p>
+          <h3>Assignments</h3>
+          <p>Teachers publish tasks and due dates; students submit text plus attachments where enabled—typically <strong>up to six files</strong> per submission (for example PDF, images, and small audio/video, <strong>up to 25 MB per file</strong>). See in-app Help for the current allowed formats list.</p>
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">🔐</div>
@@ -488,12 +529,12 @@
         <article class="card">
           <div class="card-icon" aria-hidden="true">📅</div>
           <h3>School calendar</h3>
-          <p>Events, holidays, and “don’t forget” days in friendly view.</p>
+          <p>Plan events and seed holidays: import an <strong>iCal (.ics)</strong> file (for example an export from Google Calendar) or pick built-in <strong>US</strong>, <strong>European</strong>, or <strong>Indian</strong> holiday presets (plus optional regional packs such as Marathi where offered). Available where your admin enables calendar tools.</p>
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">🚀</div>
           <h3>Guided onboarding</h3>
-          <p>Checklists and videos so your team never feels alone on day one.</p>
+          <p>Short walkthroughs and checklists for GuruVidyaZen are expanding to <strong>School SISLMS</strong> so the clips match the live school shell—coverage rolls out by release; use <strong>in-app Help</strong> for the current playlist.</p>
         </article>
       </div>
     </section>
@@ -509,8 +550,7 @@
           <span class="badge" role="listitem">Wisconsin-friendly options</span>
         </div>
         <p>
-          We build with school privacy statutes in mind (including Wisconsin pupil records rules where they apply).
-          Enterprise-style infrastructure and careful subprocessors help us stay transparent—see the whitepaper and agreements linked below.
+          We design workflows with <strong>FERPA- and COPPA-style concerns</strong> and <strong>Wisconsin pupil-record practices</strong> in mind—the same posture we document alongside our SISMMS work—but <strong>no marketing snippet replaces your counsel</strong> or the in-app <strong>Terms</strong>, <strong>Privacy Policy</strong>, and <strong>Disclaimer</strong>, which spell out limits, subprocessors, and what “optional” student fields mean.
         </p>
       </div>
     </section>
@@ -525,7 +565,7 @@
         <a class="link-tile" href="https://nasneeraj.com/">NAS home<span>Products &amp; research</span></a>
       </div>
       <p style="text-align:center;margin-top:2rem;color:var(--ink-soft);max-width:60ch;margin-left:auto;margin-right:auto;">
-        Legal packs (terms, privacy, disclaimer, WSDPA) live on the main NAS site—share them with your board when you are ready.
+        After sign-in, open <strong>Legal</strong> in the app for Terms, Privacy, Disclaimer, and related notices (including Wisconsin-oriented context where applicable). <strong>nasneeraj.com</strong> hosts this static overview; the in-app legal text is the detailed source.
       </p>
     </section>
   </main>
@@ -536,7 +576,9 @@
       © <span id="y"></span> Neeraj’s AI Software. All rights reserved.
       · <a href="https://nasneeraj.com/">Home</a>
       · <a href="compare.html">Compare</a>
-      · <a href="https://guruvidyazen.nasneeraj.com/">GuruVidyaZen app</a>
+      · <a href="https://guruvidyazen.nasneeraj.com/">guruvidyazen.nasneeraj.com</a>
+      · <a href="https://guruvidyazen.vercel.app/">guruvidyazen.vercel.app</a>
+      · <a href="https://sislms.guruvidyazen.nasneeraj.com/">sislms.guruvidyazen.nasneeraj.com</a>
     </p>
   </footer>
   <script>
