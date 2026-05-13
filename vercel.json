@@ -29,6 +29,10 @@
       "destination": "/services.html"
     },
     {
+      "source": "/saarthee",
+      "destination": "/saarthee.html"
+    },
+    {
       "source": "/signup",
       "destination": "/signup.html"
     },
@@ -133,6 +137,15 @@
     },
     {
       "source": "/compare.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/saarthee.html",
       "headers": [
         {
           "key": "Cache-Control",

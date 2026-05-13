@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saarthee CoPlanner by NAS | Privacy-first personal coworker</title>
+    <meta name="description" content="Saarthee CoPlanner by NAS is a privacy-first personal coworker for organizing calendars, inboxes, files, Notion, finance notes, and local workflows across everyday tools.">
+    <meta name="keywords" content="Saarthee CoPlanner, NAS, personal productivity, personal OS, calendar organizer, email organizer, Notion workflow, privacy-first productivity">
+    <link rel="icon" type="image/png" href="assets/Saartheelogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasneeraj.com/saarthee">
+    <meta property="og:title" content="Saarthee CoPlanner by NAS">
+    <meta property="og:description" content="A privacy-first personal coworker for planning across calendar, inbox, files, Notion, and local workflows.">
+    <meta property="og:image" content="https://nasneeraj.com/assets/Saartheelogo.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://nasneeraj.com/assets/Saartheelogo.png">
+
+    <style>
+        :root {
+            --nas-cream: #fffbf5;
+            --nas-ink: #0f172a;
+            --nas-soft: #475569;
+            --nas-muted: #64748b;
+            --nas-line: #e2e8f0;
+            --nas-indigo: #4f46e5;
+            --nas-violet: #7c3aed;
+            --saarthee-navy: #0b1530;
+            --saarthee-navy-mid: #152347;
+            --saarthee-gold: #c9a227;
+            --saarthee-gold-light: #e8c56a;
+            --saarthee-cyan: #22d3ee;
+            --saarthee-radius: 1.25rem;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+            color: var(--nas-ink);
+            background: var(--nas-cream);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; }
+
+        /* —— NAS site navigation —— */
+        .navbar {
+            background: var(--nas-cream);
+            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-logo-text {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #667eea;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.95em;
+            transition: color 0.3s, background 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a[aria-current="page"] {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .nav-dropdown { position: relative; }
+
+        .nav-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-dropdown > a::after {
+            content: "▼";
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            min-width: 240px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            margin-top: 5px;
+            padding: 8px 0;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            border-radius: 0;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f0f4ff;
+            color: #667eea;
+            padding-left: 25px;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #333;
+            border-radius: 2px;
+        }
+
+        .nav-cta-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-left: 4px;
+        }
+
+        .nav-cta {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--nas-line);
+            background: white;
+            white-space: nowrap;
+        }
+
+        .nav-cta-primary {
+            color: white;
+            border-color: transparent;
+            background: linear-gradient(135deg, var(--saarthee-gold) 0%, #a67c00 100%);
+        }
+
+        /* —— Saarthee hero —— */
+        .saarthee-hero {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            background:
+                radial-gradient(ellipse 80% 60% at 100% 0%, rgba(34, 211, 238, 0.18) 0%, transparent 55%),
+                radial-gradient(ellipse 70% 50% at 0% 100%, rgba(201, 162, 39, 0.14) 0%, transparent 50%),
+                linear-gradient(165deg, var(--saarthee-navy) 0%, var(--saarthee-navy-mid) 45%, #1e3a5f 100%);
+            color: #f8fafc;
+            padding: clamp(3rem, 7vw, 5rem) clamp(1.25rem, 4vw, 2.5rem);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .saarthee-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v1H0z' fill='%23ffffff' fill-opacity='0.03'/%3E%3Cpath d='M0 0v60h1V0z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .saarthee-hero-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+            gap: clamp(2rem, 5vw, 3.5rem);
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(34, 211, 238, 0.35);
+            background: rgba(34, 211, 238, 0.1);
+            color: var(--saarthee-cyan);
+            border-radius: 999px;
+            padding: 7px 14px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .saarthee-hero h1 {
+            font-size: clamp(2rem, 4.5vw, 3.35rem);
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .brand-word {
+            font-family: "Cormorant Garamond", Georgia, serif;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--saarthee-gold-light), var(--saarthee-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-sub {
+            color: rgba(248, 250, 252, 0.82);
+            font-size: 1.12rem;
+            max-width: 34rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border: 1px solid transparent;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover { transform: translateY(-1px); }
+
+        .btn-gold {
+            color: var(--saarthee-navy);
+            background: linear-gradient(135deg, var(--saarthee-gold-light), var(--saarthee-gold));
+            box-shadow: 0 8px 24px rgba(201, 162, 39, 0.35);
+        }
+
+        .btn-ghost {
+            color: #f8fafc;
+            border-color: rgba(248, 250, 252, 0.35);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-status {
+            color: rgba(248, 250, 252, 0.55);
+            font-size: 0.9rem;
+        }
+
+        .logo-showcase {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: clamp(1.25rem, 3vw, 2rem);
+            box-shadow:
+                0 24px 60px rgba(0, 0, 0, 0.35),
+                0 0 0 1px rgba(201, 162, 39, 0.25),
+                0 0 40px rgba(34, 211, 238, 0.12);
+            text-align: center;
+        }
+
+        .logo-showcase img {
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logo-showcase figcaption {
+            margin-top: 1rem;
+            font-size: 0.88rem;
+            color: var(--nas-muted);
+            font-weight: 600;
+        }
+
+        /* —— Content sections —— */
+        .section {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 2rem);
+        }
+
+        .section h2 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            letter-spacing: -0.03em;
+            margin-bottom: 0.75rem;
+            color: var(--saarthee-navy);
+        }
+
+        .section-lead {
+            color: var(--nas-soft);
+            max-width: 42rem;
+            margin-bottom: 1.75rem;
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--nas-line);
+            border-radius: var(--saarthee-radius);
+            padding: 1.5rem;
+            transition: box-shadow 0.25s, border-color 0.25s;
+        }
+
+        .card:hover {
+            border-color: rgba(201, 162, 39, 0.35);
+            box-shadow: 0 12px 32px rgba(11, 21, 48, 0.08);
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.15), rgba(201, 162, 39, 0.15));
+        }
+
+        .card h3 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--saarthee-navy);
+        }
+
+        .card p {
+            color: var(--nas-soft);
+            font-size: 0.96rem;
+        }
+
+        .brief-panel {
+            background: white;
+            border: 1px solid var(--nas-line);
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+        }
+
+        .brief-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .pill {
+            border-radius: 999px;
+            padding: 6px 12px;
+            background: rgba(34, 211, 238, 0.12);
+            color: #0e7490;
+            font-weight: 700;
+            font-size: 0.78rem;
+        }
+
+        .brief-list { display: grid; gap: 10px; }
+
+        .brief-item {
+            border: 1px solid var(--nas-line);
+            border-radius: 14px;
+            padding: 14px;
+            background: var(--nas-cream);
+        }
+
+        .brief-item strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--saarthee-navy);
+        }
+
+        .brief-item span {
+            color: var(--nas-muted);
+            font-size: 0.92rem;
+        }
+
+        .notice {
+            background: linear-gradient(135deg, #eef2ff 0%, #f0f9ff 100%);
+            border: 1px solid #c7d2fe;
+            border-left: 4px solid var(--saarthee-gold);
+            border-radius: var(--saarthee-radius);
+            padding: 1.5rem;
+            color: #312e81;
+        }
+
+        .notice a {
+            color: #3730a3;
+            font-weight: 700;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .step {
+            background: white;
+            border: 1px solid var(--nas-line);
+            border-radius: 18px;
+            padding: 1.1rem;
+        }
+
+        .step small {
+            color: var(--saarthee-gold);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-size: 0.72rem;
+        }
+
+        .step p {
+            margin-top: 8px;
+            color: var(--nas-soft);
+            font-size: 0.94rem;
+        }
+
+        .footer {
+            background: var(--saarthee-navy);
+            color: rgba(248, 250, 252, 0.75);
+            padding: 2.5rem 1.25rem 3rem;
+            margin-top: 1rem;
+        }
+
+        .footer-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand img {
+            height: 52px;
+            width: auto;
+            background: white;
+            border-radius: 12px;
+            padding: 6px 10px;
+        }
+
+        .footer-brand .nas-mark {
+            height: 40px;
+            background: transparent;
+            padding: 0;
+            filter: brightness(1.1);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+        }
+
+        .footer-links a {
+            color: rgba(248, 250, 252, 0.85);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover { color: var(--saarthee-gold-light); }
+
+        .footer-links span { color: rgba(248, 250, 252, 0.25); }
+
+        .footer-note { font-size: 0.88rem; max-width: 52rem; }
+
+        @media (max-width: 900px) {
+            .saarthee-hero-inner,
+            .grid,
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-showcase { order: -1; max-width: 420px; margin: 0 auto; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--nas-cream);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-cta-group {
+                flex-direction: column;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .nav-cta { width: 100%; text-align: center; }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                margin: 0;
+                padding-left: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/NASlogonew.png" alt="NAS Logo">
+                <span class="nav-logo-text">Neeraj's AI Software</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" type="button">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#">Products</a>
+                    <div class="dropdown-menu">
+                        <a href="https://sislms.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen SISLMS</a>
+                        <a href="sismms.html">SISMMS by NAS</a>
+                        <a href="saarthee.html" aria-current="page">Saarthee CoPlanner by NAS</a>
+                        <a href="https://guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen by NAS</a>
+                        <a href="https://riyaz.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen Riyaz Studio</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="compare.html">Compare</a>
+                    <div class="dropdown-menu">
+                        <a href="compare.html">School SISLMS comparison</a>
+                        <a href="compare-gvz.html">GuruVidyaZen comparison</a>
+                    </div>
+                </li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="nav-cta-group">
+                    <a class="nav-cta" href="https://saarthee-coplanner.vercel.app/sign-in">Log in</a>
+                    <a class="nav-cta nav-cta-primary" href="https://saarthee-coplanner.vercel.app/sign-up">Sign up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="saarthee-hero">
+        <div class="saarthee-hero-inner">
+            <div>
+                <span class="eyebrow">Personal coworker · private pilot</span>
+                <h1><span class="brand-word">Saarthee</span> CoPlanner by NAS</h1>
+                <p class="hero-sub">
+                    A privacy-first personal coworker for calendars, inboxes, files, Notion, finance notes, and local Windows workflows — guided by human-approved automation, not another data warehouse.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-gold" href="https://saarthee-coplanner.vercel.app/sign-in">Log in</a>
+                    <a class="btn btn-ghost" href="https://saarthee-coplanner.vercel.app/sign-up">Sign up</a>
+                    <a class="btn btn-ghost" href="contact.html">Contact NAS</a>
+                </div>
+                <p class="hero-status">Public entry page on nasneeraj.com · app hosted on Vercel</p>
+            </div>
+            <figure class="logo-showcase">
+                <img src="assets/Saartheelogo.png" alt="Saarthee CoPlanner by NAS — chariot and AI-guided planning logo" width="340" height="340">
+                <figcaption>Heritage guidance meets digital planning</figcaption>
+            </figure>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr); gap: 2rem; align-items: start;">
+                <div>
+                    <h2>Built for mixed personal workflows</h2>
+                    <p class="section-lead">
+                        Saarthee is for people who live across Google, Microsoft, Apple, Samsung, Notion, local files, and small finance spreadsheets — without adopting an enterprise tool stack.
+                    </p>
+                    <div class="grid" style="grid-template-columns: 1fr;">
+                        <article class="card">
+                            <div class="card-icon" aria-hidden="true">📅</div>
+                            <h3>Calendar and inbox planning</h3>
+                            <p>Careful scope review and lightweight organization before deeper email permissions.</p>
+                        </article>
+                        <article class="card">
+                            <div class="card-icon" aria-hidden="true">📝</div>
+                            <h3>Notion and daily logs</h3>
+                            <p>Mirror planning documents, tasks, and summaries into a workspace you control.</p>
+                        </article>
+                        <article class="card">
+                            <div class="card-icon" aria-hidden="true">🖥️</div>
+                            <h3>Local Windows coworker</h3>
+                            <p>Connect local file organization with cloud context; destructive actions stay explicit and reversible.</p>
+                        </article>
+                    </div>
+                </div>
+                <aside class="brief-panel" aria-label="Today brief preview">
+                    <div class="brief-panel-header">
+                        <strong>Today brief</strong>
+                        <span class="pill">Preview</span>
+                    </div>
+                    <div class="brief-list">
+                        <div class="brief-item">
+                            <strong>One plan across tools</strong>
+                            <span>Calendar, tasks, Notion notes, and selected inbox context in one daily view.</span>
+                        </div>
+                        <div class="brief-item">
+                            <strong>No raw data by default</strong>
+                            <span>Organize links, rules, and summaries without stockpiling message bodies or file contents.</span>
+                        </div>
+                        <div class="brief-item">
+                            <strong>Human-approved automation</strong>
+                            <span>Local file actions use preview, approval, allowlists, and undo logs.</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <h2>Privacy-first by design</h2>
+            <p class="section-lead">
+                The product organizes access you grant — not a warehouse of email bodies, attachments, calendar descriptions, or file contents unless you explicitly enable them.
+            </p>
+            <div class="notice">
+                Google and Microsoft integrations will be reviewed scope-by-scope. Gmail read/modify scopes are a later phase, not a Phase 0 assumption.
+                <div style="margin-top: 14px; font-size: 0.92rem;">
+                    <strong>Legal:</strong>
+                    <a href="https://saarthee-coplanner.vercel.app/legal/privacy">Privacy</a> ·
+                    <a href="https://saarthee-coplanner.vercel.app/legal/terms">Terms</a> ·
+                    <a href="https://saarthee-coplanner.vercel.app/legal/disclaimer">Disclaimer</a> ·
+                    <a href="contact.html">Contact us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <h2>Phase 0 roadmap</h2>
+            <p class="section-lead">Early milestones before a broader public launch.</p>
+            <div class="timeline">
+                <div class="step">
+                    <small>Step 1</small>
+                    <p>Trademark, domain, GitHub, App Store, and Play Store research for Saarthee CoPlanner by NAS.</p>
+                </div>
+                <div class="step">
+                    <small>Step 2</small>
+                    <p>Wire GitHub, Vercel, Neon, local dev port 5174, and development branch workflow.</p>
+                </div>
+                <div class="step">
+                    <small>Step 3</small>
+                    <p>First app scaffold and placeholder deployment for private pilot work.</p>
+                </div>
+                <div class="step">
+                    <small>Step 4</small>
+                    <p>Minimum OAuth scopes and published privacy/legal notes before public access.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="assets/Saartheelogo.png" alt="Saarthee CoPlanner">
+                <img class="nas-mark" src="assets/NASlogonew.png" alt="NAS — Neeraj's AI Software">
+            </div>
+            <nav class="footer-links" aria-label="App and legal">
+                <a href="https://saarthee-coplanner.vercel.app/sign-in">Log in</a>
+                <a href="https://saarthee-coplanner.vercel.app/sign-up">Sign up</a>
+                <span aria-hidden="true">·</span>
+                <a href="https://saarthee-coplanner.vercel.app/legal/terms">Terms</a>
+                <a href="https://saarthee-coplanner.vercel.app/legal/privacy">Privacy</a>
+                <a href="https://saarthee-coplanner.vercel.app/legal/disclaimer">Disclaimer</a>
+                <a href="https://saarthee-coplanner.vercel.app/legal/cookies">Cookies</a>
+                <span aria-hidden="true">·</span>
+                <a href="https://saarthee-coplanner.vercel.app/help">Help</a>
+                <span aria-hidden="true">·</span>
+                <a href="index.html">NAS home</a>
+            </nav>
+            <p class="footer-note">Saarthee CoPlanner by NAS is a working product name under review. NAS is Neeraj's AI Software. This page is the public marketing entry; the app remains in private pilot.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", function () {
+                menuToggle.classList.toggle("active");
+                navLinks.classList.toggle("active");
+            });
+            document.addEventListener("click", function (event) {
+                if (!navLinks.contains(event.target) && !menuToggle.contains(event.target) && navLinks.classList.contains("active")) {
+                    menuToggle.classList.remove("active");
+                    navLinks.classList.remove("active");
+                }
+            });
+            navLinks.querySelectorAll("a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    menuToggle.classList.remove("active");
+                    navLinks.classList.remove("active");
+                });
+            });
+        }
+    </script>
+</body>
+</html>
