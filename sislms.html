@@ -373,6 +373,52 @@
       border: 1px solid #e2e8f0;
     }
     .compliance p { margin: 0; color: var(--ink-soft); font-size: .95rem; text-align: center; }
+    .trusted-by-section {
+      text-align: center;
+      padding: 2.5rem clamp(1rem, 4vw, 2rem) 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .wisconsin-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: .65rem 1.25rem;
+      background: white;
+      color: #155724;
+      border-radius: 999px;
+      font-size: .95rem;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      border: 2px solid #28a745;
+      margin-bottom: 1.5rem;
+    }
+    .wisconsin-badge svg { flex-shrink: 0; margin-right: .5rem; }
+    .trusted-by-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .trusted-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .75rem;
+      max-width: 220px;
+    }
+    .trusted-logo img {
+      max-height: 72px;
+      max-width: 180px;
+      object-fit: contain;
+    }
+    .trusted-logo p {
+      margin: 0;
+      font-size: .88rem;
+      color: var(--ink-soft);
+      font-weight: 700;
+      line-height: 1.35;
+    }
     .links-grid {
       max-width: 1000px;
       margin: 0 auto;
@@ -536,6 +582,31 @@
           <h3>Guided onboarding</h3>
           <p>Short walkthroughs and checklists for GuruVidyaZen are expanding to <strong>School SISLMS</strong> so the clips match the live school shell—coverage rolls out by release; use <strong>in-app Help</strong> for the current playlist.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="trusted-by-section" aria-labelledby="trusted-partners">
+      <div class="wisconsin-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#28a745"/>
+          <path d="M2 17L12 22L22 17V12L12 17L2 12V17Z" fill="#28a745"/>
+        </svg>
+        <span>Wisconsin Compliant</span>
+      </div>
+      <h2 id="trusted-partners" class="section-title" style="margin-bottom:1.5rem;">Trusted by school partners</h2>
+      <div class="trusted-by-logos">
+        <div class="trusted-logo">
+          <img src="assets/BMM-Shala-Logo.jpg" alt="Brihan Maharshtral Mandal Schools">
+          <p>Brihan Maharshtral Mandal Schools</p>
+        </div>
+        <div class="trusted-logo">
+          <img src="assets/MMSlogo.jpg" alt="Milwaukee Marathi School">
+          <p>Milwaukee Marathi School</p>
+        </div>
+        <div class="trusted-logo">
+          <img src="assets/sewalogo.png" alt="SEWA USA Sponsored Schools">
+          <p>SEWA USA Sponsored Schools</p>
+        </div>
       </div>
     </section>
 
