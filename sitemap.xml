@@ -36,6 +36,14 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Saarthee CoPlanner subdomain -->
+    <url>
+        <loc>https://saarthee.nasneeraj.com/</loc>
+        <lastmod>2026-05-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Comparison Page -->
     <url>
         <loc>https://nasneeraj.com/compare.html</loc>
