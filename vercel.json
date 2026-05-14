@@ -37,6 +37,16 @@
       "destination": "/saarthee.html"
     },
     {
+      "source": "/index.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "saarthee.nasneeraj.com"
+        }
+      ],
+      "destination": "/saarthee.html"
+    },
+    {
       "source": "/",
       "destination": "/index.html"
     },
