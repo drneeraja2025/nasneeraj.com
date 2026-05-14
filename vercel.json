@@ -5,16 +5,6 @@
   "framework": null,
   "redirects": [
     {
-      "source": "/saarthee",
-      "destination": "https://saarthee.nasneeraj.com/",
-      "permanent": false
-    },
-    {
-      "source": "/saarthee/",
-      "destination": "https://saarthee.nasneeraj.com/",
-      "permanent": false
-    },
-    {
       "source": "/guruvidyazen",
       "destination": "https://guruvidyazen.nasneeraj.com/",
       "permanent": false
