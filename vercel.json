@@ -5,14 +5,34 @@
   "framework": null,
   "redirects": [
     {
-      "source": "/saarthee",
-      "destination": "https://saarthee.nasneeraj.com/",
-      "permanent": true
+      "source": "/sign-in",
+      "has": [{ "type": "host", "value": "saarthee.nasneeraj.com" }],
+      "destination": "https://saarthee-coplanner.vercel.app/sign-in",
+      "permanent": false
     },
     {
-      "source": "/saarthee/",
-      "destination": "https://saarthee.nasneeraj.com/",
-      "permanent": true
+      "source": "/sign-up",
+      "has": [{ "type": "host", "value": "saarthee.nasneeraj.com" }],
+      "destination": "https://saarthee-coplanner.vercel.app/sign-up",
+      "permanent": false
+    },
+    {
+      "source": "/legal/:path*",
+      "has": [{ "type": "host", "value": "saarthee.nasneeraj.com" }],
+      "destination": "https://saarthee-coplanner.vercel.app/legal/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/help/:path*",
+      "has": [{ "type": "host", "value": "saarthee.nasneeraj.com" }],
+      "destination": "https://saarthee-coplanner.vercel.app/help/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/help",
+      "has": [{ "type": "host", "value": "saarthee.nasneeraj.com" }],
+      "destination": "https://saarthee-coplanner.vercel.app/help",
+      "permanent": false
     },
     {
       "source": "/guruvidyazen",
@@ -37,16 +57,6 @@
       "destination": "/saarthee.html"
     },
     {
-      "source": "/index.html",
-      "has": [
-        {
-          "type": "host",
-          "value": "saarthee.nasneeraj.com"
-        }
-      ],
-      "destination": "/saarthee.html"
-    },
-    {
       "source": "/",
       "destination": "/index.html"
     },
@@ -57,6 +67,10 @@
     {
       "source": "/services",
       "destination": "/services.html"
+    },
+    {
+      "source": "/saarthee",
+      "destination": "/saarthee.html"
     },
     {
       "source": "/signup",
