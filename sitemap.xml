@@ -44,6 +44,14 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Astrology Guide subdomain -->
+    <url>
+        <loc>https://horoscopeguide.nasneeraj.com/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- Comparison Page -->
     <url>
         <loc>https://nasneeraj.com/compare.html</loc>
