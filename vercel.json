@@ -109,6 +109,14 @@
       "destination": "/disclaimer.html"
     },
     {
+      "source": "/legal/astrology",
+      "destination": "/legal/astrology-policies.html"
+    },
+    {
+      "source": "/legal/astrology-policies",
+      "destination": "/legal/astrology-policies.html"
+    },
+    {
       "source": "/compare",
       "destination": "/compare.html"
     },
