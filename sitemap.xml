@@ -52,6 +52,14 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- Saarthee Fleet Manager subdomain -->
+    <url>
+        <loc>https://fleet.nasneeraj.com/</loc>
+        <lastmod>2026-06-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
     <!-- Comparison Page -->
     <url>
         <loc>https://nasneeraj.com/compare.html</loc>
