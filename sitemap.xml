@@ -219,6 +219,14 @@
         <changefreq>monthly</changefreq>
         <priority>0.55</priority>
     </url>
+
+    <!-- Astrology book — legal & policies -->
+    <url>
+        <loc>https://nasneeraj.com/legal/astrology-policies.html</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
     
 </urlset>
 
