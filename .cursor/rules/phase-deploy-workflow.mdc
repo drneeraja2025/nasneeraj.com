@@ -1,0 +1,45 @@
+---
+description: After each development phase — ask env, push, watch Vercel deploy, fix failures
+alwaysApply: true
+---
+
+# Phase deploy workflow (automated)
+
+When you **finish a development phase** and the user has not said "don't deploy", run this workflow **before ending the turn**.
+
+Static site — **no local npm build** (Vercel runs `build.sh`). Script skips build preflight.
+
+## 1. Ask which environment
+
+| Option | When to use |
+|--------|-------------|
+| **Preview** (`development`) | HTML changes before production |
+| **Production** (`master`) | Ready for nasneeraj.com |
+| **Skip deploy** | Local-only edits |
+
+Default: **Preview** unless user asked for production.
+
+## 2. Commit if needed
+
+- Commit only when user asked or phase includes shipping.
+- Never commit LFS pointers without actual assets.
+
+## 3. Run phase deploy
+
+```powershell
+npm run phase:deploy -- --env preview
+npm run phase:deploy -- --env production
+```
+
+On failure: read Vercel logs → fix → commit → re-run.
+
+## 4. Branch reference
+
+| Env | Branch | URL |
+|-----|--------|-----|
+| Preview | `development` | Vercel preview |
+| Production | `master` | https://nasneeraj.com |
+
+**Note:** Remote also has `main`; active production branch is **`master`**.
+
+Config: `scripts/phase-deploy.config.json`

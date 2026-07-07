@@ -1,0 +1,20 @@
+---
+description: Use GitHub Desktop Git when git isn't on PATH (NAS projects)
+alwaysApply: true
+---
+
+# Git push in NAS projects (Cursor / other windows)
+
+When `git` is **not on PATH**, use GitHub Desktop’s Git by full path:
+
+```powershell
+$git = "C:\Users\bccli\AppData\Local\GitHubDesktop\app-3.5.4\resources\app\git\cmd\git.exe"
+& $git status
+& $git push origin <branch>
+```
+
+If the path doesn’t exist, check `C:\Users\bccli\AppData\Local\GitHubDesktop\` for the current `app-*\resources\app\git\cmd\git.exe`.
+
+`phase-deploy.config.json` can set `gitExecutable` to this path so `npm run phase:deploy` works in any Cursor window.
+
+Use **at most 10 git commands** per batch when scripting.

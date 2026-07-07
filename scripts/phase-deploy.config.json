@@ -1,0 +1,20 @@
+{
+  "projectName": "nasneeraj.com",
+  "repo": "drneeraja2025/nasneeraj.com",
+  "projectFilter": "nasneeraj",
+  "production": {
+    "branch": "master",
+    "label": "Production (nasneeraj.com)",
+    "url": "https://nasneeraj.com"
+  },
+  "preview": {
+    "branch": "development",
+    "label": "Preview (development branch)",
+    "url": "Vercel preview URL"
+  },
+  "build": {
+    "command": "bash build.sh",
+    "cwd": null,
+    "skip": true
+  }
+}
