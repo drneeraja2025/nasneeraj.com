@@ -1,0 +1,9 @@
+{
+  "name": "nasneeraj.com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NAS marketing site — static HTML on Vercel",
+  "scripts": {
+    "phase:deploy": "node scripts/phase-deploy.mjs"
+  }
+}
