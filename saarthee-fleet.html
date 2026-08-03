@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saarthee Fleet Manager by Saaniya Software LLC | Private rides &amp; Turo ops</title>
+    <meta name="description" content="Saarthee Fleet Manager by Saaniya Software LLC is a mobile-first fleet dashboard for private chauffeur rides, Turo rental tracking, quoting, schedules, and unified financials.">
+    <meta name="keywords" content="Saarthee Fleet Manager, Saaniya Software LLC, fleet operations, private chauffeur, Turo rentals, ride quoting, fleet dashboard">
+    <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasneeraj.com/saarthee-fleet">
+    <meta property="og:title" content="Saarthee Fleet Manager by Saaniya Software LLC">
+    <meta property="og:description" content="Fleet ops for private chauffeur rides and Turo rentals — quoting, schedule, reports, and payments in one dashboard.">
+    <meta property="og:image" content="https://nasneeraj.com/assets/Saaniyalogo.png">
+
+    <style>
+        :root {
+            --ink: #0f172a;
+            --soft: #475569;
+            --muted: #64748b;
+            --line: #e2e8f0;
+            --cream: #fffbf5;
+            --card: #ffffff;
+            --indigo: #4f46e5;
+            --violet: #7c3aed;
+            --cyan: #06b6d4;
+            --radius: 24px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+            color: var(--ink);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 251, 245, 0.94);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            backdrop-filter: blur(16px);
+        }
+
+        .nav-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 16px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.94rem;
+            color: var(--soft);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover { color: var(--indigo); }
+
+        .hero {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 76px 22px 48px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+            gap: 44px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(79, 70, 229, 0.18);
+            background: rgba(79, 70, 229, 0.08);
+            color: #3730a3;
+            border-radius: 999px;
+            padding: 8px 13px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: clamp(2.7rem, 6vw, 5.2rem);
+            line-height: 0.96;
+            letter-spacing: -0.055em;
+            max-width: 760px;
+            margin-bottom: 24px;
+        }
+
+        .highlight { color: var(--indigo); }
+
+        .hero-sub {
+            color: var(--soft);
+            font-size: 1.18rem;
+            max-width: 690px;
+            margin-bottom: 30px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            color: white;
+            background: linear-gradient(135deg, var(--indigo), var(--violet));
+        }
+
+        .btn-secondary {
+            color: var(--ink);
+            background: white;
+            border-color: var(--line);
+        }
+
+        .status {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .panel {
+            background: var(--card);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 32px;
+            padding: 26px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .pill {
+            border-radius: 999px;
+            padding: 7px 11px;
+            background: #f1f5f9;
+            color: var(--soft);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .brief-list { display: grid; gap: 12px; }
+
+        .brief-item {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .brief-item strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .brief-item span {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .section {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 34px 22px;
+        }
+
+        .section h2 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.035em;
+            margin-bottom: 12px;
+        }
+
+        .section-lead {
+            color: var(--soft);
+            max-width: 760px;
+            margin-bottom: 26px;
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 22px;
+        }
+
+        .card h3 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: 1.22rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: var(--soft);
+            font-size: 0.98rem;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .step {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 18px;
+        }
+
+        .step small {
+            color: var(--indigo);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .step p {
+            margin-top: 8px;
+            color: var(--soft);
+        }
+
+        .notice {
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: var(--radius);
+            padding: 22px;
+            color: #312e81;
+        }
+
+        .footer {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 36px 22px 52px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero,
+            .grid,
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .hero { padding-top: 44px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+                <span>Saaniya Software LLC</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="saarthee.html">CoPlanner</a>
+                <a href="saarthee-fleet.html">Fleet</a>
+                <a href="services.html">Services</a>
+                <a href="astrology-guide.html">Astrology Guide</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div>
+                <span class="eyebrow">Live product · fleet.nasneeraj.com</span>
+                <h1>Meet <span class="highlight">Saarthee Fleet Manager</span> by Saaniya Software LLC.</h1>
+                <p class="hero-sub">
+                    A mobile-first fleet dashboard for independent operators who run private chauffeur rides and host vehicles on Turo—quoting, scheduling, rentals, and unified financials in one place.
+                </p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="https://fleet.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Open Fleet app</a>
+                    <a class="btn btn-secondary" href="contact.html">Request access</a>
+                    <a class="btn btn-secondary" href="saarthee.html">Saarthee CoPlanner</a>
+                </div>
+                <p class="status">Software product of Saaniya Software LLC. Live at fleet.nasneeraj.com.</p>
+            </div>
+
+            <div class="panel" aria-label="Fleet Manager preview">
+                <div class="panel-header">
+                    <strong>Ops snapshot</strong>
+                    <span class="pill">Five modules</span>
+                </div>
+                <div class="brief-list">
+                    <div class="brief-item">
+                        <strong>Quoter</strong>
+                        <span>Compare Uber/Lyft-style market rates and set a private chauffeur rate with clear math.</span>
+                    </div>
+                    <div class="brief-item">
+                        <strong>Schedule + Turo</strong>
+                        <span>Manage ride status, vehicle calendars, iCal sync, and rental bookings together.</span>
+                    </div>
+                    <div class="brief-item">
+                        <strong>Reports &amp; payments</strong>
+                        <span>Split private vs Turo revenue, track expenses, export CSV, and show payment QR codes.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Built for mixed fleet work</h2>
+            <p class="section-lead">
+                Saarthee Fleet Manager helps operators who do both private rides and short-term rentals keep pricing, calendars, and cashflow aligned—without juggling spreadsheets and chat threads.
+            </p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Private chauffeur rides</h3>
+                    <p>Quote against market comps, schedule the trip, mark complete or canceled, and keep the original quote math expandable.</p>
+                </div>
+                <div class="card">
+                    <h3>Turo rental tracking</h3>
+                    <p>User-managed vehicles, availability, bookings, and iCal feed sync—no hardcoded fleet list.</p>
+                </div>
+                <div class="card">
+                    <h3>Unified financials</h3>
+                    <p>Private ride revenue + Turo income − expenses, with charts and CSV export for bookkeeping handoff.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>What you get in the app</h2>
+            <div class="timeline">
+                <div class="step">
+                    <small>Quoter</small>
+                    <p>Trip details, competitor cards, Comfort/Premier helpers, private rate = Comfort × 0.90.</p>
+                </div>
+                <div class="step">
+                    <small>Schedule</small>
+                    <p>Ride list with route, vehicle, rate, status actions, and expandable quote details.</p>
+                </div>
+                <div class="step">
+                    <small>Turo</small>
+                    <p>Vehicles, calendars, bookings, and iCal import via scheduled sync.</p>
+                </div>
+                <div class="step">
+                    <small>Reports</small>
+                    <p>Revenue split, expenses, net profit, performance metrics, and CSV ledger tools.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Entity note</h2>
+            <div class="notice">
+                Saarthee Fleet Manager is a <strong>software product of Saaniya Software LLC</strong>. It is not the transport brand for Saarthee Rides LLC. Use the live app for fleet operations; contact Saaniya Software for demos, pilots, and access.
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Saarthee Fleet Manager by Saaniya Software LLC · <a href="https://fleet.nasneeraj.com/" target="_blank" rel="noopener noreferrer">fleet.nasneeraj.com</a> · <a href="saarthee.html">Saarthee CoPlanner</a></p>
+    </footer>
+</body>
+</html>

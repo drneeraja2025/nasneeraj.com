@@ -228,5 +228,18 @@
         <priority>0.4</priority>
     </url>
     
+
+    <url>
+        <loc>https://nasneeraj.com/saarthee-fleet.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://nasneeraj.com/astrology-guide.html</loc>
+        <lastmod>2026-08-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 </urlset>
 

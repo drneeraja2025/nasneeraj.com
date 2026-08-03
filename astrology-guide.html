@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedic Astrology and Modern Science | Book by Saaniya Software LLC</title>
+    <meta name="description" content="Vedic Astrology and Modern Science — an interactive book and tools from Saaniya Software LLC. Free sample, 14 illustrated modules, live calculators, and reference matrix at horoscopeguide.nasneeraj.com.">
+    <meta name="keywords" content="Vedic Astrology and Modern Science, Astrology Guide, horoscopeguide, Jyotish, Saaniya Software LLC, interactive book">
+    <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasneeraj.com/astrology-guide">
+    <meta property="og:title" content="Vedic Astrology and Modern Science | Saaniya Software LLC">
+    <meta property="og:description" content="Interactive book: Jyotish in dialogue with physics, astronomy, psychology, and world faiths — 14 modules, calculators, and a free sample.">
+    <meta property="og:image" content="https://nasneeraj.com/assets/Saaniyalogo.png">
+
+    <style>
+        :root {
+            --ink: #0f172a;
+            --soft: #475569;
+            --muted: #64748b;
+            --line: #e2e8f0;
+            --cream: #fffbf5;
+            --card: #ffffff;
+            --indigo: #4f46e5;
+            --violet: #7c3aed;
+            --cyan: #06b6d4;
+            --radius: 24px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+            color: var(--ink);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 251, 245, 0.94);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            backdrop-filter: blur(16px);
+        }
+
+        .nav-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 16px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.94rem;
+            color: var(--soft);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover { color: var(--indigo); }
+
+        .hero {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 76px 22px 48px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+            gap: 44px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(79, 70, 229, 0.18);
+            background: rgba(79, 70, 229, 0.08);
+            color: #3730a3;
+            border-radius: 999px;
+            padding: 8px 13px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+            line-height: 0.98;
+            letter-spacing: -0.05em;
+            max-width: 780px;
+            margin-bottom: 16px;
+        }
+
+        .highlight { color: var(--indigo); }
+
+        .book-sub {
+            color: var(--soft);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .hero-sub {
+            color: var(--soft);
+            font-size: 1.12rem;
+            max-width: 690px;
+            margin-bottom: 30px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            color: white;
+            background: linear-gradient(135deg, var(--indigo), var(--violet));
+        }
+
+        .btn-secondary {
+            color: var(--ink);
+            background: white;
+            border-color: var(--line);
+        }
+
+        .status {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .panel {
+            background: var(--card);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 32px;
+            padding: 26px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .pill {
+            border-radius: 999px;
+            padding: 7px 11px;
+            background: #f1f5f9;
+            color: var(--soft);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .brief-list { display: grid; gap: 12px; }
+
+        .brief-item {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .brief-item strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .brief-item span {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .section {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 34px 22px;
+        }
+
+        .section h2 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.035em;
+            margin-bottom: 12px;
+        }
+
+        .section-lead {
+            color: var(--soft);
+            max-width: 760px;
+            margin-bottom: 26px;
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 22px;
+        }
+
+        .card h3 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: 1.22rem;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: var(--soft);
+            font-size: 0.98rem;
+        }
+
+        .topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .topics span {
+            border: 1px solid var(--line);
+            background: white;
+            border-radius: 999px;
+            padding: 8px 14px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--soft);
+        }
+
+        .notice {
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: var(--radius);
+            padding: 22px;
+            color: #312e81;
+        }
+
+        .footer {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 36px 22px 52px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero,
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero { padding-top: 44px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+                <span>Saaniya Software LLC</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="saarthee-fleet.html">Fleet</a>
+                <a href="saarthee.html">CoPlanner</a>
+                <a href="astrology-guide.html">Astrology Guide</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div>
+                <span class="eyebrow">Live book · horoscopeguide.nasneeraj.com</span>
+                <h1><span class="highlight">Vedic Astrology</span><br>and Modern Science</h1>
+                <p class="book-sub">Vedic Wisdom, Modern Science, and the Search for Meaning</p>
+                <p class="hero-sub">
+                    An interactive book from Saaniya Software LLC that puts Jyotish in honest dialogue with physics, astronomy, psychology, world faiths, Ayurveda, yoga, and meditation — then teaches across 14 illustrated modules with live calculators and a reference matrix.
+                </p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="https://horoscopeguide.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Open Astrology Guide</a>
+                    <a class="btn btn-secondary" href="https://horoscopeguide.nasneeraj.com/sample" target="_blank" rel="noopener noreferrer">Read free sample</a>
+                    <a class="btn btn-secondary" href="contact.html">Ask about access</a>
+                </div>
+                <p class="status">Book product of Saaniya Software LLC · Vercel project <strong>horoscopeguide</strong></p>
+            </div>
+
+            <div class="panel" aria-label="Book product preview">
+                <div class="panel-header">
+                    <strong>What readers get</strong>
+                    <span class="pill">Digital + tools</span>
+                </div>
+                <div class="brief-list">
+                    <div class="brief-item">
+                        <strong>Free sample</strong>
+                        <span>Preface, Modern Science chapter, and Module 1 — no login required.</span>
+                    </div>
+                    <div class="brief-item">
+                        <strong>Full interactive book</strong>
+                        <span>14 modules with illustrations, inline calculators, and member access.</span>
+                    </div>
+                    <div class="brief-item">
+                        <strong>True-Sayana &amp; matrix tools</strong>
+                        <span>Educational engines and an interactive reference matrix on the live site.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>What the book examines</h2>
+            <p class="section-lead">
+                Built for believers and sceptics alike — weighing claims as Established, Frontier, or Metaphor before teaching prediction practice.
+            </p>
+            <div class="topics" aria-label="Topics">
+                <span>Astrology × Modern Science</span>
+                <span>World religions</span>
+                <span>Ayurveda &amp; health</span>
+                <span>Yoga, meditation &amp; karma</span>
+                <span>Alternative systems</span>
+                <span>Empirical evidence</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Start on the live site</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Free sample</h3>
+                    <p>Read the opening chapters online or download the sample PDF from the Astrology Guide app.</p>
+                    <p style="margin-top:14px;"><a class="btn btn-secondary" href="https://horoscopeguide.nasneeraj.com/sample" target="_blank" rel="noopener noreferrer">Open /sample</a></p>
+                </div>
+                <div class="card">
+                    <h3>Full book</h3>
+                    <p>Member access to all modules, calculators, and the interactive reading experience.</p>
+                    <p style="margin-top:14px;"><a class="btn btn-secondary" href="https://horoscopeguide.nasneeraj.com/read" target="_blank" rel="noopener noreferrer">Open /read</a></p>
+                </div>
+                <div class="card">
+                    <h3>True-Sayana Engine</h3>
+                    <p>Educational calculation tools aligned with the book’s sidereal baseline.</p>
+                    <p style="margin-top:14px;"><a class="btn btn-secondary" href="https://horoscopeguide.nasneeraj.com/true-sayana" target="_blank" rel="noopener noreferrer">Open tools</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Product note</h2>
+            <div class="notice">
+                <em>Vedic Astrology and Modern Science</em> (Astrology Guide / horoscopeguide) is a <strong>Saaniya Software LLC</strong> book product. Live host: <a href="https://horoscopeguide.nasneeraj.com/" target="_blank" rel="noopener noreferrer">horoscopeguide.nasneeraj.com</a>. Repo: <code>a-guide-to-understand-horoscope</code>. Content is educational — not medical, legal, or financial advice.
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Vedic Astrology and Modern Science by Saaniya Software LLC · <a href="https://horoscopeguide.nasneeraj.com/" target="_blank" rel="noopener noreferrer">horoscopeguide.nasneeraj.com</a></p>
+    </footer>
+</body>
+</html>

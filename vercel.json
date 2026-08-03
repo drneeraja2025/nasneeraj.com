@@ -73,6 +73,26 @@
       "destination": "/saarthee.html"
     },
     {
+      "source": "/saarthee-fleet",
+      "destination": "/saarthee-fleet.html"
+    },
+    {
+      "source": "/fleet",
+      "destination": "/saarthee-fleet.html"
+    },
+    {
+      "source": "/astrology-guide",
+      "destination": "/astrology-guide.html"
+    },
+    {
+      "source": "/horoscopeguide",
+      "destination": "/astrology-guide.html"
+    },
+    {
+      "source": "/vedic-astrology",
+      "destination": "/astrology-guide.html"
+    },
+    {
       "source": "/signup",
       "destination": "/signup.html"
     },
