@@ -1,16 +1,15 @@
 /* Shared left sidebar navigation for Saaniya Software LLC pages */
 :root {
     --side-nav-width: 268px;
-    --side-nav-collapsed-width: 88px;
 }
 
 body {
     margin-left: var(--side-nav-width) !important;
-    transition: margin-left 0.28s ease;
+    transition: margin-left 0.32s ease;
 }
 
 body.nav-collapsed {
-    margin-left: var(--side-nav-collapsed-width) !important;
+    margin-left: 0 !important;
 }
 
 nav.navbar {
@@ -31,13 +30,14 @@ nav.navbar {
     overflow-y: auto !important;
     z-index: 1000 !important;
     display: block !important;
-    transition: width 0.28s ease, max-width 0.28s ease, padding 0.28s ease !important;
+    transform: translateX(0) !important;
+    transition: transform 0.32s ease, box-shadow 0.32s ease !important;
 }
 
 nav.navbar.collapsed {
-    width: var(--side-nav-collapsed-width) !important;
-    max-width: var(--side-nav-collapsed-width) !important;
-    padding: 0.85rem 0.45rem 1rem !important;
+    transform: translateX(-105%) !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
 }
 
 nav.navbar .nav-container {
@@ -69,7 +69,6 @@ nav.navbar .nav-logo img {
     height: 80px !important;
     width: auto !important;
     max-width: 100% !important;
-    transition: height 0.28s ease !important;
 }
 
 nav.navbar .nav-logo-text {
@@ -80,7 +79,6 @@ nav.navbar .nav-logo-text {
     white-space: normal !important;
     text-align: center !important;
     width: 100% !important;
-    transition: opacity 0.2s ease, max-height 0.28s ease !important;
 }
 
 nav.navbar .sidebar-collapse {
@@ -114,41 +112,6 @@ nav.navbar .sidebar-collapse-icon {
     display: inline-block !important;
     font-size: 1rem !important;
     line-height: 1 !important;
-    transition: transform 0.28s ease !important;
-}
-
-nav.navbar .sidebar-collapse-label {
-    white-space: nowrap !important;
-}
-
-nav.navbar.collapsed .sidebar-collapse {
-    padding: 0.55rem 0.35rem !important;
-}
-
-nav.navbar.collapsed .sidebar-collapse-label {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-}
-
-nav.navbar.collapsed .sidebar-collapse-icon {
-    transform: rotate(180deg) !important;
-}
-
-nav.navbar.collapsed .nav-logo-text,
-nav.navbar.collapsed .nav-links {
-    display: none !important;
-}
-
-nav.navbar.collapsed .nav-logo {
-    border-bottom: none !important;
-    padding-bottom: 0.35rem !important;
-}
-
-nav.navbar.collapsed .nav-logo img {
-    height: 56px !important;
 }
 
 nav.navbar .menu-toggle {
@@ -254,6 +217,46 @@ nav.navbar .dropdown-menu a:focus-visible {
     padding-left: 0.85rem !important;
 }
 
+/* Floating control to slide the sidebar back in */
+.sidebar-reopen {
+    position: fixed !important;
+    top: 1rem !important;
+    left: 1rem !important;
+    z-index: 1100 !important;
+    display: none !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+    padding: 0.65rem 0.9rem !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+    color: #334155 !important;
+    font: inherit !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14) !important;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease !important;
+}
+
+body.nav-collapsed .sidebar-reopen {
+    display: inline-flex !important;
+}
+
+.sidebar-reopen:hover,
+.sidebar-reopen:focus-visible {
+    background: #eef2ff !important;
+    color: #4f46e5 !important;
+    transform: translateY(-1px) !important;
+    outline: none !important;
+}
+
+.sidebar-reopen img {
+    width: 28px !important;
+    height: 28px !important;
+    object-fit: contain !important;
+}
+
 /* Mobile: top bar + slide-out drawer */
 @media (max-width: 960px) {
     body,
@@ -275,6 +278,8 @@ nav.navbar .dropdown-menu a:focus-visible {
         border-right: none !important;
         border-bottom: 1px solid rgba(226, 232, 240, 0.9) !important;
         overflow: visible !important;
+        transform: none !important;
+        pointer-events: auto !important;
     }
 
     nav.navbar .nav-container {
@@ -294,20 +299,18 @@ nav.navbar .dropdown-menu a:focus-visible {
         text-align: left !important;
     }
 
-    nav.navbar .nav-logo img,
-    nav.navbar.collapsed .nav-logo img {
+    nav.navbar .nav-logo img {
         height: 52px !important;
     }
 
-    nav.navbar .nav-logo-text,
-    nav.navbar.collapsed .nav-logo-text {
-        display: block !important;
+    nav.navbar .nav-logo-text {
         font-size: 0.78rem !important;
         text-align: left !important;
         white-space: nowrap !important;
     }
 
-    nav.navbar .sidebar-collapse {
+    nav.navbar .sidebar-collapse,
+    .sidebar-reopen {
         display: none !important;
     }
 
@@ -317,9 +320,7 @@ nav.navbar .dropdown-menu a:focus-visible {
         z-index: 1002 !important;
     }
 
-    nav.navbar .nav-links,
-    nav.navbar.collapsed .nav-links {
-        display: flex !important;
+    nav.navbar .nav-links {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
@@ -333,6 +334,7 @@ nav.navbar .dropdown-menu a:focus-visible {
         transition: transform 0.28s ease !important;
         overflow-y: auto !important;
         z-index: 1001 !important;
+        pointer-events: auto !important;
     }
 
     nav.navbar .nav-links.active {

@@ -9,26 +9,54 @@
     return window.matchMedia('(max-width: 960px)').matches;
   }
 
+  function ensureReopenButton() {
+    var existing = document.getElementById('sidebarReopen');
+    if (existing) return existing;
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'sidebarReopen';
+    btn.className = 'sidebar-reopen';
+    btn.setAttribute('aria-label', 'Show navigation');
+    btn.innerHTML =
+      '<img src="assets/Saaniyalogo.png" alt="" width="28" height="28">' +
+      '<span>Menu</span>';
+    document.body.appendChild(btn);
+
+    btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      setCollapsed(false);
+    });
+
+    return btn;
+  }
+
   function setCollapsed(collapsed) {
     if (!navbar) return;
+    if (isMobile()) {
+      collapsed = false;
+    }
+
     navbar.classList.toggle('collapsed', collapsed);
     document.body.classList.toggle('nav-collapsed', collapsed);
+    navbar.setAttribute('aria-hidden', collapsed ? 'true' : 'false');
+
     try {
       localStorage.setItem(STORAGE_KEY, collapsed ? '1' : '0');
     } catch (err) {
       /* ignore storage errors */
     }
-    var btn = document.getElementById('sidebarCollapse');
-    if (btn) {
-      btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
-      btn.setAttribute(
-        'aria-label',
-        collapsed ? 'Expand navigation' : 'Collapse navigation'
-      );
-      var label = btn.querySelector('.sidebar-collapse-label');
-      if (label) {
-        label.textContent = collapsed ? 'Expand' : 'Collapse';
-      }
+
+    var hideBtn = document.getElementById('sidebarCollapse');
+    if (hideBtn) {
+      hideBtn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    }
+
+    var reopen = ensureReopenButton();
+    reopen.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    if (!isMobile() && collapsed) {
+      reopen.focus();
     }
   }
 
@@ -42,9 +70,10 @@
     btn.id = 'sidebarCollapse';
     btn.className = 'sidebar-collapse';
     btn.setAttribute('aria-controls', 'navLinks');
+    btn.setAttribute('aria-label', 'Hide navigation');
     btn.innerHTML =
       '<span class="sidebar-collapse-icon" aria-hidden="true">⟨</span>' +
-      '<span class="sidebar-collapse-label">Collapse</span>';
+      '<span class="sidebar-collapse-label">Hide menu</span>';
 
     var logo = navContainer.querySelector('.nav-logo');
     if (logo && logo.nextSibling) {
@@ -57,7 +86,7 @@
       event.preventDefault();
       event.stopPropagation();
       if (isMobile()) return;
-      setCollapsed(!navbar.classList.contains('collapsed'));
+      setCollapsed(true);
     });
 
     return btn;
@@ -65,20 +94,19 @@
 
   if (navbar && navContainer) {
     ensureCollapseButton();
+    ensureReopenButton();
+
     var saved = false;
     try {
       saved = localStorage.getItem(STORAGE_KEY) === '1';
     } catch (err) {
       saved = false;
     }
-    if (!isMobile()) {
-      setCollapsed(saved);
-    }
+    setCollapsed(!isMobile() && saved);
 
     window.addEventListener('resize', function () {
       if (isMobile()) {
-        navbar.classList.remove('collapsed');
-        document.body.classList.remove('nav-collapsed');
+        setCollapsed(false);
       } else {
         var preferCollapsed = false;
         try {
@@ -87,6 +115,12 @@
           preferCollapsed = false;
         }
         setCollapsed(preferCollapsed);
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && !isMobile() && !navbar.classList.contains('collapsed')) {
+        setCollapsed(true);
       }
     });
   }
