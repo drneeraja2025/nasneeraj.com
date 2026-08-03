@@ -85,17 +85,15 @@ nav.navbar .sidebar-collapse {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 0.4rem !important;
-    width: 100% !important;
-    margin: 0 0 0.15rem !important;
-    padding: 0.5rem 0.65rem !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    margin: 0 auto 0.15rem !important;
+    padding: 0 !important;
     border: 1px solid #e2e8f0 !important;
-    border-radius: 10px !important;
+    border-radius: 999px !important;
     background: #ffffff !important;
     color: #334155 !important;
     font: inherit !important;
-    font-size: 0.82rem !important;
-    font-weight: 600 !important;
     cursor: pointer !important;
     transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
 }
@@ -110,8 +108,9 @@ nav.navbar .sidebar-collapse:focus-visible {
 
 nav.navbar .sidebar-collapse-icon {
     display: inline-block !important;
-    font-size: 1rem !important;
+    font-size: 1.15rem !important;
     line-height: 1 !important;
+    font-weight: 700 !important;
 }
 
 nav.navbar .menu-toggle {
@@ -225,15 +224,15 @@ nav.navbar .dropdown-menu a:focus-visible {
     z-index: 1100 !important;
     display: none !important;
     align-items: center !important;
-    gap: 0.45rem !important;
-    padding: 0.65rem 0.9rem !important;
+    justify-content: center !important;
+    width: 3rem !important;
+    height: 3rem !important;
+    padding: 0 !important;
     border: 1px solid #e2e8f0 !important;
     border-radius: 999px !important;
     background: #ffffff !important;
     color: #334155 !important;
     font: inherit !important;
-    font-size: 0.88rem !important;
-    font-weight: 700 !important;
     cursor: pointer !important;
     box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14) !important;
     transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease !important;

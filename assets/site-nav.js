@@ -17,10 +17,10 @@
     btn.type = 'button';
     btn.id = 'sidebarReopen';
     btn.className = 'sidebar-reopen';
-    btn.setAttribute('aria-label', 'Show navigation');
+    btn.setAttribute('aria-label', 'Open navigation');
+    btn.title = 'Open navigation';
     btn.innerHTML =
-      '<img src="assets/Saaniyalogo.png" alt="" width="28" height="28">' +
-      '<span>Menu</span>';
+      '<img src="assets/Saaniyalogo.png" alt="" width="28" height="28">';
     document.body.appendChild(btn);
 
     btn.addEventListener('click', function (event) {
@@ -70,10 +70,10 @@
     btn.id = 'sidebarCollapse';
     btn.className = 'sidebar-collapse';
     btn.setAttribute('aria-controls', 'navLinks');
-    btn.setAttribute('aria-label', 'Hide navigation');
+    btn.setAttribute('aria-label', 'Close navigation');
+    btn.title = 'Close navigation';
     btn.innerHTML =
-      '<span class="sidebar-collapse-icon" aria-hidden="true">⟨</span>' +
-      '<span class="sidebar-collapse-label">Hide menu</span>';
+      '<span class="sidebar-collapse-icon" aria-hidden="true">⟨</span>';
 
     var logo = navContainer.querySelector('.nav-logo');
     if (logo && logo.nextSibling) {
