@@ -502,6 +502,7 @@
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="assets/site-sidebar.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -511,7 +512,12 @@
                 <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
                 <span class="nav-logo-text">Saaniya Software LLC</span>
             </a>
-            <ul class="nav-links">
+                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li class="nav-dropdown">
                     <a href="#">Products</a>
@@ -533,7 +539,7 @@
                     </div>
                 </li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="hotl-research.html">Research on HOTL by Saaniya Software LLC</a></li>
+                <li><a href="hotl-research.html">Research on HOTL</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="vision.html">Vision</a></li>
@@ -1141,6 +1147,7 @@
             Contact: <a href="mailto:neeraj@nasneeraj.com" style="color: #667eea;">neeraj@nasneeraj.com</a>
         </p>
     </footer>
+    <script src="assets/site-nav.js"></script>
 </body>
 </html>
 
