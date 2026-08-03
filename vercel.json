@@ -69,6 +69,10 @@
       "destination": "/services.html"
     },
     {
+      "source": "/upwork",
+      "destination": "/upwork.html"
+    },
+    {
       "source": "/saarthee",
       "destination": "/saarthee.html"
     },

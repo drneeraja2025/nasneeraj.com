@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Saaniya Software on Upwork | Explained</title>
+    <meta name="description" content="How to engage Saaniya Software LLC through Upwork: what we build, example engagement types, and how marketplace work relates to our direct services. Upwork profile coming soon.">
+    <meta name="keywords" content="Saaniya Software LLC, Upwork, software contracting, SaaS development, architecture, EdTech">
+    <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nasneeraj.com/upwork">
+    <meta property="og:title" content="Working with Saaniya Software on Upwork">
+    <meta property="og:description" content="An explanation of how clients can engage Saaniya Software LLC through Upwork—capabilities, portfolio, and example engagement types. Profile link coming soon.">
+    <meta property="og:image" content="https://nasneeraj.com/assets/Saaniyalogo.png">
+
+    <style>
+        :root {
+            --ink: #0f172a;
+            --soft: #475569;
+            --muted: #64748b;
+            --line: #e2e8f0;
+            --cream: #fffbf5;
+            --card: #ffffff;
+            --indigo: #4f46e5;
+            --violet: #7c3aed;
+            --radius: 24px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+            color: var(--ink);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 251, 245, 0.94);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            backdrop-filter: blur(16px);
+        }
+
+        .nav-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 16px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.94rem;
+            color: var(--soft);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover { color: var(--indigo); }
+
+        .hero {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 72px 22px 40px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            border: 1px solid rgba(79, 70, 229, 0.18);
+            background: rgba(79, 70, 229, 0.08);
+            color: #3730a3;
+            border-radius: 999px;
+            padding: 8px 13px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: clamp(2.4rem, 5vw, 4.2rem);
+            line-height: 1.02;
+            letter-spacing: -0.045em;
+            max-width: 900px;
+            margin-bottom: 18px;
+        }
+
+        .highlight { color: var(--indigo); }
+
+        .hero-sub {
+            color: var(--soft);
+            font-size: 1.15rem;
+            max-width: 720px;
+            margin-bottom: 28px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 22px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            color: white;
+            background: linear-gradient(135deg, var(--indigo), var(--violet));
+        }
+
+        .btn-secondary {
+            color: var(--ink);
+            background: white;
+            border-color: var(--line);
+        }
+
+        .btn-disabled {
+            color: var(--muted);
+            background: #f1f5f9;
+            border-color: var(--line);
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .status {
+            color: var(--muted);
+            font-size: 0.94rem;
+        }
+
+        .section {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 34px 22px;
+        }
+
+        .section h2 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+
+        .section-lead {
+            color: var(--soft);
+            max-width: 760px;
+            margin-bottom: 26px;
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 22px;
+        }
+
+        .card h3 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .card p, .card li {
+            color: var(--soft);
+            font-size: 0.98rem;
+        }
+
+        .card ul {
+            margin-top: 10px;
+            padding-left: 1.15rem;
+        }
+
+        .card li { margin-bottom: 6px; }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .step {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 18px;
+        }
+
+        .step small {
+            color: var(--indigo);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .step p {
+            margin-top: 8px;
+            color: var(--soft);
+        }
+
+        .notice {
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: var(--radius);
+            padding: 22px;
+            color: #312e81;
+        }
+
+        .portfolio a {
+            color: var(--indigo);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .portfolio a:hover { text-decoration: underline; }
+
+        .footer {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 36px 22px 52px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .grid, .grid-2, .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+                <span>Saaniya Software LLC</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="upwork.html">Upwork</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <span class="eyebrow">Marketplace engagement · explained</span>
+            <h1>Working with <span class="highlight">Saaniya Software</span> on Upwork</h1>
+            <p class="hero-sub">
+                This page explains how clients can engage Saaniya Software LLC through Upwork for custom software work—alongside our public products and direct professional services. It is not a price list or project catalog.
+            </p>
+            <div class="actions">
+                <span class="btn btn-disabled" aria-disabled="true">Upwork profile — coming soon</span>
+                <a class="btn btn-primary" href="contact.html">Contact us directly</a>
+                <a class="btn btn-secondary" href="services.html">Professional services</a>
+            </div>
+            <p class="status">Agency profile link will appear here when the public Upwork listing is live.</p>
+        </section>
+
+        <section class="section">
+            <h2>What Upwork is for (for us)</h2>
+            <p class="section-lead">
+                Upwork is one channel to hire Saaniya Software LLC for scoped software work under marketplace contracts. Clients who already know us—or prefer email—can still use our contact form and services page.
+            </p>
+            <div class="steps">
+                <div class="step">
+                    <small>Step 1</small>
+                    <p>Review our live products and this site so you know the kind of systems we ship.</p>
+                </div>
+                <div class="step">
+                    <small>Step 2</small>
+                    <p>When our Upwork profile is live, open it and send a clear brief (goals, timeline, stack preferences).</p>
+                </div>
+                <div class="step">
+                    <small>Step 3</small>
+                    <p>Agree scope on Upwork—milestones or hourly—then work proceeds under that contract.</p>
+                </div>
+                <div class="step">
+                    <small>Step 4</small>
+                    <p>Prefer direct? Use Contact or Professional Services; we route the same capability set.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Capabilities</h2>
+            <p class="section-lead">
+                Soft themes we take through Upwork or direct engagement—aligned with our shipped products.
+            </p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Full-stack SaaS</h3>
+                    <p>Web apps, dashboards, multi-tenant portals, payments, and admin tooling on a modern cloud stack.</p>
+                </div>
+                <div class="card">
+                    <h3>Architecture &amp; planning</h3>
+                    <p>System design, technology selection, security and data boundaries, and phased implementation roadmaps.</p>
+                </div>
+                <div class="card">
+                    <h3>AI-assisted delivery</h3>
+                    <p>Human-over-the-Loop (HOTL) practice: AI accelerates coding; people own architecture, security, and production quality.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Example engagement types</h2>
+            <p class="section-lead">
+                Illustrative shapes—not fixed packages, not priced tiers, and not our private Upwork catalog.
+            </p>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>SaaS MVP or rebuild</h3>
+                    <p>Take a product idea or legacy app to a first production slice: auth, core workflows, database, and deploy.</p>
+                </div>
+                <div class="card">
+                    <h3>Multi-tenant / portal work</h3>
+                    <p>Role-based access, school or academy-style hubs, guardian or staff portals, and careful data isolation.</p>
+                </div>
+                <div class="card">
+                    <h3>Architecture review</h3>
+                    <p>Short engagement to map stack choices, risks, and a phased plan before a larger build.</p>
+                </div>
+                <div class="card">
+                    <h3>Integrations &amp; automation</h3>
+                    <p>APIs, payments, calendars, messaging, or workflow glue—scoped to what the product already needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section portfolio">
+            <h2>Live portfolio (public products)</h2>
+            <p class="section-lead">
+                Evidence you can open today—same products we cite on the company site.
+            </p>
+            <div class="grid">
+                <div class="card">
+                    <h3>GuruVidyaZen</h3>
+                    <p>Academy management SaaS.</p>
+                    <p style="margin-top:10px;"><a href="https://guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Open platform</a></p>
+                </div>
+                <div class="card">
+                    <h3>School SISLMS</h3>
+                    <p>K–8 school &amp; learning hub.</p>
+                    <p style="margin-top:10px;"><a href="sislms.html">Overview</a> · <a href="https://sislms.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Live app</a></p>
+                </div>
+                <div class="card">
+                    <h3>More on this site</h3>
+                    <p>SISMMS, Riyaz Studio, Saarthee products, Astrology Guide.</p>
+                    <p style="margin-top:10px;"><a href="index.html#products">See products</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Stack we commonly use</h2>
+            <div class="card">
+                <p>Next.js · React · TypeScript · PostgreSQL (Supabase / Neon) · Vercel · auth &amp; RLS · Stripe and related APIs when the product needs them.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Note</h2>
+            <div class="notice">
+                This page does <strong>not</strong> publish Upwork catalog listings, package tiers, or pricing. Marketplace rates and deliverables are agreed on Upwork (or in a direct statement of work). Saaniya Software LLC remains the company behind the work; nasneeraj.com is the public product and information hub.
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Saaniya Software LLC · <a href="services.html">Services</a> · <a href="contact.html">Contact</a> · Upwork profile coming soon</p>
+    </footer>
+</body>
+</html>
