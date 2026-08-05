@@ -121,6 +121,10 @@
       "destination": "/social-saarthee-fleet.html"
     },
     {
+      "source": "/social-astrology",
+      "destination": "/social-astrology.html"
+    },
+    {
       "source": "/signup",
       "destination": "/signup.html"
     },

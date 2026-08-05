@@ -174,6 +174,33 @@
             font-size: 0.94rem;
         }
 
+        .logo-video-wrap {
+            background: #0b1220;
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+        }
+
+        .logo-video-wrap video {
+            display: block;
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+            background: #0b1220;
+        }
+
+        .logo-video-wrap .video-caption {
+            padding: 14px 18px 18px;
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            background: #0b1220;
+        }
+
+        .logo-video-wrap .video-caption strong {
+            color: #fff;
+        }
+
         .panel {
             background: var(--card);
             border: 1px solid rgba(226, 232, 240, 0.9);
@@ -339,24 +366,36 @@
                 <p class="status">Book product of Saaniya Software LLC · Vercel project <strong>horoscopeguide</strong></p>
             </div>
 
-            <div class="panel" aria-label="Book product preview">
-                <div class="panel-header">
-                    <strong>What readers get</strong>
-                    <span class="pill">Digital + tools</span>
+            <div class="logo-video-wrap" aria-label="Official book logo video">
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    controls
+                    poster="assets/astrology-cover.jpeg"
+                    aria-label="Vedic Astrology and Modern Science — spinning planet logo"
+                >
+                    <source src="assets/astrology-spinning-planet.mp4" type="video/mp4">
+                </video>
+                <p class="video-caption"><strong>Official logo:</strong> spinning-planet video from the live Astrology Guide.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>What readers get</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Free sample</h3>
+                    <p>Preface, Modern Science chapter, and Module 1 — no login required.</p>
                 </div>
-                <div class="brief-list">
-                    <div class="brief-item">
-                        <strong>Free sample</strong>
-                        <span>Preface, Modern Science chapter, and Module 1 — no login required.</span>
-                    </div>
-                    <div class="brief-item">
-                        <strong>Full interactive book</strong>
-                        <span>14 modules with illustrations, inline calculators, and member access.</span>
-                    </div>
-                    <div class="brief-item">
-                        <strong>True-Sayana &amp; matrix tools</strong>
-                        <span>Educational engines and an interactive reference matrix on the live site.</span>
-                    </div>
+                <div class="card">
+                    <h3>Full interactive book</h3>
+                    <p>14 modules with illustrations, inline calculators, and member access.</p>
+                </div>
+                <div class="card">
+                    <h3>True-Sayana &amp; matrix tools</h3>
+                    <p>Educational engines and an interactive reference matrix on the live site.</p>
                 </div>
             </div>
         </section>

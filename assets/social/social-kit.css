@@ -32,6 +32,16 @@ h2 { font-size: 1.3rem; margin: 2rem 0 0.75rem; color: var(--blue); }
 }
 .pill-gvz { background: #ecfeff; color: var(--family); }
 .pill-saarthee { background: #eef2ff; color: #4338ca; }
+.pill-book { background: #fff7ed; color: #9a3412; }
+.product-logo-frame .logo-video {
+    display: block;
+    width: min(100%, 420px);
+    max-height: 320px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: #0f172a;
+    object-fit: contain;
+}
 .note, .card {
     background: #fff;
     border: 1px solid var(--line);
