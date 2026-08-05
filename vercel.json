@@ -101,6 +101,26 @@
       "destination": "/social-kit.html"
     },
     {
+      "source": "/social-guruvidyazen",
+      "destination": "/social-guruvidyazen.html"
+    },
+    {
+      "source": "/social-sislms",
+      "destination": "/social-sislms.html"
+    },
+    {
+      "source": "/social-riyaz",
+      "destination": "/social-riyaz.html"
+    },
+    {
+      "source": "/social-saarthee-coplanner",
+      "destination": "/social-saarthee-coplanner.html"
+    },
+    {
+      "source": "/social-saarthee-fleet",
+      "destination": "/social-saarthee-fleet.html"
+    },
+    {
       "source": "/signup",
       "destination": "/signup.html"
     },

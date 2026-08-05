@@ -1,0 +1,130 @@
+/* Shared styles for Saaniya Software social product kits */
+:root {
+    --ink: #0f172a;
+    --soft: #475569;
+    --line: #e2e8f0;
+    --cream: #fffbf5;
+    --blue: #1d4ed8;
+    --gold: #b8860b;
+    --family: #0f766e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+h1, h2, h3 { font-family: "Outfit", system-ui, sans-serif; }
+h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 0.4rem; }
+h2 { font-size: 1.3rem; margin: 2rem 0 0.75rem; color: var(--blue); }
+.lede { color: var(--soft); max-width: 40rem; margin-bottom: 1.25rem; }
+.pill {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+}
+.pill-gvz { background: #ecfeff; color: var(--family); }
+.pill-saarthee { background: #eef2ff; color: #4338ca; }
+.note, .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1rem 1.15rem;
+    margin-bottom: 1rem;
+}
+.note { color: var(--soft); }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 1.25rem;
+}
+.card label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.35rem;
+}
+.copy-block {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+    border: 1px dashed #cbd5e1;
+}
+.asset {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+}
+.asset img { display: block; width: 100%; height: auto; }
+.asset figcaption {
+    padding: 0.75rem 1rem 1rem;
+    font-size: 0.88rem;
+    color: var(--soft);
+}
+.asset a { color: var(--blue); font-weight: 600; text-decoration: none; }
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 1rem 0 1.5rem;
+}
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--blue);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+}
+.nav-links a.active {
+    background: #1d4ed8;
+    color: #fff;
+    border-color: #1d4ed8;
+}
+.back { display: inline-block; margin-bottom: 1rem; color: var(--blue); font-weight: 600; text-decoration: none; }
+.checklist { padding-left: 1.2rem; color: var(--soft); }
+.checklist li { margin: 0.35rem 0; }
+.preview {
+    max-width: 380px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 1rem 0 1.5rem;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+.preview .top {
+    display: flex;
+    gap: 0.85rem;
+    align-items: center;
+    padding: 1rem 1rem 0.6rem;
+}
+.preview .avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e2e8f0;
+}
+.preview .bio {
+    padding: 0 1rem 0.85rem;
+    font-size: 0.88rem;
+    color: var(--soft);
+}
+.preview .bio strong { color: var(--ink); display: block; margin-bottom: 0.15rem; }
