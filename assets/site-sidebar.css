@@ -209,8 +209,6 @@ nav.navbar .nav-dropdown > a::after {
     transition: transform 0.2s ease !important;
 }
 
-nav.navbar .nav-dropdown:hover > a::after,
-nav.navbar .nav-dropdown:focus-within > a::after,
 nav.navbar .nav-dropdown.open > a::after {
     transform: rotate(180deg) !important;
 }
@@ -221,7 +219,7 @@ nav.navbar .dropdown-menu {
     left: auto !important;
     display: none !important;
     opacity: 1 !important;
-    visibility: visible !important;
+    visibility: hidden !important;
     transform: none !important;
     box-shadow: none !important;
     border-radius: 10px !important;
@@ -234,10 +232,13 @@ nav.navbar .dropdown-menu {
     z-index: 1 !important;
 }
 
-nav.navbar .nav-dropdown:hover > .dropdown-menu,
-nav.navbar .nav-dropdown:focus-within > .dropdown-menu,
-nav.navbar .nav-dropdown.open > .dropdown-menu {
+/* Click/.open only — hover is unreliable on mobile Chrome */
+nav.navbar .nav-dropdown.open > .dropdown-menu,
+nav.navbar .dropdown-menu.is-open {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
 }
 
 nav.navbar .dropdown-menu a {

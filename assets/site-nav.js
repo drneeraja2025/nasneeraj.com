@@ -38,7 +38,6 @@
     navLinks.classList.toggle('active', open);
     navLinks.setAttribute('aria-hidden', open ? 'false' : 'true');
 
-    // Only inert the off-canvas drawer on mobile when it is closed.
     if (isMobile()) {
       if (open) {
         navLinks.removeAttribute('inert');
@@ -65,9 +64,19 @@
     navLinks.querySelectorAll('.nav-dropdown.open').forEach(function (item) {
       if (except && item === except) return;
       item.classList.remove('open');
-      var trigger = item.querySelector(':scope > a');
+      var menu = item.querySelector('.dropdown-menu');
+      if (menu) menu.classList.remove('is-open');
+      var trigger = item.querySelector('a');
       if (trigger) trigger.setAttribute('aria-expanded', 'false');
     });
+  }
+
+  function setDropdownOpen(item, open) {
+    var trigger = item.querySelector('a');
+    var menu = item.querySelector('.dropdown-menu');
+    item.classList.toggle('open', open);
+    if (menu) menu.classList.toggle('is-open', open);
+    if (trigger) trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
   }
 
   function setCollapsed(collapsed) {
@@ -138,32 +147,37 @@
     return btn;
   }
 
+  function isDropdownTrigger(link) {
+    if (!link || !link.parentElement) return false;
+    return link.parentElement.classList.contains('nav-dropdown');
+  }
+
   function wireDropdowns() {
     if (!navLinks) return;
 
     navLinks.querySelectorAll('.nav-dropdown').forEach(function (item) {
-      var trigger = item.querySelector(':scope > a');
-      if (!trigger || trigger.dataset.dropdownWired === '1') return;
+      var trigger = item.querySelector('a');
+      var menu = item.querySelector('.dropdown-menu');
+      if (!trigger || !menu || trigger.dataset.dropdownWired === '1') return;
       trigger.dataset.dropdownWired = '1';
       trigger.setAttribute('aria-expanded', 'false');
       trigger.setAttribute('aria-haspopup', 'true');
+      trigger.setAttribute('role', 'button');
 
-      trigger.addEventListener('click', function (event) {
-        // Products / Compare toggles use href="#"; always toggle instead of navigating.
-        var href = (trigger.getAttribute('href') || '').trim();
-        var isToggleOnly = !href || href === '#' || href === '#!';
-        if (isToggleOnly || item.querySelector(':scope > .dropdown-menu')) {
-          // For Compare which links to compare.html, still allow toggle when menu exists.
-          if (item.querySelector(':scope > .dropdown-menu')) {
-            event.preventDefault();
-            event.stopPropagation();
-            var willOpen = !item.classList.contains('open');
-            closeAllDropdowns(item);
-            item.classList.toggle('open', willOpen);
-            trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      trigger.addEventListener(
+        'click',
+        function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          if (typeof event.stopImmediatePropagation === 'function') {
+            event.stopImmediatePropagation();
           }
-        }
-      });
+          var willOpen = !item.classList.contains('open');
+          closeAllDropdowns(item);
+          setDropdownOpen(item, willOpen);
+        },
+        true
+      );
     });
   }
 
@@ -258,14 +272,12 @@
     }
   });
 
-  navLinks.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      if (!isMobile()) return;
-      // Keep drawer open when expanding Products / Compare.
-      if (link.closest('.nav-dropdown') && link.parentElement && link.parentElement.classList.contains('nav-dropdown')) {
-        return;
-      }
-      syncDrawerState(false);
-    });
+  navLinks.addEventListener('click', function (event) {
+    if (!isMobile()) return;
+    var link = event.target.closest('a');
+    if (!link || !navLinks.contains(link)) return;
+    if (isDropdownTrigger(link)) return;
+    // Submenu / normal links close the drawer after navigation starts.
+    syncDrawerState(false);
   });
 })();
