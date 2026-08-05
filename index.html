@@ -744,6 +744,76 @@
             font-size: 0.95em;
         }
 
+        /* Cybersecurity highlight */
+        .cyber-section {
+            background:
+                radial-gradient(ellipse 70% 60% at 0% 0%, rgba(6, 182, 212, 0.08) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(79, 70, 229, 0.08) 0%, transparent 50%),
+                #f8fafc;
+            border-radius: var(--nas-radius);
+            padding: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 4vw, 2.5rem);
+            border: 1px solid #e2e8f0;
+        }
+
+        .cyber-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin: 2rem 0 1.75rem;
+        }
+
+        .cyber-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.25rem 1.35rem;
+        }
+
+        .cyber-card h3 {
+            font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+            font-size: 1.15rem;
+            color: #0f172a;
+            margin-bottom: 0.65rem;
+            font-weight: 700;
+        }
+
+        .cyber-card p,
+        .cyber-card li {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .cyber-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cyber-card li {
+            padding: 0.35rem 0 0.35rem 1.15rem;
+            position: relative;
+        }
+
+        .cyber-card li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background: #4f46e5;
+        }
+
+        .cyber-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
         /* Contact Section */
         .contact-section {
             background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
@@ -1094,6 +1164,7 @@
                 </li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="upwork.html">Upwork</a></li>
+                <li><a href="#cybersecurity">Cybersecurity</a></li>
                 <li><a href="hotl-research.html">Research on HOTL</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
@@ -1114,7 +1185,7 @@
                 </p>
                 <div class="hero-chips" role="list">
                     <span class="hero-chip" role="listitem">Schools · academies · personal productivity</span>
-                    <span class="hero-chip" role="listitem">Vercel cloud · Postgres · secure multi-tenant patterns</span>
+                    <span class="hero-chip" role="listitem">Cybersecurity · tenant isolation · privacy-first OAuth</span>
                     <span class="hero-chip" role="listitem">AI-assisted workflows where humans stay in control</span>
                 </div>
                 <div style="margin-bottom: 1.25rem;">
@@ -1122,8 +1193,8 @@
                 </div>
                 <div class="hero-buttons">
                     <a href="#products" class="btn btn-primary">Explore our products</a>
+                    <a href="#cybersecurity" class="btn btn-secondary">Cybersecurity</a>
                     <a href="https://saarthee.nasneeraj.com/" class="btn btn-secondary">Saarthee CoPlanner</a>
-                    <a href="#upwork" class="btn btn-secondary">Upwork</a>
                     <a href="demo.html" class="btn btn-secondary">Request a demo</a>
                 </div>
             </div>
@@ -1173,11 +1244,70 @@
             </p>
             <div class="hero-chips" style="justify-content: center; max-width: 980px; margin: 0 auto;">
                 <span class="hero-chip">Vercel edge hosting &amp; CI/CD</span>
-                <span class="hero-chip">Postgres (Neon) &amp; row-level security</span>
+                <span class="hero-chip">Postgres with tenant isolation</span>
                 <span class="hero-chip">OAuth &amp; scoped integrations</span>
                 <span class="hero-chip">FERPA- &amp; COPPA-conscious school workflows</span>
                 <span class="hero-chip">AI-assisted features with approval paths</span>
-                <span class="hero-chip">Static marketing + live app subdomains</span>
+                <span class="hero-chip">TLS in transit · encryption at rest</span>
+            </div>
+        </div>
+
+        <!-- Cybersecurity highlight -->
+        <div class="section" id="cybersecurity" style="animation: fadeInUp 0.8s ease-out 0.15s both;">
+            <div class="cyber-section">
+                <h2 class="section-title" style="margin-bottom: 0.75rem;">Cybersecurity across our products</h2>
+                <p style="font-size: 1.08em; text-align: center; max-width: 920px; margin: 0 auto; line-height: 1.8; color: #555;">
+                    Security is designed into <strong>GuruVidyaZen</strong>, <strong>School SISLMS</strong>, <strong>Riyaz Studio</strong>,
+                    <strong>Saarthee Fleet Manager</strong>, and <strong>Saarthee CoPlanner</strong>—not bolted on later.
+                    We emphasize tenant isolation, least-privilege access, and privacy-first integrations.
+                </p>
+                <div class="cyber-grid">
+                    <article class="cyber-card">
+                        <h3>Shared foundation</h3>
+                        <ul>
+                            <li>HTTPS / TLS for data in transit on Vercel-hosted apps</li>
+                            <li>Cloud Postgres with encryption at rest on provider infrastructure</li>
+                            <li>Scoped OAuth for third-party tools (Google and related integrations)</li>
+                            <li>Human-over-the-loop for AI-assisted workflows</li>
+                            <li>Published Privacy, Terms, and product legal surfaces</li>
+                        </ul>
+                    </article>
+                    <article class="cyber-card">
+                        <h3>GuruVidyaZen · SISLMS · Riyaz</h3>
+                        <ul>
+                            <li>Postgres row-level security (RLS) for school/academy isolation</li>
+                            <li>Role-based access (admins, teachers, students, guardians)</li>
+                            <li>FERPA- and COPPA-conscious education workflows</li>
+                            <li>WSDPA-ready posture for Wisconsin schools</li>
+                            <li>Auth hardening with Turnstile where enabled; Riyaz mic/camera consent + teacher approval for AI scores</li>
+                        </ul>
+                    </article>
+                    <article class="cyber-card">
+                        <h3>Saarthee Fleet &amp; CoPlanner</h3>
+                        <ul>
+                            <li>Fleet: Clerk auth, organization-based tenancy, admin audit logging</li>
+                            <li>Fleet: pilot approval gating and scoped Google Drive OAuth</li>
+                            <li>CoPlanner: privacy-first, minimum OAuth scopes</li>
+                            <li>CoPlanner: Turnstile on auth, server-only integration tokens</li>
+                            <li>CoPlanner: secret-gated jobs plus SAST / dependency audit practices</li>
+                        </ul>
+                    </article>
+                    <article class="cyber-card">
+                        <h3>Compliance &amp; response</h3>
+                        <ul>
+                            <li>Security &amp; compliance whitepaper for education products</li>
+                            <li>WSDPA contract template for Wisconsin districts</li>
+                            <li>Breach-notification commitments documented in our policies</li>
+                            <li>Runs on SOC 2 Type II–certified cloud providers (not a claim that Saaniya itself is SOC 2 certified)</li>
+                            <li>Counsel-first wording: marketing never replaces your legal review</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="cyber-actions">
+                    <a href="security-compliance.html" class="btn btn-primary">Security &amp; compliance</a>
+                    <a href="wsdpa.html" class="btn btn-secondary">WSDPA template</a>
+                    <a href="privacy.html" class="btn btn-secondary">Privacy policy</a>
+                </div>
             </div>
         </div>
 
@@ -1195,7 +1325,7 @@
                     </p>
                     <ul class="product-features">
                         <li>Public School SISLMS story: warm copy, compare table, and deep links to GuruVidyaZen</li>
-                        <li>Row-level security by school, aligned with the live app</li>
+                        <li>Row-level security by school, RBAC, FERPA-/COPPA-conscious workflows</li>
                         <li>Live host: sislms.guruvidyazen.nasneeraj.com</li>
                         <li>See how the stack lines up: School SISLMS vs. a reference SISMMS-style data shape</li>
                     </ul>
@@ -1232,7 +1362,8 @@
                     </p>
                     <ul class="product-features">
                         <li>Daily brief across the tools you already use</li>
-                        <li>Privacy-first design with scope-by-scope integration review</li>
+                        <li>Privacy-first design, minimum OAuth scopes, Turnstile on auth</li>
+                        <li>Server-only integration tokens and secret-gated jobs</li>
                         <li>Preview and updates at saarthee.nasneeraj.com</li>
                     </ul>
                     <div class="product-actions">
@@ -1252,9 +1383,9 @@
                     </p>
                     <ul class="product-features">
                         <li>7-year master repertoire vaults &amp; CCE matrices</li>
+                        <li>Multi-tenant RLS isolation, RBAC, and audit-ready education posture</li>
                         <li>Examiner tools &amp; student QR portfolios</li>
                         <li>AI stylistic analysis for practice media (where product allows)</li>
-                        <li>Financial ledger, Stripe, and 11+ locales</li>
                     </ul>
                     <div class="product-actions">
                         <a href="https://guruvidyazen.nasneeraj.com/" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer">Open platform</a>
@@ -1271,8 +1402,8 @@
                     </p>
                     <ul class="product-features">
                         <li>Hands-on demo deployment</li>
-                        <li>Aligned with GuruVidyaZen product UX</li>
-                        <li>Ideal for academies evaluating the platform</li>
+                        <li>Same GuruVidyaZen trust stack; mic/camera consent for practice analysis</li>
+                        <li>Human-in-the-loop: AI scores stay formative until teacher save</li>
                     </ul>
                     <div class="product-actions">
                         <a href="https://riyaz.guruvidyazen.nasneeraj.com/" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer">Open Riyaz Studio</a>
@@ -1306,8 +1437,8 @@
                     </p>
                     <ul class="product-features">
                         <li>Smart quoter, schedule, fleet, and rental modules</li>
-                        <li>Per-business isolation with public booking links</li>
-                        <li>Built for chauffeur, Turo, and mixed fleet operators</li>
+                        <li>Clerk auth, org-based tenancy, and admin audit logging</li>
+                        <li>Pilot approval gating and scoped Google Drive OAuth</li>
                     </ul>
                     <div class="product-actions">
                         <a href="saarthee-fleet.html" class="btn btn-primary btn-small">Overview</a>
@@ -1450,6 +1581,7 @@
             <a href="sislms.html">School SISLMS</a>
             <a href="services.html">Services</a>
             <a href="upwork.html">Upwork</a>
+            <a href="security-compliance.html">Security</a>
             <a href="demo.html">Request Demo</a>
             <a href="contact.html">Contact</a>
             <a href="terms.html">Terms</a>
