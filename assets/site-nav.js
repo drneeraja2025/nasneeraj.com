@@ -37,15 +37,37 @@
     if (!navLinks) return;
     navLinks.classList.toggle('active', open);
     navLinks.setAttribute('aria-hidden', open ? 'false' : 'true');
-    if (open) {
-      navLinks.removeAttribute('inert');
+
+    // Only inert the off-canvas drawer on mobile when it is closed.
+    if (isMobile()) {
+      if (open) {
+        navLinks.removeAttribute('inert');
+      } else {
+        navLinks.setAttribute('inert', '');
+      }
     } else {
-      navLinks.setAttribute('inert', '');
+      navLinks.removeAttribute('inert');
+      navLinks.setAttribute('aria-hidden', 'false');
     }
+
     if (menuToggle) {
       menuToggle.classList.toggle('active', open);
       menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     }
+
+    if (!open) {
+      closeAllDropdowns();
+    }
+  }
+
+  function closeAllDropdowns(except) {
+    if (!navLinks) return;
+    navLinks.querySelectorAll('.nav-dropdown.open').forEach(function (item) {
+      if (except && item === except) return;
+      item.classList.remove('open');
+      var trigger = item.querySelector(':scope > a');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
   }
 
   function setCollapsed(collapsed) {
@@ -77,6 +99,10 @@
 
     if (isMobile()) {
       syncDrawerState(false);
+    } else if (navLinks) {
+      navLinks.removeAttribute('inert');
+      navLinks.setAttribute('aria-hidden', 'false');
+      navLinks.classList.remove('active');
     }
   }
 
@@ -112,6 +138,35 @@
     return btn;
   }
 
+  function wireDropdowns() {
+    if (!navLinks) return;
+
+    navLinks.querySelectorAll('.nav-dropdown').forEach(function (item) {
+      var trigger = item.querySelector(':scope > a');
+      if (!trigger || trigger.dataset.dropdownWired === '1') return;
+      trigger.dataset.dropdownWired = '1';
+      trigger.setAttribute('aria-expanded', 'false');
+      trigger.setAttribute('aria-haspopup', 'true');
+
+      trigger.addEventListener('click', function (event) {
+        // Products / Compare toggles use href="#"; always toggle instead of navigating.
+        var href = (trigger.getAttribute('href') || '').trim();
+        var isToggleOnly = !href || href === '#' || href === '#!';
+        if (isToggleOnly || item.querySelector(':scope > .dropdown-menu')) {
+          // For Compare which links to compare.html, still allow toggle when menu exists.
+          if (item.querySelector(':scope > .dropdown-menu')) {
+            event.preventDefault();
+            event.stopPropagation();
+            var willOpen = !item.classList.contains('open');
+            closeAllDropdowns(item);
+            item.classList.toggle('open', willOpen);
+            trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+          }
+        }
+      });
+    });
+  }
+
   if (navbar && navContainer) {
     ensureCollapseButton();
     ensureReopenButton();
@@ -141,6 +196,7 @@
           navLinks.removeAttribute('inert');
           navLinks.setAttribute('aria-hidden', 'false');
         }
+        closeAllDropdowns();
       }
     }
 
@@ -151,8 +207,21 @@
     }
 
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && !isMobile() && !navbar.classList.contains('collapsed')) {
-        setCollapsed(true);
+      if (event.key === 'Escape') {
+        closeAllDropdowns();
+        if (!isMobile() && !navbar.classList.contains('collapsed')) {
+          setCollapsed(true);
+        }
+      }
+    });
+  }
+
+  if (navLinks) {
+    wireDropdowns();
+
+    document.addEventListener('click', function (event) {
+      if (!navLinks.contains(event.target)) {
+        closeAllDropdowns();
       }
     });
   }
@@ -161,7 +230,13 @@
 
   menuToggle.setAttribute('aria-controls', 'navLinks');
   menuToggle.setAttribute('aria-expanded', 'false');
-  syncDrawerState(false);
+
+  if (isMobile()) {
+    syncDrawerState(false);
+  } else {
+    navLinks.removeAttribute('inert');
+    navLinks.setAttribute('aria-hidden', 'false');
+  }
 
   function toggleMobileDrawer(event) {
     if (event) {
@@ -186,6 +261,10 @@
   navLinks.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       if (!isMobile()) return;
+      // Keep drawer open when expanding Products / Compare.
+      if (link.closest('.nav-dropdown') && link.parentElement && link.parentElement.classList.contains('nav-dropdown')) {
+        return;
+      }
       syncDrawerState(false);
     });
   });

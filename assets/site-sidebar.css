@@ -210,7 +210,8 @@ nav.navbar .nav-dropdown > a::after {
 }
 
 nav.navbar .nav-dropdown:hover > a::after,
-nav.navbar .nav-dropdown:focus-within > a::after {
+nav.navbar .nav-dropdown:focus-within > a::after,
+nav.navbar .nav-dropdown.open > a::after {
     transform: rotate(180deg) !important;
 }
 
@@ -234,7 +235,8 @@ nav.navbar .dropdown-menu {
 }
 
 nav.navbar .nav-dropdown:hover > .dropdown-menu,
-nav.navbar .nav-dropdown:focus-within > .dropdown-menu {
+nav.navbar .nav-dropdown:focus-within > .dropdown-menu,
+nav.navbar .nav-dropdown.open > .dropdown-menu {
     display: block !important;
 }
 
