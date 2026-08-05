@@ -5,6 +5,18 @@
   "framework": null,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "nasneeraj.com" }],
+      "destination": "https://saaniya-software.nasneeraj.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.nasneeraj.com" }],
+      "destination": "https://saaniya-software.nasneeraj.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/sign-in",
       "has": [{ "type": "host", "value": "saarthee.nasneeraj.com" }],
       "destination": "https://saarthee-coplanner.vercel.app/sign-in",

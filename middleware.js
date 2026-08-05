@@ -10,7 +10,7 @@ export default function middleware(request) {
   const url = new URL(request.url);
 
   if (url.pathname === '/index.html') {
-    return Response.redirect('https://nasneeraj.com/', 302);
+    return Response.redirect('https://saaniya-software.nasneeraj.com/', 302);
   }
 
   if (
