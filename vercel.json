@@ -5,6 +5,18 @@
   "framework": null,
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "host", "value": "nasneeraj.com" }],
+      "destination": "https://saaniya-software.nasneeraj.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.nasneeraj.com" }],
+      "destination": "https://saaniya-software.nasneeraj.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "nasneeraj.com" }],
       "destination": "https://saaniya-software.nasneeraj.com/:path*",
