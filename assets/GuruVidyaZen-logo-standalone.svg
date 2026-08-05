@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- Favicon / PWA icons (PNG — Chrome installability rejects SVG icons) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+    <link rel="icon" type="image/png" href="/assets/GuruVidyaZen-logo-standalone.png" />
+
+    <!-- PWA manifest (swapped per hostname below) -->
+    <link id="pwa-manifest" rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+
+    <!-- PWA meta -->
+    <meta name="theme-color" content="#ea580c" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="GuruVidyaZen" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512.png" />
+
+    <!-- SEO -->
+    <meta name="description" content="Intelligent Academy Management for Music, Dance and Yoga — by Saaniya Software LLC" />
+
+    <title>GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management</title>
+
+    <script src="/pwa-bootstrap.js"></script>
+    <script type="module" crossorigin src="/assets/index-xRsgkjqh.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DJPO-Ae1.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+
+
