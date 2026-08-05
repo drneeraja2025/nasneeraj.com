@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social kit — Saaniya Software LLC | Facebook &amp; Instagram</title>
+    <meta name="description" content="Facebook and Instagram page kit for Saaniya Software LLC: profile copy, cover art, posts, and setup checklist.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0f172a;
+            --soft: #475569;
+            --line: #e2e8f0;
+            --cream: #fffbf5;
+            --blue: #1d4ed8;
+            --gold: #b8860b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+            color: var(--ink);
+            background: var(--cream);
+            line-height: 1.65;
+        }
+        .wrap { max-width: 1080px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+        h1, h2, h3 { font-family: "Outfit", system-ui, sans-serif; }
+        h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.5rem; }
+        h2 { font-size: 1.45rem; margin: 2.25rem 0 0.85rem; color: var(--blue); }
+        h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+        .lede { color: var(--soft); max-width: 42rem; margin-bottom: 1.5rem; }
+        .note {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 1rem 1.15rem;
+            color: var(--soft);
+            margin-bottom: 1.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 1.1rem 1.2rem;
+        }
+        .card label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.35rem;
+        }
+        .copy-block {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+            font-size: 0.95rem;
+            white-space: pre-wrap;
+            border: 1px dashed #cbd5e1;
+        }
+        .asset {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .asset img {
+            display: block;
+            width: 100%;
+            height: auto;
+            background: #f1f5f9;
+        }
+        .asset figcaption {
+            padding: 0.75rem 1rem 1rem;
+            font-size: 0.88rem;
+            color: var(--soft);
+        }
+        .asset a {
+            color: var(--blue);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .preview-fb, .preview-ig {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            overflow: hidden;
+            margin: 1rem 0 1.5rem;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        }
+        .preview-fb .cover { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+        .preview-fb .row {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-end;
+            padding: 0 1.25rem 1.25rem;
+            margin-top: -2.5rem;
+            position: relative;
+        }
+        .preview-fb .avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            background: #fff;
+        }
+        .preview-fb .meta h3 { font-size: 1.35rem; }
+        .preview-fb .meta p { color: var(--soft); font-size: 0.92rem; }
+        .preview-ig {
+            max-width: 380px;
+        }
+        .preview-ig .top {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            padding: 1.1rem 1.1rem 0.75rem;
+        }
+        .preview-ig .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #e2e8f0;
+        }
+        .preview-ig .stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--soft);
+            padding: 0 1.1rem 0.75rem;
+        }
+        .preview-ig .bio {
+            padding: 0 1.1rem 1rem;
+            font-size: 0.9rem;
+        }
+        .preview-ig .bio strong { display: block; margin-bottom: 0.2rem; }
+        .checklist { padding-left: 1.2rem; color: var(--soft); }
+        .checklist li { margin: 0.35rem 0; }
+        .back { display: inline-block; margin-bottom: 1rem; color: var(--blue); font-weight: 600; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <a class="back" href="index.html">← Back to home</a>
+        <h1>Facebook &amp; Instagram page kit</h1>
+        <p class="lede">
+            Ready-to-use profile copy and brand art for <strong>Saaniya Software LLC</strong>.
+            Upload the images below when you create the pages. Keep naming consistent: never use NAS on public social profiles.
+        </p>
+        <div class="note">
+            Suggested handles: <strong>@saaniyasoftware</strong> (or <strong>@saaniyasoftwarellc</strong> if taken).
+            Website: <strong>https://nasneeraj.com</strong> · Email: <strong>neeraj@nasneeraj.com</strong>
+        </div>
+
+        <h2>Page previews</h2>
+        <div class="preview-fb" aria-label="Facebook page preview">
+            <img class="cover" src="assets/social/fb-cover-saaniya.png" alt="Facebook cover preview">
+            <div class="row">
+                <img class="avatar" src="assets/social/social-avatar-saaniya.png" alt="Profile avatar">
+                <div class="meta">
+                    <h3>Saaniya Software LLC</h3>
+                    <p>Software company · nasneeraj.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="preview-ig" aria-label="Instagram profile preview">
+            <div class="top">
+                <img class="avatar" src="assets/social/social-avatar-saaniya.png" alt="Instagram avatar">
+                <div>
+                    <strong>saaniyasoftware</strong>
+                    <div style="font-size:0.85rem;color:#64748b;margin-top:0.2rem;">Saaniya Software LLC</div>
+                </div>
+            </div>
+            <div class="stats"><span><strong>0</strong> posts</span><span><strong>—</strong> followers</span><span><strong>—</strong> following</span></div>
+            <div class="bio">
+                <strong>Saaniya Software LLC</strong>
+                Purpose-built cloud software for schools, academies &amp; work.<br>
+                Cybersecurity · GuruVidyaZen · SISLMS · Saarthee<br>
+                🔗 nasneeraj.com
+            </div>
+            <img src="assets/social/ig-post-brand.png" alt="Sample Instagram post" style="width:100%;display:block;">
+        </div>
+
+        <h2>Profile copy (paste into Meta)</h2>
+        <div class="grid">
+            <div class="card">
+                <label>Page / profile name</label>
+                <div class="copy-block">Saaniya Software LLC</div>
+            </div>
+            <div class="card">
+                <label>Username</label>
+                <div class="copy-block">saaniyasoftware</div>
+            </div>
+            <div class="card">
+                <label>Facebook category</label>
+                <div class="copy-block">Software Company
+(or Education · Computer Company)</div>
+            </div>
+            <div class="card">
+                <label>Instagram bio (150 chars max)</label>
+                <div class="copy-block">Purpose-built cloud software for schools, academies &amp; work.
+Cybersecurity · GuruVidyaZen · SISLMS · Saarthee
+nasneeraj.com</div>
+            </div>
+            <div class="card" style="grid-column: 1 / -1;">
+                <label>Facebook About / short description</label>
+                <div class="copy-block">Saaniya Software LLC builds purpose-built cloud products for schools, academies, and everyday work—including GuruVidyaZen, School SISLMS, Riyaz Studio, and Saarthee. Security, tenant isolation, and privacy-first integrations are designed in from the start.</div>
+            </div>
+            <div class="card" style="grid-column: 1 / -1;">
+                <label>First post caption (shared)</label>
+                <div class="copy-block">We’re Saaniya Software LLC — purpose-built software for learning, academies, and work.
+
+On the stack: GuruVidyaZen, School SISLMS, Riyaz Studio, and Saarthee — with cybersecurity, tenant isolation, and human-over-the-loop AI where it helps.
+
+Explore: https://nasneeraj.com
+#SaaniyaSoftware #EdTech #Cybersecurity #GuruVidyaZen #SISLMS</div>
+            </div>
+        </div>
+
+        <h2>Downloadable art</h2>
+        <div class="grid">
+            <figure class="asset">
+                <img src="assets/social/fb-cover-saaniya.png" alt="Facebook cover">
+                <figcaption>
+                    <strong>Facebook cover</strong> (wide)<br>
+                    <a href="assets/social/fb-cover-saaniya.png" download>Download fb-cover-saaniya.png</a>
+                </figcaption>
+            </figure>
+            <figure class="asset">
+                <img src="assets/social/social-avatar-saaniya.png" alt="Profile avatar">
+                <figcaption>
+                    <strong>Profile photo</strong> (FB + IG)<br>
+                    <a href="assets/social/social-avatar-saaniya.png" download>Download social-avatar-saaniya.png</a>
+                    · or use <a href="assets/Saaniyalogo.png" download>Saaniyalogo.png</a>
+                </figcaption>
+            </figure>
+            <figure class="asset">
+                <img src="assets/social/ig-post-brand.png" alt="Instagram brand post">
+                <figcaption>
+                    <strong>Instagram feed post</strong> (1:1)<br>
+                    <a href="assets/social/ig-post-brand.png" download>Download ig-post-brand.png</a>
+                </figcaption>
+            </figure>
+            <figure class="asset">
+                <img src="assets/social/ig-story-security.png" alt="Instagram story">
+                <figcaption>
+                    <strong>Instagram / FB story</strong> (9:16)<br>
+                    <a href="assets/social/ig-story-security.png" download>Download ig-story-security.png</a>
+                </figcaption>
+            </figure>
+        </div>
+
+        <h2>Setup checklist</h2>
+        <ol class="checklist">
+            <li>Create a Facebook <strong>Page</strong> (Business) named Saaniya Software LLC.</li>
+            <li>Create an Instagram professional account; connect it to the Facebook Page in Meta Business Suite.</li>
+            <li>Upload profile photo + Facebook cover from this kit.</li>
+            <li>Set website to https://nasneeraj.com and email neeraj@nasneeraj.com.</li>
+            <li>Paste bio / About text above; publish the first post + story.</li>
+            <li>Pin a highlight: Products · Cybersecurity · Contact.</li>
+        </ol>
+    </div>
+</body>
+</html>

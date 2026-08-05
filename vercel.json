@@ -97,6 +97,10 @@
       "destination": "/astrology-guide.html"
     },
     {
+      "source": "/social-kit",
+      "destination": "/social-kit.html"
+    },
+    {
       "source": "/signup",
       "destination": "/signup.html"
     },
