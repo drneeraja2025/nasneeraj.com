@@ -31,7 +31,7 @@ All paths in `index.html` are correct for deployment:
 - ✅ Title: "Neeraj's AI Software - Innovative Software Solutions"
 - ✅ Company name: Neeraj's AI Software
 - ✅ Founder: Dr. Neeraj Agrawal
-- ✅ Email: neeraj@nasneeraj.com
+- ✅ Email: saaniyasoftware@nasneeraj.com
 - ✅ Domain: nasneeraj.com
 - ✅ Products: SISLMS, Non Profit ERP, NAS Portal
 - ✅ Technology stack: Complete list

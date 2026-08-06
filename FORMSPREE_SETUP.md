@@ -15,7 +15,7 @@ All forms on nasneeraj.com have been updated to use Formspree instead of mailto:
 
 1. Go to https://formspree.io/
 2. Click "Sign Up" (free account available)
-3. Sign up with your email (use neeraj@nasneeraj.com)
+3. Sign up with your email (use saaniyasoftware@nasneeraj.com)
 4. Verify your email address
 
 ### Step 2: Create Forms
@@ -25,21 +25,21 @@ You'll need to create **3 separate forms** in Formspree:
 #### Form 1: Contact Form
 1. In Formspree dashboard, click "New Form"
 2. Name it: "NAS Contact Form"
-3. Set email to: `neeraj@nasneeraj.com`
+3. Set email to: `saaniyasoftware@nasneeraj.com`
 4. Copy the Form ID (format: `xrgkqjvw` or similar)
 5. Replace `YOUR_CONTACT_FORM_ID` in `contact.html` with this ID
 
 #### Form 2: Demo Request Form
 1. Click "New Form" again
 2. Name it: "SISLMS Demo Request"
-3. Set email to: `neeraj@nasneeraj.com`
+3. Set email to: `saaniyasoftware@nasneeraj.com`
 4. Copy the Form ID
 5. Replace `YOUR_DEMO_FORM_ID` in `demo.html` with this ID
 
 #### Form 3: Signup Form
 1. Click "New Form" again
 2. Name it: "SISLMS Signup"
-3. Set email to: `neeraj@nasneeraj.com`
+3. Set email to: `saaniyasoftware@nasneeraj.com`
 4. Copy the Form ID
 5. Replace `YOUR_SIGNUP_FORM_ID` in `signup.html` with this ID
 
@@ -131,7 +131,7 @@ After updating the form IDs:
    - Fill out the contact form
    - Submit a demo request
    - Submit a signup request
-3. **Check your email** (neeraj@nasneeraj.com) for submissions
+3. **Check your email** (saaniyasoftware@nasneeraj.com) for submissions
 4. **Verify Formspree dashboard** shows the submissions
 
 ## Troubleshooting

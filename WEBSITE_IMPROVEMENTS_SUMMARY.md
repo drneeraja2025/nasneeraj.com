@@ -102,7 +102,7 @@ The nasneeraj.com website has been significantly improved with new pages, enhanc
 
 **Form Submission:**
 - Opens email client with pre-filled message
-- Sends to: neeraj@nasneeraj.com
+- Sends to: saaniyasoftware@nasneeraj.com
 - Subject: `[SISLMS Demo Request] [School Name]`
 
 ---
@@ -112,7 +112,7 @@ The nasneeraj.com website has been significantly improved with new pages, enhanc
 
 **Features:**
 - ✅ Contact information cards:
-  - Email: neeraj@nasneeraj.com
+  - Email: saaniyasoftware@nasneeraj.com
   - Phone: (262) 352-1845
   - Contact Person: Dr. Neeraj Agrawal, Founder & CEO
 - ✅ Contact form with email integration
@@ -123,7 +123,7 @@ The nasneeraj.com website has been significantly improved with new pages, enhanc
 **Contact Information Displayed:**
 - **NAS (Neeraj's AI Services)**
 - **Dr. Neeraj Agrawal, Founder & CEO**
-- **Email:** neeraj@nasneeraj.com
+- **Email:** saaniyasoftware@nasneeraj.com
 - **Phone:** (262) 352-1845
 - **Website:** nasneeraj.com
 - **Response Time:** Within 24 hours
@@ -177,7 +177,7 @@ The nasneeraj.com website has been significantly improved with new pages, enhanc
 
 **NAS (Neeraj's AI Services)**  
 **Dr. Neeraj Agrawal, Founder & CEO**  
-**Email:** neeraj@nasneeraj.com  
+**Email:** saaniyasoftware@nasneeraj.com  
 **Phone:** (262) 352-1845  
 **Website:** nasneeraj.com  
 **Response Time:** Within 24 hours

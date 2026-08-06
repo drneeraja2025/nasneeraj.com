@@ -4,7 +4,7 @@
 **Version:** 1.0  
 **Date:** December 2025  
 **Company:** Neeraj's AI Software (NAS)  
-**Email:** neeraj@nasneeraj.com
+**Email:** saaniyasoftware@nasneeraj.com
 
 ---
 
@@ -71,7 +71,7 @@
 - Security & Compliance
 
 ### **8. Contact Information**
-- Email: neeraj@nasneeraj.com
+- Email: saaniyasoftware@nasneeraj.com
 - Call-to-action
 
 ---
@@ -114,7 +114,7 @@ Follow the existing section structure:
 
 ## 📧 **CONTACT INFORMATION**
 
-**Email:** neeraj@nasneeraj.com
+**Email:** saaniyasoftware@nasneeraj.com
 
 **Company Name:** Neeraj's AI Software
 

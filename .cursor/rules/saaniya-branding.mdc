@@ -23,7 +23,7 @@ alwaysApply: true
 
 ## Do not rename
 
-- Domains and emails: `nasneeraj.com`, `neeraj@nasneeraj.com`, product subdomains
+- Domains and emails: `nasneeraj.com`, `saaniyasoftware@nasneeraj.com`, product subdomains
 - Internal filenames that are URLs/paths unless explicitly migrating (e.g. `NAS_BROCHURE.html`)
 - Video asset filenames (e.g. `NAS-promo.mp4`) unless re-encoding/rebranding the media
 
