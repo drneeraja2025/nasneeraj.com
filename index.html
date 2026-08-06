@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saaniya Software LLC | Schools, Academies, Saarthee &amp; Cloud Products</title>
-    <meta name="description" content="Saaniya Software LLC builds purpose-built cloud products: GuruVidyaZen School SISLMS, SISMMS, GuruVidyaZen academies, Riyaz Studio, Saarthee CoPlanner, and professional services—on modern secure infrastructure with thoughtful AI where it helps.">
+    <title>Saaniya Software LLC | Custom development &amp; cloud products</title>
+    <meta name="description" content="Saaniya Software LLC: custom software development—architecture, analysis, and delivery planning—plus purpose-built products for schools, academies, and operators (GuruVidyaZen, SISLMS, Saarthee, and more).">
     <meta name="keywords" content="Saaniya Software LLC, Saaniya Software LLC, student information system, academy management, GuruVidyaZen, SISLMS, Saarthee CoPlanner, Riyaz Studio, cloud software, AI-assisted workflows">
     <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -87,7 +87,7 @@
         body {
             font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1e293b;
             background: #fffbf5;
         }
 
@@ -631,56 +631,117 @@
         .content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 40px;
+            padding: 56px 32px;
             background: #fffbf5;
         }
 
         .section {
-            margin-bottom: 80px;
+            margin-bottom: 52px;
         }
 
         .section-title {
             font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
-            font-size: 2.35em;
+            font-size: clamp(1.65rem, 3vw, 2rem);
             font-weight: 700;
             letter-spacing: -0.02em;
             color: #4f46e5;
-            margin-bottom: 30px;
+            margin-bottom: 1.1rem;
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #6366f1;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #6366f1;
             animation: fadeInUp 0.8s ease-out;
+        }
+
+        .section-lead {
+            font-size: 1.05rem;
+            text-align: center;
+            max-width: 42rem;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+            color: #334155;
+        }
+
+        .build-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.6rem;
+            justify-content: center;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .build-chip {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 650;
+            padding: 0.45rem 0.85rem;
+            border-radius: 999px;
+            color: #0f172a;
+            background: #e2e8f0;
+            border: 1px solid #94a3b8;
+        }
+
+        .services-strip {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .service-item {
+            padding: 1.1rem 1.15rem;
+            border-left: 3px solid #667eea;
+            background: rgba(255, 255, 255, 0.72);
+        }
+
+        .service-item h3 {
+            font-family: "Outfit", system-ui, sans-serif;
+            font-size: 1.05rem;
+            color: #4338ca;
+            margin-bottom: 0.35rem;
+        }
+
+        .service-item p {
+            font-size: 0.92rem;
+            color: #334155;
+            line-height: 1.55;
+            margin: 0;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 14px;
+            margin-top: 1.25rem;
         }
 
         .product-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-left: 5px solid #667eea;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 0.8s ease-out forwards;
+            background: #fff;
+            padding: 1.05rem 1.1rem 1.15rem;
+            border-radius: 10px;
+            box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+            border: 1px solid #e2e8f0;
+            border-left: 3px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            animation: fadeInUp 0.6s ease-out forwards;
             opacity: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
         }
 
-        .product-card:nth-child(1) { animation-delay: 0.1s; }
-        .product-card:nth-child(2) { animation-delay: 0.2s; }
-        .product-card:nth-child(3) { animation-delay: 0.3s; }
-        .product-card:nth-child(4) { animation-delay: 0.35s; }
-        .product-card:nth-child(5) { animation-delay: 0.4s; }
-        .product-card:nth-child(6) { animation-delay: 0.45s; }
+        .product-card:nth-child(1) { animation-delay: 0.05s; }
+        .product-card:nth-child(2) { animation-delay: 0.08s; }
+        .product-card:nth-child(3) { animation-delay: 0.11s; }
+        .product-card:nth-child(4) { animation-delay: 0.14s; }
+        .product-card:nth-child(5) { animation-delay: 0.17s; }
+        .product-card:nth-child(6) { animation-delay: 0.2s; }
+        .product-card:nth-child(7) { animation-delay: 0.23s; }
 
         .product-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
-            animation: aiGlow 2s ease-in-out infinite, fadeInUp 0.8s ease-out forwards;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(79, 70, 229, 0.12);
+            border-color: #c7d2fe;
             opacity: 1 !important;
         }
 
@@ -688,55 +749,76 @@
             display: inline-block;
             background: #667eea;
             color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            margin-bottom: 15px;
+            padding: 0.2rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 0.45rem;
+            width: fit-content;
         }
 
         .product-badge.coming-soon {
-            background: #ffc107;
-            color: #333;
+            background: #f59e0b;
+            color: #1e293b;
         }
 
         .product-card h3 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
+            color: #4338ca;
+            font-family: "Outfit", system-ui, sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.3;
+            margin-bottom: 0.4rem;
         }
 
         .product-card p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            color: #334155;
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin-bottom: 0.65rem;
+            flex: 1;
         }
 
         .product-features {
             list-style: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 0 0 0.75rem;
         }
 
         .product-features li {
-            padding: 8px 0;
-            padding-left: 25px;
+            padding: 0.15rem 0 0.15rem 1.05rem;
             position: relative;
-            color: #555;
+            color: #1e293b;
+            font-size: 0.8rem;
+            line-height: 1.4;
         }
 
         .product-features li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #4f46e5;
             font-weight: bold;
+            font-size: 0.75rem;
         }
 
         .product-actions {
-            margin-top: 25px;
+            margin-top: auto;
             display: flex;
-            gap: 15px;
+            gap: 0.45rem;
             flex-wrap: wrap;
+        }
+
+        .product-actions .btn-small {
+            padding: 0.45rem 0.85rem;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 800px) {
+            .services-strip {
+                grid-template-columns: 1fr;
+            }
         }
 
         .btn-small {
@@ -1179,23 +1261,20 @@
     <section class="hero">
         <div class="hero-content hero-grid">
             <div class="hero-copy">
-                <h1>Purpose-built software for <span class="hero-highlight">learning, academies &amp; everyday work</span></h1>
+                <h1>Custom development &amp; <span class="hero-highlight">purpose-built products</span></h1>
                 <p class="hero-sub">
-                    <strong>Saaniya Software LLC</strong> ships focused cloud products—not one generic platform. Schools use <strong>GuruVidyaZen School SISLMS</strong> and <strong>SISMMS</strong>; arts and specialized programs use <strong>GuruVidyaZen</strong> and <strong>Riyaz Studio</strong>; <strong>Saarthee CoPlanner</strong> and <strong>Saarthee Fleet Manager</strong> are in active development. We also offer architecture, analysis, and implementation planning for organizations that need a thoughtful build—not a template.
+                    <strong>Saaniya Software LLC</strong> helps organizations plan and ship cloud software—architecture, analysis, and delivery—while building its own products for schools, academies, and operators. Engage us for a thoughtful build, or explore live products like <strong>GuruVidyaZen</strong>, <strong>School SISLMS</strong>, and <strong>Saarthee</strong> apps in development.
                 </p>
                 <div class="hero-chips" role="list">
-                    <span class="hero-chip" role="listitem">Schools · academies · personal productivity</span>
-                    <span class="hero-chip" role="listitem">Cybersecurity · tenant isolation · privacy-first OAuth</span>
-                    <span class="hero-chip" role="listitem">AI-assisted workflows where humans stay in control</span>
-                </div>
-                <div style="margin-bottom: 1.25rem;">
-                    <span class="ai-badge-futuristic">Modern UX · demos · pilots · comparisons</span>
+                    <span class="hero-chip" role="listitem">Architecture · analysis · implementation planning</span>
+                    <span class="hero-chip" role="listitem">Education &amp; academy products</span>
+                    <span class="hero-chip" role="listitem">Secure cloud delivery · human-in-the-loop AI</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary">Explore our products</a>
-                    <a href="#cybersecurity" class="btn btn-secondary">Cybersecurity</a>
-                    <a href="https://saarthee.nasneeraj.com/" class="btn btn-secondary">Saarthee CoPlanner</a>
+                    <a href="services.html" class="btn btn-primary">Professional services</a>
+                    <a href="#products" class="btn btn-secondary">Our products</a>
                     <a href="demo.html" class="btn btn-secondary">Request a demo</a>
+                    <a href="upwork.html" class="btn btn-secondary">Upwork</a>
                 </div>
             </div>
             <div class="hero-visual" aria-label="Product imagery">
@@ -1225,30 +1304,58 @@
 
 
     <div class="content">
+        <!-- Services first -->
+        <div class="section" id="services-home" style="animation: fadeInUp 0.8s ease-out;">
+            <h2 class="section-title">Development services</h2>
+            <p class="section-lead">
+                Need a partner to analyze requirements, design the architecture, and plan delivery—without a cookie-cutter template? That is a core part of how Saaniya Software works.
+            </p>
+            <div class="services-strip">
+                <div class="service-item">
+                    <h3>Business analysis</h3>
+                    <p>Clarify processes and requirements so software solves the right problem.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Architecture</h3>
+                    <p>Multi-tenant, secure, and scalable designs grounded in how you actually operate.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Delivery planning</h3>
+                    <p>Roadmaps, milestones, and implementation plans you can hire against with confidence.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 1.35rem;">
+                <a href="services.html" class="btn btn-primary btn-small">View services</a>
+                <a href="contact.html" class="btn btn-secondary btn-small">Talk to us</a>
+            </div>
+        </div>
+
         <!-- About Section -->
         <div class="section" style="animation: fadeInUp 0.8s ease-out;">
             <h2 class="section-title">About Saaniya Software LLC</h2>
-            <p style="font-size: 1.15em; text-align: center; max-width: 960px; margin: 0 auto 1.5rem; line-height: 1.85; color: #555;">
-                <strong>Saaniya Software LLC</strong> designs and ships <strong>purpose-built, cloud-hosted products</strong>—not generic templates. Our portfolio spans <strong>GuruVidyaZen School SISLMS</strong> (K–8 school hubs), <strong>SISMMS by Saaniya Software LLC</strong> (SIS + MMS administration), the flagship <strong>GuruVidyaZen</strong> platform for 17+ academy types, <strong>GuruVidyaZen Riyaz Studio</strong> for practice demos, plus <strong>Saarthee CoPlanner</strong> and <strong>Saarthee Fleet Manager</strong> (coming soon). We also publish <a href="hotl-research.html" style="color: #667eea;">research on HOTL</a>, deliver <a href="services.html" style="color: #667eea;">professional services</a> for analysis, architecture, and software planning, and explain how to engage us via <a href="upwork.html" style="color: #667eea;">Upwork</a> (profile coming soon).
-            </p>
-            <p style="font-size: 1.05em; text-align: center; max-width: 920px; margin: 0 auto; line-height: 1.8; color: #666;">
-                Compare honestly where it helps: <a href="compare.html" style="color: #667eea;">School SISLMS stacks</a>, <a href="compare-gvz.html" style="color: #667eea;">GuruVidyaZen vs. other tools</a>, and the <a href="pilot.html" style="color: #667eea;">pilot program</a> for structured onboarding.
+            <p class="section-lead">
+                We ship focused cloud products for schools, academies, and operators—and publish
+                <a href="hotl-research.html" style="color: #4f46e5;">HOTL research</a>,
+                honest <a href="compare.html" style="color: #4f46e5;">comparisons</a>, and
+                <a href="pilot.html" style="color: #4f46e5;">pilot</a> options. Hire us for custom work via
+                <a href="services.html" style="color: #4f46e5;">services</a> or
+                <a href="upwork.html" style="color: #4f46e5;">Upwork</a> (profile coming soon).
             </p>
         </div>
 
         <!-- Technology Section -->
         <div class="section" style="animation: fadeInUp 0.8s ease-out 0.1s both;">
             <h2 class="section-title">How we build</h2>
-            <p style="font-size: 1.05em; text-align: center; max-width: 880px; margin: 0 auto 2rem; line-height: 1.8; color: #555;">
-                Saaniya Software LLC products are developed on a modern cloud stack with security and clarity first—then thoughtful automation where a human stays in the loop.
+            <p class="section-lead">
+                Modern cloud delivery with security and clarity first—then automation where a human stays in the loop.
             </p>
-            <div class="hero-chips" style="justify-content: center; max-width: 980px; margin: 0 auto;">
-                <span class="hero-chip">Vercel edge hosting &amp; CI/CD</span>
-                <span class="hero-chip">Postgres with tenant isolation</span>
-                <span class="hero-chip">OAuth &amp; scoped integrations</span>
-                <span class="hero-chip">FERPA- &amp; COPPA-conscious school workflows</span>
-                <span class="hero-chip">AI-assisted features with approval paths</span>
-                <span class="hero-chip">TLS in transit · encryption at rest</span>
+            <div class="build-chips">
+                <span class="build-chip">Vercel edge hosting &amp; CI/CD</span>
+                <span class="build-chip">Postgres with tenant isolation</span>
+                <span class="build-chip">OAuth &amp; scoped integrations</span>
+                <span class="build-chip">FERPA- &amp; COPPA-conscious school workflows</span>
+                <span class="build-chip">AI-assisted features with approval paths</span>
+                <span class="build-chip">TLS in transit · encryption at rest</span>
             </div>
         </div>
 
@@ -1256,10 +1363,9 @@
         <div class="section" id="cybersecurity" style="animation: fadeInUp 0.8s ease-out 0.15s both;">
             <div class="cyber-section">
                 <h2 class="section-title" style="margin-bottom: 0.75rem;">Cybersecurity across our products</h2>
-                <p style="font-size: 1.08em; text-align: center; max-width: 920px; margin: 0 auto; line-height: 1.8; color: #555;">
+                <p class="section-lead">
                     Security is designed into <strong>GuruVidyaZen</strong>, <strong>School SISLMS</strong>, <strong>Riyaz Studio</strong>,
-                    <strong>Saarthee Fleet Manager</strong>, and <strong>Saarthee CoPlanner</strong>—not bolted on later.
-                    We emphasize tenant isolation, least-privilege access, and privacy-first integrations.
+                    <strong>Saarthee Fleet Manager</strong>, and <strong>Saarthee CoPlanner</strong>—tenant isolation, least privilege, and privacy-first integrations.
                 </p>
                 <div class="cyber-grid">
                     <article class="cyber-card">
@@ -1314,244 +1420,112 @@
         <!-- Products Section -->
         <div class="section" id="products">
             <h2 class="section-title">Our products</h2>
+            <p class="section-lead">Live and in-progress products—short takes below; open a page for the full story.</p>
             <div class="products-grid">
-                <!-- School SISLMS -->
                 <div class="product-card">
-                    <span class="product-badge">K–8 SCHOOLS</span>
+                    <span class="product-badge">K–8 Schools</span>
                     <h3>GuruVidyaZen School SISLMS</h3>
-                    <p>
-                        <strong>Family-friendly school &amp; learning hub</strong> on GuruVidyaZen—enrollment, classes, daily logs, and assignments
-                        with the same sign-on patterns as the rest of the platform. <em>Positioned for elementary &amp; middle (K–8).</em>
-                    </p>
+                    <p>Family-friendly school hub: enrollment, classes, daily logs, and assignments with school-level security.</p>
                     <ul class="product-features">
-                        <li>Public School SISLMS story: warm copy, compare table, and deep links to GuruVidyaZen</li>
-                        <li>Row-level security by school, RBAC, FERPA-/COPPA-conscious workflows</li>
-                        <li>Live host: sislms.guruvidyazen.nasneeraj.com</li>
-                        <li>See how the stack lines up: School SISLMS vs. a reference SISMMS-style data shape</li>
+                        <li>RLS · RBAC · FERPA-/COPPA-conscious</li>
+                        <li>Live: sislms.guruvidyazen.nasneeraj.com</li>
                     </ul>
                     <div class="product-actions">
-                        <a href="sislms.html" class="btn btn-primary btn-small">School overview</a>
-                        <a href="https://sislms.guruvidyazen.nasneeraj.com/" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">Open live SISLMS</a>
+                        <a href="sislms.html" class="btn btn-primary btn-small">Overview</a>
+                        <a href="https://sislms.guruvidyazen.nasneeraj.com/" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">Open</a>
                     </div>
                 </div>
 
-                <!-- SISMMS -->
                 <div class="product-card">
-                    <span class="product-badge">SCHOOL ADMIN</span>
-                    <h3>SISMMS by Saaniya Software LLC</h3>
-                    <p>
-                        <strong>Student information + management</strong> for leaders who juggle rosters, compliance, and daily operations.
-                        Promoted on its own product page for administrators comparing scope with School SISLMS.
-                    </p>
+                    <span class="product-badge">School admin</span>
+                    <h3>SISMMS</h3>
+                    <p>Student information + management for leaders comparing scope with School SISLMS.</p>
                     <ul class="product-features">
-                        <li>Standalone product page for administrators scoping SIS + MMS work</li>
-                        <li>Complements the K–8 School SISLMS marketing lane</li>
-                        <li>Same trust, privacy, and security posture as the rest of Saaniya Software LLC</li>
+                        <li>Standalone admin product page</li>
                     </ul>
                     <div class="product-actions">
-                        <a href="sismms.html" class="btn btn-primary btn-small">SISMMS page</a>
+                        <a href="sismms.html" class="btn btn-primary btn-small">SISMMS</a>
                     </div>
                 </div>
 
-                <!-- Saarthee CoPlanner -->
                 <div class="product-card">
-                    <span class="product-badge coming-soon">COMING SOON</span>
-                    <h3>Saarthee CoPlanner by Saaniya Software LLC</h3>
-                    <p>
-                        <strong>Privacy-first personal coworker</strong> for calendars, inboxes, files, Notion, and local Windows workflows—human-approved automation without turning into another data warehouse.
-                    </p>
+                    <span class="product-badge">Academies</span>
+                    <h3>GuruVidyaZen</h3>
+                    <p>Arts &amp; specialized academies—17+ types, repertoire, CCE, payments, and practice insights.</p>
                     <ul class="product-features">
-                        <li>Daily brief across the tools you already use</li>
-                        <li>Privacy-first design, minimum OAuth scopes, Turnstile on auth</li>
-                        <li>Server-only integration tokens and secret-gated jobs</li>
-                        <li>Preview and updates at saarthee.nasneeraj.com</li>
+                        <li>Multi-tenant RLS · pilot program</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="https://guruvidyazen.nasneeraj.com/" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer">Open</a>
+                        <a href="pilot.html" class="btn btn-secondary btn-small">Pilot</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge">Live demo</span>
+                    <h3>Riyaz Studio</h3>
+                    <p>Practice &amp; pedagogy demo on GuruVidyaZen—consent-aware analysis, teacher-approved AI scores.</p>
+                    <ul class="product-features">
+                        <li>riyaz.guruvidyazen.nasneeraj.com</li>
+                    </ul>
+                    <div class="product-actions">
+                        <a href="https://riyaz.guruvidyazen.nasneeraj.com/" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer">Try demo</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-badge coming-soon">Coming soon</span>
+                    <h3>Saarthee CoPlanner</h3>
+                    <p>Privacy-first personal coworker for calendars, mail, files, and Notion—minimum OAuth scopes.</p>
+                    <ul class="product-features">
+                        <li>Preview: saarthee.nasneeraj.com</li>
                     </ul>
                     <div class="product-actions">
                         <a href="saarthee.html" class="btn btn-primary btn-small">Overview</a>
                         <a href="https://saarthee.nasneeraj.com/" class="btn btn-secondary btn-small">Learn more</a>
-                        <a href="contact.html" class="btn btn-secondary btn-small">Get notified</a>
                     </div>
                 </div>
 
-                <!-- GuruVidyaZen -->
                 <div class="product-card">
-                    <span class="product-badge">ACADEMIES &amp; ARTS</span>
-                    <h3>GuruVidyaZen by Saaniya Software LLC</h3>
-                    <p>
-                        <strong>The digitized legacy system</strong> for music, dance, and specialized training—17+ academy types, repertoire,
-                        CCE, payments, and AI-assisted practice insights where enabled.
-                    </p>
+                    <span class="product-badge coming-soon">Coming soon</span>
+                    <h3>Saarthee Fleet</h3>
+                    <p>Private rides &amp; rentals—quotes, vehicles, bookings, Turo sync, invoicing.</p>
                     <ul class="product-features">
-                        <li>7-year master repertoire vaults &amp; CCE matrices</li>
-                        <li>Multi-tenant RLS isolation, RBAC, and audit-ready education posture</li>
-                        <li>Examiner tools &amp; student QR portfolios</li>
-                        <li>AI stylistic analysis for practice media (where product allows)</li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="https://guruvidyazen.nasneeraj.com/" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer">Open platform</a>
-                        <a href="pilot.html" class="btn btn-secondary btn-small">Pilot program</a>
-                    </div>
-                </div>
-
-                <!-- GuruVidyaZen Riyaz Studio (demo) -->
-                <div class="product-card">
-                    <span class="product-badge">LIVE DEMO</span>
-                    <h3>GuruVidyaZen Riyaz Studio</h3>
-                    <p>
-                        <strong>Practice &amp; pedagogy showcase</strong> — Experience GuruVidyaZen flows in a dedicated demo environment for riyaz (practice), guided learning, and academy workflows.
-                    </p>
-                    <ul class="product-features">
-                        <li>Hands-on demo deployment</li>
-                        <li>Same GuruVidyaZen trust stack; mic/camera consent for practice analysis</li>
-                        <li>Human-in-the-loop: AI scores stay formative until teacher save</li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="https://riyaz.guruvidyazen.nasneeraj.com/" class="btn btn-primary btn-small" target="_blank" rel="noopener noreferrer">Open Riyaz Studio</a>
-                    </div>
-                </div>
-
-                <!-- Astrology Guide -->
-                <div class="product-card">
-                    <span class="product-badge">DIGITAL BOOK</span>
-                    <h3>Vedic Astrology and Modern Science</h3>
-                    <p>
-                        <strong>Astrology, examined in the light of everything else</strong> — a 14-module illustrated book from <strong>Saaniya Software LLC</strong> putting Jyotish in honest dialogue with physics, astronomy, psychology, world religions, and Ayurveda.
-                    </p>
-                    <ul class="product-features">
-                        <li>Free sample: preface, science chapter, and Module 1—no login</li>
-                        <li>Ten Lahiri-sidereal calculators and a color-coded reference matrix</li>
-                        <li>Full 14-module reader and printable PDF for members</li>
-                    </ul>
-                    <div class="product-actions">
-                        <a href="astrology-guide.html" class="btn btn-primary btn-small">Book overview</a>
-                        <a href="https://horoscopeguide.nasneeraj.com/" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">Open the guide</a>
-                    </div>
-                </div>
-
-                <!-- Saarthee Fleet Manager -->
-                <div class="product-card">
-                    <span class="product-badge coming-soon">COMING SOON</span>
-                    <h3>Saarthee Fleet Manager</h3>
-                    <p>
-                        <strong>Private rides &amp; rentals on one platform</strong> — quote trips against market rates, manage vehicles, respond to booking requests, sync Turo rentals, invoice clients, and track revenue with a dedicated booking page per business.
-                    </p>
-                    <ul class="product-features">
-                        <li>Smart quoter, schedule, fleet, and rental modules</li>
-                        <li>Clerk auth, org-based tenancy, and admin audit logging</li>
-                        <li>Pilot approval gating and scoped Google Drive OAuth</li>
+                        <li>Clerk auth · org tenancy · audit log</li>
                     </ul>
                     <div class="product-actions">
                         <a href="saarthee-fleet.html" class="btn btn-primary btn-small">Overview</a>
                         <a href="https://fleet.nasneeraj.com/" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">Learn more</a>
-                        <a href="contact.html" class="btn btn-secondary btn-small">Get notified</a>
                     </div>
                 </div>
 
-                <!-- Non Profit ERP -->
                 <div class="product-card">
-                    <span class="product-badge coming-soon">COMING SOON</span>
-                    <h3>Non Profit ERP / Volunteer Tracking</h3>
-                    <p>
-                        A comprehensive Enterprise Resource Planning solution designed specifically for nonprofit 
-                        organizations.
-                    </p>
+                    <span class="product-badge">Digital book</span>
+                    <h3>Vedic Astrology &amp; Modern Science</h3>
+                    <p>Interactive book with free sample, calculators, and a reference matrix.</p>
                     <ul class="product-features">
-                        <li>Volunteer management</li>
-                        <li>Donor tracking</li>
-                        <li>Event coordination</li>
-                        <li>Financial management</li>
-                        <li>Comprehensive reporting</li>
+                        <li>horoscopeguide.nasneeraj.com</li>
                     </ul>
                     <div class="product-actions">
-                        <a href="contact.html" class="btn btn-secondary btn-small">Get Notified</a>
+                        <a href="astrology-guide.html" class="btn btn-primary btn-small">Overview</a>
+                        <a href="https://horoscopeguide.nasneeraj.com/" class="btn btn-secondary btn-small" target="_blank" rel="noopener noreferrer">Open</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Services Section -->
-    <section class="content" style="background: #fffbf5;">
-            <div class="section">
-                <h2 class="section-title">Professional Services</h2>
-                <p style="font-size: 1.2em; text-align: center; max-width: 900px; margin: 0 auto 40px; line-height: 1.8; color: #555;">
-                    Beyond our products, Saaniya Software LLC offers comprehensive consulting services to help organizations 
-                    analyze their needs, design robust architectures, and create detailed software development plans.
-                </p>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <h3>📊 Business Analysis</h3>
-                        <p>
-                            Comprehensive analysis of your business needs, processes, and requirements to identify 
-                            opportunities for software solutions.
-                        </p>
-                        <div class="product-actions">
-                            <a href="services.html" class="btn btn-primary btn-small">Learn More</a>
-                    </div>
-                    </div>
-                    <div class="product-card">
-                        <h3>🏗️ Architectural Analysis</h3>
-                        <p>
-                            Design robust, scalable, and secure software architectures tailored to your specific 
-                            needs, following industry best practices.
-                        </p>
-                        <div class="product-actions">
-                            <a href="services.html" class="btn btn-primary btn-small">Learn More</a>
-                    </div>
-                    </div>
-                    <div class="product-card">
-                        <h3>📋 Software Planning</h3>
-                        <p>
-                            Create comprehensive software development plans with detailed roadmaps, timelines, 
-                            and implementation strategies.
-                        </p>
-                        <div class="product-actions">
-                            <a href="services.html" class="btn btn-primary btn-small">Learn More</a>
-                    </div>
-                </div>
-            </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="services.html" class="btn btn-primary">View All Services</a>
-        </div>
-                </div>
-        </section>
-
-        <!-- Upwork Section -->
+    <!-- Upwork Section -->
         <section class="content" id="upwork" style="background: linear-gradient(180deg, #f8fafc 0%, #fffbf5 100%);">
             <div class="section">
                 <h2 class="section-title">Upwork engagements</h2>
-                <p style="font-size: 1.15em; text-align: center; max-width: 900px; margin: 0 auto 1.25rem; line-height: 1.8; color: #555;">
-                    Prefer hiring through <strong>Upwork</strong>? Saaniya Software LLC can work with clients on scoped builds—architecture, SaaS features, integrations, and implementation planning—with the same standards we use for our own products.
+                <p class="section-lead">
+                    Prefer hiring through Upwork? We take on scoped builds—architecture, SaaS features, integrations, and delivery planning—with the same standards as our products. Profile link coming soon;
+                    <a href="contact.html" style="color: #4f46e5;">contact us</a> meanwhile.
                 </p>
-                <p style="font-size: 1.05em; text-align: center; max-width: 880px; margin: 0 auto 2rem; line-height: 1.8; color: #666;">
-                    Our public Upwork profile link is <strong>coming soon</strong>. Until then, use this site for portfolio context, or <a href="contact.html" style="color: #667eea;">contact us directly</a>. We do not publish rate cards or catalog packages here—engagements are scoped to your needs.
-                </p>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <h3>What we take on</h3>
-                        <p>
-                            Feature delivery on existing apps, multi-tenant SaaS patterns, Postgres/Neon and auth setups,
-                            EdTech workflows, and clear architecture or delivery plans before you commit to a large build.
-                        </p>
-                    </div>
-                    <div class="product-card">
-                        <h3>How it relates to our products</h3>
-                        <p>
-                            Marketplace work sits alongside our product portfolio (GuruVidyaZen, Saarthee, and more).
-                            Direct demos and pilots stay available through this site when Upwork is not the right channel.
-                        </p>
-                    </div>
-                    <div class="product-card">
-                        <h3>Next step</h3>
-                        <p>
-                            Read the full explanation of capabilities, example engagement types, and portfolio links—
-                            then reach out when you are ready to scope work.
-                        </p>
-                        <div class="product-actions">
-                            <a href="upwork.html" class="btn btn-primary btn-small">Upwork explained</a>
-                            <a href="contact.html" class="btn btn-secondary btn-small">Contact</a>
-                        </div>
-                    </div>
+                <div style="text-align: center;">
+                    <a href="upwork.html" class="btn btn-primary btn-small">Upwork explained</a>
+                    <a href="contact.html" class="btn btn-secondary btn-small">Contact</a>
                 </div>
             </div>
         </section>
