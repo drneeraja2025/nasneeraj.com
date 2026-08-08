@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyer | Saaniya EMR by Saaniya Software LLC</title>
+  <meta name="description" content="A printable one-page introduction to Saaniya EMR for clinic owners.">
+  <link rel="icon" type="image/png" href="assets/emr/logo-trimmed.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/emr/emr.css">
+</head>
+<body>
+  <header class="site-header is-solid no-print">
+    <div class="site-header__inner">
+      <a class="site-logo" href="saaniya-emr.html" aria-label="Saaniya EMR home">
+        <span class="site-logo__plate">
+          <img src="assets/emr/logo-trimmed.png" alt="Saaniya Software LLC Logo" width="1314" height="392">
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="saaniya-emr.html">Home</a>
+        <a href="saaniya-emr-software.html">Software</a>
+        <a href="saaniya-emr-pricing.html">Pricing</a>
+        <a href="saaniya-emr-security.html">Security</a>
+        <a href="saaniya-emr-flyer.html" class="is-active">Flyer</a>
+        <a href="https://docs.google.com/forms/d/1qiJV6SQoZRM7BvTl73QU-d9fLmzqa4f0CwI-xQaCs3Y/viewform" target="_blank" rel="noopener noreferrer">Survey</a>
+        <a class="nav-company lift" href="index.html">Saaniya Software</a>
+      </nav>
+      <div class="site-header__mobile">
+        <a class="btn-mobile-pricing lift" href="saaniya-emr-pricing.html">Pricing</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="flyer-toolbar no-print">
+      <p>One A4 page. Print with background graphics enabled, or share the PDF.</p>
+      <div class="btn-row">
+        <a href="assets/emr/saaniya-emr-flyer.pdf" download>Download PDF</a>
+        <button type="button" class="btn btn-outline lift" data-print style="padding:0.5rem 1rem">Print</button>
+      </div>
+    </div>
+
+    <article class="flyer-sheet">
+      <header>
+        <div>
+          <img src="assets/emr/logo-trimmed.png" alt="Saaniya Software LLC Logo" width="1314" height="392">
+          <h1>Saaniya EMR</h1>
+        </div>
+        <p class="subtitle">Local-first clinical records · Any outpatient clinic · India first</p>
+      </header>
+
+      <p class="flyer-standfirst">The complete patient record stays encrypted on your clinic's own computer. Patients still book online, and your own payment QR appears on every invoice.</p>
+
+      <div class="flyer-photos">
+        <div><img src="assets/emr/clinic-office.jpg" alt="Clinic reception and waiting area"></div>
+        <div><img src="assets/emr/emr-system.jpg" alt="Saaniya EMR running on a clinic desktop and laptop"></div>
+      </div>
+
+      <div class="flyer-cols">
+        <section>
+          <h2>What the software does</h2>
+          <ul>
+            <li><strong>Built for any outpatient clinic.</strong> Solo OPD, single-specialty clinic, or multi-specialty outpatient practice — same product. You are not limited to a short list of disciplines; optional chart packs extend the forms when you need them.</li>
+            <li><strong>Works when the internet does not.</strong> Consultations, prescriptions, and billing complete offline. Appointments queue locally and sync when the connection returns, so a power cut or an outage never stops the clinic.</li>
+            <li><strong>Charting that fits your practice.</strong> Start with standard outpatient notes, vitals, and prescriptions. Optional packs add structured fields for Ayurveda, psychiatry, neurology, gastroenterology, and more — as schemas, not separate products.</li>
+            <li><strong>Prescriptions built for your practice.</strong> Conventional medications with dosage and duration, or classical formulations with Anupana when that pack is enabled. Reusable templates mean the third prescription of the day takes seconds.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Four services</h2>
+          <ul>
+            <li><strong>A · Software.</strong> The local desktop EMR, licensed to your practice.</li>
+            <li><strong>B · Website.</strong> A managed booking site for your clinic.</li>
+            <li><strong>C · Payment display.</strong> Your own UPI QR and bank details, shown where patients need them.</li>
+            <li><strong>D · Maintenance.</strong> Updates, support, and backup assistance.</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="flyer-cols bordered">
+        <section>
+          <h2>Cybersecurity</h2>
+          <ul>
+            <li><strong>AES-256 encryption at rest.</strong> The clinical database is encrypted on disk with SQLCipher. A stolen or resold clinic PC does not hand over your patient history.</li>
+            <li><strong>Keys derived properly, not guessed.</strong> Argon2id key derivation with a per-install salt. Your passphrase is never used directly as the encryption key, and the session key lives in the operating system keychain.</li>
+            <li><strong>Recovery codes at setup.</strong> Printed recovery codes are generated during installation, so a forgotten passphrase is a recoverable event rather than a permanent loss.</li>
+            <li><strong>Role-based access and audit logging.</strong> Doctors and front-desk staff see different things. The audit log records who accessed which record, never the record contents.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Compliance — India DPDP Act</h2>
+          <ul>
+            <li><strong>You are the Data Fiduciary. We are a processor.</strong> Under India's DPDP Act the clinic determines why and how patient data is processed. Saaniya Software LLC processes booking contacts on your behalf, under a written Data Processing Agreement supplied with your licence.</li>
+            <li><strong>Data minimisation, built into the product.</strong> The clinical record never reaches our infrastructure, so the volume of personal data we hold on your behalf stays deliberately small. Minimisation is an architectural property here, not a policy promise.</li>
+            <li><strong>Consent and clear notice.</strong> Your booking page carries a specific, readable privacy notice covering what is collected and why, rather than blanket consent buried in a form.</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="flyer-pricing">
+        <div class="flyer-pricing__head">
+          <h2>Indicative India pricing</h2>
+          <p>Pilot pricing, shown excluding applicable taxes. Other markets quoted on request.</p>
+        </div>
+        <div class="flyer-pricing__grid">
+          <div class="flyer-tier">
+            <p class="flyer-tier__name">Starter<span>Solo doctor or single-room clinic</span></p>
+            <dl>
+              <dt>Software</dt><dd>₹20,000 – ₹25,000 one-time</dd>
+              <dt>Website</dt><dd>₹8,000 setup + ₹4,000 / year</dd>
+              <dt>Maintenance</dt><dd>₹6,000 – ₹8,000 / year</dd>
+            </dl>
+          </div>
+          <div class="flyer-tier">
+            <p class="flyer-tier__name">Professional<span>Multi-doctor or multi-specialty practice</span></p>
+            <dl>
+              <dt>Software</dt><dd>₹40,000 – ₹50,000 one-time</dd>
+              <dt>Website</dt><dd>₹15,000 setup + ₹8,000 / year</dd>
+              <dt>Maintenance</dt><dd>₹12,000 – ₹18,000 / year</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <p class="cta">Interested? Share clinic needs via our survey</p>
+          <p class="url">https://docs.google.com/forms/d/1qiJV6SQoZRM7BvTl73QU-d9fLmzqa4f0CwI-xQaCs3Y/viewform</p>
+          <p class="contact">saaniyasoftware@nasneeraj.com · saaniya-software.nasneeraj.com</p>
+        </div>
+        <p class="disclaimer">Saaniya EMR is not marketed as HIPAA certified. Cloud booking contacts are personal data under India's DPDP Act and are processed under a written agreement. Patient payments are collected by your clinic, never by Saaniya Software LLC. Do not put clinical patient details in the interest survey.</p>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="site-footer__bar" style="border-top:0">
+      Saaniya EMR by Saaniya Software LLC ·
+      <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a> ·
+      <a href="index.html">Company home</a> ·
+      <a href="saaniya-emr.html">Product overview</a>
+    </div>
+  </footer>
+
+  <script src="assets/emr/emr.js"></script>
+</body>
+</html>

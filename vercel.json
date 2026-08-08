@@ -113,6 +113,22 @@
       "destination": "/saaniya-emr.html"
     },
     {
+      "source": "/saaniya-emr-software",
+      "destination": "/saaniya-emr-software.html"
+    },
+    {
+      "source": "/saaniya-emr-pricing",
+      "destination": "/saaniya-emr-pricing.html"
+    },
+    {
+      "source": "/saaniya-emr-security",
+      "destination": "/saaniya-emr-security.html"
+    },
+    {
+      "source": "/saaniya-emr-flyer",
+      "destination": "/saaniya-emr-flyer.html"
+    },
+    {
       "source": "/emr",
       "destination": "/saaniya-emr.html"
     },
