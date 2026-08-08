@@ -1486,9 +1486,14 @@ body.page-home .site-header:not(.is-solid) .btn-mobile-pricing {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
   border-top: 2px solid #e0b457;
   padding-top: 3mm;
+}
+
+.flyer-footer__copy {
+  flex: 1;
+  min-width: 0;
 }
 
 .flyer-sheet > footer .cta {
@@ -1499,28 +1504,80 @@ body.page-home .site-header:not(.is-solid) .btn-mobile-pricing {
   color: #0f2f61;
 }
 
-.flyer-sheet > footer .url {
-  margin: 1mm 0 0;
-  font-size: 8pt;
-  font-weight: 600;
-  color: #1b4fa8;
-  word-break: break-all;
-}
-
 .flyer-sheet > footer .contact {
-  margin: 0.5mm 0 0;
+  margin: 1mm 0 0;
   font-size: 9pt;
   font-weight: 600;
   color: #1b4fa8;
 }
 
 .flyer-sheet > footer .disclaimer {
-  margin: 0;
-  max-width: 92mm;
-  text-align: right;
+  margin: 1.5mm 0 0;
+  max-width: 145mm;
+  text-align: left;
   font-size: 6.5pt;
   line-height: 1.35;
   color: #4d5f74;
+}
+
+.flyer-qr {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1mm;
+  text-decoration: none;
+  color: #0f2f61;
+}
+
+.flyer-qr img {
+  width: 28mm;
+  height: 28mm;
+  display: block;
+  background: #fff;
+  border: 0.4mm solid #d7e0ec;
+  padding: 1mm;
+}
+
+.flyer-qr span {
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* On-page survey QR next to CTAs */
+.survey-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem 1.75rem;
+}
+
+.survey-qr {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--ink, #0f2f61);
+}
+
+.survey-qr img {
+  width: 5.5rem;
+  height: 5.5rem;
+  display: block;
+  background: #fff;
+  border: 1px solid rgba(15, 47, 97, 0.14);
+  padding: 0.35rem;
+}
+
+.survey-qr span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted, #4d5f74);
 }
 
 @page {
