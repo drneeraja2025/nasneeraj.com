@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design, Development &amp; Maintenance | Saaniya Software LLC</title>
+  <meta name="description" content="Saaniya Software LLC designs, builds, hosts, and maintains websites for schools, studios, and small organizations — from choosing a domain through social media marketing.">
+  <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saaniya-software.nasneeraj.com/website-services">
+  <meta property="og:title" content="Website Design, Development &amp; Maintenance | Saaniya Software LLC">
+  <meta property="og:description" content="From domain choice to social marketing — websites built and kept alive for schools, studios, and local organizations.">
+  <meta property="og:image" content="https://saaniya-software.nasneeraj.com/assets/Saaniyalogo.png">
+
+  <style>
+    :root {
+      --ink: #10261f;
+      --soft: #3d534a;
+      --muted: #5f7469;
+      --line: #d5e0da;
+      --paper: #f3f7f4;
+      --panel: #ffffff;
+      --forest: #1f5c45;
+      --forest-deep: #0d3326;
+      --gold: #c9a14a;
+      --gold-soft: #f0e2c0;
+      --sky: #e8f2ec;
+      --radius: 1.25rem;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "DM Sans", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(201, 161, 74, 0.18), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(31, 92, 69, 0.12), transparent 50%),
+        linear-gradient(180deg, #eef5f0 0%, var(--paper) 38%, #f7faf8 100%);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(243, 247, 244, 0.92);
+      border-bottom: 1px solid rgba(213, 224, 218, 0.9);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .brand img {
+      width: 3.25rem;
+      height: 3.25rem;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+      align-items: center;
+      list-style: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--soft);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.is-active { color: var(--forest); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(13, 51, 38, 0.94) 0%, rgba(31, 92, 69, 0.88) 48%, rgba(16, 38, 31, 0.92) 100%),
+        repeating-linear-gradient(-18deg, transparent, transparent 22px, rgba(255,255,255,0.03) 22px, rgba(255,255,255,0.03) 23px);
+      pointer-events: none;
+    }
+
+    .hero__inner {
+      position: relative;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: clamp(3.5rem, 8vw, 5.5rem) 1.35rem clamp(3.75rem, 8vw, 5.75rem);
+      color: #f5faf7;
+    }
+
+    .hero__eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 1rem;
+      animation: rise 0.7s ease both;
+    }
+
+    .hero__brand {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 3.75rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      max-width: 14ch;
+      margin-bottom: 1rem;
+      animation: rise 0.75s 0.06s ease both;
+    }
+
+    .hero__support {
+      max-width: 36rem;
+      font-size: 1.1rem;
+      color: rgba(245, 250, 247, 0.88);
+      margin-bottom: 1.75rem;
+      animation: rise 0.75s 0.12s ease both;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      animation: rise 0.75s 0.18s ease both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--forest-deep);
+    }
+
+    .btn-gold:hover { background: #d4b05c; }
+
+    .btn-ghost {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); }
+
+    .btn-solid {
+      background: var(--forest);
+      color: #fff;
+    }
+
+    .btn-solid:hover { background: #174a37; }
+
+    .btn-outline {
+      border: 1px solid var(--forest);
+      color: var(--forest);
+      background: transparent;
+    }
+
+    .btn-outline:hover { background: var(--sky); }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: clamp(3rem, 6vw, 4.5rem) 1.35rem;
+    }
+
+    .section__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 0.65rem;
+    }
+
+    .section__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 4vw, 2.65rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      max-width: 22ch;
+    }
+
+    .section__lead {
+      color: var(--soft);
+      font-size: 1.05rem;
+      max-width: 40rem;
+      margin-bottom: 2rem;
+    }
+
+    .journey {
+      display: grid;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(16, 38, 31, 0.06);
+    }
+
+    .journey__row {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 1rem;
+      padding: 1.25rem 1.35rem;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+
+    .journey__row:last-child { border-bottom: 0; }
+
+    .journey__num {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--gold);
+      line-height: 1.2;
+    }
+
+    .journey__row h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .journey__row p {
+      color: var(--soft);
+      font-size: 0.98rem;
+      max-width: 44rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 0.65rem 1fr;
+      gap: 0.85rem;
+      align-items: start;
+      color: var(--soft);
+    }
+
+    .feature-list li::before {
+      content: "";
+      width: 0.55rem;
+      height: 0.55rem;
+      margin-top: 0.45rem;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .feature-list strong {
+      display: block;
+      color: var(--ink);
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+
+    .case {
+      background: var(--forest-deep);
+      color: #eef6f1;
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case::after {
+      content: "";
+      position: absolute;
+      width: 12rem;
+      height: 12rem;
+      right: -3rem;
+      bottom: -4rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 161, 74, 0.28), transparent 70%);
+      pointer-events: none;
+    }
+
+    .case__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 0.75rem;
+    }
+
+    .case h3 {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 500;
+      margin-bottom: 0.65rem;
+      position: relative;
+    }
+
+    .case p {
+      color: rgba(238, 246, 241, 0.86);
+      margin-bottom: 1.25rem;
+      position: relative;
+      font-size: 0.98rem;
+    }
+
+    .case a {
+      position: relative;
+      color: var(--gold-soft);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .band {
+      background: linear-gradient(180deg, rgba(232, 242, 236, 0.7), transparent);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .pillar {
+      padding: 0.25rem 0;
+    }
+
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.45rem;
+    }
+
+    .pillar p { color: var(--soft); font-size: 0.98rem; }
+
+    .cta {
+      text-align: left;
+      background:
+        linear-gradient(135deg, rgba(31, 92, 69, 0.08), rgba(201, 161, 74, 0.12)),
+        var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .cta .section__title { max-width: none; }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 1.35rem 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer a {
+      color: var(--forest);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 820px) {
+      .split,
+      .pillars { grid-template-columns: 1fr; }
+      .hero__brand { max-width: none; }
+      .journey__row { grid-template-columns: 3rem 1fr; }
+    }
+  </style>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+        <span>Saaniya Software LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="website-services.html" class="is-active">Websites</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Saaniya Software LLC</p>
+      <h1 class="hero__brand">Website design, development &amp; maintenance</h1>
+      <p class="hero__support">From choosing a domain to launching on social media — we plan, build, host, and keep your site working so schools, studios, and local organizations can focus on teaching and community.</p>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="contact.html">Start a website project</a>
+        <a class="btn btn-ghost" href="https://milwaukeeshala.org/" target="_blank" rel="noopener noreferrer">See Milwaukee Shala</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap">
+      <p class="section__eyebrow">End-to-end</p>
+      <h2 class="section__title">One partner from name to presence</h2>
+      <p class="section__lead">Most organizations do not need a dozen vendors. They need a clear path: a good domain, a site that looks like them, a host that stays up, and a simple way to be found online.</p>
+
+      <div class="journey">
+        <div class="journey__row">
+          <span class="journey__num" aria-hidden="true">01</span>
+          <div>
+            <h3>Domain &amp; identity</h3>
+            <p>Help choosing and registering a domain, setting DNS, email basics, and aligning the site name with how people already know your school or business.</p>
+          </div>
+        </div>
+        <div class="journey__row">
+          <span class="journey__num" aria-hidden="true">02</span>
+          <div>
+            <h3>Design that fits the place</h3>
+            <p>Structure, typography, photography direction, and copy tone for language schools, arts studios, clinics, and community organizations — not a generic template look.</p>
+          </div>
+        </div>
+        <div class="journey__row">
+          <span class="journey__num" aria-hidden="true">03</span>
+          <div>
+            <h3>Build &amp; launch</h3>
+            <p>Fast, mobile-first pages: programs, schedules, enrollment or inquiry forms, maps, and contact — deployed on modern hosting with HTTPS and analytics when you want them.</p>
+          </div>
+        </div>
+        <div class="journey__row">
+          <span class="journey__num" aria-hidden="true">04</span>
+          <div>
+            <h3>Hosting &amp; maintenance</h3>
+            <p>Updates, content edits, uptime checks, dependency and security patches, and seasonal refresh so the site does not quietly go stale after launch day.</p>
+          </div>
+        </div>
+        <div class="journey__row">
+          <span class="journey__num" aria-hidden="true">05</span>
+          <div>
+            <h3>Social media marketing</h3>
+            <p>Profile setup, post templates, launch announcements, and a practical posting rhythm so the website and Facebook / Instagram point to each other and bring people in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <p class="section__eyebrow">What you get</p>
+            <h2 class="section__title">Built for real schedules</h2>
+            <p class="section__lead">Language schools and small organizations need clarity more than flash. We keep the first visit simple: who you are, what you teach, how to join.</p>
+            <ul class="feature-list">
+              <li>
+                <div>
+                  <strong>Programs &amp; schedules</strong>
+                  Class offerings, levels, ages, and how to inquire or enroll without hunting through menus.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Forms that reach you</strong>
+                  Interest, placement, and contact forms wired to your inbox — not abandoned in a dashboard you never open.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Findable online</strong>
+                  Sensible page titles, map and NAP details, and social links so search and shares land on the right place.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Care after launch</strong>
+                  Monthly or seasonal maintenance so hours, fees, and events stay accurate.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <aside class="case">
+            <p class="case__label">Featured engagement</p>
+            <h3>Milwaukee Shala</h3>
+            <p>A language-school website engagement for <strong>milwaukeeshala.org</strong> — domain, design, development, and go-live presence so families can find programs and get in touch. The new site is in active development.</p>
+            <p>
+              <a href="https://milwaukeeshala.org/" target="_blank" rel="noopener noreferrer">milwaukeeshala.org</a>
+              · Language school
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <p class="section__eyebrow">Three layers</p>
+      <h2 class="section__title">Design. Development. Care.</h2>
+      <p class="section__lead">Pick a full package or start with launch and add maintenance and social once the site is live.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Design</h3>
+          <p>Brand-aware layout, photography guidance, and copy structure that reads clearly on phone and desktop.</p>
+        </div>
+        <div class="pillar">
+          <h3>Development</h3>
+          <p>Clean static or Next.js sites, forms, DNS, SSL, analytics, and deploy pipelines you can hand off or keep with us.</p>
+        </div>
+        <div class="pillar">
+          <h3>Maintenance &amp; marketing</h3>
+          <p>Content updates, seasonal campaigns, and social kits so the website is not the last thing anyone remembers to update.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-top:0">
+      <div class="cta">
+        <p class="section__eyebrow">Next step</p>
+        <h2 class="section__title">Tell us about your school or organization</h2>
+        <p class="section__lead" style="margin-bottom:1.5rem">Share what you teach, whether you already own a domain, and whether you need launch-only or ongoing care. We will reply with a clear scope — not a vague proposal deck.</p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="contact.html">Contact Saaniya Software</a>
+          <a class="btn btn-outline" href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>
+          <a class="btn btn-outline" href="services.html">All consulting services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Website services by Saaniya Software LLC</p>
+      <p>
+        <a href="index.html">Company home</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

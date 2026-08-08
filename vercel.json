@@ -133,6 +133,14 @@
       "destination": "/saaniya-emr.html"
     },
     {
+      "source": "/website-services",
+      "destination": "/website-services.html"
+    },
+    {
+      "source": "/websites",
+      "destination": "/website-services.html"
+    },
+    {
       "source": "/astrology-guide",
       "destination": "/astrology-guide.html"
     },
