@@ -15,6 +15,7 @@ Meta needs you signed in (or an official Meta API connection with your Business 
 | Saarthee CoPlanner | https://saaniya-software.nasneeraj.com/social-saarthee-coplanner |
 | Saarthee Fleet | https://saaniya-software.nasneeraj.com/social-saarthee-fleet |
 | Astrology book | https://saaniya-software.nasneeraj.com/social-astrology |
+| Saaniya EMR | https://saaniya-software.nasneeraj.com/social-saaniya-emr |
 
 Local files: `social-kit.html` and `social-*.html`. Assets live in `assets/social/`.
 
@@ -47,6 +48,7 @@ Suggested order:
 5. CoPlanner
 6. Fleet
 7. Astrology
+8. Saaniya EMR
 
 ## What Cursor / an agent cannot do
 

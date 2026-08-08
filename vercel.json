@@ -153,6 +153,10 @@
       "destination": "/social-saarthee-fleet.html"
     },
     {
+      "source": "/social-saaniya-emr",
+      "destination": "/social-saaniya-emr.html"
+    },
+    {
       "source": "/social-astrology",
       "destination": "/social-astrology.html"
     },
