@@ -109,6 +109,14 @@
       "destination": "/saarthee-fleet.html"
     },
     {
+      "source": "/saaniya-emr",
+      "destination": "/saaniya-emr.html"
+    },
+    {
+      "source": "/emr",
+      "destination": "/saaniya-emr.html"
+    },
+    {
       "source": "/astrology-guide",
       "destination": "/astrology-guide.html"
     },
