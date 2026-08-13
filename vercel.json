@@ -141,6 +141,10 @@
       "destination": "/website-services.html"
     },
     {
+      "source": "/visiting-card",
+      "destination": "/visiting-card.html"
+    },
+    {
       "source": "/astrology-guide",
       "destination": "/astrology-guide.html"
     },

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visiting card | Saaniya Software LLC</title>
+  <meta name="description" content="Print-ready Saaniya Software LLC visiting card — brand front with website QR, logo back, 3.5 × 2 in at 300 dpi.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a2b4a;
+      --soft: #475569;
+      --line: #e2e8f0;
+      --paper: #f7f6f3;
+      --gold: #b8944a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 70% 40% at 0% 0%, rgba(184, 148, 74, 0.12), transparent 55%),
+        linear-gradient(180deg, #eef1f6 0%, var(--paper) 40%, #fff 100%);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1, h2 { font-family: "Outfit", system-ui, sans-serif; letter-spacing: -0.02em; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0.35rem 0 0.5rem; }
+    h2 { font-size: 1.25rem; margin: 2rem 0 0.75rem; color: var(--ink); }
+    .back { color: var(--soft); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+    .back:hover { color: var(--ink); }
+    .lede { color: var(--soft); max-width: 40rem; margin-bottom: 1.25rem; }
+    .meta {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+      color: var(--soft); font-size: 0.9rem; margin-bottom: 1.5rem;
+    }
+    .meta strong { color: var(--ink); }
+    .downloads {
+      display: flex; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 2rem;
+    }
+    .downloads a {
+      display: inline-flex; align-items: center;
+      padding: 0.65rem 1rem; border-radius: 999px;
+      background: var(--ink); color: #fff; font-weight: 700;
+      font-size: 0.9rem; text-decoration: none;
+    }
+    .downloads a.secondary {
+      background: #fff; color: var(--ink); border: 1px solid var(--line);
+    }
+    .downloads a:hover { opacity: 0.92; }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    figure {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 12px 30px rgba(26, 43, 74, 0.06);
+    }
+    figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+    }
+    figcaption {
+      margin-top: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--soft);
+      font-weight: 600;
+    }
+    .sheet {
+      margin-top: 1.25rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+    }
+    .sheet img { width: 100%; max-width: 520px; display: block; margin: 0 auto; border: 1px solid var(--line); }
+    .note {
+      margin-top: 1.5rem;
+      padding: 1rem 1.15rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--soft);
+      font-size: 0.95rem;
+    }
+    .note a { color: var(--ink); font-weight: 700; }
+    @media (max-width: 720px) {
+      .preview-grid { grid-template-columns: 1fr; }
+    }
+    @media print {
+      .downloads, .back, .note { display: none; }
+      body { background: #fff; }
+      .wrap { padding: 0; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">← Saaniya Software LLC</a>
+    <h1>Visiting card</h1>
+    <p class="lede">Brand front from your Saaniya Software artwork, with a QR code to the company website. Clean logo back for double-sided print.</p>
+    <div class="meta">
+      <span><strong>Size</strong> 3.5 × 2 in</span>
+      <span><strong>Resolution</strong> 300 dpi</span>
+      <span><strong>QR</strong> https://saaniya-software.nasneeraj.com</span>
+    </div>
+    <div class="downloads">
+      <a href="assets/visiting-card/saaniya-visiting-card-front.png" download>Download front PNG</a>
+      <a class="secondary" href="assets/visiting-card/saaniya-visiting-card-back.png" download>Download back PNG</a>
+      <a class="secondary" href="assets/visiting-card/saaniya-visiting-card-print-sheet.png" download>Download print sheet</a>
+      <a class="secondary" href="assets/visiting-card/website-qr.png" download>Download QR only</a>
+    </div>
+
+    <h2>Preview</h2>
+    <div class="preview-grid">
+      <figure>
+        <img src="assets/visiting-card/saaniya-visiting-card-front.png" alt="Saaniya Software LLC visiting card front with website QR">
+        <figcaption>Front — name, tagline, gold wave, contact, website QR</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/visiting-card/saaniya-visiting-card-back.png" alt="Saaniya Software LLC visiting card back">
+        <figcaption>Back — logo and tagline</figcaption>
+      </figure>
+    </div>
+
+    <div class="sheet">
+      <h2 style="margin-top:0">Letter print sheet</h2>
+      <img src="assets/visiting-card/saaniya-visiting-card-print-sheet.png" alt="Print sheet with front and back visiting cards">
+    </div>
+
+    <div class="note">
+      Print at <strong>actual size</strong> (no “fit to page”). Cut on the grey border.
+      Website: <a href="https://saaniya-software.nasneeraj.com/">saaniya-software.nasneeraj.com</a>
+      · Email: <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>
+    </div>
+  </div>
+</body>
+</html>

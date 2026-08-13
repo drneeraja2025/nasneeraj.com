@@ -19,6 +19,8 @@ Meta needs you signed in (or an official Meta API connection with your Business 
 
 Local files: `social-kit.html` and `social-*.html`. Assets live in `assets/social/`.
 
+**Visiting card** (brand front + website QR): https://saaniya-software.nasneeraj.com/visiting-card · files in `assets/visiting-card/`.
+
 ## One-time Meta setup
 
 1. Open [Meta Business Suite](https://business.facebook.com/).
