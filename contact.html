@@ -431,7 +431,7 @@
                 <strong>Error:</strong> There was a problem sending your message. Please try again or email us directly at saaniyasoftware@nasneeraj.com
             </div>
             
-            <form id="contactForm" action="https://formspree.io/f/YOUR_CONTACT_FORM_ID" method="POST">
+            <form id="contactForm" method="POST" action="/api/contact">
                 <div class="form-group">
                     <label for="name">Name *</label>
                     <input type="text" id="name" name="name" required>
@@ -519,21 +519,21 @@
             submitBtn.textContent = 'Sending...';
             
             try {
-                const formData = new FormData(form);
-                
-                // Add hidden fields for better email formatting
-                formData.append('_subject', `[Saaniya Software LLC Contact Form] ${formData.get('subject')}`);
-                formData.append('_replyto', formData.get('email'));
-                formData.append('_next', window.location.origin + window.location.pathname + '?success=true');
-                
-                const response = await fetch(form.action, {
+                const payload = {
+                    name: form.name.value.trim(),
+                    email: form.email.value.trim(),
+                    subject: form.subject.value.trim(),
+                    message: form.message.value.trim(),
+                };
+
+                const response = await fetch('/api/contact', {
                     method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(payload),
                 });
-                
+
+                const data = await response.json().catch(() => ({}));
+
                 if (response.ok) {
                     // Show success message or redirect
                     if (successMessage) {
@@ -549,11 +549,7 @@
                     // Update URL without reload
                     window.history.pushState({}, '', window.location.pathname + '?success=true');
                 } else {
-                    const data = await response.json();
-                    if (data.errors) {
-                        throw new Error(data.errors.map(e => e.message).join(', '));
-                    }
-                    throw new Error('Form submission failed');
+                    throw new Error(data.error || 'Form submission failed');
                 }
             } catch (error) {
                 console.error('Error submitting form:', error);
