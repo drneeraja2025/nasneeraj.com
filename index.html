@@ -442,14 +442,39 @@
 
         .hero-copy { max-width: 38rem; }
 
+        .hero-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 1.15rem;
+            animation: fadeInUp 1s ease-out 0.1s both;
+        }
+
+        .hero-brand img {
+            height: clamp(3.25rem, 7vw, 4.5rem);
+            width: auto;
+            filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.35));
+        }
+
+        .hero-brand-name {
+            margin: 0;
+            font-size: clamp(1.65rem, 3.6vw, 2.35rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
         .hero h1 {
-            font-size: clamp(2.1rem, 4.2vw, 3.15rem);
-            line-height: 1.12;
+            font-size: clamp(1.55rem, 2.8vw, 2.15rem);
+            line-height: 1.2;
             margin-bottom: 1.1rem;
-            font-weight: 700;
+            font-weight: 650;
             letter-spacing: -0.02em;
             text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25);
             animation: fadeInUp 1s ease-out 0.2s both;
+            color: rgba(241, 245, 249, 0.95);
         }
 
         .hero h1 .hero-highlight {
@@ -1180,8 +1205,19 @@
                 margin: 0 auto 0.75rem;
             }
 
+            .hero-brand {
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                gap: 0.55rem;
+            }
+
+            .hero-brand-name {
+                font-size: 1.75rem;
+            }
+
             .hero h1 {
-                font-size: 2.2em;
+                font-size: 1.55em;
             }
 
             .products-grid {
@@ -1265,9 +1301,13 @@
     <section class="hero">
         <div class="hero-content hero-grid">
             <div class="hero-copy">
+                <div class="hero-brand">
+                    <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo" width="72" height="72">
+                    <p class="hero-brand-name">Saaniya Software LLC</p>
+                </div>
                 <h1>Custom development &amp; <span class="hero-highlight">purpose-built products</span></h1>
                 <p class="hero-sub">
-                    <strong>Saaniya Software LLC</strong> helps organizations plan and ship cloud software—architecture, analysis, and delivery—while building its own products for schools, academies, and operators. Engage us for a thoughtful build, or explore live products like <strong>GuruVidyaZen</strong>, <strong>School SISLMS</strong>, and <strong>Saarthee</strong> apps in development.
+                    We help organizations plan and ship cloud software—architecture, analysis, and delivery—while building our own products for schools, academies, and operators. Engage us for a thoughtful build, or explore live products like <strong>GuruVidyaZen</strong>, <strong>School SISLMS</strong>, and <strong>Saarthee</strong> apps in development.
                 </p>
                 <div class="hero-chips" role="list">
                     <span class="hero-chip" role="listitem">Architecture · analysis · implementation planning</span>
@@ -1579,7 +1619,7 @@
 
         <!-- Footer -->
     <footer class="footer">
-            <p>&copy; 2026 Saaniya Software LLC. All rights reserved.</p>
+            <p>&copy; <span id="nas-copyright-year">2026</span> <strong>Saaniya Software LLC</strong>. A Wisconsin limited liability company. All rights reserved.</p>
         <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="sislms.html">School SISLMS</a>
@@ -1589,14 +1629,24 @@
             <a href="social-kit.html">Social kit</a>
             <a href="demo.html">Request Demo</a>
             <a href="contact.html">Contact</a>
-            <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
             <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacy/guruvidyazen.html">Education Privacy</a>
             <a href="legal/astrology-policies.html">Astrology Book — Legal</a>
         </div>
-        <p style="margin-top: 20px; font-size: 0.9em;">
-                Innovative Software Solutions Powered by Artificial Intelligence
-            </p>
+        <p style="margin-top: 16px; font-size: 0.85em; max-width: 42rem; margin-left: auto; margin-right: auto; opacity: 0.9;">
+            GuruVidyaZen, GuruVidyaZen School SISLMS, SISMMS, GuruVidyaZen Riyaz Studio, Saarthee CoPlanner, Saarthee Fleet Manager, and Saaniya EMR are product names of Saaniya Software LLC.
+        </p>
+        <p style="margin-top: 12px; font-size: 0.9em;">
+            Billing &amp; legal: <a href="mailto:saaniyasoftware@nasneeraj.com" style="color: inherit;">saaniyasoftware@nasneeraj.com</a>
+        </p>
+        <script>
+            (function () {
+                var el = document.getElementById('nas-copyright-year');
+                if (el) el.textContent = String(new Date().getFullYear());
+            })();
+        </script>
     </footer>
 
     <script src="assets/site-nav.js?v=20260805a"></script>

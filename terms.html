@@ -3,175 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Saaniya Software LLC | SISLMS & GuruVidyaZen</title>
-    <meta name="description" content="Terms of Service and Data Governance for SISLMS and GuruVidyaZen by Saaniya Software LLC. Platform disclosure, data retention policies, and Wisconsin legal mandates.">
+    <title>Terms of Service — Saaniya Software LLC</title>
+    <meta name="description" content="Terms of Service for products and services provided by Saaniya Software LLC.">
     <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
-    
-    <!-- Google Analytics 4 -->
-    <!-- Replace 'G-XXXXXXXXXX' with your actual GA4 Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX', {
-        'anonymize_ip': true,
-        'cookie_flags': 'SameSite=None;Secure'
-      });
-    </script>
-    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: #fffbf5;
-        }
-        .navbar {
-            background: #fffbf5;
-            box-shadow: 0 2px 12px rgba(30, 41, 59, 0.06);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 0;
-        }
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        .nav-logo img { height: 80px; width: auto; }
-        .nav-logo-text { font-size: 1.3em; font-weight: bold; color: #667eea; }
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-            padding: 8px 12px;
-            border-radius: 5px;
-            white-space: nowrap;
-            font-size: 0.95em;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background: #fffbf5; }
+        .navbar { background: #fffbf5; box-shadow: 0 2px 12px rgba(30, 41, 59, 0.06); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { display: flex; align-items: center; gap: 15px; text-decoration: none; color: #333; }
+        .nav-logo img { height: 64px; width: auto; }
+        .nav-logo-text { font-size: 1.2em; font-weight: bold; color: #667eea; }
+        .nav-links { display: flex; gap: 16px; list-style: none; align-items: center; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; padding: 8px 10px; border-radius: 5px; font-size: 0.95em; }
         .nav-links a:hover { color: #667eea; background: #f0f0f0; }
-        .content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 60px 40px;
-            background: white;
-        }
-        h1 { color: #667eea; font-size: 2.5em; margin-bottom: 20px; }
-        h2 { color: #667eea; font-size: 2em; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
-        h3 { color: #555; font-size: 1.5em; margin-top: 30px; margin-bottom: 15px; }
-        p { margin-bottom: 15px; color: #555; }
-        ul, ol { margin: 15px 0; padding-left: 30px; }
-        li { margin-bottom: 10px; color: #555; }
-        .highlight { background: #e3f2fd; padding: 20px; border-radius: 10px; border-left: 4px solid #667eea; margin: 20px 0; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { padding: 12px; text-align: left; border: 1px solid #ddd; }
-        th { background: #667eea; color: white; }
-        .footer {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 40px;
-            text-align: center;
-        }
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
+        .content { max-width: 1000px; margin: 0 auto; padding: 60px 40px; background: white; }
+        h1 { color: #667eea; font-size: 2.4em; margin-bottom: 12px; }
+        h2 { color: #667eea; font-size: 1.55em; margin-top: 36px; margin-bottom: 14px; border-bottom: 2px solid #667eea; padding-bottom: 8px; }
+        p, li { margin-bottom: 12px; color: #555; }
+        ul { margin: 12px 0 12px 28px; }
+        .meta { color: #666; margin-bottom: 24px; }
+        .draft-note { background: #fff8e6; border-left: 4px solid #e6a800; padding: 14px 18px; margin: 0 0 28px; border-radius: 8px; font-size: 0.95em; }
+        .highlight { background: #e3f2fd; padding: 18px; border-radius: 10px; border-left: 4px solid #667eea; margin: 20px 0; }
+        .footer { background: #1a1a1a; color: #ccc; padding: 40px; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 24px; margin: 20px 0; flex-wrap: wrap; }
         .footer-links a { color: #ccc; text-decoration: none; }
         .footer-links a:hover { color: #667eea; }
-        @media (max-width: 768px) {
-            .content { padding: 40px 20px; }
-            h1 { font-size: 2em; }
-            h2 { font-size: 1.5em; }
-        }
-        /* Dropdown Menu */
-        .nav-dropdown {
-            position: relative;
-        }
-
-        .nav-dropdown > a {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .nav-dropdown > a::after {
-            content: '▼';
-            font-size: 0.7em;
-            margin-left: 5px;
-            transition: transform 0.3s;
-        }
-
-        .nav-dropdown:hover > a::after {
-            transform: rotate(180deg);
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            border-radius: 8px;
-            min-width: 220px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            margin-top: 5px;
-            padding: 8px 0;
-        }
-
-        .nav-dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 12px 20px;
-            color: #333;
-            text-decoration: none;
-            transition: all 0.3s;
-            border-radius: 0;
-        }
-
-        .dropdown-menu a:hover {
-            background: #f0f4ff;
-            color: #667eea;
-            padding-left: 25px;
-        }
+        @media (max-width: 768px) { .content { padding: 40px 20px; } h1 { font-size: 1.9em; } }
     </style>
-    <!-- Vercel Web Analytics -->
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
     <script defer src="/_vercel/insights/script.js"></script>
     <link rel="stylesheet" href="assets/site-sidebar.css?v=20260805a">
 </head>
@@ -182,178 +42,111 @@
                 <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
                 <span class="nav-logo-text">Saaniya Software LLC</span>
             </a>
-                        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li class="nav-dropdown">
-                    <a href="#">Products</a>
-                    <div class="dropdown-menu">
-                        <a href="https://sislms.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen SISLMS</a>
-                        <a href="sismms.html">SISMMS by Saaniya Software LLC</a>
-                        <a href="https://saarthee.nasneeraj.com/">Saarthee CoPlanner by Saaniya Software LLC</a>
-                        <a href="https://guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen by Saaniya Software LLC</a>
-                        <a href="https://riyaz.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">GuruVidyaZen Riyaz Studio</a>
-                        <a href="https://horoscopeguide.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Astrology Guide by Saaniya Software LLC</a>
-                        <a href="https://fleet.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Saarthee Fleet Manager</a>
-                    </div>
-                </li>
-                <li class="nav-dropdown">
-                    <a href="compare.html">Compare</a>
-                    <div class="dropdown-menu">
-                        <a href="compare.html">SISLMS Comparison</a>
-                        <a href="compare-gvz.html">GuruVidyaZen Comparison</a>
-                    </div>
-                </li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="hotl-research.html">Research on HOTL</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="vision.html">Vision</a></li>
-                <li><a href="demo.html">Request Demo</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="content">
-        <h1>Terms of Service & Data Governance</h1>
-        <p style="font-size: 1.1em; color: #666; margin-bottom: 30px;">
-            <strong>Last Updated:</strong> February 23, 2026<br>
-            <strong>Service:</strong> SISLMS & GuruVidyaZen by Saaniya Software LLC<br>
-            <strong>Provider:</strong> Saaniya Software LLC
-        </p>
+        <h1>Terms of Service</h1>
+        <p class="meta"><strong>Last updated:</strong> September 9, 2026<br>
+            <strong>Provider:</strong> Saaniya Software LLC (Wisconsin)</p>
 
-        <h2>1. Service Scope and Architecture</h2>
-        <p>This Terms of Service agreement governs your use of the SISLMS and GuruVidyaZen platforms operated by Saaniya Software LLC. These services are provided solely for educational, administrative, and data governance functions as authorized by the institution's administration.</p>
-
-        <h3>Platform Disclosure (Headless Saaniya Software LLC Protocol)</h3>
-        <p>This application operates on a secure, multi-platform technology stack. Saaniya Software LLC acts as the Data Controller and manages the security of all third-party vendors listed below.</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Vendor / Platform</th>
-                    <th>Role</th>
-                    <th>GNA Protocol Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Cursor</strong></td>
-                    <td>Primary coder and AI technology</td>
-                    <td>Development Tool</td>
-                </tr>
-                <tr>
-                    <td><strong>Supabase</strong></td>
-                    <td>Primary Database and Authentication Backend (DB-as-Truth)</td>
-                    <td>Fully Controlled and Secured</td>
-                </tr>
-                <tr>
-                    <td><strong>Vercel</strong></td>
-                    <td>Front-End Hosting and Deployment (Git-as-Truth)</td>
-                    <td>Fully Controlled and deployed from GitHub</td>
-                </tr>
-                <tr>
-                    <td><strong>Make</strong></td>
-                    <td>External Logic and Automation (e.g., scheduled notifications)</td>
-                    <td>Future Use</td>
-                </tr>
-                <tr>
-                    <td><strong>Bubble</strong></td>
-                    <td>External Logic and Specialized Dashboards</td>
-                    <td>Future Use</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>2. Data Retention and Disposition (Wisconsin Legal Mandate)</h2>
-        <p>Saaniya Software LLC strictly adheres to the data retention mandates of the State of Wisconsin for public educational records.</p>
-
-        <h3>Minimum Retention Period (Wis. Stat. § 16.61)</h3>
-        <div class="highlight">
-            <p>We are legally required to retain all public educational records for a period of <strong>not less than seven (7) years</strong> from the date of creation, as mandated by State Public Records Law.</p>
+        <div class="draft-note">
+            Staged from the Saaniya Software LLC counsel pack in <code>agrawal-llc-docs</code>. Wisconsin counsel should finalize indemnity, liability caps, and dispute resolution before relying on these Terms for paid contracts or OAuth production verification.
         </div>
 
-        <h3>Data Destruction Protocol</h3>
-        <p>When data is required to be permanently destroyed (e.g., after the 7-year minimum period):</p>
-        <ul>
-            <li>Saaniya Software LLC and the school district must adhere to the <strong>60-day written notification process</strong> to the Wisconsin State Historical Society before the final destruction of public records.</li>
-            <li>All data destruction procedures must comply with Wisconsin state law.</li>
-            <li>Written confirmation of data destruction will be provided to the school district.</li>
-        </ul>
+        <h2 id="section-1">1. Who we are</h2>
+        <p>These Terms of Service (“Terms”) govern your access to and use of websites, software-as-a-service products, downloadable software, and professional services (collectively, the “Services”) provided by <strong>Saaniya Software LLC</strong> (“Company,” “we,” “us,” or “our”), a Wisconsin limited liability company. Product brands include GuruVidyaZen, GuruVidyaZen School SISLMS, SISMMS, GuruVidyaZen Riyaz Studio, Saarthee CoPlanner, Saarthee Fleet Manager, Saaniya EMR, and other portfolio products on nasneeraj.com.</p>
+        <p>These Terms are a contract with the Company, not with any individual member, officer, or developer personally.</p>
 
-        <h2>3. Data Ownership and Security</h2>
-        <h3>Data Ownership</h3>
+        <h2 id="section-2">2. Acceptance</h2>
+        <p>By accessing or using the Services, you agree to be bound by these Terms. If you use the Services on behalf of an organization, you represent that you have authority to bind that organization, and “you” refers to both you and that organization.</p>
+
+        <h2 id="section-3">3. Eligibility and minors</h2>
+        <p>You must be at least 18 (or the age of majority in your jurisdiction) to create an account, unless you use an education product solely through a school or academy Customer that has agreed to a data processing arrangement. We do not knowingly allow direct-to-child account creation outside a school contract. Report suspected underage direct accounts to <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>.</p>
+
+        <h2 id="section-4">4. Accounts</h2>
+        <p>You are responsible for maintaining the confidentiality of account credentials and for all activities under your account. Notify us promptly of unauthorized use. Do not share tenant-admin access in a way that bypasses billed seats or security controls.</p>
+
+        <h2 id="section-5">5. Subscription, fees, and refunds</h2>
+        <p>Paid Services are billed as disclosed at signup or in an invoice/SOW, in U.S. dollars unless stated otherwise. Fees may be processed by third-party processors (for example Stripe or Razorpay). Except where required by law or expressly stated in a written refund policy, fees are non-refundable. Applicable cancellation, refund, and proration rules at the time of purchase are part of these Terms. Taxes (including VAT/GST where required) are extra unless stated.</p>
+
+        <h2 id="section-6">6. Acceptable use</h2>
+        <p>You agree not to:</p>
+        <ul>
+            <li>use the Services to violate any law, regulation, or third-party right;</li>
+            <li>reverse engineer or attempt to extract source code except as permitted by law;</li>
+            <li>upload malicious code, bypass security controls, or interfere with Service integrity;</li>
+            <li>probe or access other tenants’ data;</li>
+            <li>use the Services to generate or disseminate illegal content, spam, or infringing material;</li>
+            <li>upload protected health information (PHI) or regulated medical/financial document sets unless a separate written compliance program exists (none today);</li>
+            <li>use the Services for medical, legal, financial, or other regulated decisions without independent professional review.</li>
+        </ul>
+        <p><strong>Regulated-work decline:</strong> We do not accept HIPAA / PHI or regulated medical-financial processing without a separate written compliance program.</p>
+
+        <h2 id="section-7">7. Your content</h2>
+        <p>You retain rights in content you submit (“User Content”). You grant the Company a worldwide, non-exclusive, royalty-free license to host, store, process, transmit, display, and create derivative works of User Content solely to provide and improve the Services. You represent that you have all rights necessary to grant this license. Customer data remains Customer’s property; school education records remain subject to the school’s policies and applicable law.</p>
+
+        <h2 id="section-8">8. AI features</h2>
+        <p>Certain Services use artificial intelligence or machine-learning models, including third-party models. AI outputs may be inaccurate, incomplete, or inappropriate. You must review AI outputs before relying on them. We do not warrant that AI outputs are fit for any particular purpose. AI outputs are <strong>not</strong> medical, legal, financial, or professional advice. See our <a href="disclaimer.html">Disclaimer</a>.</p>
+        <p>Subject to model-provider terms and applicable law, we assign to you our rights (if any) in AI-generated output produced from your inputs, excluding pre-existing Company tools, prompts, or libraries. We do not use Customer Content to train public foundation models unless a written order says so.</p>
+
+        <h2 id="section-9">9. Education products — FERPA / COPPA</h2>
+        <p>Where Services are provided to K–12 schools or other education institutions, we may receive student personally identifiable information. In that role we act as a processor / “school official” with a “legitimate educational interest” under FERPA only to the extent set forth in a separate written Data Processing Addendum or School Service Agreement. Product-specific details: <a href="privacy/guruvidyazen.html">Education Privacy Addendum</a>. We do not knowingly collect personal information directly from children under 13 outside an institutional context that authorizes such collection.</p>
+
+        <h2 id="section-10">10. Intellectual property</h2>
+        <p>Except for User Content and third-party components licensed separately, all rights in the Services—including software, designs, and marks—are owned by Saaniya Software LLC or its licensors. Product and brand names listed above are trade names and/or unregistered service marks of the Company.</p>
+
+        <h2 id="section-11">11. Beta / pilot features</h2>
+        <p>Beta, pilot, or preview features are provided “as is” and may change or be withdrawn without notice.</p>
+
+        <h2 id="section-12">12. Disclaimers</h2>
+        <p>THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE.</p>
+
+        <h2 id="section-13">13. Limitation of liability</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR EXEMPLARY DAMAGES, OR FOR LOST PROFITS, REVENUE, OR DATA, ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICES. OUR TOTAL AGGREGATE LIABILITY UNDER THESE TERMS WILL NOT EXCEED THE GREATER OF (A) USD $100 OR (B) THE AMOUNT PAID BY YOU TO US FOR THE SERVICES IN THE TWELVE (12) MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM.</p>
+
+        <h2 id="section-14">14. Indemnification</h2>
+        <p>You will indemnify and hold harmless the Company and its officers, employees, and agents from any third-party claim arising out of (a) your breach of these Terms, (b) your User Content, or (c) your violation of any law or third-party right.</p>
+
+        <h2 id="section-15">15. Suspension and termination</h2>
+        <p>We may suspend or terminate access for breach of these Terms or for security or operational reasons. Sections addressing IP, disclaimers, liability, indemnity, and governing law survive termination.</p>
+
+        <h2 id="section-16">16. Export and sanctions</h2>
+        <p>You may not use the Services if you are prohibited under U.S. export control or sanctions laws.</p>
+
+        <h2 id="section-17">17. Governing law and disputes</h2>
+        <p>These Terms are governed by the laws of the State of Wisconsin, excluding conflict-of-laws rules, without waiving any non-waivable consumer-protection rights of your place of residence. Subject to those rights, disputes will be resolved in the state or federal courts located in Wisconsin, and you consent to personal jurisdiction there. Counsel may later add arbitration or class-action terms.</p>
+
+        <h2 id="section-18">18. Changes</h2>
+        <p>We may update these Terms from time to time. Material changes will be posted on this page with an updated “Last updated” date. Continued use after the effective date constitutes acceptance of the revised Terms.</p>
+
+        <h2 id="section-19">19. Contact</h2>
         <div class="highlight">
-            <p><strong>All student data and educational records entered into the SISLMS by Saaniya Software LLC platform are and shall remain the property of the student and the school district.</strong></p>
-        </div>
-        <p>Saaniya Software LLC acknowledges that it has no ownership rights to student data. The school district and students retain full ownership and control of all educational records.</p>
-
-        <h3>Security Standard (RLS)</h3>
-        <p>All access to data is secured by <strong>Row-Level Security (RLS)</strong> policies applied directly to the Supabase database. Access is strictly controlled based on the user's verified role (Admin, Teacher, Guardian).</p>
-        <ul>
-            <li>RLS policies are enforced at the database level, ensuring security even if application code has vulnerabilities</li>
-            <li>Users can only access data they are authorized to view based on their role and school assignment</li>
-            <li>All data access is logged and auditable</li>
-        </ul>
-
-        <h3>Prohibited Actions</h3>
-        <p>Users are strictly forbidden from:</p>
-        <ul>
-            <li>Attempting to bypass RLS security policies</li>
-            <li>Performing unauthorized data scraping or extraction</li>
-            <li>Sharing login credentials with unauthorized persons</li>
-            <li>Accessing data outside of their authorized scope</li>
-        </ul>
-        <p><strong>Any such attempt is considered a material breach of these terms.</strong></p>
-
-        <h2>4. Account Termination</h2>
-        <p>Saaniya Software LLC reserves the right to suspend or terminate any user account that:</p>
-        <ul>
-            <li>Violates RLS policies</li>
-            <li>Attempts unauthorized data access</li>
-            <li>Violates the spirit of these terms</li>
-            <li>Engages in any activity that compromises system security</li>
-        </ul>
-
-        <h2>5. Governing Law</h2>
-        <p>These Terms are governed by the laws of the State of Wisconsin, U.S.A.</p>
-
-        <h2>6. Contact Information</h2>
-        <div class="highlight">
-            <p><strong>For questions about these Terms of Service:</strong></p>
             <p>
-                <strong>Saaniya Software</strong><br>
-                Saaniya Software LLC<br>
-                Email: <a href="mailto:saaniyasoftware@nasneeraj.com" style="color: #667eea;">saaniyasoftware@nasneeraj.com</a><br>
-                Website: <a href="http://nasneeraj.com" style="color: #667eea;">nasneeraj.com</a>
+                <strong>Saaniya Software LLC</strong><br>
+                Wisconsin, United States<br>
+                Legal &amp; billing: <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a><br>
+                Website: <a href="https://saaniya-software.nasneeraj.com/">saaniya-software.nasneeraj.com</a>
             </p>
         </div>
-
-        <p style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #ddd; color: #999; font-size: 0.9em;">
-            <strong>Last Updated:</strong> November 20, 2025
-        </p>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2026 Saaniya Software LLC. All rights reserved.</p>
+        <p>&copy; 2026 Saaniya Software LLC. A Wisconsin limited liability company. All rights reserved.</p>
         <div class="footer-links">
             <a href="index.html">Home</a>
-            <a href="sislms.html">SISLMS</a>
-            <a href="services.html">Services</a>
-            <a href="demo.html">Request Demo</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="privacy/guruvidyazen.html">Education Privacy</a>
             <a href="contact.html">Contact</a>
         </div>
-        <p style="margin-top: 20px; font-size: 0.9em;">
-            Contact: <a href="mailto:saaniyasoftware@nasneeraj.com" style="color: #667eea;">saaniyasoftware@nasneeraj.com</a>
-        </p>
     </footer>
     <script src="assets/site-nav.js?v=20260805a"></script>
 </body>
 </html>
-
-

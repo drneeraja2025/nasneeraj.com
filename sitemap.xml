@@ -135,7 +135,7 @@
     <!-- Terms of Service -->
     <url>
         <loc>https://saaniya-software.nasneeraj.com/terms.html</loc>
-        <lastmod>2026-04-17</lastmod>
+        <lastmod>2026-09-09</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -143,7 +143,7 @@
     <!-- Privacy Policy -->
     <url>
         <loc>https://saaniya-software.nasneeraj.com/privacy.html</loc>
-        <lastmod>2026-04-17</lastmod>
+        <lastmod>2026-09-09</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -151,7 +151,15 @@
     <!-- Disclaimer -->
     <url>
         <loc>https://saaniya-software.nasneeraj.com/disclaimer.html</loc>
-        <lastmod>2026-04-17</lastmod>
+        <lastmod>2026-09-09</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Education Privacy Addendum -->
+    <url>
+        <loc>https://saaniya-software.nasneeraj.com/privacy/guruvidyazen.html</loc>
+        <lastmod>2026-09-09</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>

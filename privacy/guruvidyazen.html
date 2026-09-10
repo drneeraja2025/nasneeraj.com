@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Privacy Addendum — GuruVidyaZen / SISLMS | Saaniya Software LLC</title>
+    <meta name="description" content="Privacy and OAuth addendum for GuruVidyaZen and SISLMS education products by Saaniya Software LLC. FERPA processor role, student data, and parental rights.">
+    <link rel="icon" type="image/png" href="../assets/Saaniyalogo.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; color: #333; background: #fffbf5; }
+        .navbar { background: #fffbf5; box-shadow: 0 2px 12px rgba(30, 41, 59, 0.06); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+        .nav-container { max-width: 1400px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { display: flex; align-items: center; gap: 15px; text-decoration: none; color: #333; }
+        .nav-logo img { height: 64px; width: auto; }
+        .nav-logo-text { font-size: 1.2em; font-weight: bold; color: #667eea; }
+        .nav-links { display: flex; gap: 16px; list-style: none; align-items: center; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; padding: 8px 10px; border-radius: 5px; font-size: 0.95em; }
+        .nav-links a:hover { color: #667eea; background: #f0f0f0; }
+        .content { max-width: 1000px; margin: 0 auto; padding: 60px 40px; background: white; }
+        h1 { color: #667eea; font-size: 2.2em; margin-bottom: 12px; }
+        h2 { color: #667eea; font-size: 1.55em; margin-top: 36px; margin-bottom: 14px; border-bottom: 2px solid #667eea; padding-bottom: 8px; }
+        h3 { color: #555; font-size: 1.2em; margin-top: 22px; margin-bottom: 10px; }
+        p, li, td { margin-bottom: 12px; color: #555; }
+        ul { margin: 12px 0 12px 28px; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; vertical-align: top; }
+        th { background: #f5f7ff; color: #445; }
+        .meta { color: #666; margin-bottom: 24px; }
+        .draft-note { background: #fff8e6; border-left: 4px solid #e6a800; padding: 14px 18px; margin: 0 0 28px; border-radius: 8px; font-size: 0.95em; }
+        .highlight { background: #e3f2fd; padding: 18px; border-radius: 10px; border-left: 4px solid #667eea; margin: 20px 0; }
+        .footer { background: #1a1a1a; color: #ccc; padding: 40px; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 24px; margin: 20px 0; flex-wrap: wrap; }
+        .footer-links a { color: #ccc; text-decoration: none; }
+        .footer-links a:hover { color: #667eea; }
+        @media (max-width: 768px) { .content { padding: 40px 20px; } h1 { font-size: 1.75em; } }
+    </style>
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="../assets/site-sidebar.css?v=20260805a">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+                <span class="nav-logo-text">Saaniya Software LLC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../privacy.html">Master Privacy</a></li>
+                <li><a href="../terms.html">Terms</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1>Education Privacy Addendum</h1>
+        <p class="meta">
+            <strong>Products:</strong> GuruVidyaZen / SISLMS and related school products<br>
+            <strong>Last updated:</strong> September 9, 2026<br>
+            <strong>Company Terms / Privacy:</strong> <a href="../terms.html">Terms</a> · <a href="../privacy.html">Master Privacy</a>
+        </p>
+
+        <div class="draft-note">
+            Staged from <code>agrawal-llc-docs</code> education SaaS privacy addendum. Use this URL (not master Privacy alone) for education-product OAuth Privacy fields after counsel approval.
+        </div>
+
+        <h2>1. Roles</h2>
+        <table>
+            <thead>
+                <tr><th>Role</th><th>Who</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Controller (or “school official” under FERPA where applicable)</td><td>The school / academy / Customer tenant</td></tr>
+                <tr><td>Processor</td><td>Saaniya Software LLC</td></tr>
+            </tbody>
+        </table>
+        <p>We process student, parent, and staff personal data only to provide the education product under the Customer’s instructions and any signed DPA.</p>
+
+        <h2>2. Categories of personal data</h2>
+        <ul>
+            <li><strong>Student:</strong> name, student ID, class enrollment, attendance, assignments, grades as configured</li>
+            <li><strong>Parent / guardian:</strong> name, email, phone (if Customer enables)</li>
+            <li><strong>Staff:</strong> name, email, role, class assignments</li>
+            <li><strong>Auth:</strong> OAuth subject ID, email, profile photo if scope granted</li>
+            <li><strong>Usage:</strong> login times, feature logs</li>
+        </ul>
+        <div class="highlight">
+            <p><strong>Excluded today:</strong> PHI / clinical records; regulated medical-financial document pipelines. We do not sell student PII.</p>
+        </div>
+
+        <h2>3. FERPA / school-official framing (U.S.)</h2>
+        <p>Where applicable, Saaniya Software LLC operates as a “school official” with a legitimate educational interest only under the school’s authorization and written agreement. We:</p>
+        <ul>
+            <li>perform institutional services the school would otherwise use employees for;</li>
+            <li>remain under the school’s control for use and maintenance of education records;</li>
+            <li>use education records only for authorized purposes and do not disclose them to unauthorized parties.</li>
+        </ul>
+        <p><strong>Non-U.S. schools:</strong> substitute the local education-privacy regime; flag to counsel per country before signing.</p>
+
+        <h2>4. Parental rights</h2>
+        <p>Parents and eligible students typically have rights to inspect/review records, request amendment, opt out of directory information, and file complaints under FERPA. Exercise those rights through the <strong>school</strong>; we assist the school under the DPA.</p>
+
+        <h2>5. COPPA / children under 13</h2>
+        <p>Where applicable, we support COPPA compliance for students under 13 through school-authorized collection only. Direct-to-child products without a school contract will not launch without counsel COPPA language. OAuth should not knowingly onboard users under 13 outside a school contract.</p>
+
+        <h2>6. OAuth / SSO scopes</h2>
+        <p>Exact live scopes must match the OAuth consent screen before External publishing. Typical sign-in scopes include <code>openid</code>, <code>email</code>, <code>profile</code>. Classroom / Drive / Graph scopes only if enabled and listed here after go-live.</p>
+
+        <h2>7. AI features in classroom context</h2>
+        <p>If AI-assisted features process student records, we remain processor—not controller. Student PII is not sent to a general-purpose AI provider unless that provider is listed as a subprocessor and covered by the DPA.</p>
+
+        <h2>8. Retention and return</h2>
+        <p>We retain data as needed to provide the Services and as required by law or school agreement. Upon termination, student data will be deleted or returned to the school within the period stated in the DPA (target: within 30 days), subject to legal retention holds. Wisconsin public-records rules may require longer retention where they apply.</p>
+
+        <h2>9. Security (summary)</h2>
+        <ul>
+            <li>TLS in transit; encryption for backups / snapshots where configured</li>
+            <li>Role-based access and row-level security where used</li>
+            <li>Least-privilege operator access</li>
+        </ul>
+
+        <h2>10. Contact</h2>
+        <div class="highlight">
+            <p>
+                <strong>Saaniya Software LLC</strong><br>
+                Privacy: <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a><br>
+                For student-record requests, contact your school administrator first.
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Saaniya Software LLC. A Wisconsin limited liability company. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Master Privacy</a>
+            <a href="../terms.html">Terms</a>
+            <a href="../contact.html">Contact</a>
+        </div>
+    </footer>
+    <script src="../assets/site-nav.js?v=20260805a"></script>
+</body>
+</html>
