@@ -79,7 +79,7 @@
     <!-- FAQ -->
     <url>
         <loc>https://saaniya-software.nasneeraj.com/faq.html</loc>
-        <lastmod>2026-04-17</lastmod>
+        <lastmod>2026-09-09</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -111,9 +111,9 @@
     <!-- HOTL Research -->
     <url>
         <loc>https://saaniya-software.nasneeraj.com/hotl-research.html</loc>
-        <lastmod>2026-04-17</lastmod>
+        <lastmod>2026-09-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.7</priority>
     </url>
     
     <!-- Security & Compliance -->

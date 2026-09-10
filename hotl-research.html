@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOTL Research & GNA Model - Saaniya Software LLC</title>
-    <meta name="description" content="Saaniya Software LLC research on Human-over-the-Loop (HOTL) governance model for AI software development. Validated methodology with 100% success rate on complex development tasks.">
+    <title>HOTL + AI Development - Saaniya Software LLC</title>
+    <meta name="description" content="How Saaniya Software uses Human-on-the-Loop (HOTL) skills with AI LLMs for cutting-edge software development: plan once, execute to Done/Blocked, verify, and ship with human gates.">
     <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
     
     <!-- Google Analytics 4 -->
@@ -321,7 +321,7 @@
         }
 
         .research-methodology li::before {
-            content: '✓';
+            content: '\2713';
             position: absolute;
             left: 0;
             color: #667eea;
@@ -336,6 +336,9 @@
             .stats-grid, .pillars-grid {
                 grid-template-columns: 1fr;
             }
+            .hotl-split {
+                grid-template-columns: 1fr !important;
+            }
         }
         /* Dropdown Menu */
         .nav-dropdown {
@@ -349,7 +352,7 @@
         }
 
         .nav-dropdown > a::after {
-            content: '▼';
+            content: 'v';
             font-size: 0.7em;
             margin-left: 5px;
             transition: transform 0.3s;
@@ -439,7 +442,7 @@
                     </div>
                 </li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="hotl-research.html">Research on HOTL</a></li>
+                <li><a href="hotl-research.html">HOTL + AI</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="testimonials.html">Testimonials</a></li>
                 <li><a href="vision.html">Vision</a></li>
@@ -451,285 +454,230 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>HOTL Research & GNA Model</h1>
-        <p>Validating Human-over-the-Loop Governance for Reliable AI Software Development</p>
+        <h1>HOTL + AI Development</h1>
+        <p>Human-on-the-Loop skills with modern LLMs-plan once, execute to Done or Blocked, verify with evidence, ship with human gates</p>
     </section>
 
     <!-- Content -->
     <div class="content">
-        <!-- Executive Summary -->
         <div class="section">
-            <h2 class="section-title">Executive Summary</h2>
-            <p style="font-size: 1.2em; line-height: 1.8; color: #555; margin-bottom: 30px;">
-                Saaniya Software LLC has conducted extensive research validating the <strong>Human-over-the-Loop (HOTL)</strong> 
-                governance model for AI-assisted software development. Our research, based on an audit of <strong>N=65</strong> real-world 
-                development tickets, proves that while AI can generate 80% of application code, it fails 100% of the time on the critical 
-                20% involving architectural integrity, security, and platform configuration.
+            <h2 class="section-title">Why this matters now</h2>
+            <p style="font-size: 1.15em; line-height: 1.8; color: #555; margin-bottom: 24px;">
+                Generative AI and large language models (LLMs) can draft large portions of an application quickly.
+                What separates production software from a demo is not more autocomplete-it is <strong>governance</strong>:
+                clear scope, security-aware architecture, verification, and deliberate release. Saaniya Software builds
+                with <strong>Human-on-the-Loop (HOTL)</strong> skills that turn LLM speed into reliable delivery.
             </p>
-
             <div class="highlight-box">
-                <h3>Key Finding</h3>
-                <p style="font-size: 1.1em; line-height: 1.8;">
-                    The <strong>GNA (Gemini-Neeraj Alliance) Model</strong> achieves <strong>100% project success</strong> by enforcing 
-                    rigid governance protocols, while AI-only workflows have a <strong>0% reliability rate</strong> on complex tasks. 
-                    Our research demonstrates that human strategic oversight is the only viable mechanism for bridging the "Execution Gap" 
-                    in AI development.
+                <h3>Cutting-edge practice, not "AI magic"</h3>
+                <p style="font-size: 1.05em; line-height: 1.8;">
+                    Industry teams are moving from chat-and-paste coding to <strong>agentic development</strong>:
+                    project rules, reusable skills, automated verify/deploy loops, and human stop rules for secrets,
+                    data loss, and production. That combination-<strong>HOTL + LLM agents</strong>-is how serious
+                    product teams ship faster without surrendering accountability.
                 </p>
             </div>
         </div>
 
-        <!-- Research Statistics -->
         <div class="section">
-            <h2 class="section-title">Research Validation Results</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="number">100%</div>
-                    <div class="label">GNA Model Success Rate</div>
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">65/65 complex tasks completed successfully</p>
-                </div>
-                <div class="stat-card">
-                    <div class="number">0%</div>
-                    <div class="label">AI-Only Success Rate</div>
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">0/65 complex tasks completed successfully</p>
-                </div>
-                <div class="stat-card">
-                    <div class="number">175%</div>
-                    <div class="label">Efficiency Ratio</div>
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">Value created vs. failures incurred</p>
-                </div>
-                <div class="stat-card">
-                    <div class="number">65</div>
-                    <div class="label">Tickets Audited</div>
-                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">Real-world development scenarios analyzed</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- The 80/20 Problem -->
-        <div class="section">
-            <h2 class="section-title">The 80/20 Rule in AI Development</h2>
-            <p style="font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 30px;">
-                Our research reveals a critical paradox in AI-assisted development:
-            </p>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0;">
-                <div style="background: #d4edda; padding: 30px; border-radius: 10px; border-left: 5px solid #28a745;">
-                    <h3 style="color: #155724; margin-bottom: 15px;">The 80% (Generation)</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #28a745; font-weight: bold;">✓</span>
-                            Isolated component generation
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #28a745; font-weight: bold;">✓</span>
-                            UI layouts and basic logic
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #28a745; font-weight: bold;">✓</span>
-                            Boilerplate code creation
-                        </li>
-                    </ul>
-                </div>
-                <div style="background: #f8d7da; padding: 30px; border-radius: 10px; border-left: 5px solid #dc3545;">
-                    <h3 style="color: #721c24; margin-bottom: 15px;">The 20% Gap (Critical Failures)</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #dc3545; font-weight: bold;">✗</span>
-                            Architectural integration
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #dc3545; font-weight: bold;">✗</span>
-                            Security enforcement (RLS policies)
-                        </li>
-                        <li style="padding: 8px 0; padding-left: 25px; position: relative;">
-                            <span style="position: absolute; left: 0; color: #dc3545; font-weight: bold;">✗</span>
-                            Platform configuration
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Failure Modes -->
-        <div class="section">
-            <h2 class="section-title">Identified Failure Modes</h2>
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <h4>1. AI Hallucination</h4>
-                    <p>The AI reports a task as "complete" when critical code is missing or incorrect. This creates false confidence and delays resolution.</p>
-                </div>
-                <div class="pillar-card">
-                    <h4>2. Systemic Omission</h4>
-                    <p>The AI generates code that references non-existent files or imports, causing build crashes and deployment failures.</p>
-                </div>
-                <div class="pillar-card">
-                    <h4>3. Context Rot</h4>
-                    <p>In long development sessions, the AI loses track of project state, reverting valid code to broken versions.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Comparison Table -->
-        <div class="section">
-            <h2 class="section-title">AI-Only vs. GNA HOTL Model</h2>
+            <h2 class="section-title">HITL vs HOTL (in one glance)</h2>
             <table class="comparison-table">
                 <thead>
                     <tr>
-                        <th>Metric</th>
-                        <th>AI-Only Workflow</th>
-                        <th>GNA HOTL Workflow</th>
+                        <th>Mode</th>
+                        <th>Human role</th>
+                        <th>Agent role</th>
+                        <th>Best for</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>First-Try Success Rate</strong></td>
-                        <td><span class="badge badge-danger">0% (0/65)</span></td>
-                        <td><span class="badge badge-success">100% (65/65)</span></td>
+                        <td><strong>HITL</strong><br><span style="font-weight:400;font-size:0.9em;">Human-in-the-Loop</span></td>
+                        <td>Approves nearly every step</td>
+                        <td>Waits between actions</td>
+                        <td>Exploration, ambiguous requirements</td>
                     </tr>
                     <tr>
-                        <td><strong>Systemic Failures</strong></td>
-                        <td>45+ (Build crashes, RLS locks)</td>
-                        <td>0 (Prevented by protocol)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Hallucination Rate</strong></td>
-                        <td>High (False completion claims)</td>
-                        <td>0 (Caught by Human Verification)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Efficiency Ratio</strong></td>
-                        <td>Negative (More failures than value)</td>
-                        <td>175% (2x value per failure)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Architectural Integrity</strong></td>
-                        <td>Compromised</td>
-                        <td>Maintained</td>
+                        <td><strong>HOTL</strong><br><span style="font-weight:400;font-size:0.9em;">Human-on-the-Loop</span></td>
+                        <td>Approves plan + stop rules once</td>
+                        <td>Runs until Done or Blocked</td>
+                        <td>Approved implementation packages</td>
                     </tr>
                 </tbody>
             </table>
+            <p style="margin-top: 20px; color: #555;">
+                HOTL is not "unattended AI." It is <strong>delegated execution under a written plan</strong>, with forced
+                human stops for secrets, destructive operations, lane ambiguity, and failed Done-when checks.
+            </p>
         </div>
 
-        <!-- The 9 Pillars -->
         <div class="section">
-            <h2 class="section-title">The 9 Pillars of GNA Governance</h2>
-            <p style="font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 30px;">
-                The GNA Model succeeds through 9 non-negotiable governance pillars:
+            <h2 class="section-title">How we use HOTL skills in development</h2>
+            <p style="font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 28px;">
+                In our day-to-day Cursor / agent workflow, HOTL is encoded as reusable <strong>skills</strong> and
+                project rules-so every package starts the same way and ends with evidence, not vibes.
             </p>
             <div class="pillars-grid">
                 <div class="pillar-card">
-                    <h4>Pillar I: Architectural Mandates</h4>
-                    <p><strong>Manual-First Architecture:</strong> Database schemas and RLS policies are NEVER created by AI. They are manually pushed by the Senior Architect to ensure security and integrity.</p>
+                    <h4>1. Restate the contract</h4>
+                    <p>Plan · Done when · Out of scope in a few lines. If those are missing, ask once-then execute.</p>
                 </div>
                 <div class="pillar-card">
-                    <h4>Pillar II: Platform Advisory</h4>
-                    <p><strong>Strategic Selection:</strong> Platforms are evaluated and selected based on production-readiness. Unfit platforms are flagged and avoided.</p>
+                    <h4>2. Execute without mid-step yes/no</h4>
+                    <p>No permission theater on every file edit. Progress is continuous until Done or Blocked.</p>
                 </div>
                 <div class="pillar-card">
-                    <h4>Pillar III: Client Protocols</h4>
-                    <p><strong>Trust Only Human Verification:</strong> AI success claims are disregarded. The human "Ground Truth" test is the only metric.</p>
+                    <h4>3. Verify with evidence</h4>
+                    <p>Build, tests, or stated checks. Fix once and retry; fail twice → Blocked with a precise question.</p>
                 </div>
                 <div class="pillar-card">
-                    <h4>Pillar IV: Fulfillment Protocols</h4>
-                    <p><strong>Single-Action Surgical Prompts:</strong> Tasks are broken down into atomic units to prevent Context Rot. GNA Reset Protocol ensures clean state recovery.</p>
+                    <h4>4. Ship with gates</h4>
+                    <p>Preview then production when authorized. Report SHAs, URLs, and residual risks-not "LGTM."</p>
                 </div>
                 <div class="pillar-card">
-                    <h4>Pillar V: Acquisition</h4>
-                    <p><strong>Proof of Value:</strong> Marketing is based on solving the specific "20% problems" (like RLS bugs) that trap other developers.</p>
+                    <h4>5. Hard stops stay human</h4>
+                    <p>Secrets, irreversible data loss, cross-product ambiguity, and unapproved production pushes force HITL.</p>
                 </div>
                 <div class="pillar-card">
-                    <h4>Pillar VI: Knowledge Lifecycle</h4>
-                    <p><strong>Continuous Audit:</strong> Every failure is logged to train the GNA Engine and improve future performance.</p>
+                    <h4>6. Project rules bind the agent</h4>
+                    <p>Branding, branch policy, deploy scripts, and security rules live in the repo so agents inherit them.</p>
                 </div>
-                <div class="pillar-card">
-                    <h4>Pillar VII: Business Governance</h4>
-                    <p><strong>Liability Shield:</strong> Client Service Agreements mandate client responsibility for testing and validation.</p>
-                </div>
-                <div class="pillar-card">
-                    <h4>Pillar VIII: Architect Development</h4>
-                    <p><strong>Skill Mandate:</strong> The human architect must master the "20% gaps" (SQL, Shell, CI/CD) to effectively audit the AI.</p>
-                </div>
-                <div class="pillar-card">
-                    <h4>Pillar IX: Validation Protocol</h4>
-                    <p><strong>The Audit Log:</strong> Continuously updated database of failure modes used to train agent-debuggers and prevent recurrence.</p>
-                </div>
+            </div>
+            <div class="research-methodology" style="margin-top: 32px;">
+                <h3>Example ship loop</h3>
+                <p style="margin-bottom: 12px;">A typical end-to-end package on our stack:</p>
+                <ul>
+                    <li><strong>HOTL execute</strong> - implement the approved plan without mid-step stalls</li>
+                    <li><strong>Verify</strong> - local build / e2e (or project Done-when)</li>
+                    <li><strong>Push</strong> - commit, Preview deploy, then Production when the phase calls for it</li>
+                    <li><strong>Handoff</strong> - short Done report: what changed, evidence table, risks</li>
+                </ul>
             </div>
         </div>
 
-        <!-- Saaniya Software LLC Portal Application -->
         <div class="section">
-            <h2 class="section-title">Saaniya Software LLC Portal: The 99/1 Automation Engine</h2>
-            <p style="font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 30px;">
-                The final evolution of the GNA model is the <strong>Saaniya Software LLC Portal</strong>, which automates the governance protocols themselves:
+            <h2 class="section-title">HOTL + LLM agents: what is cutting-edge</h2>
+            <div class="hotl-split" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0;">
+                <div style="background: #eef2ff; padding: 28px; border-radius: 10px; border-left: 5px solid #667eea;">
+                    <h3 style="color: #4338ca; margin-bottom: 12px;">Where LLMs excel</h3>
+                    <ul style="padding-left: 20px; color: #555;">
+                        <li style="margin-bottom: 8px;">Boilerplate, UI drafts, refactors, tests, docs</li>
+                        <li style="margin-bottom: 8px;">Repo-aware edits across many files</li>
+                        <li style="margin-bottom: 8px;">Turning a written plan into concrete diffs</li>
+                        <li style="margin-bottom: 8px;">Summarizing failures for human review</li>
+                    </ul>
+                </div>
+                <div style="background: #fff7ed; padding: 28px; border-radius: 10px; border-left: 5px solid #ea580c;">
+                    <h3 style="color: #9a3412; margin-bottom: 12px;">Where humans stay on the loop</h3>
+                    <ul style="padding-left: 20px; color: #555;">
+                        <li style="margin-bottom: 8px;">Architecture, threat model, data boundaries</li>
+                        <li style="margin-bottom: 8px;">Secrets, production, irreversible changes</li>
+                        <li style="margin-bottom: 8px;">Acceptance against Done-when evidence</li>
+                        <li style="margin-bottom: 8px;">Product and compliance judgment calls</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="font-size: 1.1em; line-height: 1.8; color: #555;">
+                The frontier is not "replace the engineer." It is <strong>AI drafting under architected control</strong>-
+                the same pattern advanced teams use for agent coding, CI gates, and preview/production promotion.
+                Saaniya Software operationalizes that pattern with HOTL skills so clients get speed <em>and</em> accountability.
             </p>
+        </div>
 
-            <div class="highlight-box">
-                <h3>The GNA Triad</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
-                    <div>
-                        <h4 style="color: #667eea; margin-bottom: 10px;">Strategic Hub (Gemini Web)</h4>
-                        <p>Designs the plan using Strategic Sync Prompt</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #667eea; margin-bottom: 10px;">Builder (Cursor/VS Code)</h4>
-                        <p>Executes the code generation</p>
-                    </div>
-                    <div>
-                        <h4 style="color: #667eea; margin-bottom: 10px;">Human Bridge (Neeraj)</h4>
-                        <p>Verifies the result with Ground Truth testing</p>
-                    </div>
+        <div class="section">
+            <h2 class="section-title">What our research taught us</h2>
+            <p style="font-size: 1.1em; line-height: 1.8; color: #555; margin-bottom: 28px;">
+                Internal audits of real development tickets reinforced a practical 80/20 pattern: models draft a large
+                share of routine code, but ungoverned AI-only runs fail on the critical remainder-integration,
+                security controls, and platform configuration. HOTL exists to close that gap.
+            </p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">80/20</div>
+                    <div class="label">Generation vs. critical gap</div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">LLMs accelerate drafts; humans own the hard 20%</p>
+                </div>
+                <div class="stat-card">
+                    <div class="number">HOTL</div>
+                    <div class="label">Plan → Done/Blocked</div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">Approve once; execute with stop rules</p>
+                </div>
+                <div class="stat-card">
+                    <div class="number">Verify</div>
+                    <div class="label">Evidence over claims</div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">Builds, tests, URLs-not "done" assertions</p>
+                </div>
+                <div class="stat-card">
+                    <div class="number">Ship</div>
+                    <div class="label">Preview then production</div>
+                    <p style="margin-top: 10px; font-size: 0.9em; color: #666;">Human gate when rules require it</p>
                 </div>
             </div>
-
-            <div class="research-methodology">
-                <h3>Agentic Enforcement Tools</h3>
-                <ul>
-                    <li><strong>agent-db-migrator:</strong> Automates the Manual SQL Push protocol</li>
-                    <li><strong>agent-auditor:</strong> Automates the detection of Systemic Omissions (missing imports, broken references)</li>
-                    <li><strong>agent-reviewer:</strong> Summarizes code changes for rapid human veto and approval</li>
-                </ul>
+            <div class="pillars-grid" style="margin-top: 28px;">
+                <div class="pillar-card">
+                    <h4>Failure mode: hallucination</h4>
+                    <p>Agent reports complete when critical pieces are missing. HOTL requires Done-when evidence.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Failure mode: systemic omission</h4>
+                    <p>Broken imports, missing files, half-wired config. Review and verify catch these before ship.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Failure mode: context rot</h4>
+                    <p>Long sessions drift. Atomic packages and reset/handoff discipline keep state honest.</p>
+                </div>
             </div>
         </div>
 
-        <!-- Research Methodology -->
         <div class="section">
-            <h2 class="section-title">Research Methodology</h2>
-            <div class="research-methodology">
-                <h3>Validation Protocol</h3>
-                <p style="margin-bottom: 20px;">To validate the necessity of human governance, we conducted a rigorous A/B test across three project environments:</p>
-                <ul>
-                    <li><strong>Sample Size:</strong> N=65 critical failure tickets and 114 verified successful atomic actions</li>
-                    <li><strong>Control Group (AI-Only):</strong> Tasks delegated fully to the AI without human intervention</li>
-                    <li><strong>Test Group (GNA HOTL):</strong> Tasks governed by the SUPERHARD GSA PROTOCOL, utilizing Strategic Sync Prompt and Manual-First mandates</li>
-                    <li><strong>Core Metrics:</strong> First-Try Success Rate, Efficiency Ratio, Defect Density</li>
-                </ul>
+            <h2 class="section-title">Governance pillars we still enforce</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h4>Manual-first for sensitive layers</h4>
+                    <p>Security-critical schema, access policies, and platform secrets are human-directed-not blind agent invent.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Trust verification, not claims</h4>
+                    <p>AI "success" language is ignored until checks pass. Ground truth is the only Done signal.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Surgical packages</h4>
+                    <p>Small, reviewable units beat giant prompts that rot context and hide risk.</p>
+                </div>
+                <div class="pillar-card">
+                    <h4>Architect skill mandate</h4>
+                    <p>Humans must still understand SQL, CI/CD, and security enough to audit agent output.</p>
+                </div>
             </div>
         </div>
 
-        <!-- Conclusion -->
         <div class="section">
-            <h2 class="section-title">Conclusion</h2>
+            <h2 class="section-title">What this means for clients</h2>
             <div class="highlight-box">
-                <p style="font-size: 1.2em; line-height: 1.8;">
-                    The era of "AI Coding" is a misnomer; the reality is <strong>"AI Drafting / Human Architecting."</strong> 
-                    Our research proves that AI cannot span the "Execution Gap" alone. The <strong>GNA Model</strong>—defined by 
-                    <strong>HOTL governance</strong>, <strong>Manual-First Architecture</strong>, and <strong>Procedural Rigor</strong>—is 
-                    the only proven methodology for building reliable, production-grade software with generative AI.
+                <p style="font-size: 1.15em; line-height: 1.8;">
+                    You get a partner that uses today's best LLM tooling <strong>without</strong> treating the model as
+                    the architect of record. Engagements start with a clear plan; agents move fast inside that plan;
+                    you see preview builds and evidence before production. That is HOTL in practice-modern, auditable,
+                    and built for real software, not demos.
                 </p>
             </div>
+            <p style="margin-top: 20px; color: #555;">
+                Related: <a href="faq.html">FAQ - how we develop and manage projects</a> ·
+                <a href="services.html">Services</a> ·
+                <a href="terms.html">Terms</a>
+            </p>
         </div>
 
-        <!-- CTA -->
         <div style="text-align: center; margin: 60px 0; padding: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white;">
-            <h2 style="font-size: 2.5em; margin-bottom: 20px;">Ready to Build Reliable AI-Assisted Software?</h2>
-            <p style="font-size: 1.2em; margin-bottom: 40px; opacity: 0.9;">
-                Learn how Saaniya Software LLC can help you avoid the 20% gap and achieve 100% project success
+            <h2 style="font-size: 2.2em; margin-bottom: 20px;">Build with HOTL + modern AI</h2>
+            <p style="font-size: 1.15em; margin-bottom: 36px; opacity: 0.95;">
+                Tell us what you want shipped. We will propose Plan / Done when / Out of scope-and execute with human gates.
             </p>
             <a href="contact.html" class="btn btn-primary" style="background: white; color: #667eea;">Contact Us</a>
-            <a href="services.html" class="btn btn-primary" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">Our Services</a>
+            <a href="faq.html" class="btn btn-primary" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">Read the FAQ</a>
+            <a href="services.html" class="btn btn-primary" style="background: rgba(255,255,255,0.2); color: white; border: 2px solid white;">Services</a>
         </div>
     </div>
-
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 Saaniya Software LLC. All rights reserved.</p>
