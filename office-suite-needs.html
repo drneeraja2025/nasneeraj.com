@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Needs questionnaire | Saaniya Office Suite</title>
+  <meta name="description" content="Tell Saaniya Software LLC how your small business works. The form recommends which Saaniya Office Suite pieces you need and shows pilot pricing for your country.">
+  <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/office-suite/suite.css">
+  <meta property="og:title" content="Needs questionnaire | Saaniya Office Suite">
+  <meta property="og:description" content="A short questionnaire that maps a small business to the Office Suite pieces it actually needs, with country pricing.">
+  <meta property="og:image" content="https://saaniya-software.nasneeraj.com/assets/Saaniyalogo.png">
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+        <span>Saaniya Software LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="office-suite.html">Office Suite</a></li>
+        <li><a href="office-suite-needs.html" class="is-active">Needs</a></li>
+        <li><a href="office-suite-pricing.html">Pricing</a></li>
+        <li><a href="mailto:saaniyasoftware@nasneeraj.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Saaniya Office Suite · Questionnaire</p>
+      <h1 class="hero__brand">What does your desk need?</h1>
+      <p class="hero__support">Answer for the business you run. We match you to the pieces on the <a href="office-suite.html">Office Suite</a> page and show pilot pricing for your country. Email the result to Saaniya Software LLC when you want a reply.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <form id="needs-form">
+      <fieldset class="panel">
+        <legend>About the business</legend>
+        <p class="hint">We use this to price the recommendation and to reply. No payment details on this form.</p>
+        <div class="grid-2">
+          <label class="field">Your name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">Work email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">Business name
+            <input type="text" name="business" required>
+          </label>
+          <label class="field">Country
+            <select name="country" id="country" required></select>
+          </label>
+        </div>
+        <label class="field">What do you sell or deliver?
+          <textarea name="sells" required placeholder="Example: a tutoring studio, a repair shop, a consulting practice"></textarea>
+        </label>
+        <p class="hint">Team size</p>
+        <label class="choice"><input type="radio" name="team" value="solo" required> Just me</label>
+        <label class="choice"><input type="radio" name="team" value="small"> 2–10 people</label>
+        <label class="choice"><input type="radio" name="team" value="mid"> 11–50 people</label>
+        <label class="choice"><input type="radio" name="team" value="large"> More than 50</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>Website</legend>
+        <p class="hint">The public face of the group.</p>
+        <label class="choice"><input type="radio" name="website" value="none" required> We do not have a website</label>
+        <label class="choice"><input type="radio" name="website" value="outdated"> We have one, and it is out of date or hard to change</label>
+        <label class="choice"><input type="radio" name="website" value="ok"> We have a site that already does the job</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>Front Office</legend>
+        <p class="hint">Who is coming, what is due, and what the team should see.</p>
+        <label class="choice"><input type="radio" name="reach" value="scattered" required> Requests live in phone, WhatsApp, and email — no shared desk</label>
+        <label class="choice"><input type="radio" name="reach" value="shared"> The team already shares one calendar and one task list</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>AI bots</legend>
+        <p class="hint">An assistant for repeat questions. A person stays in the loop.</p>
+        <label class="choice"><input type="radio" name="repeat" value="often" required> Clients ask the same questions every week</label>
+        <label class="choice"><input type="radio" name="repeat" value="sometimes"> Sometimes</label>
+        <label class="choice"><input type="radio" name="repeat" value="rarely"> Rarely — a person should answer everything</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>CRM</legend>
+        <p class="hint">Contacts, notes, and follow-ups outside one person’s inbox.</p>
+        <label class="choice"><input type="radio" name="leads" value="inbox" required> Inbox or chat only</label>
+        <label class="choice"><input type="radio" name="leads" value="sheet"> A spreadsheet</label>
+        <label class="choice"><input type="radio" name="leads" value="none"> Nowhere consistent</label>
+        <label class="choice"><input type="radio" name="leads" value="crm"> We already use a CRM and want to keep it</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>customized business software</legend>
+        <p class="hint">Only when a template does not fit the work.</p>
+        <label class="choice"><input type="radio" name="custom" value="yes" required> Yes — there is a job our tools cannot do</label>
+        <label class="choice"><input type="radio" name="custom" value="maybe"> Maybe — we are not sure yet</label>
+        <label class="choice"><input type="radio" name="custom" value="no"> No — standard pieces are enough</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>Integrations</legend>
+        <p class="hint">First set we connect. Pick every tool the desk must keep.</p>
+        <label class="choice"><input type="checkbox" name="tools" value="Notion"> Notion</label>
+        <label class="choice"><input type="checkbox" name="tools" value="Google Calendar"> Google Calendar</label>
+        <label class="choice"><input type="checkbox" name="tools" value="Google Drive"> Google Drive</label>
+        <label class="choice"><input type="checkbox" name="tools" value="Google Meet"> Google Meet</label>
+        <label class="choice"><input type="checkbox" name="tools" value="Zoom"> Zoom</label>
+        <label class="choice"><input type="checkbox" name="tools" value="none"> None of these</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>Client portals</legend>
+        <p class="hint">A customer books, sees status, and opens a document or invoice.</p>
+        <label class="choice"><input type="radio" name="portal" value="yes" required> Yes — customers should see their own status</label>
+        <label class="choice"><input type="radio" name="portal" value="soon"> Not yet, but within the next year</label>
+        <label class="choice"><input type="radio" name="portal" value="no"> No — staff can look things up for them</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>Invoices</legend>
+        <p class="hint">Quote, invoice, and paid mark. Saaniya does not hold client funds. You use your own Stripe or bank/UPI.</p>
+        <label class="choice"><input type="radio" name="invoice" value="chat" required> We send amounts in chat or on paper</label>
+        <label class="choice"><input type="radio" name="invoice" value="sheet"> Spreadsheet or a basic template</label>
+        <label class="choice"><input type="radio" name="invoice" value="need"> We need quotes, invoices, and a paid mark</label>
+        <label class="choice"><input type="radio" name="invoice" value="have"> Accounting software already does this</label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend>Anything else</legend>
+        <label class="field">What should work better this quarter?
+          <textarea name="notes" placeholder="Optional"></textarea>
+        </label>
+      </fieldset>
+
+      <div class="btn-row">
+        <button class="btn btn-solid" type="submit">Email this recommendation</button>
+        <a class="btn btn-outline" href="office-suite-pricing.html">Full country pricing</a>
+      </div>
+    </form>
+
+    <section id="result" class="result" style="margin-top:1.5rem" hidden>
+      <p class="section__eyebrow" style="color:var(--gold-soft)">Recommendation</p>
+      <h2 id="result-title">Pieces for your desk</h2>
+      <p id="result-intro"></p>
+      <ul id="result-list"></ul>
+      <p id="result-price" class="price"></p>
+      <p id="result-care"></p>
+      <p id="result-custom"></p>
+      <p style="margin-top:1rem">Pilot guide, excluding taxes. A written quote follows this email. <a href="office-suite-pricing.html">See the country matrix</a>.</p>
+    </section>
+    <p class="note">Responses are sent as an email to saaniyasoftware@nasneeraj.com from your own mail app. This page does not store answers.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Saaniya Office Suite by Saaniya Software LLC</p>
+      <p>
+        <a href="office-suite.html">Office Suite</a> ·
+        <a href="office-suite-pricing.html">Pricing</a> ·
+        <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/office-suite/suite.js"></script>
+  <script>
+    (function () {
+      var S = window.SaaniyaOfficeSuite;
+      var country = document.getElementById("country");
+      var other = document.createElement("option");
+      other.value = "";
+      other.textContent = "Choose a country";
+      country.appendChild(other);
+      S.COUNTRIES.forEach(function (row) {
+        var opt = document.createElement("option");
+        opt.value = row[0];
+        opt.textContent = row[0];
+        country.appendChild(opt);
+      });
+      var otherOpt = document.createElement("option");
+      otherOpt.value = "Other";
+      otherOpt.textContent = "Other — name it in the notes";
+      country.appendChild(otherOpt);
+
+      var form = document.getElementById("needs-form");
+
+      function readAnswers() {
+        var data = new FormData(form);
+        var tools = data.getAll("tools");
+        return {
+          name: data.get("name") || "",
+          email: data.get("email") || "",
+          business: data.get("business") || "",
+          country: data.get("country") || "",
+          sells: data.get("sells") || "",
+          team: data.get("team") || "",
+          website: data.get("website") || "",
+          reach: data.get("reach") || "",
+          repeat: data.get("repeat") || "",
+          leads: data.get("leads") || "",
+          custom: data.get("custom") || "",
+          tools: tools,
+          portal: data.get("portal") || "",
+          invoice: data.get("invoice") || "",
+          notes: data.get("notes") || ""
+        };
+      }
+
+      function paint(answers) {
+        var items = S.recommend(answers);
+        var box = document.getElementById("result");
+        var list = document.getElementById("result-list");
+        var ready = answers.website && answers.reach && answers.repeat && answers.leads && answers.custom && answers.portal && answers.invoice;
+        list.innerHTML = "";
+        if (!ready) {
+          box.hidden = true;
+          return { items: [], priced: null, band: null };
+        }
+        if (!items.length) {
+          box.hidden = false;
+          document.getElementById("result-title").textContent = "No extra pieces from these answers";
+          document.getElementById("result-intro").textContent = "The answers say the current desk already covers the eight pieces. Write if that reading is wrong.";
+          document.getElementById("result-price").textContent = "";
+          document.getElementById("result-care").textContent = "";
+          document.getElementById("result-custom").textContent = "";
+          return { items: items, priced: null, band: null };
+        }
+        var band = answers.country && answers.country !== "Other" ? S.countryBand(answers.country) : null;
+        var ids = items.map(function (item) { return item.id; });
+        var priced = band ? S.priceSelection(ids, band) : null;
+        box.hidden = false;
+        document.getElementById("result-title").textContent = items.length + (items.length === 1 ? " piece" : " pieces");
+        document.getElementById("result-intro").textContent = band
+          ? answers.country + " · " + band.note
+          : "Name your country for a price. Other markets are quoted from the nearest band.";
+        items.forEach(function (item) {
+          var li = document.createElement("li");
+          var piece = S.pieceById(item.id);
+          li.textContent = piece.name + " — " + item.why;
+          list.appendChild(li);
+        });
+        if (priced && priced.label !== "None yet") {
+          document.getElementById("result-price").textContent = priced.label + " setup " + priced.setup;
+          document.getElementById("result-care").textContent = "Optional annual care " + priced.care + ".";
+        } else {
+          document.getElementById("result-price").textContent = "";
+          document.getElementById("result-care").textContent = "";
+        }
+        document.getElementById("result-custom").textContent = priced && priced.custom
+          ? "customized business software is scoped after we read this — it is not in the setup figure."
+          : "";
+        return { items: items, priced: priced, band: band };
+      }
+
+      form.addEventListener("change", function () { paint(readAnswers()); });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var answers = readAnswers();
+        var view = paint(answers);
+        var lines = [
+          "Saaniya Office Suite — needs questionnaire",
+          "",
+          "Name: " + answers.name,
+          "Email: " + answers.email,
+          "Business: " + answers.business,
+          "Country: " + answers.country,
+          "Sells: " + answers.sells,
+          "Team: " + answers.team,
+          "",
+          "Recommended pieces:"
+        ];
+        if (!view.items.length) lines.push("- None from these answers");
+        view.items.forEach(function (item) {
+          lines.push("- " + S.pieceById(item.id).name + ": " + item.why);
+        });
+        if (view.priced && view.priced.label !== "None yet") {
+          lines.push("");
+          lines.push("Pilot price (" + view.priced.label + "): setup " + view.priced.setup + ", care " + view.priced.care);
+        }
+        if (answers.notes) {
+          lines.push("");
+          lines.push("Notes: " + answers.notes);
+        }
+        var href = "mailto:saaniyasoftware@nasneeraj.com?subject=" +
+          encodeURIComponent("Office Suite needs — " + answers.business) +
+          "&body=" + encodeURIComponent(lines.join("\n"));
+        window.location.href = href;
+      });
+    })();
+  </script>
+</body>
+</html>

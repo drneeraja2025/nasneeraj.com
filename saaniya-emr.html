@@ -288,7 +288,7 @@
       <div class="wrap">
         <p class="section__eyebrow">Pricing</p>
         <h2 class="section__title">Bought once, not rented forever.</h2>
-        <p class="section__lead">Pilot pricing, shown excluding applicable taxes. Other markets quoted on request.</p>
+        <p class="section__lead">Pilot pricing by country, shown excluding applicable taxes. The United States is not offered yet.</p>
         <div class="section__body">
           <div class="region-chooser" data-region-chooser style="margin-bottom:2rem">
             <div class="region-chooser__top">
@@ -297,12 +297,20 @@
               </div>
               <p class="region-chooser__currency" data-region-currency>INR · excl. taxes</p>
             </div>
+            <label class="country-select">Country
+              <select data-country-select aria-label="Pricing country"></select>
+            </label>
             <div class="region-tabs" role="radiogroup" aria-label="Pricing region">
               <button type="button" class="region-tab is-active" role="radio" aria-checked="true" data-region="india">India</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="south_asia">South Asia</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="africa">Africa</button>
               <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="southeast_asia">SE Asia</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="south_america">LATAM</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="mena">Middle East</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="uk">UK</button>
               <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="europe">Europe</button>
               <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="australia">AU / NZ</button>
-              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="south_america">LATAM</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="other_high">Other</button>
             </div>
             <p class="region-chooser__detail" data-region-detail><strong>India.</strong> Primary market — outpatient / OPD clinics and multi-specialty private practices DPDP-aligned processor terms. Clinical notes stay on clinic hardware.</p>
           </div>

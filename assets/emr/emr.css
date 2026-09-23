@@ -1004,6 +1004,60 @@ body.page-home .site-header:not(.is-solid) .btn-mobile-pricing {
   color: var(--muted);
 }
 
+.country-select {
+  display: block;
+  max-width: 22rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.country-select select {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+}
+
+.emr-matrix-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  margin-top: 0.5rem;
+}
+
+.emr-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  font-size: 0.875rem;
+}
+
+.emr-matrix th,
+.emr-matrix td {
+  text-align: left;
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.emr-matrix th {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.emr-matrix td.num,
+.emr-matrix th.num {
+  text-align: right;
+  white-space: nowrap;
+}
+
 .pricing-teaser {
   border-top: 1px solid var(--line);
 }

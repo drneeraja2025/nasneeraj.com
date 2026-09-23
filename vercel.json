@@ -141,6 +141,14 @@
       "destination": "/office-suite.html"
     },
     {
+      "source": "/office-suite-needs",
+      "destination": "/office-suite-needs.html"
+    },
+    {
+      "source": "/office-suite-pricing",
+      "destination": "/office-suite-pricing.html"
+    },
+    {
       "source": "/social-office-suite",
       "destination": "/social-office-suite.html"
     },

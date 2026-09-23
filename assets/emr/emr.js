@@ -261,14 +261,309 @@
         },
       ],
     },
+    south_asia: {
+      id: "south_asia",
+      label: "South Asia",
+      shortLabel: "South Asia",
+      currencyNote: "USD · excl. taxes",
+      detail: "Nepal, Bangladesh, Sri Lanka, Bhutan, Maldives, and Pakistan",
+      complianceNote: "Local privacy terms before first sale. Clinic-owned payment display.",
+      tiers: [
+        {
+          name: "Starter",
+          audience: "Solo doctor or single-room clinic",
+          license: "$240 – $320 one-time",
+          website: "$100 setup + $50 / year",
+          maintenance: "$70 – $95 / year",
+          includes: [
+            "Desktop EMR licence",
+            "Clinic-owned QR / pay instructions",
+            "Optional managed website",
+            "Optional annual maintenance",
+          ],
+        },
+        {
+          name: "Professional",
+          audience: "Multi-doctor or multi-specialty practice",
+          license: "$480 – $620 one-time",
+          website: "$180 setup + $95 / year",
+          maintenance: "$145 – $210 / year",
+          featured: true,
+          includes: [
+            "Everything in Starter",
+            "Multi-user roles and optional specialty chart packs",
+            "Managed website recommended",
+            "Priority support under maintenance",
+          ],
+        },
+        {
+          name: "Enterprise",
+          audience: "Multi-branch or custom compliance",
+          license: "Custom",
+          website: "Custom",
+          maintenance: "Custom",
+          includes: ["Multi-site licences", "Dedicated onboarding"],
+        },
+      ],
+    },
+    africa: {
+      id: "africa",
+      label: "Africa",
+      shortLabel: "Africa",
+      currencyNote: "USD · excl. taxes",
+      detail: "Kenya, Nigeria, Ghana, South Africa, Egypt, and neighbours",
+      complianceNote: "Local privacy terms before first sale. Clinic-owned payment display.",
+      tiers: [
+        {
+          name: "Starter",
+          audience: "Solo or small private clinic",
+          license: "$260 – $350 one-time",
+          website: "$110 setup + $55 / year",
+          maintenance: "$80 – $110 / year",
+          includes: [
+            "Desktop EMR licence",
+            "Clinic-owned QR / bank display",
+            "Optional managed website",
+            "Optional annual maintenance",
+          ],
+        },
+        {
+          name: "Professional",
+          audience: "Multi-doctor practice",
+          license: "$520 – $700 one-time",
+          website: "$200 setup + $110 / year",
+          maintenance: "$160 – $230 / year",
+          featured: true,
+          includes: [
+            "Everything in Starter",
+            "Multi-user roles and optional specialty chart packs",
+            "Managed website recommended",
+            "Priority support",
+          ],
+        },
+        {
+          name: "Enterprise",
+          audience: "Multi-site",
+          license: "Custom",
+          website: "Custom",
+          maintenance: "Custom",
+          includes: ["Multi-site licences", "Dedicated onboarding"],
+        },
+      ],
+    },
+    mena: {
+      id: "mena",
+      label: "Middle East",
+      shortLabel: "Middle East",
+      currencyNote: "USD · excl. taxes · AED or SAR on request",
+      detail: "UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, and Jordan",
+      complianceNote: "Local privacy terms before first sale. Clinic-owned payment display.",
+      tiers: [
+        {
+          name: "Starter",
+          audience: "Solo or boutique clinic",
+          license: "$350 – $480 one-time",
+          website: "$170 setup + $100 / year",
+          maintenance: "$130 – $180 / year",
+          includes: [
+            "Desktop EMR licence",
+            "Clinic-owned payment instructions",
+            "Optional managed website",
+            "Optional annual maintenance",
+          ],
+        },
+        {
+          name: "Professional",
+          audience: "Multi-doctor practice",
+          license: "$700 – $960 one-time",
+          website: "$300 setup + $170 / year",
+          maintenance: "$260 – $350 / year",
+          featured: true,
+          includes: [
+            "Everything in Starter",
+            "Multi-user roles and optional specialty chart packs",
+            "Managed website recommended",
+            "Priority support",
+          ],
+        },
+        {
+          name: "Enterprise",
+          audience: "Multi-site",
+          license: "Custom",
+          website: "Custom",
+          maintenance: "Custom",
+          includes: ["Multi-site licences", "Dedicated onboarding"],
+        },
+      ],
+    },
+    uk: {
+      id: "uk",
+      label: "United Kingdom",
+      shortLabel: "UK",
+      currencyNote: "GBP · excl. VAT",
+      detail: "Private and wellness clinics in the United Kingdom",
+      complianceNote: "GDPR-ready architecture with processor terms. Not marketed as certified.",
+      tiers: [
+        {
+          name: "Starter",
+          audience: "Niche / wellness / integrative practice",
+          license: "£310 – £430 one-time",
+          website: "£160 setup + £90 / year",
+          maintenance: "£120 – £160 / year",
+          includes: [
+            "Desktop EMR licence",
+            "Clinic-owned payment instructions",
+            "Optional managed website",
+            "Optional annual maintenance",
+          ],
+        },
+        {
+          name: "Professional",
+          audience: "Multi-clinician private practice",
+          license: "£620 – £860 one-time",
+          website: "£270 setup + £160 / year",
+          maintenance: "£230 – £310 / year",
+          featured: true,
+          includes: [
+            "Everything in Starter",
+            "Multi-user roles and optional specialty chart packs",
+            "Managed website recommended",
+            "Priority support",
+          ],
+        },
+        {
+          name: "Enterprise",
+          audience: "Multi-site or custom contracts",
+          license: "Custom",
+          website: "Custom",
+          maintenance: "Custom",
+          includes: ["Multi-site licences", "Dedicated onboarding"],
+        },
+      ],
+    },
+    other_high: {
+      id: "other_high",
+      label: "Canada, Japan, Korea, Singapore, Switzerland, Israel",
+      shortLabel: "Other",
+      currencyNote: "USD · excl. taxes",
+      detail: "Same pilot band as Australia and New Zealand. Local currency on request.",
+      complianceNote: "Contract terms confirmed before first sale. This is not a United States price.",
+      tiers: [
+        {
+          name: "Starter",
+          audience: "Boutique / wellness clinic",
+          license: "$400 – $550 one-time",
+          website: "$200 setup + $120 / year",
+          maintenance: "$150 – $200 / year",
+          includes: [
+            "Desktop EMR licence",
+            "Clinic-owned payment instructions",
+            "Optional managed website",
+            "Optional annual maintenance",
+          ],
+        },
+        {
+          name: "Professional",
+          audience: "Multi-clinician practice",
+          license: "$800 – $1,100 one-time",
+          website: "$350 setup + $200 / year",
+          maintenance: "$300 – $400 / year",
+          featured: true,
+          includes: [
+            "Everything in Starter",
+            "Multi-user roles and optional specialty chart packs",
+            "Managed website recommended",
+            "Priority support",
+          ],
+        },
+        {
+          name: "Enterprise",
+          audience: "Multi-site",
+          license: "Custom",
+          website: "Custom",
+          maintenance: "Custom",
+          includes: ["Multi-site licences", "Dedicated onboarding"],
+        },
+      ],
+    },
+    united_states: {
+      id: "united_states",
+      label: "United States",
+      shortLabel: "United States",
+      currencyNote: "Not offered",
+      detail: "Deferred until a HIPAA / BAA-backed offering exists.",
+      complianceNote: "No public US price list.",
+      unavailable: true,
+      tiers: [],
+    },
   };
+
+  var COUNTRIES = [
+    ["Argentina", "south_america"],
+    ["Australia", "australia"],
+    ["Bahrain", "mena"],
+    ["Bangladesh", "south_asia"],
+    ["Bhutan", "south_asia"],
+    ["Brazil", "south_america"],
+    ["Canada", "other_high"],
+    ["Chile", "south_america"],
+    ["Colombia", "south_america"],
+    ["Egypt", "africa"],
+    ["Ethiopia", "africa"],
+    ["France", "europe"],
+    ["Germany", "europe"],
+    ["Ghana", "africa"],
+    ["India", "india"],
+    ["Indonesia", "southeast_asia"],
+    ["Ireland", "europe"],
+    ["Israel", "other_high"],
+    ["Italy", "europe"],
+    ["Japan", "other_high"],
+    ["Jordan", "mena"],
+    ["Kenya", "africa"],
+    ["Kuwait", "mena"],
+    ["Malaysia", "southeast_asia"],
+    ["Maldives", "south_asia"],
+    ["Mexico", "south_america"],
+    ["Morocco", "africa"],
+    ["Nepal", "south_asia"],
+    ["Netherlands", "europe"],
+    ["New Zealand", "australia"],
+    ["Nigeria", "africa"],
+    ["Oman", "mena"],
+    ["Pakistan", "south_asia"],
+    ["Peru", "south_america"],
+    ["Philippines", "southeast_asia"],
+    ["Qatar", "mena"],
+    ["Rwanda", "africa"],
+    ["Saudi Arabia", "mena"],
+    ["Singapore", "other_high"],
+    ["South Africa", "africa"],
+    ["South Korea", "other_high"],
+    ["Spain", "europe"],
+    ["Sri Lanka", "south_asia"],
+    ["Sweden", "europe"],
+    ["Switzerland", "other_high"],
+    ["Tanzania", "africa"],
+    ["Thailand", "southeast_asia"],
+    ["Uganda", "africa"],
+    ["United Arab Emirates", "mena"],
+    ["United Kingdom", "uk"],
+    ["United States", "united_states"],
+    ["Vietnam", "southeast_asia"],
+  ];
 
   var REGION_ORDER = [
     "india",
+    "south_asia",
+    "africa",
     "southeast_asia",
+    "south_america",
+    "mena",
+    "uk",
     "europe",
     "australia",
-    "south_america",
+    "other_high",
   ];
 
   function escapeHtml(str) {
@@ -345,6 +640,11 @@
 
   /* ---------- Region pricing ---------- */
   function renderTeaserRows(region, container) {
+    if (region.unavailable) {
+      container.innerHTML =
+        '<p class="region-chooser__excluded">United States is not offered. No public US price list.</p>';
+      return;
+    }
     container.innerHTML = region.tiers
       .map(function (tier, index) {
         return (
@@ -390,6 +690,11 @@
   }
 
   function renderPricingCards(region, container) {
+    if (region.unavailable) {
+      container.innerHTML =
+        '<p class="region-chooser__excluded">United States is not offered. Deferred until a HIPAA / BAA-backed offering exists. No public US price list.</p>';
+      return;
+    }
     container.innerHTML = region.tiers
       .map(function (tier, index) {
         var includes = tier.includes
@@ -492,8 +797,70 @@
       renderPricingCards(region, el);
     });
 
+    document.querySelectorAll("[data-country-select]").forEach(function (select) {
+      var match = COUNTRIES.filter(function (row) {
+        return row[1] === region.id && row[0] === select.value;
+      });
+      if (!match.length) {
+        var first = COUNTRIES.filter(function (row) {
+          return row[1] === region.id;
+        })[0];
+        if (first) select.value = first[0];
+      }
+    });
+
     updateSurveyLabels(region);
     updateFullPricingLinks(region);
+  }
+
+  function initCountrySelect() {
+    var selects = document.querySelectorAll("[data-country-select]");
+    if (!selects.length) return;
+
+    selects.forEach(function (select) {
+      COUNTRIES.forEach(function (row) {
+        var opt = document.createElement("option");
+        opt.value = row[0];
+        opt.textContent = row[0];
+        select.appendChild(opt);
+      });
+      select.addEventListener("change", function () {
+        var row = COUNTRIES.filter(function (item) {
+          return item[0] === select.value;
+        })[0];
+        if (row) applyRegion(row[1]);
+      });
+    });
+  }
+
+  function initPricingMatrix() {
+    var body = document.querySelector("[data-emr-matrix]");
+    if (!body) return;
+    REGION_ORDER.forEach(function (id) {
+      var region = REGIONS[id];
+      if (!region || region.unavailable) return;
+      var starter = region.tiers[0] ? region.tiers[0].license : "";
+      var professional = region.tiers[1] ? region.tiers[1].license : "";
+      var names = COUNTRIES.filter(function (row) {
+        return row[1] === id;
+      })
+        .map(function (row) {
+          return row[0];
+        })
+        .join(", ");
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        "<td>" +
+        escapeHtml(region.label) +
+        "</td><td>" +
+        escapeHtml(names) +
+        '</td><td class="num">' +
+        escapeHtml(starter) +
+        '</td><td class="num">' +
+        escapeHtml(professional) +
+        "</td>";
+      body.appendChild(tr);
+    });
   }
 
   function initRegionChooser() {
@@ -525,13 +892,16 @@
   document.addEventListener("DOMContentLoaded", function () {
     initHeader();
     initReveal();
+    initCountrySelect();
     initRegionChooser();
+    initPricingMatrix();
     initPrintButtons();
   });
 
   window.SaaniyaEmrRegions = {
     REGIONS: REGIONS,
     REGION_ORDER: REGION_ORDER,
+    COUNTRIES: COUNTRIES,
     getStoredRegion: getStoredRegion,
     applyRegion: applyRegion,
   };

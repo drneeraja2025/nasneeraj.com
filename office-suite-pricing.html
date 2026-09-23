@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing by country | Saaniya Office Suite</title>
+  <meta name="description" content="Pilot pricing for Saaniya Office Suite by country: Desk, Connected, and Full suite, plus each piece. Excluding taxes. You own it. Saaniya does not hold client funds.">
+  <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/office-suite/suite.css">
+  <meta property="og:title" content="Pricing by country | Saaniya Office Suite">
+  <meta property="og:description" content="Worldwide pilot pricing for Saaniya Office Suite. One-time setup and optional annual care.">
+  <meta property="og:image" content="https://saaniya-software.nasneeraj.com/assets/Saaniyalogo.png">
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+        <span>Saaniya Software LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="office-suite.html">Office Suite</a></li>
+        <li><a href="office-suite-needs.html">Needs</a></li>
+        <li><a href="office-suite-pricing.html" class="is-active">Pricing</a></li>
+        <li><a href="mailto:saaniyasoftware@nasneeraj.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Saaniya Office Suite · Pricing</p>
+      <h1 class="hero__brand">Pilot prices by country</h1>
+      <p class="hero__support">One-time setup, optional annual care, and you own the result. Prices exclude taxes. Invoices use the buyer’s own Stripe or bank/UPI — Saaniya Software LLC does not hold client funds. Start with the <a href="office-suite-needs.html">needs questionnaire</a> if you want a piece list first.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap">
+      <p class="section__eyebrow">Your country</p>
+      <h2 class="section__title">Pick a market</h2>
+      <p class="section__lead" id="band-note">Prices follow the band for that country. A country not on the list is quoted after the needs form.</p>
+      <label class="field band-select">Country
+        <select id="country"></select>
+      </label>
+      <div class="cards" id="bundles"></div>
+    </section>
+
+    <section class="wrap" style="padding-top:0">
+      <p class="section__eyebrow">Pieces</p>
+      <h2 class="section__title">Each piece in this country</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Piece</th>
+              <th class="num">Setup</th>
+              <th class="num">Annual care</th>
+            </tr>
+          </thead>
+          <tbody id="pieces"></tbody>
+        </table>
+      </div>
+      <p class="note">customized business software is scoped from the questionnaire. It is not included in Desk, Connected, or Full suite.</p>
+    </section>
+
+    <section class="wrap" style="padding-top:0">
+      <p class="section__eyebrow">World matrix</p>
+      <h2 class="section__title">Setup price by band</h2>
+      <p class="section__lead">Annual care is optional and is about 30% of that band’s setup. The licence is bought once.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Band</th>
+              <th>Countries in this guide</th>
+              <th class="num">Desk</th>
+              <th class="num">Connected</th>
+              <th class="num">Full suite</th>
+            </tr>
+          </thead>
+          <tbody id="matrix"></tbody>
+        </table>
+      </div>
+      <div class="btn-row" style="margin-top:1.25rem">
+        <a class="btn btn-solid" href="office-suite-needs.html">Take the needs questionnaire</a>
+        <a class="btn btn-outline" href="office-suite.html">Back to Office Suite</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Saaniya Office Suite by Saaniya Software LLC</p>
+      <p>
+        <a href="office-suite.html">Office Suite</a> ·
+        <a href="office-suite-needs.html">Needs</a> ·
+        <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/office-suite/suite.js"></script>
+  <script>
+    (function () {
+      var S = window.SaaniyaOfficeSuite;
+      var select = document.getElementById("country");
+      S.COUNTRIES.forEach(function (row) {
+        var opt = document.createElement("option");
+        opt.value = row[0];
+        opt.textContent = row[0];
+        if (row[0] === "India") opt.selected = true;
+        select.appendChild(opt);
+      });
+
+      function render() {
+        var band = S.countryBand(select.value);
+        document.getElementById("band-note").textContent = band.label + ". " + band.note;
+
+        var cards = document.getElementById("bundles");
+        cards.innerHTML = "";
+        S.BUNDLES.forEach(function (bundle) {
+          var card = document.createElement("article");
+          card.className = "panel card";
+          var names = bundle.pieces.map(function (id) { return S.pieceById(id).name; });
+          card.innerHTML =
+            "<h3>" + bundle.name + "</h3>" +
+            "<p class=\"hint\">" + bundle.blurb + "</p>" +
+            "<p class=\"price\">" + S.formatMoney(S.bundleUsd(bundle, "setup"), band) + "</p>" +
+            "<p class=\"care\">Care " + S.formatMoney(S.bundleUsd(bundle, "care"), band) + " / year</p>" +
+            "<ul>" + names.map(function (name) { return "<li>" + name + "</li>"; }).join("") + "</ul>";
+          cards.appendChild(card);
+        });
+
+        var body = document.getElementById("pieces");
+        body.innerHTML = "";
+        S.PIECES.forEach(function (piece) {
+          var tr = document.createElement("tr");
+          tr.innerHTML =
+            "<td>" + piece.name + "</td>" +
+            "<td class=\"num\">" + S.formatMoney(piece.setup, band) + "</td>" +
+            "<td class=\"num\">" + S.formatMoney(piece.care, band) + "</td>";
+          body.appendChild(tr);
+        });
+      }
+
+      var matrix = document.getElementById("matrix");
+      S.BAND_ORDER.forEach(function (id) {
+        var band = S.BANDS[id];
+        var names = S.COUNTRIES.filter(function (row) { return row[1] === id; }).map(function (row) { return row[0]; });
+        var tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td>" + band.label + "<br><span class=\"care\">" + band.note + "</span></td>" +
+          "<td>" + names.join(", ") + "</td>" +
+          S.BUNDLES.map(function (bundle) {
+            return "<td class=\"num\">" + S.formatMoney(S.bundleUsd(bundle, "setup"), band) + "</td>";
+          }).join("");
+        matrix.appendChild(tr);
+      });
+
+      select.addEventListener("change", render);
+      render();
+    })();
+  </script>
+</body>
+</html>

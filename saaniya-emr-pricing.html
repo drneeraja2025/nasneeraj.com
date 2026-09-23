@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing | Saaniya EMR by Saaniya Software LLC</title>
-  <meta name="description" content="Saaniya EMR regional pilot pricing — choose India, Southeast Asia, Europe, Australia &amp; New Zealand, or South America. United States not offered yet.">
+  <meta name="description" content="Saaniya EMR pilot pricing by country. India, South Asia, Africa, Southeast Asia, Latin America, the Middle East, the UK, Europe, and Australia and New Zealand. United States not offered yet.">
   <link rel="icon" type="image/png" href="assets/emr/logo-trimmed.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,8 +38,8 @@
     <section class="section page-intro">
       <div class="wrap">
         <p class="section__eyebrow">Pricing</p>
-        <h1 class="section__title">Pick your region, then pick your bundle.</h1>
-        <p class="section__lead">Pilot pricing, shown excluding applicable taxes. Other markets quoted on request. Payment display — your clinic's own QR or bank details — is included with the software, because Saaniya never processes patient payments.</p>
+        <h1 class="section__title">Pick your country, then pick your bundle.</h1>
+        <p class="section__lead">Pilot pricing, shown excluding applicable taxes. Payment display — your clinic's own QR or bank details — is included with the software, because Saaniya never processes patient payments. The United States is not offered yet.</p>
         <div class="section__body">
           <p class="text-muted" style="margin:0 0 2rem;max-width:40rem;font-size:0.875rem;line-height:1.65">
             Saaniya EMR is a product of
@@ -51,16 +51,24 @@
             <div class="region-chooser__top">
               <div>
                 <p class="region-chooser__label">Your region</p>
-                <p class="region-chooser__hint">Choose a market version to see local pilot pricing. Preference is saved on this device. The United States is not offered yet.</p>
+                <p class="region-chooser__hint">Choose a country to see that band’s pilot pricing. Preference is saved on this device. The United States is not offered yet.</p>
               </div>
               <p class="region-chooser__currency" data-region-currency>INR · excl. taxes</p>
             </div>
+            <label class="country-select">Country
+              <select data-country-select aria-label="Pricing country"></select>
+            </label>
             <div class="region-tabs" role="radiogroup" aria-label="Pricing region">
               <button type="button" class="region-tab is-active" role="radio" aria-checked="true" data-region="india">India</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="south_asia">South Asia</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="africa">Africa</button>
               <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="southeast_asia">SE Asia</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="south_america">LATAM</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="mena">Middle East</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="uk">UK</button>
               <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="europe">Europe</button>
               <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="australia">AU / NZ</button>
-              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="south_america">LATAM</button>
+              <button type="button" class="region-tab" role="radio" aria-checked="false" data-region="other_high">Other</button>
             </div>
             <p class="region-chooser__detail" data-region-detail><strong>India.</strong> Primary market — outpatient / OPD clinics and multi-specialty private practices DPDP-aligned processor terms. Clinical notes stay on clinic hardware.</p>
             <p class="region-chooser__excluded">Not available: United States (Deferred until a HIPAA / BAA-backed offering exists. No public US price list.)</p>
@@ -85,13 +93,32 @@
 
           <ul class="footnotes">
             <li><span class="dot dot--line" aria-hidden="true"></span><span>Pilot pricing. All prices exclude applicable taxes.</span></li>
-            <li><span class="dot dot--line" aria-hidden="true"></span><span>Choose your region above — India, Southeast Asia, Europe, Australia &amp; New Zealand, or South America.</span></li>
+            <li><span class="dot dot--line" aria-hidden="true"></span><span>Choose a country above. Prices follow that country’s band. A country not on the list is quoted after the survey.</span></li>
             <li><span class="dot dot--line" aria-hidden="true"></span><span>Software and payment display form the base of every bundle. Website and maintenance are optional add-ons.</span></li>
             <li><span class="dot dot--line" aria-hidden="true"></span><span>The licence is bought once, not rented. Your practice keeps using the software whether or not you renew maintenance.</span></li>
             <li><span class="dot dot--line" aria-hidden="true"></span><span>Licence and maintenance fees are paid to Saaniya Software LLC. Patient payments go directly to your clinic's own account and never pass through us.</span></li>
             <li><span class="dot dot--line" aria-hidden="true"></span><span>United States pricing is not published; that market remains deferred.</span></li>
             <li><span class="dot dot--line" aria-hidden="true"></span><span><strong style="color:var(--foreground)">United States not offered:</strong> Deferred until a HIPAA / BAA-backed offering exists. No public US price list.</span></li>
           </ul>
+
+          <div style="margin-top:2.5rem">
+            <p class="section__eyebrow">World matrix</p>
+            <h2 class="section__title">Software licence by band</h2>
+            <p class="section__lead">One-time licence. Website and maintenance stay optional. Enterprise is custom in every band.</p>
+            <div class="emr-matrix-wrap">
+              <table class="emr-matrix">
+                <thead>
+                  <tr>
+                    <th>Band</th>
+                    <th>Countries</th>
+                    <th class="num">Starter</th>
+                    <th class="num">Professional</th>
+                  </tr>
+                </thead>
+                <tbody data-emr-matrix></tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </section>
