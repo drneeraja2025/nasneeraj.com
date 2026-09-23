@@ -514,8 +514,10 @@
         }
 
         .hero-visual {
-            position: relative;
-            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            min-height: 0;
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
@@ -536,22 +538,16 @@
             aspect-ratio: 4 / 3;
         }
 
-        .hero-figure--1 {
+        .hero-figure--1,
+        .hero-figure--2 {
             position: relative;
             z-index: 1;
-            transform: rotate(-1.5deg);
-            max-width: 92%;
-            margin-left: auto;
-        }
-
-        .hero-figure--2 {
-            position: absolute;
-            bottom: -8%;
-            left: 0;
-            z-index: 2;
-            max-width: 68%;
-            transform: rotate(2deg);
-            border: 3px solid rgba(15, 23, 42, 0.85);
+            transform: none;
+            max-width: 100%;
+            left: auto;
+            bottom: auto;
+            margin: 0;
+            border: 0;
         }
 
         .hero-figure figcaption {
@@ -1325,7 +1321,7 @@
             <div class="hero-visual" aria-label="Product imagery">
                 <figure class="hero-figure hero-figure--1">
                     <img
-                        src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&amp;q=80&amp;auto=format&amp;fit=crop"
+                        src="assets/home/home-learning-pause.png"
                         width="400"
                         height="300"
                         alt="Students and technology working together in a learning environment"
@@ -1335,7 +1331,7 @@
                 </figure>
                 <figure class="hero-figure hero-figure--2">
                     <img
-                        src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=700&amp;q=80&amp;auto=format&amp;fit=crop"
+                        src="assets/home/home-arts-pause.png"
                         width="400"
                         height="300"
                         alt="Piano and arts learning, reflecting academy and Gurukul-style programs"

@@ -153,8 +153,17 @@
       max-width: 38rem;
       font-size: 1.1rem;
       color: rgba(245, 250, 247, 0.88);
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.25rem;
       animation: rise 0.75s 0.12s ease both;
+    }
+
+    .hero__art {
+      display: block;
+      width: min(100%, 42rem);
+      margin-bottom: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+      animation: rise 0.75s 0.16s ease both;
     }
 
     .btn-row {
@@ -266,6 +275,15 @@
       font-size: 1.25rem;
       font-weight: 500;
       margin-bottom: 0.4rem;
+    }
+
+    .piece img {
+      width: 100%;
+      height: 11rem;
+      object-fit: cover;
+      border-radius: 0.85rem;
+      margin-bottom: 0.85rem;
+      background: var(--sky);
     }
 
     .piece p { color: var(--soft); font-size: 0.98rem; }
@@ -470,6 +488,7 @@
       <p class="hero__eyebrow">Saaniya Software LLC · Small business</p>
       <h1 class="hero__brand">Saaniya Office Suite</h1>
       <p class="hero__support">A worldwide desk for small-business groups — done-for-you, and you own it. Eight pieces that work together. This is not a clinic product; <a href="saaniya-emr.html" style="color:var(--gold-soft);font-weight:700;">Saaniya EMR</a> is separate.</p>
+      <img class="hero__art" src="assets/office-suite/office-hero-pause.png" alt="A small-business desk with a laptop, an invoice, a plant, and the Saaniya mascot">
       <div class="btn-row">
         <a class="btn btn-gold" href="office-suite-needs.html">Tell us what you need</a>
         <a class="btn btn-ghost" href="office-suite-pricing.html">Pricing by country</a>
@@ -485,41 +504,49 @@
 
       <div class="pieces">
         <article class="piece" id="website">
+          <img src="assets/office-suite/office-website-pause.png" alt="A simple public website layout with the Saaniya mascot">
           <p class="piece__num" aria-hidden="true">01</p>
           <h3>Website</h3>
           <p>The public face of the group. Domain, design, build, host, and care — the same Website piece already live on our <a href="website-services.html">website services</a> page. Example: <a href="https://milwaukeeshala.org/" target="_blank" rel="noopener noreferrer">milwaukeeshala.org</a>.</p>
         </article>
         <article class="piece">
+          <img src="assets/office-suite/office-front-pause.png" alt="A front office desk with the Saaniya mascot">
           <p class="piece__num" aria-hidden="true">02</p>
           <h3>Front Office</h3>
           <p>The daily desk: who is coming, what is due, and what the team needs to see without hunting through mail and chat.</p>
         </article>
         <article class="piece">
+          <img src="assets/office-suite/office-bots-pause.png" alt="The Saaniya mascot at a quiet desk beside an empty chair">
           <p class="piece__num" aria-hidden="true">03</p>
           <h3>AI bots</h3>
           <p>Assistants that answer repeat questions and hand a person the ones that matter. A person stays in the loop.</p>
         </article>
         <article class="piece">
+          <img src="assets/office-suite/office-crm-pause.png" alt="Contact cards and the Saaniya mascot">
           <p class="piece__num" aria-hidden="true">04</p>
           <h3>CRM</h3>
           <p>Contacts, notes, and follow-ups for the same small-business group — so a lead does not live only in someone’s inbox.</p>
         </article>
         <article class="piece">
+          <img src="assets/office-suite/office-custom-pause.png" alt="A custom tool and the Saaniya mascot">
           <p class="piece__num" aria-hidden="true">05</p>
           <h3>customized business software</h3>
           <p>When a template does not fit, we build the piece you need and you own it. Scoped to your group, not a generic platform.</p>
         </article>
         <article class="piece" id="integrations">
+          <img src="assets/office-suite/office-integrations-pause.png" alt="Connected tools and the Saaniya mascot">
           <p class="piece__num" aria-hidden="true">06</p>
           <h3>Integrations</h3>
           <p>First set: Notion, Google Calendar, Google Drive, Google Meet, and Zoom. Other tools are added only when the work asks for them twice.</p>
         </article>
         <article class="piece" id="portals">
+          <img src="assets/office-suite/office-portals-pause.png" alt="A client status tablet and the Saaniya mascot">
           <p class="piece__num" aria-hidden="true">07</p>
           <h3>Client portals</h3>
           <p>A customer books, sees status, and opens an invoice or document. Proof already in use: the <a href="https://fleet.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Saarthee Fleet Manager</a> booking page and the GuruVidyaZen parent/student view.</p>
         </article>
         <article class="piece" id="invoices">
+          <img src="assets/office-suite/office-invoices-pause.png" alt="An invoice with a gold seal and the Saaniya mascot">
           <p class="piece__num" aria-hidden="true">08</p>
           <h3>Invoices</h3>
           <p>Quote, invoice, and paid mark. The buyer uses their own Stripe or bank/UPI. Saaniya does not hold client funds.</p>
