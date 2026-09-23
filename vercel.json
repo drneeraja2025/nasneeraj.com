@@ -137,6 +137,14 @@
       "destination": "/website-services.html"
     },
     {
+      "source": "/office-suite",
+      "destination": "/office-suite.html"
+    },
+    {
+      "source": "/social-office-suite",
+      "destination": "/social-office-suite.html"
+    },
+    {
       "source": "/websites",
       "destination": "/website-services.html"
     },

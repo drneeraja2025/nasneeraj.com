@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saaniya Office Suite | Worldwide desk for small businesses</title>
+  <meta name="description" content="Saaniya Office Suite is a done-for-you small-business group: Website, Front Office, AI bots, CRM, customized business software, Integrations, Client portals, and Invoices. You own it. Saaniya EMR is a separate clinic product.">
+  <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saaniya-software.nasneeraj.com/office-suite">
+  <meta property="og:title" content="Saaniya Office Suite | Saaniya Software LLC">
+  <meta property="og:description" content="A worldwide desk for small businesses — eight pieces, done-for-you, and you own it. Not a clinic product.">
+  <meta property="og:image" content="https://saaniya-software.nasneeraj.com/assets/Saaniyalogo.png">
+
+  <style>
+    :root {
+      --ink: #10261f;
+      --soft: #3d534a;
+      --muted: #5f7469;
+      --line: #d5e0da;
+      --paper: #f3f7f4;
+      --panel: #ffffff;
+      --forest: #1f5c45;
+      --forest-deep: #0d3326;
+      --gold: #c9a14a;
+      --gold-soft: #f0e2c0;
+      --sky: #e8f2ec;
+      --radius: 1.25rem;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "DM Sans", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(201, 161, 74, 0.18), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(31, 92, 69, 0.12), transparent 50%),
+        linear-gradient(180deg, #eef5f0 0%, var(--paper) 38%, #f7faf8 100%);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(243, 247, 244, 0.92);
+      border-bottom: 1px solid rgba(213, 224, 218, 0.9);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .brand img {
+      width: 3.25rem;
+      height: 3.25rem;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+      align-items: center;
+      list-style: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--soft);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.is-active { color: var(--forest); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(13, 51, 38, 0.94) 0%, rgba(31, 92, 69, 0.88) 48%, rgba(16, 38, 31, 0.92) 100%),
+        repeating-linear-gradient(-18deg, transparent, transparent 22px, rgba(255,255,255,0.03) 22px, rgba(255,255,255,0.03) 23px);
+      pointer-events: none;
+    }
+
+    .hero__inner {
+      position: relative;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: clamp(3.5rem, 8vw, 5.5rem) 1.35rem clamp(3.75rem, 8vw, 5.75rem);
+      color: #f5faf7;
+    }
+
+    .hero__eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 1rem;
+      animation: rise 0.7s ease both;
+    }
+
+    .hero__brand {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 3.75rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      max-width: 16ch;
+      margin-bottom: 1rem;
+      animation: rise 0.75s 0.06s ease both;
+    }
+
+    .hero__support {
+      max-width: 38rem;
+      font-size: 1.1rem;
+      color: rgba(245, 250, 247, 0.88);
+      margin-bottom: 1.75rem;
+      animation: rise 0.75s 0.12s ease both;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      animation: rise 0.75s 0.18s ease both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--forest-deep);
+    }
+
+    .btn-gold:hover { background: #d4b05c; }
+
+    .btn-ghost {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); }
+
+    .btn-solid {
+      background: var(--forest);
+      color: #fff;
+    }
+
+    .btn-solid:hover { background: #174a37; }
+
+    .btn-outline {
+      border: 1px solid var(--forest);
+      color: var(--forest);
+      background: transparent;
+    }
+
+    .btn-outline:hover { background: var(--sky); }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: clamp(3rem, 6vw, 4.5rem) 1.35rem;
+    }
+
+    .section__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 0.65rem;
+    }
+
+    .section__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 4vw, 2.65rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      max-width: 22ch;
+    }
+
+    .section__lead {
+      color: var(--soft);
+      font-size: 1.05rem;
+      max-width: 42rem;
+      margin-bottom: 2rem;
+    }
+
+    .pieces {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.15rem;
+    }
+
+    .piece {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      box-shadow: 0 12px 28px rgba(16, 38, 31, 0.05);
+    }
+
+    .piece__num {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+    }
+
+    .piece h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .piece p { color: var(--soft); font-size: 0.98rem; }
+
+    .piece a {
+      color: var(--forest);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 0.65rem 1fr;
+      gap: 0.85rem;
+      align-items: start;
+      color: var(--soft);
+    }
+
+    .feature-list li::before {
+      content: "";
+      width: 0.55rem;
+      height: 0.55rem;
+      margin-top: 0.45rem;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .feature-list strong {
+      display: block;
+      color: var(--ink);
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+
+    .case {
+      background: var(--forest-deep);
+      color: #eef6f1;
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .case::after {
+      content: "";
+      position: absolute;
+      width: 12rem;
+      height: 12rem;
+      right: -3rem;
+      bottom: -4rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 161, 74, 0.28), transparent 70%);
+      pointer-events: none;
+    }
+
+    .case__label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 0.75rem;
+    }
+
+    .case h3 {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 500;
+      margin-bottom: 0.65rem;
+      position: relative;
+    }
+
+    .case p {
+      color: rgba(238, 246, 241, 0.86);
+      margin-bottom: 1.25rem;
+      position: relative;
+      font-size: 0.98rem;
+    }
+
+    .case a {
+      position: relative;
+      color: var(--gold-soft);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .band {
+      background: linear-gradient(180deg, rgba(232, 242, 236, 0.7), transparent);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .pillar {
+      padding: 0.25rem 0;
+    }
+
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.45rem;
+    }
+
+    .pillar p { color: var(--soft); font-size: 0.98rem; }
+
+    .cta {
+      text-align: left;
+      background:
+        linear-gradient(135deg, rgba(31, 92, 69, 0.08), rgba(201, 161, 74, 0.12)),
+        var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .cta .section__title { max-width: none; }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 1.35rem 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer a {
+      color: var(--forest);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 820px) {
+      .split,
+      .pillars,
+      .pieces { grid-template-columns: 1fr; }
+      .hero__brand { max-width: none; }
+    }
+  </style>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+        <span>Saaniya Software LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="website-services.html">Websites</a></li>
+        <li><a href="office-suite.html" class="is-active">Office Suite</a></li>
+        <li><a href="mailto:saaniyasoftware@nasneeraj.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Saaniya Software LLC · Small business</p>
+      <h1 class="hero__brand">Saaniya Office Suite</h1>
+      <p class="hero__support">A worldwide desk for small-business groups — done-for-you, and you own it. Eight pieces that work together. This is not a clinic product; <a href="saaniya-emr.html" style="color:var(--gold-soft);font-weight:700;">Saaniya EMR</a> is separate.</p>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="mailto:saaniyasoftware@nasneeraj.com">Email saaniyasoftware@nasneeraj.com</a>
+        <a class="btn btn-ghost" href="website-services.html">Website piece</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap">
+      <p class="section__eyebrow">Eight pieces</p>
+      <h2 class="section__title">One suite for the desk you actually run</h2>
+      <p class="section__lead">Saaniya Office Suite is a small-business group, not a hospital or clinic system. We set it up for you. You own the result. You bought the all-in-one tool. It is still empty — until someone fills it with your work.</p>
+
+      <div class="pieces">
+        <article class="piece" id="website">
+          <p class="piece__num" aria-hidden="true">01</p>
+          <h3>Website</h3>
+          <p>The public face of the group. Domain, design, build, host, and care — the same Website piece already live on our <a href="website-services.html">website services</a> page. Example: <a href="https://milwaukeeshala.org/" target="_blank" rel="noopener noreferrer">milwaukeeshala.org</a>.</p>
+        </article>
+        <article class="piece">
+          <p class="piece__num" aria-hidden="true">02</p>
+          <h3>Front Office</h3>
+          <p>The daily desk: who is coming, what is due, and what the team needs to see without hunting through mail and chat.</p>
+        </article>
+        <article class="piece">
+          <p class="piece__num" aria-hidden="true">03</p>
+          <h3>AI bots</h3>
+          <p>Assistants that answer repeat questions and hand a person the ones that matter. A person stays in the loop.</p>
+        </article>
+        <article class="piece">
+          <p class="piece__num" aria-hidden="true">04</p>
+          <h3>CRM</h3>
+          <p>Contacts, notes, and follow-ups for the same small-business group — so a lead does not live only in someone’s inbox.</p>
+        </article>
+        <article class="piece">
+          <p class="piece__num" aria-hidden="true">05</p>
+          <h3>customized business software</h3>
+          <p>When a template does not fit, we build the piece you need and you own it. Scoped to your group, not a generic platform.</p>
+        </article>
+        <article class="piece" id="integrations">
+          <p class="piece__num" aria-hidden="true">06</p>
+          <h3>Integrations</h3>
+          <p>First set: Notion, Google Calendar, Google Drive, Google Meet, and Zoom. Other tools are added only when the work asks for them twice.</p>
+        </article>
+        <article class="piece" id="portals">
+          <p class="piece__num" aria-hidden="true">07</p>
+          <h3>Client portals</h3>
+          <p>A customer books, sees status, and opens an invoice or document. Proof already in use: the <a href="https://fleet.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Saarthee Fleet Manager</a> booking page and the GuruVidyaZen parent/student view.</p>
+        </article>
+        <article class="piece" id="invoices">
+          <p class="piece__num" aria-hidden="true">08</p>
+          <h3>Invoices</h3>
+          <p>Quote, invoice, and paid mark. The buyer uses their own Stripe or bank/UPI. Saaniya does not hold client funds.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <p class="section__eyebrow">How it is sold</p>
+            <h2 class="section__title">Done-for-you, and you own it</h2>
+            <p class="section__lead">We assemble the eight pieces around your group. You keep the site, the portal, and the records. Saaniya Office Suite is a worldwide small-business desk — not Saaniya EMR.</p>
+            <ul class="feature-list">
+              <li>
+                <div>
+                  <strong>Website that is already live</strong>
+                  The Website piece is the same offer on <a href="website-services.html">website-services.html</a>, with Milwaukee Shala as a public example.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Portals customers can use</strong>
+                  Book, check status, open an invoice or document — the pattern shown on Saarthee Fleet Manager and GuruVidyaZen.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Money stays with the buyer</strong>
+                  Invoices show the buyer’s own Stripe or bank/UPI. Saaniya does not hold client funds.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Integrations, first set</strong>
+                  Notion, Google Calendar / Drive / Meet, and Zoom. Messaging on WhatsApp waits until the LLC number is on the contact page.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <aside class="case">
+            <p class="case__label">What this is not</p>
+            <h3>A small-business group</h3>
+            <p>Saaniya Office Suite is for worldwide small-business teams. It is not a clinic product. Clinics use <a href="saaniya-emr.html">Saaniya EMR</a>.</p>
+            <p>Email is the contact path: <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <p class="section__eyebrow">The empty-tool problem</p>
+      <h2 class="section__title">You bought the all-in-one tool. It is still empty.</h2>
+      <p class="section__lead">A license sitting unused is not an office. We fill the desk — website through invoices — so the suite is yours and in use.</p>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Done-for-you</h3>
+          <p>We plan, connect, and launch the eight pieces with your copy, your calendar, and your payment details.</p>
+        </div>
+        <div class="pillar">
+          <h3>You own it</h3>
+          <p>The site, portal, and records stay with your group. We are the builder, not the landlord of your money.</p>
+        </div>
+        <div class="pillar">
+          <h3>Scoped on purpose</h3>
+          <p>Eight named pieces. We do not stretch this page into a clinic system or a catch-all back office.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding-top:0">
+      <div class="cta">
+        <p class="section__eyebrow">Next step</p>
+        <h2 class="section__title">Write about your small-business group</h2>
+        <p class="section__lead" style="margin-bottom:1.5rem">Tell us what you sell, whether you already have a site, and which of the eight pieces you need first. We reply by email — not a chat blast.</p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>
+          <a class="btn btn-outline" href="website-services.html">Website piece only</a>
+          <a class="btn btn-outline" href="index.html">Company home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>Saaniya Office Suite by Saaniya Software LLC</p>
+      <p>
+        <a href="index.html">Company home</a> ·
+        <a href="mailto:saaniyasoftware@nasneeraj.com">saaniyasoftware@nasneeraj.com</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
