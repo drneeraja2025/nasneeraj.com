@@ -1,0 +1,1085 @@
+{
+  "builtAt": "2026-09-24T05:37:00.533Z",
+  "chunks": [
+    {
+      "id": "/astrology-guide#0",
+      "path": "/astrology-guide",
+      "title": "Vedic Astrology and Modern Science | Book by Saaniya Software LLC",
+      "text": "Vedic Astrology and Modern Science | Book by Saaniya Software LLC Live book · horoscopeguide.nasneeraj.com Vedic Astrology and Modern Science Vedic Wisdom, Modern Science, and the Search for Meaning An interactive book from Saaniya Software LLC that puts Jyotish in honest dialogue with physics, astronomy, psychology, world faiths, Ayurveda, yoga, and meditation — then teaches across 14 illustrated modules with live calculators and a reference matrix. Open Astrology Guide Read free sample Ask about access Book product of Saaniya Software LLC · Vercel project horoscopeguide Official logo: spinning-planet video from the live Astrology Guide. What readers get Free sample Preface, Modern Science chapter, and Module 1 — no login required. Full interactive book 14 modules with illustrations, inline calculators, and member access. True-Sayana & matrix tools Educational engines and an interactive"
+    },
+    {
+      "id": "/astrology-guide#1",
+      "path": "/astrology-guide",
+      "title": "Vedic Astrology and Modern Science | Book by Saaniya Software LLC",
+      "text": "illustrations, inline calculators, and member access. True-Sayana & matrix tools Educational engines and an interactive reference matrix on the live site. What the book examines Built for believers and sceptics alike — weighing claims as Established, Frontier, or Metaphor before teaching prediction practice. Astrology × Modern Science World religions Ayurveda & health Yoga, meditation & karma Alternative systems Empirical evidence Start on the live site Free sample Read the opening chapters online or download the sample PDF from the Astrology Guide app. Open /sample Full book Member access to all modules, calculators, and the interactive reading experience. Open /read True-Sayana Engine Educational calculation tools aligned with the book’s sidereal baseline. Open tools Product note Vedic Astrology and Modern Science (Astrology Guide / horoscopeguide) is a Saaniya Software LLC book"
+    },
+    {
+      "id": "/astrology-guide#2",
+      "path": "/astrology-guide",
+      "title": "Vedic Astrology and Modern Science | Book by Saaniya Software LLC",
+      "text": "tools Product note Vedic Astrology and Modern Science (Astrology Guide / horoscopeguide) is a Saaniya Software LLC book product. Live host: horoscopeguide.nasneeraj.com . Repo: a-guide-to-understand-horoscope . Content is educational — not medical, legal, or financial advice."
+    },
+    {
+      "id": "/compare-gvz#0",
+      "path": "/compare-gvz",
+      "title": "GuruVidyaZen vs Competitors - Saaniya Software LLC | Comparison",
+      "text": "GuruVidyaZen vs Competitors - Saaniya Software LLC | Comparison GuruVidyaZen vs Competitors Why GuruVidyaZen is the only intelligent choice for heritage arts, music, and dance academies Feature Comparison Feature GuruVidyaZen by Saaniya Software LLC MyMusicStaff DanceStudio-Pro Jackrabbit Class Generic Studio Apps Heritage Pedagogy Support ✓ Specialized for 17+ arts ~ Music only ~ Dance only ✗ Generic ✗ Basic 7-Year Repertoire Vault ✓ Yes (Built-in) ✗ No ✗ No ✗ No ✗ No AI Stylistic & Pitch Analysis ✓ Yes (Advanced) ✗ No ✗ No ✗ No ✗ No Traditional Evaluation Matrix ✓ CCE & Heritage Matrix ~ Basic levels ~ Skills tracking ~ Skills tracking ✗ No Multi-Currency (USD, INR, etc.) ✓ Ledger Pro ~ Limited ~ Limited ~ Limited ✗ No 11+ Languages (EN, MR, HI, etc.) ✓ Yes ✗ No ✗ No ✗ No ✗ No Examiner Infrastructure ✓ Secure assessments ✗ No ✗ No ✗ No ✗ No Financial Ledger Pro ✓ Integrated ERP ~ Basic"
+    },
+    {
+      "id": "/compare-gvz#1",
+      "path": "/compare-gvz",
+      "title": "GuruVidyaZen vs Competitors - Saaniya Software LLC | Comparison",
+      "text": "✗ No ✗ No Examiner Infrastructure ✓ Secure assessments ✗ No ✗ No ✗ No ✗ No Financial Ledger Pro ✓ Integrated ERP ~ Basic billing ~ Basic billing ✓ Yes ~ Basic 🏛️ Preserving Heritage Unlike generic apps, GuruVidyaZen is built specifically for traditional pedagogy, from 7-year student repertoire vaults to the Continuous Comprehensive Evaluation (CCE) matrix. 🤖 AI-Driven Insights Leverage modern technology with AI stylistic analysis that helps students master pitch, rhythm, and style in traditional arts. 🌐 Global Readiness Built for the modern global academy. Manage branches in different countries with multi-currency support and 11+ languages. Ready for the intelligent choice? Join the elite academies modernizing their heritage with GuruVidyaZen. Request a Personalized Demo"
+    },
+    {
+      "id": "/compare#0",
+      "path": "/compare",
+      "title": "School SISLMS — Compare | Saaniya Software LLC — GuruVidyaZen",
+      "text": "School SISLMS — Compare | Saaniya Software LLC — GuruVidyaZen ✦ Compare — School SISLMS GuruVidyaZen · K–8 product lane How GuruVidyaZen School SISLMS lines up This page is a friendly, high-level contrast between a reference SISMMS-style school data shape (rosters, period attendance, daily formative columns) and the GuruVidyaZen School SISLMS lane in this app. School SISLMS v1 is the K–8 class hub + daily log + assignments + non–performing-arts CCE + imports; other GuruVidyaZen academy types may expose arts modules and different CCE. It is not a legal spec — see in-app Legal and Help for the live feature set. Scope: School SISLMS v1 is elementary and middle (K–8) in product positioning. Grades 9–12 are out of scope unless you add them later in planning. Area Typical SISMMS / “school data” feel GuruVidyaZen School SISLMS (this train) Tenant + isolation Per-school data boundaries expected."
+    },
+    {
+      "id": "/compare#1",
+      "path": "/compare",
+      "title": "School SISLMS — Compare | Saaniya Software LLC — GuruVidyaZen",
+      "text": "MMS / “school data” feel GuruVidyaZen School SISLMS (this train) Tenant + isolation Per-school data boundaries expected. ✓ Row-level security by school_id — same isolation pattern as the rest of Gurukul; arts-only CCE and legacy flows are kept off the School shell via UI + product gates where needed. Roster & class lists Students linked to classes / grades. ✓ Classes + enrollment + progress + roster pages with school-first copy; grades & sections catalog (K–8) and course_kind (batch vs subject offering) per parity map Option A. Daily formative / attendance By date, often period or homeroom scoped. ✓ Daily log for School on daily_logs with preset-scaled score columns; actions aligned to the school daily log page in-app. Assignments Tasks with due dates, submissions. ✓ Assignments + submissions with class and teacher scoping; school subtitle and class filter on the list; teacher preselect"
+    },
+    {
+      "id": "/compare#2",
+      "path": "/compare",
+      "title": "School SISLMS — Compare | Saaniya Software LLC — GuruVidyaZen",
+      "text": "ssignments + submissions with class and teacher scoping; school subtitle and class filter on the list; teacher preselect on create. Student submissions typically allow up to six attachment files (types and size caps in in-app Help). Import / export Admin CSV expectations. ✓ Same import-export admin surface as the rest of the app; all operations scoped to the current school . Optional future CSV fields for 1117 grade/section columns documented in the runbook. Calendar District calendars, feeds. ✓ iCal (.ics) import (works with Google Calendar exports) plus preset US / European / Indian holiday seeds (and optional regional presets such as Marathi where enabled). Not a live bidirectional Google sync—see in-app calendar Help. PII in the UI Leaders need clarity on who sees contact fields. ✓ Student detail contact minimization for School roles (e.g. phone / address / guardian email visible to"
+    },
+    {
+      "id": "/compare#3",
+      "path": "/compare",
+      "title": "School SISLMS — Compare | Saaniya Software LLC — GuruVidyaZen",
+      "text": "contact fields. ✓ Student detail contact minimization for School roles (e.g. phone / address / guardian email visible to admin/owner; others see placeholders). Try the app Deep links use the school intent so signup and login show School SISLMS copy. Sign up (school) Log in (school) In-app School welcome SISLMS subdomain (landing) Developers / QA: use the production nasneeraj.com subdomains in the footer for smoke tests (GuruVidyaZen, Riyaz, School SISLMS). Internal dev.* hosts may exist for pipeline work—do not treat them as public marketing URLs. Static pages on nasneeraj.com may lag the Gurukul marketing git folder until deploy."
+    },
+    {
+      "id": "/contact#0",
+      "path": "/contact",
+      "title": "Contact Us - Saaniya Software LLC",
+      "text": "Contact Us - Saaniya Software LLC Get In Touch We're here to help. Contact us for questions, support, or to learn more about our products. 📧 Email saaniyasoftware@nasneeraj.com We typically respond within 24 hours Send Us a Message Thank you! Your message has been sent successfully. We'll respond within 24 hours. Error: There was a problem sending your message. Please try again or email us directly at saaniyasoftware@nasneeraj.com Name * Email Address * Subject * Message * Send Message Saaniya Software LLC Saaniya Software Email: saaniyasoftware@nasneeraj.com Website: nasneeraj.com Response Time: We typically respond to all inquiries within 24 hours during business days. Product Support: If you're an existing SISLMS or GuruVidyaZen customer, please use the support features within your account or contact us directly for priority support. Quick Links Learn About SISLMS Live SISLMS Learn"
+    },
+    {
+      "id": "/contact#1",
+      "path": "/contact",
+      "title": "Contact Us - Saaniya Software LLC",
+      "text": "atures within your account or contact us directly for priority support. Quick Links Learn About SISLMS Live SISLMS Learn About GuruVidyaZen Request a Demo"
+    },
+    {
+      "id": "/demo#0",
+      "path": "/demo",
+      "title": "Request Demo - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "Request Demo - Saaniya Software LLC | SISLMS & GuruVidyaZen Request a Demo See our platforms in action with a personalized demonstration Thank you! Your demo request has been submitted. We'll contact you within 24 hours to schedule your demonstration. Error: There was a problem submitting your demo request. Please try again or contact us directly at saaniyasoftware@nasneeraj.com Product of Interest * Select a product GuruVidyaZen SISLMS (School Information System) SISMMS (Student Information & Management) GuruVidyaZen (Academy Management) GuruVidyaZen Riyaz Studio Saarthee CoPlanner Saarthee Fleet Manager Saaniya Office Suite (Coming soon) Saaniya EMR (Coming soon) Website Services Professional Services / Consultation Other / Multiple Name * Title/Position * School/Organization Name * Email Address * Estimated Number of Students Preferred Demo Date Preferred Time Select a time Morning (9"
+    },
+    {
+      "id": "/demo#1",
+      "path": "/demo",
+      "title": "Request Demo - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "nization Name * Email Address * Estimated Number of Students Preferred Demo Date Preferred Time Select a time Morning (9 AM - 12 PM) Afternoon (12 PM - 5 PM) Evening (5 PM - 8 PM) Flexible Timezone Central Standard Time (CST) Eastern Standard Time (EST) Pacific Standard Time (PST) Mountain Standard Time (MST) Other Additional Information or Questions Submit Demo Request What to Expect We'll contact you within 24 hours to confirm your demo Demos typically last 30-45 minutes We'll customize the demo to show features relevant to your needs You'll have time to ask questions and discuss your specific requirements No obligation - demos are free and informative Demo Topics During your demo, we can cover: For Schools: Student info, LMS, reports, parent portal, and compliance. For Academies: Repertoire vaults, CCE matrices, and AI stylistic analysis. Security: Row-Level Security (RLS), data"
+    },
+    {
+      "id": "/demo#2",
+      "path": "/demo",
+      "title": "Request Demo - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "nce. For Academies: Repertoire vaults, CCE matrices, and AI stylistic analysis. Security: Row-Level Security (RLS), data encryption, and audit logs. Process: Pricing, implementation timeline, and custom development."
+    },
+    {
+      "id": "/disclaimer#0",
+      "path": "/disclaimer",
+      "title": "Disclaimer — Saaniya Software LLC",
+      "text": "Disclaimer — Saaniya Software LLC Disclaimer Last updated: September 9, 2026 Staged from the Saaniya Software LLC counsel pack for the company website. Not a substitute for attorney review. 1. No professional advice The Services provided by Saaniya Software LLC , including software outputs and AI-generated content, are for informational and operational purposes only. They do not constitute medical, clinical, legal, tax, accounting, financial, investment, or other professional advice. Consult a qualified licensed professional before decisions with legal, medical, or financial consequences. 2. AI-generated content AI features can produce output that is inaccurate, incomplete, biased, or otherwise unsuitable. You are responsible for reviewing and validating AI output before acting on it. Do not rely on AI output for emergency, safety-critical, medical, or regulated decision-making. 3."
+    },
+    {
+      "id": "/disclaimer#1",
+      "path": "/disclaimer",
+      "title": "Disclaimer — Saaniya Software LLC",
+      "text": "before acting on it. Do not rely on AI output for emergency, safety-critical, medical, or regulated decision-making. 3. Education products School information systems and learning-management products support educators and administrators. They do not replace professional educational judgment, individualized assessment, or applicable legal requirements for students with disabilities, special programs, or custody arrangements. See also the Education Privacy Addendum . 4. Third-party content and links The Services may include or link to third-party content. We do not endorse or assume responsibility for the accuracy, completeness, or reliability of third-party content. Open-source and third-party components remain subject to their own licenses and terms. 5. No medical device / no HIPAA program by default No Saaniya Software LLC Service is intended for use in the diagnosis, cure, mitigation,"
+    },
+    {
+      "id": "/disclaimer#2",
+      "path": "/disclaimer",
+      "title": "Disclaimer — Saaniya Software LLC",
+      "text": "ce / no HIPAA program by default No Saaniya Software LLC Service is intended for use in the diagnosis, cure, mitigation, treatment, or prevention of disease, and no Service is offered as a medical device. We do not accept HIPAA / PHI processing without a separate written compliance program. 6. Forward-looking statements Statements on this website regarding future products, features, or timelines are aspirational and may change without notice. 7. Contact Saaniya Software LLC Wisconsin, United States saaniyasoftware@nasneeraj.com"
+    },
+    {
+      "id": "/faq#0",
+      "path": "/faq",
+      "title": "FAQ - How We Build & Manage Projects | Saaniya Software LLC",
+      "text": "FAQ - How We Build & Manage Projects | Saaniya Software LLC Frequently Asked Questions How Saaniya Software develops and manages projects-engagements, delivery, AI-assisted HOTL practice, and what to expect when you work with us. About Saaniya Software What does Saaniya Software LLC do? We are a Wisconsin software company focused on two lanes: custom development services (analysis, architecture, delivery planning, and build) and purpose-built products for schools, academies, and operators (including GuruVidyaZen / SISLMS, Saarthee apps, and related tools). See Services and our product pages for details. Are you a SaaS vendor or a development partner? Both, depending on the engagement. Many clients hire us to design and ship a system tailored to their workflow. We also operate and evolve our own products. This FAQ is about how we run projects -not product pricing tiers or feature"
+    },
+    {
+      "id": "/faq#1",
+      "path": "/faq",
+      "title": "FAQ - How We Build & Manage Projects | Saaniya Software LLC",
+      "text": "We also operate and evolve our own products. This FAQ is about how we run projects -not product pricing tiers or feature matrices. Product-specific questions belong on the product page or a scoped demo conversation. Where are you based, and who do you work with? Saaniya Software LLC is a U.S. (Wisconsin) company. We work with organizations globally via direct contracts and marketplaces such as Upwork. Communication is typically async-first with scheduled checkpoints. What kinds of projects are a good fit? Strong fits: cloud web apps, education / academy operations tools, ops and fleet-style workflows, integrations, and greenfield builds where requirements need clarifying. We decline HIPAA / PHI and regulated medical-financial processing without a separate written compliance program-see our Terms . How we develop and manage projects What does your delivery process look like? We use a"
+    },
+    {
+      "id": "/faq#2",
+      "path": "/faq",
+      "title": "FAQ - How We Build & Manage Projects | Saaniya Software LLC",
+      "text": "ompliance program-see our Terms . How we develop and manage projects What does your delivery process look like? We use a phased path that stays visible to you: Discovery: goals, constraints, success criteria, and risk notes Architecture: stack, data model, security boundaries, and integration map Delivery plan: milestones, Done-when checks, and out-of-scope list Build: iterative implementation with reviewable increments Verify: automated and/or manual checks against the agreed Done-when Ship: preview deploy, then production when you approve You approve the plan and stop rules; we do not \"wander\" into production without a clear gate. What is HOTL, and how does it affect my project? HOTL (Human-on-the-Loop) means a human architect approves the plan and hard stop rules once, then an AI agent can execute until Done or Blocked-without asking for permission on every micro-step. Secrets,"
+    },
+    {
+      "id": "/faq#3",
+      "path": "/faq",
+      "title": "FAQ - How We Build & Manage Projects | Saaniya Software LLC",
+      "text": "les once, then an AI agent can execute until Done or Blocked-without asking for permission on every micro-step. Secrets, destructive data changes, and ambiguous cross-system work still force a human stop. Read more on our HOTL page . How do you keep scope from drifting? Every work package restates Plan , Done when , and Out of scope . New ideas become a follow-on package instead of silent scope creep. If a Done-when check fails twice, we stop and ask a precise question rather than guessing. How do you communicate progress? Expect short status updates tied to milestones: what changed, evidence (build/tests/URLs), and residual risks. For marketplace jobs we follow the platform's messaging norms; for direct clients we agree on a channel (email, ticket hub, or shared doc) at kickoff. Do you use Agile / sprints? We work iteratively with frequent reviewable increments. Formal two-week"
+    },
+    {
+      "id": "/faq#4",
+      "path": "/faq",
+      "title": "FAQ - How We Build & Manage Projects | Saaniya Software LLC",
+      "text": "ed doc) at kickoff. Do you use Agile / sprints? We work iteratively with frequent reviewable increments. Formal two-week ceremonies are optional-what matters is a written plan, demoable progress, and verification before release. Small fixed-scope jobs may be one or two packages; larger programs are sequenced milestones. Engagements and working together How do engagements usually start? Start with a short discovery conversation or written brief: problem, users, constraints, and deadline. We respond with a proposed scope, assumptions, and either a fixed package or a phased estimate. You can contact us , request a product demo , or engage via Upwork . Fixed price or hourly? We prefer clear packages when requirements are stable (fixed scope + Done-when). Hourly or retainer fits exploration, ongoing product work, or changing priorities. Marketplace catalog packages follow published Upwork"
+    },
+    {
+      "id": "/faq#5",
+      "path": "/faq",
+      "title": "FAQ - How We Build & Manage Projects | Saaniya Software LLC",
+      "text": "ner fits exploration, ongoing product work, or changing priorities. Marketplace catalog packages follow published Upwork terms; custom SOWs spell out milestones and acceptance. What do you need from us as the client? A decision-maker for scope questions, access to examples or systems you want integrated, and timely feedback on demos. Unclear ownership of requirements is the #1 delay-we will flag gaps early rather than invent them. How long does a typical project take? Small, well-scoped builds can land in days to a few weeks. Multi-module systems (auth, data model, roles, integrations, production hardening) are usually multi-milestone. We estimate after discovery-not from a one-line ask. Can you work with our existing team or repo? Yes. We can join an existing GitHub/Vercel stack, follow your branch rules, and leave documentation so your team can continue. We ask for a short onboarding"
+    },
+    {
+      "id": "/faq#6",
+      "path": "/faq",
+      "title": "FAQ - How We Build & Manage Projects | Saaniya Software LLC",
+      "text": "Vercel stack, follow your branch rules, and leave documentation so your team can continue. We ask for a short onboarding pack: repo access, environments, coding standards, and who approves merges. Technology and AI-assisted delivery What tech stacks do you typically use? Common stack for our products and many client builds: modern TypeScript/React front ends, serverless or Node APIs, managed Postgres (e.g. Supabase/Neon), and Vercel-style hosting. We choose tools for maintainability and your constraints-not for novelty alone. How do you use AI / LLMs in development? LLMs accelerate drafting, refactors, tests, and documentation inside governed agent workflows (for example Cursor agents with project rules and HOTL skills). Humans still own architecture, security-sensitive steps, acceptance, and production release. See HOTL + AI development . Will my confidential data be used to train"
+    },
+    {
+      "id": "/faq#7",
+      "path": "/faq",
+      "title": "FAQ - How We Build & Manage Projects | Saaniya Software LLC",
+      "text": "sitive steps, acceptance, and production release. See HOTL + AI development . Will my confidential data be used to train public AI models? We do not use customer content to train public foundation models unless a written order says so. Tooling is configured to disable vendor training on customer inputs where the vendor offers that control. Details: Privacy Policy and Terms . Do you automate deploy and verification? Yes where the project supports it: local verify (build / tests), preview deploys, then production promotion with recorded SHAs and URLs. Automation never skips human approval for production when your rules require it. Security, IP, and ownership Who owns the code? Custom deliverables follow the SOW or marketplace contract. Saaniya Software retains pre-existing libraries, frameworks, and product IP. Your data and content remain yours. We document what is licensed vs. assigned"
+    },
+    {
+      "id": "/gurukul#0",
+      "path": "/gurukul",
+      "title": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning",
+      "text": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning Flagship site: Visit the live GuruVidyaZen experience at guruvidyazen.nasneeraj.com — this page includes extended product detail for reference. GuruVidyaZen by Saaniya Software LLC The Digitized Legacy System for Your Academy Bridges the gap between modern business operations and traditional arts curriculum. From 7-year Repertoire Vaults to AI Stylistic Analysis. Request Demo Contact Sales Pilot Program Simplify. Organize. Grow. Transform your academy with GuruVidyaZen by Saaniya Software LLC - the only platform that understands your pedagogy. Whether you're teaching Ragas, Tatkar, or AP Physics, GuruVidyaZen provides domain-intelligent systems that digitize your legacy while streamlining your business. Is This You? If you're an academy owner who: 📊 Manual Tracking Tracks"
+    },
+    {
+      "id": "/gurukul#1",
+      "path": "/gurukul",
+      "title": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning",
+      "text": "ize your legacy while streamlining your business. Is This You? If you're an academy owner who: 📊 Manual Tracking Tracks students on spreadsheets or paper 📅 Scheduling Issues Struggles with scheduling conflicts 💰 Payment Problems Loses revenue from missed payments ⏰ Time Wasted Spends hours on manual attendance tracking 📈 No Insights Can't quickly report on student progress 💬 Communication Gap Wishes for better parent communication Then GuruVidyaZen by Saaniya Software LLC is built for you. The Comprehensive Approach 🏆 Traditional Arts Moat Only platform with built-in Indian classical logic: CCE with Ashta-Anga/Natyrambham matrices and 7-year Master Repertoire Vaults. ⚡ Examiner Infrastructure Digitalize traditional exams with Examiner Portals, QR-based student portfolios, and Arangetram/Manch Pravesh prep dashboards. 💰 Financial Ledger Pro Professional multi-tenant ledger with"
+    },
+    {
+      "id": "/gurukul#2",
+      "path": "/gurukul",
+      "title": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning",
+      "text": "portfolios, and Arangetram/Manch Pravesh prep dashboards. 💰 Financial Ledger Pro Professional multi-tenant ledger with Stripe integration, global tax statement generation (IN/US), and automated fee collection. 🌍 Globalized Localization Scale globally with support for 11+ languages including Hindi, Marathi, Bengali, Tamil, Telugu, Spanish, French, and more. 🎯 AI & Predictive Analytics Go beyond tracking with AI stylistic analysis for practice videos and predictive student retention modeling using CCE data. ⚡ Fast Setup Go live in 24 hours with our Quick Start Wizard. Pre-configured with industry-specific terminology for 17+ academy types. Core Features 👥 Student Management Digital student profiles with photos Contact info & emergency contacts Skill level and progress tracking Family management & sibling discounts Custom fields for academy-specific data 📅 Smart Scheduling Interactive"
+    },
+    {
+      "id": "/gurukul#3",
+      "path": "/gurukul",
+      "title": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning",
+      "text": "s tracking Family management & sibling discounts Custom fields for academy-specific data 📅 Smart Scheduling Interactive weekly class calendar Drag-and-drop scheduling Recurring class patterns Room/studio resource management Automatic conflict detection ✅ Attendance & Progress Quick check-in system (mobile-friendly) Real-time attendance tracking Progress milestone tracking Skill assessments and evaluations Performance history analytics CCE (Continuous Comprehensive Evaluation) system Academy-specific evaluation matrices Dynamic component-based scoring 💰 Revenue Management Flexible billing (monthly, per-class, packages) Automated payment reminders Multiple payment method support Financial reports and analytics AR Aging and collection tracking Multi-currency support (USD, INR, CAD, EUR, GBP) Discount code system with real-time validation Subscription management with tier-based pricing"
+    },
+    {
+      "id": "/gurukul#4",
+      "path": "/gurukul",
+      "title": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning",
+      "text": "(USD, INR, CAD, EUR, GBP) Discount code system with real-time validation Subscription management with tier-based pricing 👨‍👩‍👧 Parent Portal Real-time progress updates Class schedule and attendance notifications Progress reports and achievements Secure messaging with instructors Online payment and statements 📊 Reports & Analytics Student progress and performance reports Financial reports and revenue analytics Class utilization and capacity reports Retention and enrollment trends Custom report builder One Platform. 17+ Academy Types. GuruVidyaZen by Saaniya Software LLC is a domain-intelligent system that understands your unique pedagogy. Supporting over 17 academy types across traditional arts, wellness, and academics: 🎵 Hindustani Classical 💃 Kathak / Dance 🧘 Bharatnatyam ✨ Yoga & Wellness 🔥 Zumba & Fitness 📚 Coaching Classes 🎨 Fine Arts 🥊 Martial Arts Beyond \"Studio"
+    },
+    {
+      "id": "/gurukul#5",
+      "path": "/gurukul",
+      "title": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning",
+      "text": "nce 🧘 Bharatnatyam ✨ Yoga & Wellness 🔥 Zumba & Fitness 📚 Coaching Classes 🎨 Fine Arts 🥊 Martial Arts Beyond \"Studio Management\" Generic apps give you a digital receptionist. GuruVidyaZen gives you a digital Academy Principal. Our Continuous Comprehensive Evaluation (CCE) system tracks what truly matters—from technical proficiency to artistic endurance. 7-Year Master Repertoire Vaults: Track progress from Prarambhik to Visharad with cumulative portfolios. Traditional Notation Support: Built-in support for Kathak Lipi and Bhatkhande notation. Examiner Infrastructure: Digitalize traditional exams with Examiner Portals and student portfolios. AI Stylistic Analysis: Go beyond tracking with AI analysis of practice videos for traditional arts nuances. 💃 Dance Studios (Kathak, Bharatnatyam, Contemporary, etc.) Dance studios use GuruVidyaZen to manage classes, costumes, competitions, and"
+    },
+    {
+      "id": "/gurukul#6",
+      "path": "/gurukul",
+      "title": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning",
+      "text": "(Kathak, Bharatnatyam, Contemporary, etc.) Dance studios use GuruVidyaZen to manage classes, costumes, competitions, and progression through levels: Dance Style & Level Tracking: Organize classes by dance style (ballet, hip-hop, contemporary, jazz, etc.) and track student progression through levels (beginner, intermediate, advanced, pre-professional). Belt/Rank Progression System: For martial arts-based dance or traditional forms, track belt/rank progression. Set requirements for each level, track student progress toward next rank, and manage testing schedules. Competition & Recital Management: Schedule competitions, recitals, and showcases. Register students for events, track registration fees, manage costumes and props, and store performance photos/videos. Costume & Prop Management: Track costume sizes for each student, manage costume inventory, schedule fittings, and track costume"
+    },
+    {
+      "id": "/gurukul#7",
+      "path": "/gurukul",
+      "title": "GuruVidyaZen by Saaniya Software LLC - Intelligent Academy Management for Music, Dance & Specialized Learning",
+      "text": "& Prop Management: Track costume sizes for each student, manage costume inventory, schedule fittings, and track costume condition and replacement needs. Choreography & Rehearsal Notes: Store choreography notes, rehearsal schedules, and special instructions for each class. Students can access rehearsal videos and notes through the portal. Flexibility & Technique Assessments: Track student progress in flexibility, technique, and dance-specific skills. Maintain assessment records to show improvement over time. Performance Teams & Troupe Management: Manage performance teams and troupes separately from regular classes. Track team members, rehearsal schedules, and performance commitments. Studio Space & Equipment: Manage studio rooms, mirrors, barres, sound systems, and other equipment. Schedule equipment usage and track maintenance needs. CCE Evaluation System: For Kathak, track Tatkar"
+    },
+    {
+      "id": "/hotl-research#0",
+      "path": "/hotl-research",
+      "title": "HOTL + AI Development - Saaniya Software LLC",
+      "text": "HOTL + AI Development - Saaniya Software LLC HOTL + AI Development Human-on-the-Loop skills with modern LLMs-plan once, execute to Done or Blocked, verify with evidence, ship with human gates Why this matters now Generative AI and large language models (LLMs) can draft large portions of an application quickly. What separates production software from a demo is not more autocomplete-it is governance : clear scope, security-aware architecture, verification, and deliberate release. Saaniya Software builds with Human-on-the-Loop (HOTL) skills that turn LLM speed into reliable delivery. Cutting-edge practice, not \"AI magic\" Industry teams are moving from chat-and-paste coding to agentic development : project rules, reusable skills, automated verify/deploy loops, and human stop rules for secrets, data loss, and production. That combination- HOTL + LLM agents -is how serious product teams ship"
+    },
+    {
+      "id": "/hotl-research#1",
+      "path": "/hotl-research",
+      "title": "HOTL + AI Development - Saaniya Software LLC",
+      "text": "top rules for secrets, data loss, and production. That combination- HOTL + LLM agents -is how serious product teams ship faster without surrendering accountability. HITL vs HOTL (in one glance) Mode Human role Agent role Best for HITL Human-in-the-Loop Approves nearly every step Waits between actions Exploration, ambiguous requirements HOTL Human-on-the-Loop Approves plan + stop rules once Runs until Done or Blocked Approved implementation packages HOTL is not \"unattended AI.\" It is delegated execution under a written plan , with forced human stops for secrets, destructive operations, lane ambiguity, and failed Done-when checks. How we use HOTL skills in development In our day-to-day Cursor / agent workflow, HOTL is encoded as reusable skills and project rules-so every package starts the same way and ends with evidence, not vibes. 1. Restate the contract Plan · Done when · Out of scope"
+    },
+    {
+      "id": "/hotl-research#2",
+      "path": "/hotl-research",
+      "title": "HOTL + AI Development - Saaniya Software LLC",
+      "text": "y package starts the same way and ends with evidence, not vibes. 1. Restate the contract Plan · Done when · Out of scope in a few lines. If those are missing, ask once-then execute. 2. Execute without mid-step yes/no No permission theater on every file edit. Progress is continuous until Done or Blocked. 3. Verify with evidence Build, tests, or stated checks. Fix once and retry; fail twice → Blocked with a precise question. 4. Ship with gates Preview then production when authorized. Report SHAs, URLs, and residual risks-not \"LGTM.\" 5. Hard stops stay human Secrets, irreversible data loss, cross-product ambiguity, and unapproved production pushes force HITL. 6. Project rules bind the agent Branding, branch policy, deploy scripts, and security rules live in the repo so agents inherit them. Example ship loop A typical end-to-end package on our stack: HOTL execute - implement the approved"
+    },
+    {
+      "id": "/hotl-research#3",
+      "path": "/hotl-research",
+      "title": "HOTL + AI Development - Saaniya Software LLC",
+      "text": "agents inherit them. Example ship loop A typical end-to-end package on our stack: HOTL execute - implement the approved plan without mid-step stalls Verify - local build / e2e (or project Done-when) Push - commit, Preview deploy, then Production when the phase calls for it Handoff - short Done report: what changed, evidence table, risks HOTL + LLM agents: what is cutting-edge Where LLMs excel Boilerplate, UI drafts, refactors, tests, docs Repo-aware edits across many files Turning a written plan into concrete diffs Summarizing failures for human review Where humans stay on the loop Architecture, threat model, data boundaries Secrets, production, irreversible changes Acceptance against Done-when evidence Product and compliance judgment calls The frontier is not \"replace the engineer.\" It is AI drafting under architected control - the same pattern advanced teams use for agent coding, CI"
+    },
+    {
+      "id": "/hotl-research#4",
+      "path": "/hotl-research",
+      "title": "HOTL + AI Development - Saaniya Software LLC",
+      "text": "ce the engineer.\" It is AI drafting under architected control - the same pattern advanced teams use for agent coding, CI gates, and preview/production promotion. Saaniya Software operationalizes that pattern with HOTL skills so clients get speed and accountability. What our research taught us Internal audits of real development tickets reinforced a practical 80/20 pattern: models draft a large share of routine code, but ungoverned AI-only runs fail on the critical remainder-integration, security controls, and platform configuration. HOTL exists to close that gap. 80/20 Generation vs. critical gap LLMs accelerate drafts; humans own the hard 20% HOTL Plan → Done/Blocked Approve once; execute with stop rules Verify Evidence over claims Builds, tests, URLs-not \"done\" assertions Ship Preview then production Human gate when rules require it Failure mode: hallucination Agent reports complete"
+    },
+    {
+      "id": "/hotl-research#5",
+      "path": "/hotl-research",
+      "title": "HOTL + AI Development - Saaniya Software LLC",
+      "text": "ertions Ship Preview then production Human gate when rules require it Failure mode: hallucination Agent reports complete when critical pieces are missing. HOTL requires Done-when evidence. Failure mode: systemic omission Broken imports, missing files, half-wired config. Review and verify catch these before ship. Failure mode: context rot Long sessions drift. Atomic packages and reset/handoff discipline keep state honest. Governance pillars we still enforce Manual-first for sensitive layers Security-critical schema, access policies, and platform secrets are human-directed-not blind agent invent. Trust verification, not claims AI \"success\" language is ignored until checks pass. Ground truth is the only Done signal. Surgical packages Small, reviewable units beat giant prompts that rot context and hide risk. Architect skill mandate Humans must still understand SQL, CI/CD, and security enough"
+    },
+    {
+      "id": "/hotl-research#6",
+      "path": "/hotl-research",
+      "title": "HOTL + AI Development - Saaniya Software LLC",
+      "text": "pts that rot context and hide risk. Architect skill mandate Humans must still understand SQL, CI/CD, and security enough to audit agent output. What this means for clients You get a partner that uses today's best LLM tooling without treating the model as the architect of record. Engagements start with a clear plan; agents move fast inside that plan; you see preview builds and evidence before production. That is HOTL in practice-modern, auditable, and built for real software, not demos. Related: FAQ - how we develop and manage projects · Services · Terms Build with HOTL + modern AI Tell us what you want shipped. We will propose Plan / Done when / Out of scope-and execute with human gates. Contact Us Read the FAQ Services"
+    },
+    {
+      "id": "/#0",
+      "path": "/",
+      "title": "Saaniya Software LLC | Custom development & cloud products",
+      "text": "Saaniya Software LLC | Custom development & cloud products Saaniya Software LLC Custom development & purpose-built products We help organizations plan and ship cloud software—architecture, analysis, and delivery—while building our own products for schools, academies, and operators. Engage us for a thoughtful build, or explore live products like GuruVidyaZen , School SISLMS , and Saarthee apps in development. Architecture · analysis · implementation planning Education & academy products Secure cloud delivery · human-in-the-loop AI Professional services Our products Request a demo Upwork Education & school programs Academies, arts & productivity Development services Need a partner to analyze requirements, design the architecture, and plan delivery—without a cookie-cutter template? That is a core part of how Saaniya Software works. Business analysis Clarify processes and requirements so"
+    },
+    {
+      "id": "/#1",
+      "path": "/",
+      "title": "Saaniya Software LLC | Custom development & cloud products",
+      "text": "ter template? That is a core part of how Saaniya Software works. Business analysis Clarify processes and requirements so software solves the right problem. Architecture Multi-tenant, secure, and scalable designs grounded in how you actually operate. Delivery planning Roadmaps, milestones, and implementation plans you can hire against with confidence. View services Talk to us About Saaniya Software LLC We ship focused cloud products for schools, academies, and operators—and publish HOTL research , honest comparisons , and pilot options. Hire us for custom work via services or Upwork (profile coming soon). How we build Modern cloud delivery with security and clarity first—then automation where a human stays in the loop. Vercel edge hosting & CI/CD Postgres with tenant isolation OAuth & scoped integrations FERPA- & COPPA-conscious school workflows AI-assisted features with approval paths"
+    },
+    {
+      "id": "/#2",
+      "path": "/",
+      "title": "Saaniya Software LLC | Custom development & cloud products",
+      "text": "isolation OAuth & scoped integrations FERPA- & COPPA-conscious school workflows AI-assisted features with approval paths TLS in transit · encryption at rest Cybersecurity across our products Security is designed into GuruVidyaZen , School SISLMS , Riyaz Studio , Saarthee Fleet Manager , and Saarthee CoPlanner —tenant isolation, least privilege, and privacy-first integrations. Shared foundation HTTPS / TLS for data in transit on Vercel-hosted apps Cloud Postgres with encryption at rest on provider infrastructure Scoped OAuth for third-party tools (Google and related integrations) Human-over-the-loop for AI-assisted workflows Published Privacy, Terms, and product legal surfaces GuruVidyaZen · SISLMS · Riyaz Postgres row-level security (RLS) for school/academy isolation Role-based access (admins, teachers, students, guardians) FERPA- and COPPA-conscious education workflows WSDPA-ready"
+    },
+    {
+      "id": "/#3",
+      "path": "/",
+      "title": "Saaniya Software LLC | Custom development & cloud products",
+      "text": "ion Role-based access (admins, teachers, students, guardians) FERPA- and COPPA-conscious education workflows WSDPA-ready posture for Wisconsin schools Auth hardening with Turnstile where enabled; Riyaz mic/camera consent + teacher approval for AI scores Saarthee Fleet & CoPlanner Fleet: Clerk auth, organization-based tenancy, admin audit logging Fleet: pilot approval gating and scoped Google Drive OAuth CoPlanner: privacy-first, minimum OAuth scopes CoPlanner: Turnstile on auth, server-only integration tokens CoPlanner: secret-gated jobs plus SAST / dependency audit practices Compliance & response Security & compliance whitepaper for education products WSDPA contract template for Wisconsin districts Breach-notification commitments documented in our policies Runs on SOC 2 Type II–certified cloud providers (not a claim that Saaniya itself is SOC 2 certified) Counsel-first wording:"
+    },
+    {
+      "id": "/#4",
+      "path": "/",
+      "title": "Saaniya Software LLC | Custom development & cloud products",
+      "text": "s on SOC 2 Type II–certified cloud providers (not a claim that Saaniya itself is SOC 2 certified) Counsel-first wording: marketing never replaces your legal review Security & compliance WSDPA template Privacy policy Our products Live and in-progress products—short takes below; open a page for the full story. K–8 Schools GuruVidyaZen School SISLMS Family-friendly school hub: enrollment, classes, daily logs, and assignments with school-level security. RLS · RBAC · FERPA-/COPPA-conscious Live: sislms.guruvidyazen.nasneeraj.com Overview Open School admin SISMMS Student information + management for leaders comparing scope with School SISLMS. Standalone admin product page SISMMS Academies GuruVidyaZen Arts & specialized academies—17+ types, repertoire, CCE, payments, and practice insights. Multi-tenant RLS · pilot program Open Pilot Live demo Riyaz Studio Practice & pedagogy demo on"
+    },
+    {
+      "id": "/#5",
+      "path": "/",
+      "title": "Saaniya Software LLC | Custom development & cloud products",
+      "text": "s, and practice insights. Multi-tenant RLS · pilot program Open Pilot Live demo Riyaz Studio Practice & pedagogy demo on GuruVidyaZen—consent-aware analysis, teacher-approved AI scores. riyaz.guruvidyazen.nasneeraj.com Try demo Coming soon Saarthee CoPlanner Privacy-first personal coworker for calendars, mail, files, and Notion—minimum OAuth scopes. Preview: saarthee.nasneeraj.com Overview Learn more Live Saarthee Fleet Private rides & rentals—quotes, vehicles, bookings, Turo sync, invoicing. Clerk auth · org tenancy · audit log Overview Learn more Digital book Vedic Astrology & Modern Science Interactive book with free sample, calculators, and a reference matrix. horoscopeguide.nasneeraj.com Overview Open Coming soon Saaniya EMR Local-first outpatient records—clinical chart stays on clinic hardware; optional online booking. saaniya-emr · DPDP-aware copy Landing Open Websites Website"
+    },
+    {
+      "id": "/#6",
+      "path": "/",
+      "title": "Saaniya Software LLC | Custom development & cloud products",
+      "text": "cal chart stays on clinic hardware; optional online booking. saaniya-emr · DPDP-aware copy Landing Open Websites Website Design & Maintenance From domain choice to social marketing—design, build, host, and care for school and organization sites. Featured: milwaukeeshala.org Overview Example Coming soon Saaniya Office Suite Worldwide desk for small businesses — eight pieces from website through invoices. Not a clinic product; Saaniya EMR is separate. Website · Front Office · AI bots · CRM Custom software · Integrations · Portals · Invoices Overview Upwork engagements Prefer hiring through Upwork? We take on scoped builds—architecture, SaaS features, integrations, and delivery planning—with the same standards as our products. Profile link coming soon; contact us meanwhile. Upwork explained Contact Get In Touch Interested in our products, services, or an Upwork engagement? Contact us today"
+    },
+    {
+      "id": "/#7",
+      "path": "/",
+      "title": "Saaniya Software LLC | Custom development & cloud products",
+      "text": "e. Upwork explained Contact Get In Touch Interested in our products, services, or an Upwork engagement? Contact us today to learn more. 📧 Email saaniyasoftware@nasneeraj.com Contact Us"
+    },
+    {
+      "id": "/legal/astrology-policies#0",
+      "path": "/legal/astrology-policies",
+      "title": "Legal Notices & Policies — An Illustrated Guide of Astrology",
+      "text": "Legal Notices & Policies — An Illustrated Guide of Astrology Neeraj AI Software Services LLC · Saaniya Software LLC Legal Notices & Policies Companion to An Illustrated Guide of Astrology by Saaniya Software Effective date: June 18, 2026 | Seller: Neeraj AI Software Services LLC (Wisconsin, USA) | nasneeraj.com | saaniyasoftware@nasneeraj.com Contents Important Legal Notice (education & entertainment only; not professional advice; no guarantees; limitation of liability) Evidence Boundary Statement Medical & Health Disclaimer (Module 11 — Astrology of Health) Short Disclaimer (for the sales / landing page and order receipt) Terms of Sale & Refund Policy (Digital Goods) Copyright & Intellectual Property 1. Important Legal Notice For education and entertainment only An Illustrated Guide of Astrology (the \"Book\") and all related materials, courses, illustrations, and communications"
+    },
+    {
+      "id": "/legal/astrology-policies#1",
+      "path": "/legal/astrology-policies",
+      "title": "Legal Notices & Policies — An Illustrated Guide of Astrology",
+      "text": "nly An Illustrated Guide of Astrology (the \"Book\") and all related materials, courses, illustrations, and communications (together, the \"Materials\") are provided for educational, informational, cultural, and entertainment purposes only. Vedic astrology is presented as a traditional symbolic and contemplative framework, not as an empirically proven science. Not professional advice Nothing in the Materials is, or is intended to be, medical, psychological, legal, financial, investment, tax, or other professional advice. The author and Neeraj AI Software Services LLC (the \"Publisher\") are not acting as your physician, attorney, accountant, financial adviser, or licensed counselor, and your use of the Materials creates no professional, fiduciary, or client relationship of any kind. No guarantees Astrological readings, timing windows, remedies (upayas), gemstones, mantras, and rituals"
+    },
+    {
+      "id": "/legal/astrology-policies#2",
+      "path": "/legal/astrology-policies",
+      "title": "Legal Notices & Policies — An Illustrated Guide of Astrology",
+      "text": "hip of any kind. No guarantees Astrological readings, timing windows, remedies (upayas), gemstones, mantras, and rituals described in the Materials are traditional practices. No specific result, outcome, prediction, cure, or benefit is promised or guaranteed. Individual results vary, and many factors outside any chart determine real-world events. Consult qualified professionals Always seek the advice of a licensed physician or qualified health provider for any medical or mental-health concern, and a licensed attorney, accountant, or financial adviser for any legal, tax, or financial decision. Never disregard, delay, or discontinue professional care because of something in the Materials. Before wearing any gemstone, undertaking any expensive ritual, or making any significant life, health, or money decision, consult appropriately qualified experts. Assumption of risk & limitation of"
+    },
+    {
+      "id": "/legal/astrology-policies#3",
+      "path": "/legal/astrology-policies",
+      "title": "Legal Notices & Policies — An Illustrated Guide of Astrology",
+      "text": "significant life, health, or money decision, consult appropriately qualified experts. Assumption of risk & limitation of liability You use the Materials at your own discretion and risk. To the fullest extent permitted by law, the author and Publisher disclaim all warranties, express or implied, including merchantability and fitness for a particular purpose, and shall not be liable for any loss, injury, or damages — direct, indirect, incidental, special, or consequential — arising from the use of, or reliance on, any information in the Materials. Where liability cannot be excluded, it is limited to the amount you paid for the Materials. By accessing or using the Materials, you acknowledge that you understand and accept this notice. 2. Evidence Boundary Statement This guide treats Vedic astrology as a personal and cultural timing framework. Where the example charts describe values as"
+    },
+    {
+      "id": "/legal/astrology-policies#4",
+      "path": "/legal/astrology-policies",
+      "title": "Legal Notices & Policies — An Illustrated Guide of Astrology",
+      "text": "is guide treats Vedic astrology as a personal and cultural timing framework. Where the example charts describe values as \"verified\" or \"locked,\" this means only that those values are internally consistent with the cited Lahiri sidereal calculation tools. It does not mean the interpretations are scientifically validated predictions of business, legal, financial, health, or personal outcomes. Throughout the Materials, modern-science topics are labeled with a three-tier honesty key so readers can tell tradition, evidence, and analogy apart: Label Meaning [Established] Supported by mainstream scientific evidence. [Frontier] Early, debated, or still-developing research. [Metaphor] A useful analogy, not scientific proof of astrology. Treat astrology as one input among many — useful when meaningful to you, and never as a substitute for professional advice in medicine, law, or finance. 3."
+    },
+    {
+      "id": "/legal/astrology-policies#5",
+      "path": "/legal/astrology-policies",
+      "title": "Legal Notices & Policies — An Illustrated Guide of Astrology",
+      "text": "many — useful when meaningful to you, and never as a substitute for professional advice in medicine, law, or finance. 3. Medical & Health Disclaimer Applies to Module 11 — Jyotish and Ayurveda: The Astrology of Health — and to any health-related content anywhere in the Materials. Read first This module teaches the traditional correspondences between Vedic astrology and Ayurveda as a cultural and symbolic framework. It is not medical advice, diagnosis, or treatment, and nothing here should delay or replace care from a qualified physician. A statement such as \"the chart shows a Pitta tendency\" is a traditional constitutional reading, not a clinical finding. Astrological health indications should be treated as prompts to take ordinary good care of yourself and to see a doctor — never as a substitute for medicine, diagnosis, prescription, therapy, or emergency care. If you are experiencing a"
+    },
+    {
+      "id": "/legal/astrology-policies#6",
+      "path": "/legal/astrology-policies",
+      "title": "Legal Notices & Policies — An Illustrated Guide of Astrology",
+      "text": "tor — never as a substitute for medicine, diagnosis, prescription, therapy, or emergency care. If you are experiencing a medical or mental-health emergency, contact your local emergency services immediately. Do not use the Materials to diagnose, treat, cure, or prevent any disease or condition. Always consult a licensed healthcare professional before changing diet, exercise, medication, supplements, or treatment, and before wearing any gemstone marketed for a health purpose. 4. Short Disclaimer Use this condensed version on the product/sales page, the checkout screen, and the order/receipt email. Copy the box below verbatim. Copy-ready — sales page & receipt Disclaimer. An Illustrated Guide of Astrology is provided for educational and entertainment purposes only. It is not medical, psychological, legal, financial, tax, or other professional advice, and it creates no professional"
+    },
+    {
+      "id": "/legal/astrology-policies#7",
+      "path": "/legal/astrology-policies",
+      "title": "Legal Notices & Policies — An Illustrated Guide of Astrology",
+      "text": "y. It is not medical, psychological, legal, financial, tax, or other professional advice, and it creates no professional relationship. No reading, timing method, remedy, gemstone, mantra, ritual, or interpretation is guaranteed to produce any result. Always consult qualified professionals for health, legal, financial, tax, or mental-health matters. Use is at your own discretion and risk. A plain-text copy of this paragraph is provided alongside this document as short-disclaimer.txt for pasting into Stripe, Gumroad, Payhip, or your email-receipt settings. 5. Terms of Sale & Refund Policy (Digital Goods) 5.1 Seller These products are sold by Neeraj AI Software Services LLC (\"we,\" \"us,\" \"Saaniya Software LLC\"), a Wisconsin limited liability company, operating at nasneeraj.com. Questions: saaniyasoftware@nasneeraj.com. 5.2 What you are buying Our products are digital goods — downloadable"
+    },
+    {
+      "id": "/office-suite-needs#0",
+      "path": "/office-suite-needs",
+      "title": "Needs questionnaire | Saaniya Office Suite",
+      "text": "Needs questionnaire | Saaniya Office Suite Saaniya Office Suite · Questionnaire What does your desk need? Answer for the business you run. We match you to the pieces on the Office Suite page and show pilot pricing for your country. Email the result to Saaniya Software LLC when you want a reply. About the business We use this to price the recommendation and to reply. No payment details on this form. Your name Work email Business name Country What do you sell or deliver? Team size Just me 2–10 people 11–50 people More than 50 Website The public face of the group. We do not have a website We have one, and it is out of date or hard to change We have a site that already does the job Front Office Who is coming, what is due, and what the team should see. Requests live in phone, WhatsApp, and email — no shared desk The team already shares one calendar and one task list AI bots An assistant for"
+    },
+    {
+      "id": "/office-suite-needs#1",
+      "path": "/office-suite-needs",
+      "title": "Needs questionnaire | Saaniya Office Suite",
+      "text": "ne, WhatsApp, and email — no shared desk The team already shares one calendar and one task list AI bots An assistant for repeat questions. A person stays in the loop. Clients ask the same questions every week Sometimes Rarely — a person should answer everything CRM Contacts, notes, and follow-ups outside one person’s inbox. Inbox or chat only A spreadsheet Nowhere consistent We already use a CRM and want to keep it customized business software Only when a template does not fit the work. Yes — there is a job our tools cannot do Maybe — we are not sure yet No — standard pieces are enough Integrations First set we connect. Pick every tool the desk must keep. Notion Google Calendar Google Drive Google Meet Zoom None of these Client portals A customer books, sees status, and opens a document or invoice. Yes — customers should see their own status Not yet, but within the next year No — staff"
+    },
+    {
+      "id": "/office-suite-needs#2",
+      "path": "/office-suite-needs",
+      "title": "Needs questionnaire | Saaniya Office Suite",
+      "text": "nd opens a document or invoice. Yes — customers should see their own status Not yet, but within the next year No — staff can look things up for them Invoices Quote, invoice, and paid mark. Saaniya does not hold client funds. You use your own Stripe or bank/UPI. We send amounts in chat or on paper Spreadsheet or a basic template We need quotes, invoices, and a paid mark Accounting software already does this Anything else What should work better this quarter? Email this recommendation Full country pricing Recommendation Pieces for your desk Pilot guide, excluding taxes. A written quote follows this email. See the country matrix . Responses are sent as an email to saaniyasoftware@nasneeraj.com from your own mail app. This page does not store answers."
+    },
+    {
+      "id": "/office-suite-pricing#0",
+      "path": "/office-suite-pricing",
+      "title": "Pricing by country | Saaniya Office Suite",
+      "text": "Pricing by country | Saaniya Office Suite Saaniya Office Suite · Pricing Pilot prices by country One-time setup, optional annual care, and you own the result. Prices exclude taxes. Invoices use the buyer’s own Stripe or bank/UPI — Saaniya Software LLC does not hold client funds. Start with the needs questionnaire if you want a piece list first. Your country Pick a market Prices follow the band for that country. A country not on the list is quoted after the needs form. Country Pieces Each piece in this country Piece Setup Annual care customized business software is scoped from the questionnaire. It is not included in Desk, Connected, or Full suite. World matrix Setup price by band Annual care is optional and is about 30% of that band’s setup. The licence is bought once. Band Countries in this guide Desk Connected Full suite Take the needs questionnaire Back to Office Suite"
+    },
+    {
+      "id": "/office-suite#0",
+      "path": "/office-suite",
+      "title": "Saaniya Office Suite | Worldwide desk for small businesses",
+      "text": "Saaniya Office Suite | Worldwide desk for small businesses Saaniya Software LLC · Small business Saaniya Office Suite A worldwide desk for small-business groups — done-for-you, and you own it. Eight pieces that work together. This is not a clinic product; Saaniya EMR is separate. Tell us what you need Pricing by country Eight pieces One suite for the desk you actually run Saaniya Office Suite is a small-business group, not a hospital or clinic system. We set it up for you. You own the result. You bought the all-in-one tool. It is still empty — until someone fills it with your work. 01 Website The public face of the group. Domain, design, build, host, and care — the same Website piece already live on our website services page. Example: milwaukeeshala.org . 02 Front Office The daily desk: who is coming, what is due, and what the team needs to see without hunting through mail and chat. 03"
+    },
+    {
+      "id": "/office-suite#1",
+      "path": "/office-suite",
+      "title": "Saaniya Office Suite | Worldwide desk for small businesses",
+      "text": "ice The daily desk: who is coming, what is due, and what the team needs to see without hunting through mail and chat. 03 AI bots Assistants that answer repeat questions and hand a person the ones that matter. A person stays in the loop. 04 CRM Contacts, notes, and follow-ups for the same small-business group — so a lead does not live only in someone’s inbox. 05 customized business software When a template does not fit, we build the piece you need and you own it. Scoped to your group, not a generic platform. 06 Integrations First set: Notion, Google Calendar, Google Drive, Google Meet, and Zoom. Other tools are added only when the work asks for them twice. 07 Client portals A customer books, sees status, and opens an invoice or document. Proof already in use: the Saarthee Fleet Manager booking page and the GuruVidyaZen parent/student view. 08 Invoices Quote, invoice, and paid mark. The"
+    },
+    {
+      "id": "/office-suite#2",
+      "path": "/office-suite",
+      "title": "Saaniya Office Suite | Worldwide desk for small businesses",
+      "text": "thee Fleet Manager booking page and the GuruVidyaZen parent/student view. 08 Invoices Quote, invoice, and paid mark. The buyer uses their own Stripe or bank/UPI. Saaniya does not hold client funds. How it is sold Done-for-you, and you own it We assemble the eight pieces around your group. You keep the site, the portal, and the records. Saaniya Office Suite is a worldwide small-business desk — not Saaniya EMR. Website that is already live The Website piece is the same offer on website-services.html , with Milwaukee Shala as a public example. Portals customers can use Book, check status, open an invoice or document — the pattern shown on Saarthee Fleet Manager and GuruVidyaZen. Money stays with the buyer Invoices show the buyer’s own Stripe or bank/UPI. Saaniya does not hold client funds. Integrations, first set Notion, Google Calendar / Drive / Meet, and Zoom. Messaging on WhatsApp waits"
+    },
+    {
+      "id": "/office-suite#3",
+      "path": "/office-suite",
+      "title": "Saaniya Office Suite | Worldwide desk for small businesses",
+      "text": "hold client funds. Integrations, first set Notion, Google Calendar / Drive / Meet, and Zoom. Messaging on WhatsApp waits until the LLC number is on the contact page. What this is not A small-business group Saaniya Office Suite is for worldwide small-business teams. It is not a clinic product. Clinics use Saaniya EMR . Email is the contact path: saaniyasoftware@nasneeraj.com . The empty-tool problem You bought the all-in-one tool. It is still empty. A license sitting unused is not an office. We fill the desk — website through invoices — so the suite is yours and in use. Done-for-you We plan, connect, and launch the eight pieces with your copy, your calendar, and your payment details. You own it The site, portal, and records stay with your group. We are the builder, not the landlord of your money. Scoped on purpose Eight named pieces. We do not stretch this page into a clinic system or a"
+    },
+    {
+      "id": "/office-suite#4",
+      "path": "/office-suite",
+      "title": "Saaniya Office Suite | Worldwide desk for small businesses",
+      "text": "the landlord of your money. Scoped on purpose Eight named pieces. We do not stretch this page into a clinic system or a catch-all back office. Next step Write about your small-business group The needs questionnaire maps your answers to the eight pieces and shows pilot pricing for your country. We reply by email — not a chat blast. Start the questionnaire Pricing by country saaniyasoftware@nasneeraj.com"
+    },
+    {
+      "id": "/pilot#0",
+      "path": "/pilot",
+      "title": "Pilot Program - GuruVidyaZen by Saaniya Software LLC",
+      "text": "Pilot Program - GuruVidyaZen by Saaniya Software LLC Pilot Program Welcome pilot partners. This page contains pilot-only guidance, links, and onboarding resources. You are joined to the live production integrations for realistic testing. Contact Support Request Sync Pilot Notes Pilot accounts are tagged with pilot=true and trial expiry is managed by ops. Integrations (Stripe/Zoom/Google) are active — treat test transactions as realistic flows. If you need isolated testing, request a demo/staging workspace via saaniyasoftware@nasneeraj.com . Onboarding checklist Confirm admin email & timezone. Seed minimal data or request white-glove import. Schedule 30-minute onboarding call. Support For pilot support and account requests, please reach out directly to our engineering team. Email Support"
+    },
+    {
+      "id": "/privacy/guruvidyazen#0",
+      "path": "/privacy/guruvidyazen",
+      "title": "Education Privacy Addendum — GuruVidyaZen / SISLMS | Saaniya Software LLC",
+      "text": "Education Privacy Addendum — GuruVidyaZen / SISLMS | Saaniya Software LLC Education Privacy Addendum Products: GuruVidyaZen / SISLMS and related school products Last updated: September 9, 2026 Company Terms / Privacy: Terms · Master Privacy Staged from agrawal-llc-docs education SaaS privacy addendum. Use this URL (not master Privacy alone) for education-product OAuth Privacy fields after counsel approval. 1. Roles Role Who Controller (or “school official” under FERPA where applicable) The school / academy / Customer tenant Processor Saaniya Software LLC We process student, parent, and staff personal data only to provide the education product under the Customer’s instructions and any signed DPA. 2. Categories of personal data Student: name, student ID, class enrollment, attendance, assignments, grades as configured Parent / guardian: name, email, phone (if Customer enables) Staff: name,"
+    },
+    {
+      "id": "/privacy/guruvidyazen#1",
+      "path": "/privacy/guruvidyazen",
+      "title": "Education Privacy Addendum — GuruVidyaZen / SISLMS | Saaniya Software LLC",
+      "text": ", attendance, assignments, grades as configured Parent / guardian: name, email, phone (if Customer enables) Staff: name, email, role, class assignments Auth: OAuth subject ID, email, profile photo if scope granted Usage: login times, feature logs Excluded today: PHI / clinical records; regulated medical-financial document pipelines. We do not sell student PII. 3. FERPA / school-official framing (U.S.) Where applicable, Saaniya Software LLC operates as a “school official” with a legitimate educational interest only under the school’s authorization and written agreement. We: perform institutional services the school would otherwise use employees for; remain under the school’s control for use and maintenance of education records; use education records only for authorized purposes and do not disclose them to unauthorized parties. Non-U.S. schools: substitute the local education-privacy"
+    },
+    {
+      "id": "/privacy/guruvidyazen#2",
+      "path": "/privacy/guruvidyazen",
+      "title": "Education Privacy Addendum — GuruVidyaZen / SISLMS | Saaniya Software LLC",
+      "text": "ized purposes and do not disclose them to unauthorized parties. Non-U.S. schools: substitute the local education-privacy regime; flag to counsel per country before signing. 4. Parental rights Parents and eligible students typically have rights to inspect/review records, request amendment, opt out of directory information, and file complaints under FERPA. Exercise those rights through the school ; we assist the school under the DPA. 5. COPPA / children under 13 Where applicable, we support COPPA compliance for students under 13 through school-authorized collection only. Direct-to-child products without a school contract will not launch without counsel COPPA language. OAuth should not knowingly onboard users under 13 outside a school contract. 6. OAuth / SSO scopes Exact live scopes must match the OAuth consent screen before External publishing. Typical sign-in scopes include openid ,"
+    },
+    {
+      "id": "/privacy/guruvidyazen#3",
+      "path": "/privacy/guruvidyazen",
+      "title": "Education Privacy Addendum — GuruVidyaZen / SISLMS | Saaniya Software LLC",
+      "text": "xact live scopes must match the OAuth consent screen before External publishing. Typical sign-in scopes include openid , email , profile . Classroom / Drive / Graph scopes only if enabled and listed here after go-live. 7. AI features in classroom context If AI-assisted features process student records, we remain processor—not controller. Student PII is not sent to a general-purpose AI provider unless that provider is listed as a subprocessor and covered by the DPA. 8. Retention and return We retain data as needed to provide the Services and as required by law or school agreement. Upon termination, student data will be deleted or returned to the school within the period stated in the DPA (target: within 30 days), subject to legal retention holds. Wisconsin public-records rules may require longer retention where they apply. 9. Security (summary) TLS in transit; encryption for backups /"
+    },
+    {
+      "id": "/privacy/guruvidyazen#4",
+      "path": "/privacy/guruvidyazen",
+      "title": "Education Privacy Addendum — GuruVidyaZen / SISLMS | Saaniya Software LLC",
+      "text": "ords rules may require longer retention where they apply. 9. Security (summary) TLS in transit; encryption for backups / snapshots where configured Role-based access and row-level security where used Least-privilege operator access 10. Contact Saaniya Software LLC Privacy: saaniyasoftware@nasneeraj.com For student-record requests, contact your school administrator first."
+    },
+    {
+      "id": "/privacy#0",
+      "path": "/privacy",
+      "title": "Privacy Policy — Saaniya Software LLC",
+      "text": "Privacy Policy — Saaniya Software LLC Privacy Policy Last updated: September 9, 2026 Master Privacy Policy staged from the Saaniya Software LLC counsel pack. Education products also use the Education Privacy Addendum . Counsel should finalize before OAuth External publishing. 1. Who we are Saaniya Software LLC (“Company,” “we”) operates software and digital products. Privacy / data requests: saaniyasoftware@nasneeraj.com . We are the data controller for personal information collected through our websites and Services, except where Services are provided to a school or other organization—in which case the institution is the controller and we act as a service provider / processor under a written agreement (see Terms §9 and the Education addendum ). 2. Scope This Master Policy covers Company websites and products generally. If a product has a Privacy addendum, that addendum controls for"
+    },
+    {
+      "id": "/privacy#1",
+      "path": "/privacy",
+      "title": "Privacy Policy — Saaniya Software LLC",
+      "text": "r Policy covers Company websites and products generally. If a product has a Privacy addendum, that addendum controls for product-specific data categories and OAuth scopes. OAuth consent screens for education apps should point to the product Privacy URL. 3. Categories of personal information we collect Account data: name, email, organization, role, password hash or SSO identifiers. Billing data: billing name, email, address, payment metadata (full card data is handled by processors such as Stripe / Razorpay; we do not receive PAN). Usage data: logs (IP, user-agent, paths, timestamps), feature events, error reports. Cookies / similar: session, preference, and (where consented) analytics cookies. User Content: data you upload, edit, or generate within the Services. Student PII (education products): only when authorized by a school or institutional customer under a separate DPA or school"
+    },
+    {
+      "id": "/privacy#2",
+      "path": "/privacy",
+      "title": "Privacy Policy — Saaniya Software LLC",
+      "text": "dent PII (education products): only when authorized by a school or institutional customer under a separate DPA or school agreement. We do not sell personal information for advertising. 4. Cookies and tracking We and our processors use cookies, local storage, and similar technologies for sign-in/session, security, basic product analytics, and payment processing. We do not use third-party advertising trackers today. Browser “Do Not Track” is not uniformly honored; Global Privacy Control (GPC) is honored as an opt-out-of-sale/share signal where applicable. 5. Sources We receive personal information from you, from your organization if you use Services on its behalf, and from service providers (hosting, auth, payments, email, OAuth providers you elect to use). 6. How we use personal information provide, secure, and improve the Services; authenticate you and prevent fraud / abuse; process"
+    },
+    {
+      "id": "/privacy#3",
+      "path": "/privacy",
+      "title": "Privacy Policy — Saaniya Software LLC",
+      "text": "use personal information provide, secure, and improve the Services; authenticate you and prevent fraud / abuse; process payments and issue invoices and refunds; communicate about product, security, billing, and (with consent) marketing; comply with legal obligations and respond to lawful requests. We do not use Student PII for targeted advertising or to build advertising profiles. We do not train general-purpose AI models on your User Content; AI features process data you submit for that interaction, with vendor training disabled where the vendor offers that control. 7. Sharing We share personal information with: Service providers (subprocessors) acting on our behalf—for example Vercel, database hosts (Neon / Supabase), Stripe / Razorpay, email providers, analytics, and AI model providers where a product uses AI features—under contracts requiring confidentiality and limited use."
+    },
+    {
+      "id": "/privacy#4",
+      "path": "/privacy",
+      "title": "Privacy Policy — Saaniya Software LLC",
+      "text": "tics, and AI model providers where a product uses AI features—under contracts requiring confidentiality and limited use. Authorities when required by law, court order, or to enforce our Terms. Successors in a merger, acquisition, or asset sale, subject to this Policy. 8. International transfers Saaniya Software LLC is based in the United States. If you access the Services from outside the United States, personal information may be transferred to and processed in the United States or other countries. Where required, we rely on appropriate safeguards (such as Standard Contractual Clauses / UK IDTA). 9. Retention We retain personal information for as long as needed to provide the Services, comply with legal obligations, resolve disputes, and enforce agreements. Institutional customers may have specific schedules in a DPA. Wisconsin public education-record rules may require longer retention"
+    },
+    {
+      "id": "/privacy#5",
+      "path": "/privacy",
+      "title": "Privacy Policy — Saaniya Software LLC",
+      "text": "nal customers may have specific schedules in a DPA. Wisconsin public education-record rules may require longer retention where they apply. 10. Security We use technical and organizational measures including TLS in transit, encryption for backups/database snapshots where configured, multi-tenant access controls (including RLS where used), scoped OAuth, and least-privilege access for personnel. We do not claim SOC 2 at launch. 11. Your privacy rights Depending on your jurisdiction (U.S. state laws such as CCPA/CPRA, EU/UK GDPR, and similar), you may have rights to access, correct, delete, port, or restrict processing, and to object to certain processing or withdraw consent. Contact saaniyasoftware@nasneeraj.com . We will verify your identity before responding. For student records in education products, contact your school administrator first. 12. Automated decision-making / AI Some"
+    },
+    {
+      "id": "/privacy#6",
+      "path": "/privacy",
+      "title": "Privacy Policy — Saaniya Software LLC",
+      "text": "student records in education products, contact your school administrator first. 12. Automated decision-making / AI Some features use automated or AI-assisted processing. These features are tools for human operators; they are not intended as sole automated decisions with legal or similarly significant effects without human review. 13. Children Outside an institutional education context governed by a separate agreement, the Services are not directed to children under 13, and we do not knowingly collect their personal information. If you believe a child provided information outside such a context, contact us and we will delete it. 14. Product addenda Education SaaS (GuruVidyaZen / SISLMS) Astrology guide / digital product notes 15. Changes We may update this Privacy Policy from time to time. Material changes will be posted here with an updated “Last updated” date. 16. Contact Saaniya"
+    },
+    {
+      "id": "/privacy#7",
+      "path": "/privacy",
+      "title": "Privacy Policy — Saaniya Software LLC",
+      "text": "Policy from time to time. Material changes will be posted here with an updated “Last updated” date. 16. Contact Saaniya Software LLC Wisconsin, United States Privacy: saaniyasoftware@nasneeraj.com Website: saaniya-software.nasneeraj.com"
+    },
+    {
+      "id": "/saaniya-emr-flyer#0",
+      "path": "/saaniya-emr-flyer",
+      "title": "Flyer | Saaniya EMR by Saaniya Software LLC",
+      "text": "Flyer | Saaniya EMR by Saaniya Software LLC Pricing One A4 page. Print with background graphics enabled, or share the PDF. Download PDF Print Saaniya EMR Local-first clinical records · Any outpatient clinic · India first The complete patient record stays encrypted on your clinic's own computer. Patients still book online, and your own payment QR appears on every invoice. What the software does Built for any outpatient clinic. Solo OPD, single-specialty clinic, or multi-specialty outpatient practice — same product. You are not limited to a short list of disciplines; optional chart packs extend the forms when you need them. Works when the internet does not. Consultations, prescriptions, and billing complete offline. Appointments queue locally and sync when the connection returns, so a power cut or an outage never stops the clinic. Charting that fits your practice. Start with standard"
+    },
+    {
+      "id": "/saaniya-emr-flyer#1",
+      "path": "/saaniya-emr-flyer",
+      "title": "Flyer | Saaniya EMR by Saaniya Software LLC",
+      "text": "ction returns, so a power cut or an outage never stops the clinic. Charting that fits your practice. Start with standard outpatient notes, vitals, and prescriptions. Optional packs add structured fields for Ayurveda, psychiatry, neurology, gastroenterology, and more — as schemas, not separate products. Prescriptions built for your practice. Conventional medications with dosage and duration, or classical formulations with Anupana when that pack is enabled. Reusable templates mean the third prescription of the day takes seconds. Four services A · Software. The local desktop EMR, licensed to your practice. B · Website. A managed booking site for your clinic. C · Payment display. Your own UPI QR and bank details, shown where patients need them. D · Maintenance. Updates, support, and backup assistance. Cybersecurity AES-256 encryption at rest. The clinical database is encrypted on disk with"
+    },
+    {
+      "id": "/saaniya-emr-flyer#2",
+      "path": "/saaniya-emr-flyer",
+      "title": "Flyer | Saaniya EMR by Saaniya Software LLC",
+      "text": "upport, and backup assistance. Cybersecurity AES-256 encryption at rest. The clinical database is encrypted on disk with SQLCipher. A stolen or resold clinic PC does not hand over your patient history. Keys derived properly, not guessed. Argon2id key derivation with a per-install salt. Your passphrase is never used directly as the encryption key, and the session key lives in the operating system keychain. Recovery codes at setup. Printed recovery codes are generated during installation, so a forgotten passphrase is a recoverable event rather than a permanent loss. Role-based access and audit logging. Doctors and front-desk staff see different things. The audit log records who accessed which record, never the record contents. Compliance — India DPDP Act You are the Data Fiduciary. We are a processor. Under India's DPDP Act the clinic determines why and how patient data is processed."
+    },
+    {
+      "id": "/saaniya-emr-flyer#3",
+      "path": "/saaniya-emr-flyer",
+      "title": "Flyer | Saaniya EMR by Saaniya Software LLC",
+      "text": "Data Fiduciary. We are a processor. Under India's DPDP Act the clinic determines why and how patient data is processed. Saaniya Software LLC processes booking contacts on your behalf, under a written Data Processing Agreement supplied with your licence. Data minimisation, built into the product. The clinical record never reaches our infrastructure, so the volume of personal data we hold on your behalf stays deliberately small. Minimisation is an architectural property here, not a policy promise. Consent and clear notice. Your booking page carries a specific, readable privacy notice covering what is collected and why, rather than blanket consent buried in a form. Indicative India pricing Pilot pricing, shown excluding applicable taxes. Other markets quoted on request. Starter Solo doctor or single-room clinic Software ₹20,000 – ₹25,000 one-time Website ₹8,000 setup + ₹4,000 / year"
+    },
+    {
+      "id": "/saaniya-emr-flyer#4",
+      "path": "/saaniya-emr-flyer",
+      "title": "Flyer | Saaniya EMR by Saaniya Software LLC",
+      "text": "uest. Starter Solo doctor or single-room clinic Software ₹20,000 – ₹25,000 one-time Website ₹8,000 setup + ₹4,000 / year Maintenance ₹6,000 – ₹8,000 / year Professional Multi-doctor or multi-specialty practice Software ₹40,000 – ₹50,000 one-time Website ₹15,000 setup + ₹8,000 / year Maintenance ₹12,000 – ₹18,000 / year"
+    },
+    {
+      "id": "/saaniya-emr-pricing#0",
+      "path": "/saaniya-emr-pricing",
+      "title": "Pricing | Saaniya EMR by Saaniya Software LLC",
+      "text": "Pricing | Saaniya EMR by Saaniya Software LLC Pricing Pricing Pick your country, then pick your bundle. Pilot pricing, shown excluding applicable taxes. Payment display — your clinic's own QR or bank details — is included with the software, because Saaniya never processes patient payments. The United States is not offered yet. Saaniya EMR is a product of Saaniya Software LLC (saaniya-software.nasneeraj.com). Listed under the Saaniya Software LLC product family. Your region Choose a country to see that band’s pilot pricing. Preference is saved on this device. The United States is not offered yet. INR · excl. taxes Country India South Asia Africa SE Asia LATAM Middle East UK Europe AU / NZ Other India. Primary market — outpatient / OPD clinics and multi-specialty private practices DPDP-aligned processor terms. Clinical notes stay on clinic hardware. Not available: United States (Deferred"
+    },
+    {
+      "id": "/saaniya-emr-pricing#1",
+      "path": "/saaniya-emr-pricing",
+      "title": "Pricing | Saaniya EMR by Saaniya Software LLC",
+      "text": "e practices DPDP-aligned processor terms. Clinical notes stay on clinic hardware. Not available: United States (Deferred until a HIPAA / BAA-backed offering exists. No public US price list.) Share clinic needs (India) Software details Email us Short needs & feedback form for interested outpatient clinics. Do not enter patient clinical details — responses go to Google Forms for Saaniya Software LLC. Scan survey Pilot pricing. All prices exclude applicable taxes. Choose a country above. Prices follow that country’s band. A country not on the list is quoted after the survey. Software and payment display form the base of every bundle. Website and maintenance are optional add-ons. The licence is bought once, not rented. Your practice keeps using the software whether or not you renew maintenance. Licence and maintenance fees are paid to Saaniya Software LLC. Patient payments go directly to"
+    },
+    {
+      "id": "/saaniya-emr-pricing#2",
+      "path": "/saaniya-emr-pricing",
+      "title": "Pricing | Saaniya EMR by Saaniya Software LLC",
+      "text": "ot you renew maintenance. Licence and maintenance fees are paid to Saaniya Software LLC. Patient payments go directly to your clinic's own account and never pass through us. United States pricing is not published; that market remains deferred. United States not offered: Deferred until a HIPAA / BAA-backed offering exists. No public US price list. World matrix Software licence by band One-time licence. Website and maintenance stay optional. Enterprise is custom in every band. Band Countries Starter Professional Questions What clinics ask before they buy. What happens if my internet goes down? The clinic keeps working. Every clinical workflow — consultations, prescriptions, invoices — completes offline. Online bookings queue and appear as soon as the connection returns. Who owns the patient data? Your practice does, and it physically sits on your machine. We hold no copy of the clinical"
+    },
+    {
+      "id": "/saaniya-emr-pricing#3",
+      "path": "/saaniya-emr-pricing",
+      "title": "Pricing | Saaniya EMR by Saaniya Software LLC",
+      "text": ". Who owns the patient data? Your practice does, and it physically sits on your machine. We hold no copy of the clinical record, so there is nothing for us to hold hostage or hand over. Do you take a cut of patient payments? No. We display your own UPI QR or bank details on invoices and your website. Patients pay you directly and we never see the money. Is it only for certain specialties? No. Any outpatient / OPD clinic can use it — solo practice, single specialty, or multi-specialty. Named specialty packs (for example Ayurveda or psychiatry) are optional form add-ons, not a gate on who may buy the product. What if the clinic computer fails? You restore from an encrypted backup. The software includes one-click local snapshots with integrity checks, and maintenance plans include restore assistance and periodic drills. Is the software available today? Saaniya EMR is in active development"
+    },
+    {
+      "id": "/saaniya-emr-pricing#4",
+      "path": "/saaniya-emr-pricing",
+      "title": "Pricing | Saaniya EMR by Saaniya Software LLC",
+      "text": "ns include restore assistance and periodic drills. Is the software available today? Saaniya EMR is in active development and pilot clinics are being selected now. Get in touch to discuss a pilot licence and help shape chart packs for your outpatient workflow. Interested in a pilot? Share clinic needs — or write to Saaniya Software LLC ( email ) and we will answer plainly — including the things the software does not do yet. Scan survey"
+    },
+    {
+      "id": "/saaniya-emr-security#0",
+      "path": "/saaniya-emr-security",
+      "title": "Security | Saaniya EMR by Saaniya Software LLC",
+      "text": "Security | Saaniya EMR by Saaniya Software LLC Pricing Cybersecurity Protect the record where it is written. Saaniya EMR encrypts the clinical database on clinic hardware and keeps diagnoses, notes, and prescriptions out of the cloud entirely. Booking contacts in the managed portal are personal data, and are treated as such. AES-256 encryption at rest The clinical database is encrypted on disk with SQLCipher. A stolen or resold clinic PC does not hand over your patient history. Keys derived properly, not guessed Argon2id key derivation with a per-install salt. Your passphrase is never used directly as the encryption key, and the session key lives in the operating system keychain. Recovery codes at setup Printed recovery codes are generated during installation, so a forgotten passphrase is a recoverable event rather than a permanent loss. Role-based access and audit logging Doctors and"
+    },
+    {
+      "id": "/saaniya-emr-security#1",
+      "path": "/saaniya-emr-security",
+      "title": "Security | Saaniya EMR by Saaniya Software LLC",
+      "text": "orgotten passphrase is a recoverable event rather than a permanent loss. Role-based access and audit logging Doctors and front-desk staff see different things. The audit log records who accessed which record, never the record contents. Sync is an allowlist, not a filter Only explicitly listed booking fields can ever leave the clinic. A new clinical field is unsyncable by default, and an automated test fails the build if that changes. Signed updates Update packages are cryptographically signed and verified before installation. The application refuses builds it cannot verify. Tenant isolation in the cloud layer Booking data is separated per clinic by row-level security driven by verified session claims, with both read and write policies enforced at the database. Incident response before launch A written runbook, contact list, and notification templates exist ahead of the first clinic, so a"
+    },
+    {
+      "id": "/saaniya-emr-security#2",
+      "path": "/saaniya-emr-security",
+      "title": "Security | Saaniya EMR by Saaniya Software LLC",
+      "text": "response before launch A written runbook, contact list, and notification templates exist ahead of the first clinic, so a breach clock is met with a procedure rather than improvisation. Threat model The risks a private clinic actually faces. Nation-state adversaries and hardware side channels are out of scope, and saying so is more useful than pretending otherwise. These six are in scope. A stolen or resold clinic PC The clinical database is encrypted at rest, so possession of the machine is not possession of the records. Ransomware on the practice network Encrypted local snapshots with integrity checks, a reminder cadence, and a restore path that is drilled rather than assumed. Staff browsing records they should not Separate doctor and front-desk roles, with an append-only audit log of access that never stores the record contents. A tampered installer Update packages are"
+    },
+    {
+      "id": "/saaniya-emr-security#3",
+      "path": "/saaniya-emr-security",
+      "title": "Security | Saaniya EMR by Saaniya Software LLC",
+      "text": "with an append-only audit log of access that never stores the record contents. A tampered installer Update packages are cryptographically signed and verified before installation. Unsigned or mismatched builds are refused. One clinic seeing another clinic's bookings Row-level security on every tenant table, driven by verified session claims rather than anything a client can send, with both read and write policies. A leaked credential or committed secret Service-role keys stay server-side, environment files are excluded from version control, and dependency audits run before each release. Compliance Accurate claims, written agreements. The clinic is the Data Fiduciary and Saaniya Software LLC is a processor for the booking layer only. That relationship is contractual, documented, and deliberately narrow. You are the Data Fiduciary. We are a processor. Under India's DPDP Act the clinic"
+    },
+    {
+      "id": "/saaniya-emr-security#4",
+      "path": "/saaniya-emr-security",
+      "title": "Security | Saaniya EMR by Saaniya Software LLC",
+      "text": ", documented, and deliberately narrow. You are the Data Fiduciary. We are a processor. Under India's DPDP Act the clinic determines why and how patient data is processed. Saaniya Software LLC processes booking contacts on your behalf, under a written Data Processing Agreement supplied with your licence. Data minimisation, built into the product The clinical record never reaches our infrastructure, so the volume of personal data we hold on your behalf stays deliberately small. Minimisation is an architectural property here, not a policy promise. Consent and clear notice Your booking page carries a specific, readable privacy notice covering what is collected and why, rather than blanket consent buried in a form. Breach notification support If an incident affects data we process for you, we notify you quickly enough to meet your own regulatory clock with the Data Protection Board and your"
+    },
+    {
+      "id": "/saaniya-emr-security#5",
+      "path": "/saaniya-emr-security",
+      "title": "Security | Saaniya EMR by Saaniya Software LLC",
+      "text": "process for you, we notify you quickly enough to meet your own regulatory clock with the Data Protection Board and your patients. Correction, erasure, and retention Records are editable and deletable, with a documented retention policy that respects medical council retention obligations where they override an erasure request. Beyond India The architecture is built for GDPR Article 28 processor terms in the UK and EU, cross-border disclosure expectations in Australia and New Zealand, and the LGPD controller/processor model in Brazil. Market-specific contracts are confirmed before any sale in those regions. We describe our architecture accurately and avoid certification language we have not earned. Saaniya EMR is not marketed as HIPAA certified, and the United States is a later market that opens only once the appropriate agreements are in place. Before the first paid clinic What has to be"
+    },
+    {
+      "id": "/saaniya-emr-security#6",
+      "path": "/saaniya-emr-security",
+      "title": "Security | Saaniya EMR by Saaniya Software LLC",
+      "text": "a later market that opens only once the appropriate agreements are in place. Before the first paid clinic What has to be in place before we take money. Saaniya Software LLC treats these as gates rather than aspirations. A pilot conversation can start today; a paid deployment waits for all five. 01 Counsel-reviewed licence agreement, Data Processing Agreement, privacy policy, and service terms 02 Tax advice covering India OIDAR/GST treatment and United States obligations 03 Payment-processor onboarding completed for licence and maintenance fees 04 Incident-response runbook and breach notification templates in place 05 Backup and restore verified on a real clinic machine Privacy notice Ask a security question"
+    },
+    {
+      "id": "/saaniya-emr-software#0",
+      "path": "/saaniya-emr-software",
+      "title": "Software | Saaniya EMR by Saaniya Software LLC",
+      "text": "Software | Saaniya EMR by Saaniya Software LLC Pricing Service A · Software A desktop EMR for any outpatient clinic. Built for OPD, single-doctor clinics, and multi-specialty outpatient practices — not a closed list of specialties. Patients, visits, charting, prescriptions, invoices, roles, and encrypted backups stay local. The optional cloud layer carries only what online booking needs. Share clinic needs See pricing Email for a demo Scan survey What you get Clinical features for day-to-day practice. Built for any outpatient clinic Solo OPD, single-specialty clinic, or multi-specialty outpatient practice — same product. You are not limited to a short list of disciplines; optional chart packs extend the forms when you need them. Works when the internet does not Consultations, prescriptions, and billing complete offline. Appointments queue locally and sync when the connection returns, so"
+    },
+    {
+      "id": "/saaniya-emr-software#1",
+      "path": "/saaniya-emr-software",
+      "title": "Software | Saaniya EMR by Saaniya Software LLC",
+      "text": "ations, prescriptions, and billing complete offline. Appointments queue locally and sync when the connection returns, so a power cut or an outage never stops the clinic. Charting that fits your practice Start with standard outpatient notes, vitals, and prescriptions. Optional packs add structured fields for Ayurveda, psychiatry, neurology, gastroenterology, and more — as schemas, not separate products. Prescriptions built for your practice Conventional medications with dosage and duration, or classical formulations with Anupana when that pack is enabled. Reusable templates mean the third prescription of the day takes seconds. Billing with your payment details attached Generate invoices locally and print or share them with your own UPI QR or bank details on the same sheet. Your front desk marks an invoice paid; the money went straight to your account. Online booking, on your terms"
+    },
+    {
+      "id": "/saaniya-emr-software#2",
+      "path": "/saaniya-emr-software",
+      "title": "Software | Saaniya EMR by Saaniya Software LLC",
+      "text": "ame sheet. Your front desk marks an invoice paid; the money went straight to your account. Online booking, on your terms Patients request appointments from your clinic website. Your front desk confirms them inside the EMR, so the clinic calendar always reflects what the clinic actually decided. Backups you can verify One-click encrypted snapshots to a local drive or NAS, with an integrity check and a reminder cadence. Restore is a tested procedure, not a hope. Roles and an audit trail Separate doctor and front-desk access, with an append-only log recording who opened or changed which record and when. Who it is for Any OPD or outpatient clinic — specialty packs are optional. Saaniya EMR is not limited to the disciplines named below. Use it for general outpatient work today; turn on specialty chart packs when your practice needs them. One system for a solo OPD or a multi-specialty clinic."
+    },
+    {
+      "id": "/saaniya-emr-software#3",
+      "path": "/saaniya-emr-software",
+      "title": "Software | Saaniya EMR by Saaniya Software LLC",
+      "text": "day; turn on specialty chart packs when your practice needs them. One system for a solo OPD or a multi-specialty clinic. General OPD / clinic Vitals, SOAP notes, conventional prescriptions, referrals, and day-to-day outpatient workflow — the default fit for most clinics. Multi-specialty outpatient Several doctors or departments on one licence and one patient master. Shared calendar, roles, and billing without buying a separate EMR per specialty. Ayurveda (example pack) Optional fields such as Prakriti and Vikriti, Nadi Pariksha, Panchakarma planning, and classical formulations with Anupana. Psychiatry (example pack) Optional mental status examination, structured rating scales, session notes, and longitudinal medication history. Other specialties (example packs) Neurology, gastroenterology, and further packs are schema add-ons — not separate products. Your clinic is not limited to the"
+    },
+    {
+      "id": "/saaniya-emr-software#4",
+      "path": "/saaniya-emr-software",
+      "title": "Software | Saaniya EMR by Saaniya Software LLC",
+      "text": "ology, gastroenterology, and further packs are schema add-ons — not separate products. Your clinic is not limited to the examples on this page. Your practice type If your workflow is not listed yet, we add fields as a form schema rather than a new product, so the engine and your data stay the same. The data boundary One boundary decides everything Most clinic software asks you to upload your patients' medical history to someone else's servers. Saaniya EMR draws a hard line instead. Stays on your clinic hardware Diagnoses and assessment notes Examination findings and specialty chart fields (when used) Prescriptions, dosages, and instructions Vitals, uploaded reports, and scans Invoice line items describing treatment Syncs only to run online booking Patient name and phone number for the appointment Requested date, time, and appointment status Your clinic's configuration and branding"
+    },
+    {
+      "id": "/saaniya-emr-software#5",
+      "path": "/saaniya-emr-software",
+      "title": "Software | Saaniya EMR by Saaniya Software LLC",
+      "text": "d phone number for the appointment Requested date, time, and appointment status Your clinic's configuration and branding Licence and subscription state Booking contacts are still personal data, so they are covered by a Data Processing Agreement, encrypted in transit, and kept for a short window only. What we never receive is the clinical record itself. Around the EMR Pair the software with website, payment display, and maintenance. Software is Service A and payment display ships with it. Website and maintenance are optional add-ons you can start or stop without losing your licence. Software The local desktop EMR, licensed to your practice. Patients, visits, outpatient charting, prescriptions, and invoicing — all running on the clinic machine. Website A managed booking site for your clinic. We design, host, and maintain a professional page where patients request appointments around the"
+    },
+    {
+      "id": "/saaniya-emr-software#6",
+      "path": "/saaniya-emr-software",
+      "title": "Software | Saaniya EMR by Saaniya Software LLC",
+      "text": "g site for your clinic. We design, host, and maintain a professional page where patients request appointments around the clock. Payment display Your own UPI QR and bank details, shown where patients need them. Saaniya never processes patient payments and never holds patient funds. Maintenance Updates, support, and backup assistance — software updates, remote support, restore help, and booking portal uptime. Under the hood How it is built. Written down here because clinics increasingly ask, and because a vague answer about security is usually a bad one. Desktop shell Tauri 2 with a React interface — a small signed Windows installer rather than a browser bundled into an application. Storage SQLite encrypted with SQLCipher using AES-256, with an Argon2id-derived key and the session key held in the operating system keychain. Optional chart packs Extra specialty fields are validated JSON"
+    },
+    {
+      "id": "/saaniya-emr-software#7",
+      "path": "/saaniya-emr-software",
+      "title": "Software | Saaniya EMR by Saaniya Software LLC",
+      "text": "nd the session key held in the operating system keychain. Optional chart packs Extra specialty fields are validated JSON Schemas in a registry — not separate products. Forms render from the schema, so the payload stays structured, queryable, and exportable. Sync An outbox with idempotency keys and cursor-based pulls. Offline is the default assumption, and only allowlisted booking fields ever move. Installer and pilot onboarding details are shared when you enquire. This website collects no patient or clinical data of any kind."
+    },
+    {
+      "id": "/saaniya-emr#0",
+      "path": "/saaniya-emr",
+      "title": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records",
+      "text": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records Pricing Saaniya Software LLC SAANIYA EMR Your patient records never leave the clinic. Saaniya EMR keeps the full clinical record encrypted on your own hardware, while patients book appointments online through a website we build and maintain for you. Share clinic needs See pricing How the software works The architecture One boundary decides everything Most clinic software asks you to upload your patients' medical history to someone else's servers. Saaniya EMR draws a hard line instead. Stays on your clinic hardware Diagnoses and assessment notes Examination findings and specialty chart fields (when used) Prescriptions, dosages, and instructions Vitals, uploaded reports, and scans Invoice line items describing treatment Syncs only to run online booking Patient name and phone number for the appointment Requested date, time,"
+    },
+    {
+      "id": "/saaniya-emr#1",
+      "path": "/saaniya-emr",
+      "title": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records",
+      "text": "ibing treatment Syncs only to run online booking Patient name and phone number for the appointment Requested date, time, and appointment status Your clinic's configuration and branding Licence and subscription state Booking contacts are still personal data, so they are covered by a Data Processing Agreement, encrypted in transit, and kept for a short window only. What we never receive is the clinical record itself. Four services Software, website, payment display, and maintenance — priced separately, not blurred into one subscription. Take the desktop EMR on its own, or add a managed booking site and annual support. Patient money never touches Saaniya. A Software The local desktop EMR, licensed to your practice. Patients, visits, outpatient charting, prescriptions, and invoicing — all running on the clinic machine and fully usable with the internet unplugged. Optional specialty packs"
+    },
+    {
+      "id": "/saaniya-emr#2",
+      "path": "/saaniya-emr",
+      "title": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records",
+      "text": "and invoicing — all running on the clinic machine and fully usable with the internet unplugged. Optional specialty packs when you need them. B Website A managed booking site for your clinic. We design, host, and maintain a professional page where patients see your services and request appointments around the clock. C Payment display Your own UPI QR and bank details, shown where patients need them. Invoices and your website display the payment details of your own account. Saaniya never processes patient payments and never holds patient funds. D Maintenance Updates, support, and backup assistance. Software updates, remote support, restore assistance when you need it, and uptime for the booking portal. Clinical work Built for how a clinic actually runs. Offline-capable outpatient charting for any OPD or multi-specialty clinic, optional specialty packs when you need them, and a booking layer"
+    },
+    {
+      "id": "/saaniya-emr#3",
+      "path": "/saaniya-emr",
+      "title": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records",
+      "text": "patient charting for any OPD or multi-specialty clinic, optional specialty packs when you need them, and a booking layer that never asks you to upload a single clinical note. Built for any outpatient clinic Solo OPD, single-specialty clinic, or multi-specialty outpatient practice — same product. You are not limited to a short list of disciplines; optional chart packs extend the forms when you need them. Works when the internet does not Consultations, prescriptions, and billing complete offline. Appointments queue locally and sync when the connection returns, so a power cut or an outage never stops the clinic. Charting that fits your practice Start with standard outpatient notes, vitals, and prescriptions. Optional packs add structured fields for Ayurveda, psychiatry, neurology, gastroenterology, and more — as schemas, not separate products. Prescriptions built for your practice"
+    },
+    {
+      "id": "/saaniya-emr#4",
+      "path": "/saaniya-emr",
+      "title": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records",
+      "text": "hiatry, neurology, gastroenterology, and more — as schemas, not separate products. Prescriptions built for your practice Conventional medications with dosage and duration, or classical formulations with Anupana when that pack is enabled. Reusable templates mean the third prescription of the day takes seconds. Billing with your payment details attached Generate invoices locally and print or share them with your own UPI QR or bank details on the same sheet. Your front desk marks an invoice paid; the money went straight to your account. Online booking, on your terms Patients request appointments from your clinic website. Your front desk confirms them inside the EMR, so the clinic calendar always reflects what the clinic actually decided. Backups you can verify One-click encrypted snapshots to a local drive or NAS, with an integrity check and a reminder cadence. Restore is a tested"
+    },
+    {
+      "id": "/saaniya-emr#5",
+      "path": "/saaniya-emr",
+      "title": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records",
+      "text": "e-click encrypted snapshots to a local drive or NAS, with an integrity check and a reminder cadence. Restore is a tested procedure, not a hope. Roles and an audit trail Separate doctor and front-desk access, with an append-only log recording who opened or changed which record and when. Saaniya EMR runs on the clinic's own Windows machine. Nothing about a consultation depends on a working internet connection. Cybersecurity A health record is worth protecting like one. Controls chosen for the threats clinics actually face: a stolen desktop, ransomware on the practice network, a curious staff member, a tampered installer. AES-256 encryption at rest The clinical database is encrypted on disk with SQLCipher. A stolen or resold clinic PC does not hand over your patient history. Keys derived properly, not guessed Argon2id key derivation with a per-install salt. Your passphrase is never used"
+    },
+    {
+      "id": "/saaniya-emr#6",
+      "path": "/saaniya-emr",
+      "title": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records",
+      "text": "story. Keys derived properly, not guessed Argon2id key derivation with a per-install salt. Your passphrase is never used directly as the encryption key, and the session key lives in the operating system keychain. Recovery codes at setup Printed recovery codes are generated during installation, so a forgotten passphrase is a recoverable event rather than a permanent loss. Role-based access and audit logging Doctors and front-desk staff see different things. The audit log records who accessed which record, never the record contents. Sync is an allowlist, not a filter Only explicitly listed booking fields can ever leave the clinic. A new clinical field is unsyncable by default, and an automated test fails the build if that changes. Signed updates Update packages are cryptographically signed and verified before installation. The application refuses builds it cannot verify. Tenant isolation"
+    },
+    {
+      "id": "/saaniya-emr#7",
+      "path": "/saaniya-emr",
+      "title": "Saaniya EMR by Saaniya Software LLC | Local-first clinic records",
+      "text": "tographically signed and verified before installation. The application refuses builds it cannot verify. Tenant isolation in the cloud layer Booking data is separated per clinic by row-level security driven by verified session claims, with both read and write policies enforced at the database. Incident response before launch A written runbook, contact list, and notification templates exist ahead of the first clinic, so a breach clock is met with a procedure rather than improvisation. Read the security programme Compliance Written for India's DPDP Act, honest about everywhere else. The clinic is the Data Fiduciary. Saaniya Software LLC processes booking contacts on your behalf under a written agreement — and treats them as the personal data they are. You are the Data Fiduciary. We are a processor. Under India's DPDP Act the clinic determines why and how patient data is processed. Saaniya"
+    },
+    {
+      "id": "/saarthee-fleet#0",
+      "path": "/saarthee-fleet",
+      "title": "Saarthee Fleet Manager by Saaniya Software LLC | Private rides & Turo ops",
+      "text": "Saarthee Fleet Manager by Saaniya Software LLC | Private rides & Turo ops Live product · fleet.nasneeraj.com Meet Saarthee Fleet Manager by Saaniya Software LLC. A mobile-first fleet dashboard for independent operators who run private chauffeur rides and host vehicles on Turo—quoting, scheduling, rentals, and unified financials in one place. Open Fleet app Request access Saarthee CoPlanner Software product of Saaniya Software LLC. Live at fleet.nasneeraj.com. Ops snapshot Five modules Quoter Compare Uber/Lyft-style market rates and set a private chauffeur rate with clear math. Schedule + Turo Manage ride status, vehicle calendars, iCal sync, and rental bookings together. Reports & payments Split private vs Turo revenue, track expenses, export CSV, and show payment QR codes. Built for mixed fleet work Saarthee Fleet Manager helps operators who do both private rides and short-term rentals"
+    },
+    {
+      "id": "/saarthee-fleet#1",
+      "path": "/saarthee-fleet",
+      "title": "Saarthee Fleet Manager by Saaniya Software LLC | Private rides & Turo ops",
+      "text": "odes. Built for mixed fleet work Saarthee Fleet Manager helps operators who do both private rides and short-term rentals keep pricing, calendars, and cashflow aligned—without juggling spreadsheets and chat threads. Private chauffeur rides Quote against market comps, schedule the trip, mark complete or canceled, and keep the original quote math expandable. Turo rental tracking User-managed vehicles, availability, bookings, and iCal feed sync—no hardcoded fleet list. Unified financials Private ride revenue + Turo income − expenses, with charts and CSV export for bookkeeping handoff. What you get in the app Quoter Trip details, competitor cards, Comfort/Premier helpers, private rate = Comfort × 0.90. Schedule Ride list with route, vehicle, rate, status actions, and expandable quote details. Turo Vehicles, calendars, bookings, and iCal import via scheduled sync. Reports Revenue split,"
+    },
+    {
+      "id": "/saarthee-fleet#2",
+      "path": "/saarthee-fleet",
+      "title": "Saarthee Fleet Manager by Saaniya Software LLC | Private rides & Turo ops",
+      "text": "expandable quote details. Turo Vehicles, calendars, bookings, and iCal import via scheduled sync. Reports Revenue split, expenses, net profit, performance metrics, and CSV ledger tools. Entity note Saarthee Fleet Manager is a software product of Saaniya Software LLC . It is not the transport brand for Saarthee Rides LLC. Use the live app for fleet operations; contact Saaniya Software for demos, pilots, and access."
+    },
+    {
+      "id": "/saarthee#0",
+      "path": "/saarthee",
+      "title": "Saarthee CoPlanner by Saaniya Software LLC | Privacy-first personal coworker",
+      "text": "Saarthee CoPlanner by Saaniya Software LLC | Privacy-first personal coworker Saarthee CoPlanner by Saaniya Software LLC Coming soon Meet Saarthee CoPlanner by Saaniya Software LLC. A privacy-first personal coworker for organizing calendars, inboxes, files, Notion, finance notes, and local Windows workflows across the tools you already use. Get notified Saaniya Software LLC home Coming soon — preview page only. Sign-in and accounts will open when we launch. Today brief Preview concept One plan across tools Calendar, tasks, Notion notes, and selected inbox context in one daily view. No raw data by default Organize links, rules, summaries, and user-created actions without stockpiling message bodies or file contents. Human-approved automation Local file actions and workflow rules use preview, approval, allowlists, and undo logs. Built for mixed personal workflows Saarthee is planned for"
+    },
+    {
+      "id": "/saarthee#1",
+      "path": "/saarthee",
+      "title": "Saarthee CoPlanner by Saaniya Software LLC | Privacy-first personal coworker",
+      "text": "kflow rules use preview, approval, allowlists, and undo logs. Built for mixed personal workflows Saarthee is planned for people who live across Google, Microsoft, Apple, Samsung, Notion, local files, and small finance spreadsheets without wanting an enterprise-grade tool stack. Calendar and inbox planning Start with careful scope review and lightweight organization before adding deeper email permissions. Notion and daily logs Mirror planning documents, tasks, and daily summaries into a workspace the user controls. Local Windows coworker Connect local file organization with cloud context while keeping destructive actions explicit and reversible. Privacy-first by design The product goal is to organize access the user grants, not become another data warehouse. Full email bodies, attachments, calendar descriptions, and file contents should stay out of storage unless the user explicitly"
+    },
+    {
+      "id": "/saarthee#2",
+      "path": "/saarthee",
+      "title": "Saarthee CoPlanner by Saaniya Software LLC | Privacy-first personal coworker",
+      "text": "mail bodies, attachments, calendar descriptions, and file contents should stay out of storage unless the user explicitly enables them. Google and Microsoft integrations will be reviewed scope-by-scope. Gmail read/modify scopes are a later phase, not a Phase 0 assumption. Status: Coming soon — no public sign-in yet. Contact us for updates. Phase 0 roadmap Step 1 Research Saarthee CoPlanner by Saaniya Software LLC in trademark, domain, GitHub, App Store, and Play Store databases. Step 2 Wire GitHub, Vercel, Neon, local port 5174, and development branch workflow. Step 3 Create the first app scaffold and placeholder deployment for private pilot work. Step 4 Define minimum OAuth scopes and publish privacy/legal notes before public access."
+    },
+    {
+      "id": "/security-compliance#0",
+      "path": "/security-compliance",
+      "title": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen Security & Compliance Whitepaper Version: 2.0 (Enhanced) | Date: December 2025 Prepared for: Wisconsin K-12 School Districts, Private Schools, and Charter Schools Provider: Saaniya Software LLC | Contact: Saaniya Software Email: saaniyasoftware@nasneeraj.com | Website: nasneeraj.com Executive Summary At Saaniya Software LLC, we understand that protecting student data is not just a technical requirement—it is a moral imperative . This document outlines the comprehensive security measures, compliance frameworks, and infrastructure standards employed by the Saaniya Software LLC Student Information System (SIS), Learning Management System (LMS), and GuruVidyaZen Academy Management platform. Our Commitment WSDPA Ready Full WSDPA Compliance - Ready to sign the Wisconsin Student Data Privacy Agreement immediately Enterprise"
+    },
+    {
+      "id": "/security-compliance#1",
+      "path": "/security-compliance",
+      "title": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "nt WSDPA Ready Full WSDPA Compliance - Ready to sign the Wisconsin Student Data Privacy Agreement immediately Enterprise Security Enterprise-Grade Security - SOC 2 Type 2 certified infrastructure without the enterprise price tag Transparent Transparent Operations - Complete visibility into our security practices and compliance measures Local Support Local Support - Wisconsin-based development and support team Affordable Affordable Pricing - 40% cost savings vs. legacy vendors 1. Compliance Alignment Saaniya Software LLC is fully committed to complying with federal and state regulations governing student privacy. 1.1 Wisconsin Statute § 118.125 (Pupil Records) We adhere strictly to Wisconsin's pupil records law, which governs the confidentiality and disclosure of pupil records. Compliance Measures: ✅ All student data is treated as confidential \"Pupil Records\" ✅ No disclosure to third"
+    },
+    {
+      "id": "/security-compliance#2",
+      "path": "/security-compliance",
+      "title": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "pil records. Compliance Measures: ✅ All student data is treated as confidential \"Pupil Records\" ✅ No disclosure to third parties without explicit LEA authorization ✅ Parent/guardian consent required for any external disclosure ✅ Annual notification of parental rights regarding pupil records ✅ Secure storage and access controls for all pupil records ✅ Audit trail of all access to pupil records Legal Citation: Wis. Stat. § 118.125 1.2 FERPA (Family Educational Rights and Privacy Act) Saaniya Software LLC acts as a \"School Official\" with a \"legitimate educational interest\" under FERPA. FERPA Compliance Framework: Data Ownership: The LEA retains full ownership of all student data. Saaniya Software LLC has no ownership rights to student data. Student data is never sold or used for commercial purposes. Data Control: LEAs can access all student data at any time, request corrections, request"
+    },
+    {
+      "id": "/security-compliance#3",
+      "path": "/security-compliance",
+      "title": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "r used for commercial purposes. Data Control: LEAs can access all student data at any time, request corrections, request deletion (subject to legal retention requirements), and use data export tools. Parental Rights: Parents have the right to inspect and review student records, request amendment of inaccurate records, and opt-out of directory information disclosure. No Ad-Mining: We never scan student data for advertising or marketing purposes, create student profiles for commercial use, or share student data with advertisers. Legal Citation: 20 U.S.C. § 1232g, 34 C.F.R. Part 99 1.3 WSDPA (Wisconsin Student Data Privacy Agreement) We are ready and willing to sign the standard WSDPA (WI-NDPA V1) with any Wisconsin district, contractually binding us to these privacy standards. WSDPA Readiness: ✅ Pre-prepared WSDPA contract template available ✅ All required provisions included ✅ Ready to"
+    },
+    {
+      "id": "/security-compliance#4",
+      "path": "/security-compliance",
+      "title": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "andards. WSDPA Readiness: ✅ Pre-prepared WSDPA contract template available ✅ All required provisions included ✅ Ready to execute immediately upon LEA request ✅ No additional compliance costs 1.4 COPPA (Children's Online Privacy Protection Act) Where applicable, Saaniya Software LLC complies with COPPA requirements for children under 13 years of age. ✅ Parental consent mechanisms ✅ Limited data collection (only what's necessary) ✅ Parental review and deletion rights ✅ Clear privacy notice to parents ✅ Reasonable security measures Legal Citation: 15 U.S.C. §§ 6501-6506 2. Security Infrastructure Saaniya Software LLC leverages world-class, SOC 2 Type 2 certified cloud infrastructure providers to ensure maximum security and reliability. 2.1 Infrastructure Components Component Provider Certification Status Data Location Database Hosting Supabase (AWS) SOC 2 Type 2 HIPAA Ready United States"
+    },
+    {
+      "id": "/security-compliance#5",
+      "path": "/security-compliance",
+      "title": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "onent Provider Certification Status Data Location Database Hosting Supabase (AWS) SOC 2 Type 2 HIPAA Ready United States (AWS) Cloud Computing Vercel / AWS SOC 2 Type 2 ISO 27001 Global CDN Identity Management Supabase Auth SOC 2 Type 2 United States (AWS) Email Service Resend SOC 2 Type 2 United States File Storage Supabase Storage (AWS S3) SOC 2 Type 2 United States (AWS) 3. Technical Security Controls We employ \"Defense in Depth\" strategies to secure data at every layer of our application stack. 3.1 Encryption Data at Rest Algorithm: AES-256 (Advanced Encryption Standard) Standard: Industry standard for banking and government data Scope: All pupil records stored in databases Key Management: Managed by Supabase (AWS KMS) Backup Encryption: All backups encrypted with AES-256 Data in Transit Protocol: TLS 1.2 or higher (Transport Layer Security) Enforcement: Unencrypted traffic (HTTP) is"
+    },
+    {
+      "id": "/security-compliance#6",
+      "path": "/security-compliance",
+      "title": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "ES-256 Data in Transit Protocol: TLS 1.2 or higher (Transport Layer Security) Enforcement: Unencrypted traffic (HTTP) is automatically rejected Certificate Management: Automatic SSL/TLS certificate provisioning Perfect Forward Secrecy: Enabled for all connections HSTS: HTTP Strict Transport Security enabled 3.2 Access Control & Authentication Role-Based Access Control (RBAC) Strict Permission Levels: Five distinct roles (SuperAdmin, Admin, Teacher, Guardian, Student) Principle of Least Privilege: Users only have access to data necessary for their role Role Verification: All roles verified at authentication and enforced at database level Row-Level Security (RLS) Database-Level Enforcement: RLS policies applied directly to PostgreSQL database 100% Coverage: All tables have RLS policies enabled School-Level Isolation: Users can only access data from their assigned school Role-Based"
+    },
+    {
+      "id": "/security-compliance#7",
+      "path": "/security-compliance",
+      "title": "Security & Compliance - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "ables have RLS policies enabled School-Level Isolation: Users can only access data from their assigned school Role-Based Filtering: Data filtered based on user role and permissions 4. Data Protection & Privacy 4.1 Data Minimization We collect only the minimum Student Data necessary to provide the Services: Student names, dates of birth, enrollment information Guardian/parent names, email addresses, phone numbers Academic records (grades, assignments, assessments) Attendance records (daily logs) Financial transaction records (fees, payments) Data NOT Collected: Social Security Numbers (SSN) Protected Health Information (PHI) under HIPAA Biometric data Location tracking data (except as needed for attendance) 4.2 Data Ownership All Student Data remains the exclusive property of the LEA and the student. Provider acknowledges that it has no ownership rights to Student Data. 4.3 Prohibited"
+    },
+    {
+      "id": "/services#0",
+      "path": "/services",
+      "title": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning",
+      "text": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning Saaniya Software LLC Professional Services Comprehensive Business Analysis, Architectural Analysis, and Software Planning Services Working with us on Upwork — explained Our Services Saaniya Software LLC offers comprehensive consulting services to help organizations analyze their business needs, design robust software architectures, and create detailed software development plans. Our proven methodology, demonstrated through the successful development of SISLMS, ensures your software project is well-planned, properly architected, and ready for successful implementation. 📊 Business Analysis Comprehensive analysis of your business needs, processes, and requirements to identify opportunities for software solutions that drive real value. Requirements gathering and analysis Business process mapping"
+    },
+    {
+      "id": "/services#1",
+      "path": "/services",
+      "title": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning",
+      "text": "opportunities for software solutions that drive real value. Requirements gathering and analysis Business process mapping Stakeholder interviews and workshops Gap analysis and opportunity identification ROI and value proposition analysis Competitive analysis Market research and validation Business case development 🏗️ Architectural Analysis Design robust, scalable, and secure software architectures tailored to your specific needs, following industry best practices and modern design patterns. System architecture design Technology stack selection Security architecture planning Scalability and performance analysis Integration architecture design Data architecture and modeling Infrastructure planning Compliance and standards alignment 📋 Software Planning Create comprehensive software development plans with detailed roadmaps, timelines, resource requirements, and implementation strategies."
+    },
+    {
+      "id": "/services#2",
+      "path": "/services",
+      "title": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning",
+      "text": "sive software development plans with detailed roadmaps, timelines, resource requirements, and implementation strategies. Project roadmap development Phase-based implementation planning Resource and team planning Timeline and milestone definition Risk assessment and mitigation Quality assurance planning Deployment and rollout strategy Post-launch support planning 🌐 Website Design & Maintenance End-to-end websites for schools and organizations — from choosing a domain through design, development, hosting, ongoing care, and social media marketing. Domain selection and DNS setup Brand-aware design and copy structure Mobile-first build and launch Hosting, SSL, and analytics Content updates and seasonal refresh Social profile setup and launch posts Featured engagement: milwaukeeshala.org Full overview → Saaniya Office Suite Looking for a worldwide desk for a small-business group — Website,"
+    },
+    {
+      "id": "/services#3",
+      "path": "/services",
+      "title": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning",
+      "text": "lwaukeeshala.org Full overview → Saaniya Office Suite Looking for a worldwide desk for a small-business group — Website, Front Office, AI bots, CRM, customized business software, Integrations, Client portals, and Invoices — not a clinic product? See Saaniya Office Suite . Website design on its own is still on Website Design & Maintenance . Our Proven Process Based on our successful development of SISLMS, we follow a structured, proven methodology: 1 Discovery & Analysis Understand your business, requirements, and goals through comprehensive analysis 2 Architecture Design Design scalable, secure architecture tailored to your specific needs 3 Planning & Roadmap Create detailed development plan with phases, timelines, and milestones 4 Documentation Deliver comprehensive documentation including architecture, SDLS, and specifications 5 Implementation Support Provide ongoing support during"
+    },
+    {
+      "id": "/services#4",
+      "path": "/services",
+      "title": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning",
+      "text": "e documentation including architecture, SDLS, and specifications 5 Implementation Support Provide ongoing support during development and implementation Comprehensive Documentation Deliverables Based on our SISLMS project, we deliver comprehensive documentation following industry standards: 📐 Architecture Documentation System Architecture Document Technology Stack Analysis Security Architecture Data Architecture Integration Architecture Deployment Architecture Scalability Analysis 📋 SDLS (Software Development Lifecycle) Development Methodology Development Phases Tools and Technologies Code Quality Standards Testing Strategy Version Control Workflow Release Management 📝 Requirements & Specifications Software Requirements Specification (SRS) Functional Requirements Non-Functional Requirements System Constraints External Interface Requirements Quality Attributes 🎨 Design Documentation"
+    },
+    {
+      "id": "/services#5",
+      "path": "/services",
+      "title": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning",
+      "text": "on-Functional Requirements System Constraints External Interface Requirements Quality Attributes 🎨 Design Documentation UML Diagrams (Class, Sequence, Component) Database Schema Design User Interface Mockups API Specifications Component Diagrams Deployment Diagrams 👥 User Documentation User Guides (by role) Administrator Guide End-User Manuals Training Materials FAQ Documentation 🔧 Developer Documentation Developer's Guide API Documentation Code Structure Guide Testing Guide Deployment Guide Troubleshooting Guide Proven Track Record: SISLMS, GuruVidyaZen & Live Demos Our methodology has been proven through flagship platforms and live deployments—including SISLMS at sislms.guruvidyazen.nasneeraj.com and the GuruVidyaZen Riyaz Studio demo at riyaz.guruvidyazen.nasneeraj.com . ✅ SISLMS by Saaniya Software LLC A comprehensive Student Information System and Learning Management System"
+    },
+    {
+      "id": "/services#6",
+      "path": "/services",
+      "title": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning",
+      "text": "sneeraj.com . ✅ SISLMS by Saaniya Software LLC A comprehensive Student Information System and Learning Management System serving schools with integrated Google Classroom, digital gradebooks, and 100% RLS security coverage. ✅ GuruVidyaZen by Saaniya Software LLC A specialized academy management system for 17+ types of learning centers, featuring 7-year repertoire vaults, traditional arts evaluation matrices, and AI stylistic analysis. ✅ GuruVidyaZen Riyaz Studio Live demo deployment for practice and academy workflows at riyaz.guruvidyazen.nasneeraj.com . SISLMS production traffic uses sislms.guruvidyazen.nasneeraj.com . ✅ AI-Driven Architecture Both platforms demonstrate our expertise in scalable, secure architecture design using modern tech stacks (React, TypeScript, Supabase, Vercel) and AI-assisted development. Why Choose Saaniya Software LLC for Your Project? 🤖 AI-Assisted"
+    },
+    {
+      "id": "/services#7",
+      "path": "/services",
+      "title": "Services - Saaniya Software LLC | Business Analysis, Architecture & Software Planning",
+      "text": "eScript, Supabase, Vercel) and AI-assisted development. Why Choose Saaniya Software LLC for Your Project? 🤖 AI-Assisted Development We leverage cutting-edge AI tools (Cursor AI) combined with human expertise to deliver high-quality solutions faster and more efficiently. 📚 Comprehensive Documentation We don't just build software - we document everything thoroughly, ensuring your project is maintainable and scalable long-term. 🔐 Security-First Approach Security and compliance are built into every aspect of our analysis and design, from architecture to implementation. ⚡ Agile Methodology We follow proven Agile/Iterative development practices, ensuring flexibility and continuous delivery of value. ☁️ Cloud-Native Expertise Deep expertise in modern cloud platforms (Vercel, Supabase, AWS) for scalable, reliable solutions. 🎯 Business-Focused We understand that software must solve real"
+    },
+    {
+      "id": "/signup#0",
+      "path": "/signup",
+      "title": "Sign Up - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "Sign Up - Saaniya Software LLC | SISLMS & GuruVidyaZen Sign Up Get started with SISLMS or GuruVidyaZen by Saaniya Software LLC - Modern Platforms for Learning Institutions Thank you! Your sign-up request has been submitted successfully. We'll contact you within 24 hours to discuss your needs and get you set up. Error: There was a problem submitting your form. Please try again or contact us directly at saaniyasoftware@nasneeraj.com Product Selection Product * Select a product SISLMS (School Information System) GuruVidyaZen (Academy Management) Institution Information Institution Name * School Type * Select school type Single School School System/District Non-Profit School/System Private School Number of Schools Estimated Number of Students * This helps us recommend the right subscription tier Subscription Tier * Select subscription tier Starter - $30/month (up to 50 students) Small -"
+    },
+    {
+      "id": "/signup#1",
+      "path": "/signup",
+      "title": "Sign Up - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "the right subscription tier Subscription Tier * Select subscription tier Starter - $30/month (up to 50 students) Small - $50/month (51-100 students) Medium - $100/month (101-250 students) - Recommended Large - $175/month (251-500 students) Enterprise - $300/month (500+ students) Contact Information Contact Name * Email Address * Title/Position Additional Information Message or Questions We are a registered non-profit organization (eligible for 20% discount) I agree to the SISLMS Service Agreement including pricing, terms, and conditions. The full agreement will be provided upon account setup. * Submit Sign-Up Request Pricing Information SISLMS offers flexible monthly pricing based on your school size: Starter: $30/month (up to 50 students) - 100 MB essential storage Small: $50/month (51-100 students) - 200 MB essential storage Medium: $100/month (101-250 students) - 500 MB essential"
+    },
+    {
+      "id": "/signup#2",
+      "path": "/signup",
+      "title": "Sign Up - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "e Small: $50/month (51-100 students) - 200 MB essential storage Medium: $100/month (101-250 students) - 500 MB essential storage - Recommended Large: $175/month (251-500 students) - 1 GB essential storage Enterprise: $300/month (500+ students) - 2 GB+ essential storage Special Discounts: Non-profit schools receive 20% off. School systems/districts receive volume discounts (10-25%). Early adopter discount: 10% for first 50 schools. All plans include unlimited Google Drive storage and comprehensive SISLMS features. What Happens After Sign-Up? We'll review your application within 24 hours Our team will contact you to discuss your needs We'll provide a customized proposal and contract Once signed, we'll begin setup (1-2 weeks) You'll receive training and go live!"
+    },
+    {
+      "id": "/sislms#0",
+      "path": "/sislms",
+      "title": "GuruVidyaZen School SISLMS — School & learning hub for families",
+      "text": "GuruVidyaZen School SISLMS — School & learning hub for families Skip to main content ✦ Saaniya Software LLC — GuruVidyaZen School Main entry for School SISLMS on GuruVidyaZen Your school’s happy learning hub GuruVidyaZen School SISLMS helps grown-ups run classes, grades, and messages—while students get a calmer, clearer day at school. Built for community schools, language programs, small privates, and nonprofits. School SISLMS v1 (this school lane) focuses on a K–8 class hub , daily log , assignments , non–performing-arts CCE , and imports —available in the app for School tenants where your admin enables each area. The wider GuruVidyaZen product still serves dance, music, yoga, and other academy types; those programs may show performing-arts tools, different CCE shapes, and other modules your school shell does not surface by default. Start a school space Request a colorful tour School"
+    },
+    {
+      "id": "/sislms#1",
+      "path": "/sislms",
+      "title": "GuruVidyaZen School SISLMS — School & learning hub for families",
+      "text": "es, and other modules your school shell does not surface by default. Start a school space Request a colorful tour School log in Same warm login as the rest of GuruVidyaZen — use School sign up / Log in above for the school intent. Official app entry points: sislms.guruvidyazen.nasneeraj.com · guruvidyazen.nasneeraj.com · riyaz.guruvidyazen.nasneeraj.com Made for real school weeks Big smiles for little campuses: fewer tabs, clearer roles, and room to grow. 🌏 Heritage & language schools Weekend classes, multi-language families, and proud traditions—tools that respect your rhythm. 🏫 Small private & community programs Rosters, assignments, and reports without the giant-district maze. 🤝 Nonprofits & caring teams Volunteer-friendly flows so helpers can support students safely. 🎨 Other academy lanes stay on GuruVidyaZen School SISLMS v1 is built around general K–8 workflows. Dance, music,"
+    },
+    {
+      "id": "/sislms#2",
+      "path": "/sislms",
+      "title": "GuruVidyaZen School SISLMS — School & learning hub for families",
+      "text": "afely. 🎨 Other academy lanes stay on GuruVidyaZen School SISLMS v1 is built around general K–8 workflows. Dance, music, yoga, and fine-arts tools remain part of GuruVidyaZen for other academy types—see in-app Help for what your tenant and roles can open. For kids (read with a grown-up) Your teachers use this tool to keep class organized—like a tidy backpack for assignments, grades, and news. Only the right adults can see student information, and your school decides what to share with families. What schools can explore What you see depends on your school’s tenant, roles, and what your admin enables— in-app Help carries the live, authoritative list. 🧒 Student stories in one place Rosters, enrollment notes, and history that honor each learner. 📘 Gradebook & gentle feedback Progress snapshots, formative notes, and daily-style logs where enabled. 📎 Assignments Teachers publish tasks and"
+    },
+    {
+      "id": "/sislms#3",
+      "path": "/sislms",
+      "title": "GuruVidyaZen School SISLMS — School & learning hub for families",
+      "text": "dback Progress snapshots, formative notes, and daily-style logs where enabled. 📎 Assignments Teachers publish tasks and due dates; students submit text plus attachments where enabled—typically up to six files per submission (for example PDF, images, and small audio/video, up to 25 MB per file ). See in-app Help for the current allowed formats list. 🔐 Private by design Row-level security patterns so each school sees only its own world. 📅 School calendar Plan events and seed holidays: import an iCal (.ics) file (for example an export from Google Calendar) or pick built-in US , European , or Indian holiday presets (plus optional regional packs such as Marathi where offered). Available where your admin enables calendar tools. 🚀 Guided onboarding Short walkthroughs and checklists for GuruVidyaZen are expanding to School SISLMS so the clips match the live school shell—coverage rolls out by"
+    },
+    {
+      "id": "/sislms#4",
+      "path": "/sislms",
+      "title": "GuruVidyaZen School SISLMS — School & learning hub for families",
+      "text": "hecklists for GuruVidyaZen are expanding to School SISLMS so the clips match the live school shell—coverage rolls out by release; use in-app Help for the current playlist. Wisconsin Compliant School partner Milwaukee Marathi School Safety & trust Short words, serious care—school leaders can dive deeper anytime. FERPA-aware workflows COPPA-conscious design Encryption & access rules Wisconsin-friendly options We design workflows with FERPA- and COPPA-style concerns and Wisconsin pupil-record practices in mind—the same posture we document alongside our SISMMS work—but no marketing snippet replaces your counsel or the in-app Terms , Privacy Policy , and Disclaimer , which spell out limits, subprocessors, and what “optional” student fields mean. Helpful links Some resources unlock after your school is onboard—your admin knows the path. See how we compare Honest feature stacks for busy"
+    },
+    {
+      "id": "/sislms#5",
+      "path": "/sislms",
+      "title": "GuruVidyaZen School SISLMS — School & learning hub for families",
+      "text": "sources unlock after your school is onboard—your admin knows the path. See how we compare Honest feature stacks for busy principals Subscriber login GuruVidyaZen School SISLMS Email the team saaniyasoftware@nasneeraj.com Saaniya Software LLC home Products & research After sign-in, open Legal in the app for Terms, Privacy, Disclaimer, and related notices (including Wisconsin-oriented context where applicable). nasneeraj.com hosts this static overview; the in-app legal text is the detailed source."
+    },
+    {
+      "id": "/sismms#0",
+      "path": "/sismms",
+      "title": "SISMMS by Saaniya Software LLC - Milwaukee Marathi School Portal",
+      "text": "SISMMS by Saaniya Software LLC - Milwaukee Marathi School Portal SISMMS by Saaniya Software LLC The Digital Foundation for Milwaukee Marathi School (MMS). Empowering the community with robust student management and heritage preservation. Access MMS Portal Schedule Demo Core Management Features 👥 Student Management Comprehensive student profiles, enrollment tracking, and academic history for every learner in the Marathi Shala. 📝 Digital Gradebook Secure entry of grades, assessments, and formative feedback for accurate progress reporting and heritage evaluation. 📚 Assignment Hub Streamlined assignment posting and submission system with multi-file support for guardians and teachers. 🔐 Secure RLS Access Advanced Row-Level Security ensures that student data is only accessible to authorized personnel and parents. 📅 School Calendar Stay updated with MMS events, holidays, and important"
+    },
+    {
+      "id": "/sismms#1",
+      "path": "/sismms",
+      "title": "SISMMS by Saaniya Software LLC - Milwaukee Marathi School Portal",
+      "text": "accessible to authorized personnel and parents. 📅 School Calendar Stay updated with MMS events, holidays, and important academic deadlines for the Marathi Shala year. 🚀 Simplified Onboarding Easy account creation and role assignment for administrators, teachers, parents, and students. About MMS Shala MMS Shala is a community-driven initiative dedicated to preserving Marathi language and culture in the Milwaukee area. The SISMMS portal is the digital foundation that supports our academic mission and community growth. 📍 Location: Saratoga School, 130 Park Pl, Waukesha, WI 53186 ⏰ Timing: Saturdays, 9:30 AM to 12:30 PM (Academic Year) ✉️ Contact: mmm.marathishala@gmail.com Data Governance The SISMMS platform employs strict encryption and Row-Level Security (RLS) to ensure student information is protected against unauthorized access. By using this platform, you agree to the Terms of"
+    },
+    {
+      "id": "/sismms#2",
+      "path": "/sismms",
+      "title": "SISMMS by Saaniya Software LLC - Milwaukee Marathi School Portal",
+      "text": "o ensure student information is protected against unauthorized access. By using this platform, you agree to the Terms of Service and Privacy Policy . Ready to Explore SISMMS? Contact us to learn how SISMMS can be tailored for your heritage language school or community center. Contact Saaniya Software LLC Team"
+    },
+    {
+      "id": "/terms#0",
+      "path": "/terms",
+      "title": "Terms of Service — Saaniya Software LLC",
+      "text": "Terms of Service — Saaniya Software LLC Terms of Service Last updated: September 9, 2026 Provider: Saaniya Software LLC (Wisconsin) Staged from the Saaniya Software LLC counsel pack in agrawal-llc-docs . Wisconsin counsel should finalize indemnity, liability caps, and dispute resolution before relying on these Terms for paid contracts or OAuth production verification. 1. Who we are These Terms of Service (“Terms”) govern your access to and use of websites, software-as-a-service products, downloadable software, and professional services (collectively, the “Services”) provided by Saaniya Software LLC (“Company,” “we,” “us,” or “our”), a Wisconsin limited liability company. Product brands include GuruVidyaZen, GuruVidyaZen School SISLMS, SISMMS, GuruVidyaZen Riyaz Studio, Saarthee CoPlanner, Saarthee Fleet Manager, Saaniya EMR, and other portfolio products on nasneeraj.com. These Terms are"
+    },
+    {
+      "id": "/terms#1",
+      "path": "/terms",
+      "title": "Terms of Service — Saaniya Software LLC",
+      "text": "Saarthee CoPlanner, Saarthee Fleet Manager, Saaniya EMR, and other portfolio products on nasneeraj.com. These Terms are a contract with the Company, not with any individual member, officer, or developer personally. 2. Acceptance By accessing or using the Services, you agree to be bound by these Terms. If you use the Services on behalf of an organization, you represent that you have authority to bind that organization, and “you” refers to both you and that organization. 3. Eligibility and minors You must be at least 18 (or the age of majority in your jurisdiction) to create an account, unless you use an education product solely through a school or academy Customer that has agreed to a data processing arrangement. We do not knowingly allow direct-to-child account creation outside a school contract. Report suspected underage direct accounts to saaniyasoftware@nasneeraj.com . 4. Accounts"
+    },
+    {
+      "id": "/terms#2",
+      "path": "/terms",
+      "title": "Terms of Service — Saaniya Software LLC",
+      "text": "tion outside a school contract. Report suspected underage direct accounts to saaniyasoftware@nasneeraj.com . 4. Accounts You are responsible for maintaining the confidentiality of account credentials and for all activities under your account. Notify us promptly of unauthorized use. Do not share tenant-admin access in a way that bypasses billed seats or security controls. 5. Subscription, fees, and refunds Paid Services are billed as disclosed at signup or in an invoice/SOW, in U.S. dollars unless stated otherwise. Fees may be processed by third-party processors (for example Stripe or Razorpay). Except where required by law or expressly stated in a written refund policy, fees are non-refundable. Applicable cancellation, refund, and proration rules at the time of purchase are part of these Terms. Taxes (including VAT/GST where required) are extra unless stated. 6. Acceptable use You agree"
+    },
+    {
+      "id": "/terms#3",
+      "path": "/terms",
+      "title": "Terms of Service — Saaniya Software LLC",
+      "text": "e are part of these Terms. Taxes (including VAT/GST where required) are extra unless stated. 6. Acceptable use You agree not to: use the Services to violate any law, regulation, or third-party right; reverse engineer or attempt to extract source code except as permitted by law; upload malicious code, bypass security controls, or interfere with Service integrity; probe or access other tenants’ data; use the Services to generate or disseminate illegal content, spam, or infringing material; upload protected health information (PHI) or regulated medical/financial document sets unless a separate written compliance program exists (none today); use the Services for medical, legal, financial, or other regulated decisions without independent professional review. Regulated-work decline: We do not accept HIPAA / PHI or regulated medical-financial processing without a separate written compliance"
+    },
+    {
+      "id": "/terms#4",
+      "path": "/terms",
+      "title": "Terms of Service — Saaniya Software LLC",
+      "text": "rk decline: We do not accept HIPAA / PHI or regulated medical-financial processing without a separate written compliance program. 7. Your content You retain rights in content you submit (“User Content”). You grant the Company a worldwide, non-exclusive, royalty-free license to host, store, process, transmit, display, and create derivative works of User Content solely to provide and improve the Services. You represent that you have all rights necessary to grant this license. Customer data remains Customer’s property; school education records remain subject to the school’s policies and applicable law. 8. AI features Certain Services use artificial intelligence or machine-learning models, including third-party models. AI outputs may be inaccurate, incomplete, or inappropriate. You must review AI outputs before relying on them. We do not warrant that AI outputs are fit for any particular"
+    },
+    {
+      "id": "/terms#5",
+      "path": "/terms",
+      "title": "Terms of Service — Saaniya Software LLC",
+      "text": "opriate. You must review AI outputs before relying on them. We do not warrant that AI outputs are fit for any particular purpose. AI outputs are not medical, legal, financial, or professional advice. See our Disclaimer . Subject to model-provider terms and applicable law, we assign to you our rights (if any) in AI-generated output produced from your inputs, excluding pre-existing Company tools, prompts, or libraries. We do not use Customer Content to train public foundation models unless a written order says so. 9. Education products — FERPA / COPPA Where Services are provided to K–12 schools or other education institutions, we may receive student personally identifiable information. In that role we act as a processor / “school official” with a “legitimate educational interest” under FERPA only to the extent set forth in a separate written Data Processing Addendum or School Service"
+    },
+    {
+      "id": "/terms#6",
+      "path": "/terms",
+      "title": "Terms of Service — Saaniya Software LLC",
+      "text": "onal interest” under FERPA only to the extent set forth in a separate written Data Processing Addendum or School Service Agreement. Product-specific details: Education Privacy Addendum . We do not knowingly collect personal information directly from children under 13 outside an institutional context that authorizes such collection. 10. Intellectual property Except for User Content and third-party components licensed separately, all rights in the Services—including software, designs, and marks—are owned by Saaniya Software LLC or its licensors. Product and brand names listed above are trade names and/or unregistered service marks of the Company. 11. Beta / pilot features Beta, pilot, or preview features are provided “as is” and may change or be withdrawn without notice. 12. Disclaimers THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE"
+    },
+    {
+      "id": "/terms#7",
+      "path": "/terms",
+      "title": "Terms of Service — Saaniya Software LLC",
+      "text": "notice. 12. Disclaimers THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE. 13. Limitation of liability TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR EXEMPLARY DAMAGES, OR FOR LOST PROFITS, REVENUE, OR DATA, ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICES. OUR TOTAL AGGREGATE LIABILITY UNDER THESE TERMS WILL NOT EXCEED THE GREATER OF (A) USD $100 OR (B) THE AMOUNT PAID BY YOU TO US FOR THE SERVICES IN THE TWELVE (12) MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM. 14. Indemnification You will indemnify and hold harmless the Company and its officers, employees,"
+    },
+    {
+      "id": "/testimonials#0",
+      "path": "/testimonials",
+      "title": "Testimonials & Case Studies | Saaniya Software LLC",
+      "text": "Testimonials & Case Studies | Saaniya Software LLC Testimonials & Partners Institutions using Saaniya Software LLC products. More customer stories will be published as partners share them. School partner Milwaukee Marathi School More success stories coming soon We publish only verified partner feedback. If your school or academy uses our products and wants to share a story, contact us. Share Your Story Ready to transform your school? Talk with Saaniya Software LLC about SISLMS, GuruVidyaZen, and related products. Request a Demo Get Started"
+    },
+    {
+      "id": "/upwork#0",
+      "path": "/upwork",
+      "title": "Working with Saaniya Software on Upwork | Explained",
+      "text": "Working with Saaniya Software on Upwork | Explained Marketplace engagement · explained Working with Saaniya Software on Upwork This page explains how clients can engage Saaniya Software LLC through Upwork for custom software work—alongside our public products and direct professional services. It is not a price list or project catalog. Upwork profile — coming soon Contact us directly Professional services Agency profile link will appear here when the public Upwork listing is live. What Upwork is for (for us) Upwork is one channel to hire Saaniya Software LLC for scoped software work under marketplace contracts. Clients who already know us—or prefer email—can still use our contact form and services page. Step 1 Review our live products and this site so you know the kind of systems we ship. Step 2 When our Upwork profile is live, open it and send a clear brief (goals, timeline, stack"
+    },
+    {
+      "id": "/upwork#1",
+      "path": "/upwork",
+      "title": "Working with Saaniya Software on Upwork | Explained",
+      "text": "kind of systems we ship. Step 2 When our Upwork profile is live, open it and send a clear brief (goals, timeline, stack preferences). Step 3 Agree scope on Upwork—milestones or hourly—then work proceeds under that contract. Step 4 Prefer direct? Use Contact or Professional Services; we route the same capability set. Capabilities Soft themes we take through Upwork or direct engagement—aligned with our shipped products. Full-stack SaaS Web apps, dashboards, multi-tenant portals, payments, and admin tooling on a modern cloud stack. Architecture & planning System design, technology selection, security and data boundaries, and phased implementation roadmaps. AI-assisted delivery Human-over-the-Loop (HOTL) practice: AI accelerates coding; people own architecture, security, and production quality. Example engagement types Illustrative shapes—not fixed packages, not priced tiers, and not our"
+    },
+    {
+      "id": "/upwork#2",
+      "path": "/upwork",
+      "title": "Working with Saaniya Software on Upwork | Explained",
+      "text": ", and production quality. Example engagement types Illustrative shapes—not fixed packages, not priced tiers, and not our private Upwork catalog. SaaS MVP or rebuild Take a product idea or legacy app to a first production slice: auth, core workflows, database, and deploy. Multi-tenant / portal work Role-based access, school or academy-style hubs, guardian or staff portals, and careful data isolation. Architecture review Short engagement to map stack choices, risks, and a phased plan before a larger build. Integrations & automation APIs, payments, calendars, messaging, or workflow glue—scoped to what the product already needs. Live portfolio (public products) Evidence you can open today—same products we cite on the company site. GuruVidyaZen Academy management SaaS. Open platform School SISLMS K–8 school & learning hub. Overview · Live app More on this site SISMMS, Riyaz Studio, Saarthee"
+    },
+    {
+      "id": "/upwork#3",
+      "path": "/upwork",
+      "title": "Working with Saaniya Software on Upwork | Explained",
+      "text": "n platform School SISLMS K–8 school & learning hub. Overview · Live app More on this site SISMMS, Riyaz Studio, Saarthee products, Astrology Guide. See products Stack we commonly use Next.js · React · TypeScript · PostgreSQL (Supabase / Neon) · Vercel · auth & RLS · Stripe and related APIs when the product needs them. Note This page does not publish Upwork catalog listings, package tiers, or pricing. Marketplace rates and deliverables are agreed on Upwork (or in a direct statement of work). Saaniya Software LLC remains the company behind the work; nasneeraj.com is the public product and information hub."
+    },
+    {
+      "id": "/vision#0",
+      "path": "/vision",
+      "title": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms",
+      "text": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms Beyond Data Entry The Era of School Intelligence Why Modern Schools Are Moving From Legacy ERPs to AI-Native Platforms The \"Legacy Trap\" in Domain Technology For the last two decades, management systems have functioned essentially as digital filing cabinets . Systems like PowerSchool or generic studio apps were built with one goal: Storage . They store records, they store attendance, and they store schedules. But they do not think . In 2025, institutions face new challenges: administrative burnout, personalized learning mandates, and traditional preservation. A \"digital filing cabinet\" is no longer enough. Schools and academies need a system that works as hard as their staff does. The Hidden Cost of \"Legacy\" Time Theft: Teachers spend up to 10 hours/week on administrative data entry. Data Silos:"
+    },
+    {
+      "id": "/vision#1",
+      "path": "/vision",
+      "title": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms",
+      "text": "es. The Hidden Cost of \"Legacy\" Time Theft: Teachers spend up to 10 hours/week on administrative data entry. Data Silos: Attendance data doesn't talk to grade data, missing early warning signs. IT Dependency: Simple reports require a ticket to the IT department. The Saaniya Software LLC Solution: AI-Native Domain Platforms Saaniya Software LLC builds Intelligence Platforms , not just ERPs. By building on modern, cloud-native infrastructure and integrating Generative AI at the core, we have transformed management software from a passive database into an active assistant. Our Flagship Platforms 1. SISLMS: School Intelligence Beyond data storage—it's about student success. SISLMS uses proactive intervention engines to predict at-risk students before they fail. 2. GuruVidyaZen: Academy Heritage Preserving traditional pedagogy with modern tech. From 7-year repertoire vaults to AI stylistic"
+    },
+    {
+      "id": "/vision#2",
+      "path": "/vision",
+      "title": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms",
+      "text": "dyaZen: Academy Heritage Preserving traditional pedagogy with modern tech. From 7-year repertoire vaults to AI stylistic analysis of Indian classical arts. Core Differentiators & Features A. The \"Daily Log\" Intelligence Legacy systems treat attendance and behavior as separate data islands. Saaniya Software LLC unifies them. The Feature: Our Daily Logs module captures Attendance, Homework Scores, Participation, and Activity Scores in a single, bulk-entry grid. The Value: This creates a high-resolution picture of student performance. You don't just see who is absent; you see how attendance correlates with participation drops in real-time . B. Proactive Intervention (The \"At-Risk\" Engine) Legacy systems record failure after it happens. Saaniya Software LLC predicts it. The Feature: The At-Risk Student Indicator and Formative Gap Analysis reports automatically synthesize grade trends,"
+    },
+    {
+      "id": "/vision#3",
+      "path": "/vision",
+      "title": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms",
+      "text": "it. The Feature: The At-Risk Student Indicator and Formative Gap Analysis reports automatically synthesize grade trends, attendance patterns, and daily participation logs. The Value: Counselors receive an \"Early Warning\" list before a student fails, allowing for timely, human intervention rather than retroactive punishment. C. Teacher Retention via Automation We use automation to remove the \"grunt work\" that leads to burnout. Google Classroom Integration: One-click sync for courses and rosters means teachers never have to double-enter data. Bulk Operations: Assign roles, send emails, or update logs for 30 students in seconds, not minutes. Teacher Efficiency Reports: Administrators can visualize grading timeliness and log frequency to support teachers who are falling behind before they burn out. D. Integrated Financial Management Private and charter schools often juggle a separate"
+    },
+    {
+      "id": "/vision#4",
+      "path": "/vision",
+      "title": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms",
+      "text": "ling behind before they burn out. D. Integrated Financial Management Private and charter schools often juggle a separate accounting tool. Saaniya Software LLC includes a built-in School Ledger . The Feature: Track income, expenses, and fees directly alongside student records. Generate AR Aging and Revenue Analysis reports instantly. The Value: You get a 360-degree view of your school's health—academic AND financial—in one dashboard. Why a Solo AI Developer Can Compete with Giants History in the software industry shows that solo founders and small teams using modern tech often disrupt massive incumbents precisely because the incumbents are too big to move fast. You are not competing with PowerSchool on \"breadth\" (having 10,000 features). You are competing on agility, user experience, and cost . The Legacy Trap Code written 15–20 years ago Every new feature must be \"glued\" onto ancient"
+    },
+    {
+      "id": "/vision#5",
+      "path": "/vision",
+      "title": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms",
+      "text": "user experience, and cost . The Legacy Trap Code written 15–20 years ago Every new feature must be \"glued\" onto ancient codebase Slow, buggy, and hard to update 500 engineers take 6 months to deploy what you can build in one week The Clean Slate Advantage Built with modern tech (Supabase, Vercel, AI) in 2025 Clean architecture from Day 1 Fast, reliable, and easy to update One developer can build in one week what takes legacy teams six months Legacy Cost Structure Bain Capital bought PowerSchool for $5.6 billion Must charge high prices to pay back debt Cannot afford to care about small schools with $5,000 budgets Loses money if they talk to anyone paying less than $50k/year Saaniya Software LLC Cost Structure Founder-led, agile company Incredibly low \"burn rate\" Can charge $8/student and be highly profitable Built for Wisconsin schools, not Wall Street Customer Service as a Feature"
+    },
+    {
+      "id": "/vision#6",
+      "path": "/vision",
+      "title": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms",
+      "text": "an charge $8/student and be highly profitable Built for Wisconsin schools, not Wall Street Customer Service as a Feature PowerSchool: If a Principal at a small Wisconsin school finds a bug, they file a ticket that goes into a black hole. They will likely never talk to a human who can fix it. Saaniya Software LLC: When that Principal emails you, the founder fixes it that afternoon. For a frustrated school administrator, that level of responsiveness is worth more than any certified compliance badge. AI Native vs. AI \"Add-On\" Legacy: AI as Marketing Gimmick Adding AI to justify price hikes Clunky chatbot floating on top of old data AI features feel \"bolted on\" Limited functionality and poor integration Saaniya Software LLC: AI at the Core Built with AI from Day 1 Native AI capabilities throughout the platform Auto-grade, generate lesson plans, predict risk factors Designed for AI from the"
+    },
+    {
+      "id": "/vision#7",
+      "path": "/vision",
+      "title": "The Future of Intelligence | Saaniya Software LLC Vision - AI-Native Legacy Platforms",
+      "text": "AI capabilities throughout the platform Auto-grade, generate lesson plans, predict risk factors Designed for AI from the ground up AI \"Superpower\" Use Cases Here is exactly where your AI-native architecture beats their 20-year-old code: Use Case A: The \"Natural Language\" Report The PowerSchool Way: A Principal wants to know \"Which students are failing Math and have missed more than 5 days?\" Process: They have to open the \"Reports\" module, find the right filter, select specific fields, export to Excel, and manually filter. Or they have to email IT and wait 3 days. The Saaniya Software LLC Way (AI-Native): The Principal types into a search bar: \"Show me 8th graders failing Math with high absenteeism.\" Result: Your AI translates that text into a SQL query and generates the list instantly. Value: You just saved the Principal 2 hours of frustration. Use Case B: The \"Magic\" Scheduler The"
+    },
+    {
+      "id": "/visiting-card#0",
+      "path": "/visiting-card",
+      "title": "Visiting card | Saaniya Software LLC",
+      "text": "Visiting card | Saaniya Software LLC ← Saaniya Software LLC Visiting card Brand front from your Saaniya Software artwork, with a QR code to the company website. Clean logo back for double-sided print. Size 3.5 × 2 in Resolution 300 dpi QR https://saaniya-software.nasneeraj.com Download front PNG Download back PNG Download print sheet Download QR only Preview Front — name, tagline, gold wave, contact, website QR Back — logo and tagline Letter print sheet Print at actual size (no “fit to page”). Cut on the grey border. Website: saaniya-software.nasneeraj.com · Email: saaniyasoftware@nasneeraj.com"
+    },
+    {
+      "id": "/website-services#0",
+      "path": "/website-services",
+      "title": "Website Design, Development & Maintenance | Saaniya Software LLC",
+      "text": "Website Design, Development & Maintenance | Saaniya Software LLC Saaniya Software LLC Website design, development & maintenance From choosing a domain to launching on social media — we plan, build, host, and keep your site working so schools, studios, and local organizations can focus on teaching and community. Start a website project See Milwaukee Shala End-to-end One partner from name to presence Most organizations do not need a dozen vendors. They need a clear path: a good domain, a site that looks like them, a host that stays up, and a simple way to be found online. 01 Domain & identity Help choosing and registering a domain, setting DNS, email basics, and aligning the site name with how people already know your school or business. 02 Design that fits the place Structure, typography, photography direction, and copy tone for language schools, arts studios, clinics, and community"
+    },
+    {
+      "id": "/website-services#1",
+      "path": "/website-services",
+      "title": "Website Design, Development & Maintenance | Saaniya Software LLC",
+      "text": "e Structure, typography, photography direction, and copy tone for language schools, arts studios, clinics, and community organizations — not a generic template look. 03 Build & launch Fast, mobile-first pages: programs, schedules, enrollment or inquiry forms, maps, and contact — deployed on modern hosting with HTTPS and analytics when you want them. 04 Hosting & maintenance Updates, content edits, uptime checks, dependency and security patches, and seasonal refresh so the site does not quietly go stale after launch day. 05 Social media marketing Profile setup, post templates, launch announcements, and a practical posting rhythm so the website and Facebook / Instagram point to each other and bring people in. What you get Built for real schedules Language schools and small organizations need clarity more than flash. We keep the first visit simple: who you are, what you teach, how to join."
+    },
+    {
+      "id": "/website-services#2",
+      "path": "/website-services",
+      "title": "Website Design, Development & Maintenance | Saaniya Software LLC",
+      "text": "ll organizations need clarity more than flash. We keep the first visit simple: who you are, what you teach, how to join. Programs & schedules Class offerings, levels, ages, and how to inquire or enroll without hunting through menus. Forms that reach you Interest, placement, and contact forms wired to your inbox — not abandoned in a dashboard you never open. Findable online Sensible page titles, map and NAP details, and social links so search and shares land on the right place. Care after launch Monthly or seasonal maintenance so hours, fees, and events stay accurate. Featured engagement Milwaukee Shala A language-school website engagement for milwaukeeshala.org — domain, design, development, and go-live presence so families can find programs and get in touch. The new site is in active development. milwaukeeshala.org · Language school Three layers Design. Development. Care. Pick a full"
+    },
+    {
+      "id": "/website-services#3",
+      "path": "/website-services",
+      "title": "Website Design, Development & Maintenance | Saaniya Software LLC",
+      "text": "site is in active development. milwaukeeshala.org · Language school Three layers Design. Development. Care. Pick a full package or start with launch and add maintenance and social once the site is live. Design Brand-aware layout, photography guidance, and copy structure that reads clearly on phone and desktop. Development Clean static or Next.js sites, forms, DNS, SSL, analytics, and deploy pipelines you can hand off or keep with us. Maintenance & marketing Content updates, seasonal campaigns, and social kits so the website is not the last thing anyone remembers to update. Next step Tell us about your school or organization Share what you teach, whether you already own a domain, and whether you need launch-only or ongoing care. We will reply with a clear scope — not a vague proposal deck. Contact Saaniya Software saaniyasoftware@nasneeraj.com All consulting services"
+    },
+    {
+      "id": "/wsdpa#0",
+      "path": "/wsdpa",
+      "title": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen Wisconsin Student Data Privacy Agreement (WSDPA) Version: 2.0 (Improved) | Date: December 2025 Template: WI-NDPA V1 | Provider: Saaniya Software LLC Contact: Saaniya Software, saaniyasoftware@nasneeraj.com Ready to Sign Saaniya Software LLC is ready and willing to sign the standard WSDPA (WI-NDPA V1) with any Wisconsin school district. This contract template is pre-prepared with all required provisions and ready to execute immediately upon LEA request. Contact us to execute this agreement: saaniyasoftware@nasneeraj.com PARTIES Local Education Agency (LEA): [School District/School Name] [Address] [City, State ZIP] [Contact Person] [Title] [Email] [Phone] Provider: Saaniya Software LLC [Business Address - To be added upon LLC formation] Wisconsin, United States Contact: Saaniya Software Email: saaniyasoftware@nasneeraj.com"
+    },
+    {
+      "id": "/wsdpa#1",
+      "path": "/wsdpa",
+      "title": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "To be added upon LLC formation] Wisconsin, United States Contact: Saaniya Software Email: saaniyasoftware@nasneeraj.com Website: nasneeraj.com RECITALS WHEREAS, the LEA is a Local Education Agency as defined by the Family Educational Rights and Privacy Act (FERPA), 20 U.S.C. § 1232g, and Wisconsin Statute § 118.125; and WHEREAS, the Provider offers Student Information System (SIS) and Learning Management System (LMS) services that may involve the collection, storage, and processing of student data; and WHEREAS, the documents and data transferred from LEAs and created by the Provider's Services are subject to Wisconsin state student privacy laws, including Wis. Stat. § 118.125 (Pupil Records) and the Wisconsin Student Data Privacy Agreement (WSDPA); and WHEREAS, the parties wish to enter into this Agreement to ensure compliance with all applicable federal and state student privacy laws;"
+    },
+    {
+      "id": "/wsdpa#2",
+      "path": "/wsdpa",
+      "title": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "rties wish to enter into this Agreement to ensure compliance with all applicable federal and state student privacy laws; NOW, THEREFORE, the parties agree as follows: 1. DEFINITIONS 1.1 \"Student Data\" Means any information that directly relates to a student that is maintained by the LEA and may include, but is not limited to: Personally Identifiable Information (PII) Educational records as defined by FERPA Pupil records as defined by Wis. Stat. § 118.125 Student names, dates of birth, enrollment information Academic records, grades, attendance Guardian/parent contact information Any other information that could be used to identify a student 1.2 \"Services\" Means the SISLMS and GuruVidyaZen platforms by Saaniya Software LLC, including: Student Information System (SIS) and Academy Management functionality Learning Management System (LMS) and Repertoire Vault functionality Related software,"
+    },
+    {
+      "id": "/wsdpa#3",
+      "path": "/wsdpa",
+      "title": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "d Academy Management functionality Learning Management System (LMS) and Repertoire Vault functionality Related software, applications, and services provided by Saaniya Software LLC 2. DATA OWNERSHIP AND CONTROL 2.1 Ownership All Student Data remains the exclusive property of the LEA and the student. Provider acknowledges that it has no ownership rights to Student Data. 2.2 Control The LEA retains full control over Student Data, including the right to: Access all Student Data at any time Request corrections to Student Data Request deletion of Student Data (subject to legal retention requirements) Export Student Data in standard formats (CSV, JSON) Terminate access to Student Data 3. PERMITTED USES OF STUDENT DATA 3.1 Educational Purpose Provider may use Student Data solely for: Providing the Services to the LEA Maintaining and improving the Services Performing authorized operations and"
+    },
+    {
+      "id": "/wsdpa#4",
+      "path": "/wsdpa",
+      "title": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "olely for: Providing the Services to the LEA Maintaining and improving the Services Performing authorized operations and support Complying with legal obligations 3.2 Prohibited Uses Provider SHALL NOT : Sell Student Data to any third party Use Student Data for advertising or marketing purposes Use Student Data for any purpose other than providing the Services Disclose Student Data to third parties except as expressly permitted in this Agreement Mine Student Data for commercial purposes Create profiles of students for non-educational purposes 4. COMPLIANCE WITH APPLICABLE LAWS 4.1 FERPA Compliance Provider agrees to comply with the Family Educational Rights and Privacy Act (FERPA), 20 U.S.C. § 1232g, and its implementing regulations, 34 C.F.R. Part 99. Provider acts as a \"School Official\" with a \"legitimate educational interest\" as defined by FERPA. 4.2 Wisconsin Statute § 118.125"
+    },
+    {
+      "id": "/wsdpa#5",
+      "path": "/wsdpa",
+      "title": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "cts as a \"School Official\" with a \"legitimate educational interest\" as defined by FERPA. 4.2 Wisconsin Statute § 118.125 Compliance Provider agrees to comply with all applicable Wisconsin student privacy laws, including Wis. Stat. § 118.125 regarding pupil records and confidentiality. 4.3 COPPA Compliance Provider agrees to comply with the Children's Online Privacy Protection Act (COPPA), 15 U.S.C. §§ 6501-6506, where applicable. 5. SECURITY MEASURES 5.1 Security Standards Provider shall implement and maintain reasonable security procedures and practices appropriate to the nature of Student Data, including: Encryption: AES-256 encryption for data at rest, TLS 1.2+ for data in transit Access Controls: Role-Based Access Control (RBAC) and Row-Level Security (RLS) at database level Infrastructure Security: SOC 2 Type 2 certified cloud infrastructure (Supabase/AWS) Regular Security"
+    },
+    {
+      "id": "/wsdpa#6",
+      "path": "/wsdpa",
+      "title": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": ") at database level Infrastructure Security: SOC 2 Type 2 certified cloud infrastructure (Supabase/AWS) Regular Security Assessments: Vulnerability scanning and security audits 5.2 Security Breach Notification In the event of an unauthorized disclosure of Student Data, Provider shall: Notify the LEA within 72 hours of discovery Provide detailed information about the breach Cooperate with the LEA in investigating and remediating the breach Comply with all applicable breach notification laws 6. DATA RETENTION AND DELETION 6.1 Retention Period Provider shall retain Student Data only for as long as: Necessary to provide the Services Required by applicable law (Wis. Stat. § 16.61 - minimum 7 years for public records) Authorized by the LEA 6.2 Deletion Upon Termination Upon termination of this Agreement or upon written request by the LEA: Provider shall delete or return all Student Data within"
+    },
+    {
+      "id": "/wsdpa#7",
+      "path": "/wsdpa",
+      "title": "WSDPA Contract - Saaniya Software LLC | SISLMS & GuruVidyaZen",
+      "text": "ermination of this Agreement or upon written request by the LEA: Provider shall delete or return all Student Data within thirty (30) days Provider shall provide written confirmation of deletion 7. THIRD-PARTY DISCLOSURES 7.1 Authorized Third Parties Provider may disclose Student Data only to: Subcontractors necessary to provide the Services, who are bound by equivalent privacy and security obligations Cloud Infrastructure Providers: Supabase (database), Vercel (hosting), AWS (infrastructure) Law enforcement when required by law or court order 8. AUDIT AND MONITORING 8.1 Audit Logs Provider shall maintain comprehensive audit logs of all access to Student Data, modifications, exports, and security events. Audit logs shall be retained for a minimum of one (1) year or as required by law. 9. PARENTAL RIGHTS 9.1 FERPA Rights Provider acknowledges that parents and eligible students have rights"
+    }
+  ]
+}

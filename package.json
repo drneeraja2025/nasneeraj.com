@@ -2,8 +2,17 @@
   "name": "nasneeraj.com",
   "version": "1.0.0",
   "private": true,
-  "description": "NAS marketing site — static HTML on Vercel",
+  "description": "Saaniya Software marketing site — static HTML on Vercel",
   "scripts": {
-    "phase:deploy": "node scripts/phase-deploy.mjs"
+    "phase:deploy": "node scripts/phase-deploy.mjs",
+    "verify:chat": "node scripts/verify-saaniya-chat.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.0",
+    "ai": "^7.0.113"
+  },
+  "devDependencies": {
+    "jpeg-js": "^0.4.4",
+    "pngjs": "^7.0.0"
   }
 }

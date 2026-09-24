@@ -1,22 +1,22 @@
-# Session handoff — 23 Sep 2026
+# Session handoff — 24 Sep 2026
 
-Office Suite and EMR country pricing are on the site for review. Prices are a pilot guide and will be revised when active build starts.
+Saaniya, the site chatbot, is on the marketing pages. She answers from a build-time index of the public HTML and can store a thumbs-up answer in Vercel Blob when `BLOB_READ_WRITE_TOKEN` is set.
 
-## Office Suite
+## Chat
 
-- Page: `office-suite.html`
-- Needs form: `office-suite-needs.html` (emails `saaniyasoftware@nasneeraj.com`; not a Google Form)
-- Pricing: `office-suite-pricing.html` and `assets/office-suite/suite.js`
-- Bundles: Desk, Connected, Full suite. Custom software is scoped separately.
+- Widget: `assets/saaniya-chat.js` and `assets/saaniya-chat.css`
+- Avatar: `assets/mascot/girl/saaniya-chat-avatar.png` (the girl, from `girl-work-school-a.png`)
+- Routes: `api/chat.js` (streams `openai/gpt-5.4-mini` through the AI Gateway), `api/chat-learn.js`
+- Index: `node scripts/build-site-index.mjs` → `data/site-index.json`
+- Check: `npm run verify:chat`
+- Pages with the widget: home, services, FAQ, contact, SISLMS, SISMMS, Gurukul, Saarthee, Fleet, EMR, Office Suite, compare, security
+- `guruvidyazen.html` is only a redirect, so it has no widget
 
-## EMR
+## Env (Vercel, not git)
 
-- Country picker on `saaniya-emr.html` and `saaniya-emr-pricing.html`
-- Existing India, SE Asia, Europe, AU/NZ, and LATAM prices are unchanged
-- New bands: South Asia, Africa, Middle East, UK, and other high-income countries (Canada, Japan, Korea, Singapore, Switzerland, Israel) at the Australia USD band
-- United States still has no public price
-- Survey stays the existing Google Form. The public form does not show which inbox receives responses. The site contact is `saaniyasoftware@nasneeraj.com`.
+- AI Gateway on Vercel uses OIDC when deployed. Local calls need `AI_GATEWAY_API_KEY`.
+- Learning stays off until `BLOB_READ_WRITE_TOKEN` exists. Chat still works.
 
-## Not in this ship
+## Earlier ship still live
 
-Astrology and demo video files that were already dirty in the working tree.
+Office Suite and EMR country pricing from 23 Sep. Astrology and demo video files in the working tree were left uncommitted.
