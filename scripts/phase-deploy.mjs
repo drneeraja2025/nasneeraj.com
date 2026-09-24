@@ -19,8 +19,7 @@ const ENVS = {
   production: {
     branch: config.production.branch,
     label: config.production.label,
-    matchEnv: (name) =>
-      name.includes(PROJECT_FILTER) && name.toLowerCase().includes("production"),
+    matchEnv: (name) => name.toLowerCase().includes("production"),
   },
   preview: {
     branch: config.preview.branch,
