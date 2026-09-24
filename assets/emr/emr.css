@@ -321,14 +321,12 @@ body.page-home .site-header:not(.is-solid) {
 }
 
 .site-nav {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.5rem 1.25rem;
   font-size: 0.875rem;
-}
-
-@media (min-width: 1024px) {
-  .site-nav { display: flex; }
 }
 
 .site-nav a {
@@ -383,13 +381,7 @@ body:not(.page-home) .nav-company:hover {
 }
 
 .site-header__mobile {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-@media (min-width: 1024px) {
-  .site-header__mobile { display: none; }
+  display: none;
 }
 
 .btn-mobile-pricing {

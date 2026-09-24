@@ -163,7 +163,7 @@
       align-items: center;
     }
     @media (min-width: 900px) {
-      .hero { grid-template-columns: 1.1fr .9fr; }
+      .hero { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); }
     }
     .hero h1 {
       font-family: "Fredoka", sans-serif;
@@ -454,6 +454,8 @@
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <link rel="stylesheet" href="assets/page-scenes.css?v=20260923m">
+    <script defer src="assets/mascot-motion.js?v=20260923m"></script>
 </head>
 <body class="bg-sky">
   <a class="skip" href="#main">Skip to main content</a>
@@ -493,19 +495,7 @@
           <a class="btn btn-ghost" href="https://guruvidyazen.nasneeraj.com/gurukul/login?intent=school_sislms">School log in</a>
         </div>
       </div>
-      <div class="art-panel float-slow" aria-hidden="true">
-        <div class="twinkle t1"></div>
-        <div class="twinkle t2"></div>
-        <div class="twinkle t3"></div>
-        <div class="cloud c1"></div>
-        <div class="cloud c2"></div>
-        <div class="hill"></div>
-        <div class="sun-face">
-          <span class="eye l"></span>
-          <span class="eye r"></span>
-          <span class="smile"></span>
-        </div>
-      </div>
+            <img class="page-scene page-scene--slot" src="assets/pages/sislms-hero.png" alt="The Saaniya mascot arranging books on a school desk">
     </div>
 
     <div class="ribbon">
@@ -555,6 +545,8 @@
     </section>
 
     <section aria-labelledby="features">
+      
+        <img class="page-scene page-scene--mid" src="assets/pages/sislms-mid.png" alt="The Saaniya mascot pinning a class card">
       <h2 id="features" class="section-title">What schools can explore</h2>
       <p class="section-sub">What you see depends on your school’s tenant, roles, and what your admin enables—<strong>in-app Help</strong> carries the live, authoritative list.</p>
       <div class="cards">

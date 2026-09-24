@@ -12,6 +12,21 @@ body.nav-collapsed {
     margin-left: 0 !important;
 }
 
+/* The sidebar already takes 268px on the left. Balance that on the right
+   so headings and columns sit on the screen center, then let full-bleed
+   bands paint back out to the screen edge. */
+@media (min-width: 961px) {
+    body:not(.nav-collapsed) {
+        padding-right: var(--side-nav-width);
+    }
+
+    body:not(.nav-collapsed) > .hero,
+    body:not(.nav-collapsed) > footer {
+        margin-right: calc(var(--side-nav-width) * -1);
+        padding-right: calc(var(--side-nav-width) + 2.5rem);
+    }
+}
+
 nav.navbar {
     position: fixed !important;
     top: 0 !important;

@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/emr/emr.css">
+    <link rel="stylesheet" href="assets/page-scenes.css?v=20260923m">
+    <script defer src="assets/mascot-motion.js?v=20260923m"></script>
 </head>
 <body>
   <header class="site-header is-solid no-print">
@@ -40,6 +42,7 @@
         <p class="section__eyebrow">Cybersecurity</p>
         <h1 class="section__title">Protect the record where it is written.</h1>
         <p class="section__lead">Saaniya EMR encrypts the clinical database on clinic hardware and keeps diagnoses, notes, and prescriptions out of the cloud entirely. Booking contacts in the managed portal are personal data, and are treated as such.</p>
+        <img class="page-scene" src="assets/pages/emr-security-hero.png" alt="The Saaniya mascot locking a clinic folder">
         <div class="section__body feature-grid">
           <article class="reveal"><h3>AES-256 encryption at rest</h3><p>The clinical database is encrypted on disk with SQLCipher. A stolen or resold clinic PC does not hand over your patient history.</p></article>
           <article class="reveal" style="--reveal-delay:60ms"><h3>Keys derived properly, not guessed</h3><p>Argon2id key derivation with a per-install salt. Your passphrase is never used directly as the encryption key, and the session key lives in the operating system keychain.</p></article>
@@ -73,6 +76,8 @@
       <div class="wrap">
         <p class="section__eyebrow">Compliance</p>
         <h2 class="section__title">Accurate claims, written agreements.</h2>
+        <img class="page-scene page-scene--mid" src="assets/pages/emr-security-mid.png" alt="The Saaniya mascot with a shield beside a closed laptop">
+        
         <p class="section__lead">The clinic is the Data Fiduciary and Saaniya Software LLC is a processor for the booking layer only. That relationship is contractual, documented, and deliberately narrow.</p>
         <div class="section__body feature-grid">
           <article class="reveal"><h3>You are the Data Fiduciary. We are a processor.</h3><p>Under India's DPDP Act the clinic determines why and how patient data is processed. Saaniya Software LLC processes booking contacts on your behalf, under a written Data Processing Agreement supplied with your licence.</p></article>
