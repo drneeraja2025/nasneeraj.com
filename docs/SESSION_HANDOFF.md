@@ -6,7 +6,7 @@ Saaniya, the site chatbot, is on the marketing pages. She answers from a build-t
 
 - Widget: `assets/saaniya-chat.js` and `assets/saaniya-chat.css`
 - Avatar: `assets/mascot/girl/saaniya-chat-avatar.png` (the girl, from `girl-work-school-a.png`)
-- Routes: `api/chat.js` (streams `openai/gpt-5.4-mini` through the AI Gateway), `api/chat-learn.js`
+- Routes: `api/chat.js` (streams `openai/gpt-4.1-mini` through the AI Gateway), `api/chat-learn.js`
 - Index: `node scripts/build-site-index.mjs` → `data/site-index.json`
 - Check: `npm run verify:chat`
 - Pages with the widget: home, services, FAQ, contact, SISLMS, SISMMS, Gurukul, Saarthee, Fleet, EMR, Office Suite, compare, security
