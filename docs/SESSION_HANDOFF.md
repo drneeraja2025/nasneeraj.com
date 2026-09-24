@@ -5,6 +5,7 @@ Saaniya, the site chatbot, is on the marketing pages. She answers from a build-t
 ## Chat
 
 - Widget: `assets/saaniya-chat.js` and `assets/saaniya-chat.css`
+- Voice and language match GuruVidyaZen: mic, spoken replies, EN / HI / MR, female or male voice. The reply language is sent to `/api/chat`.
 - Avatar: `assets/mascot/girl/saaniya-chat-avatar.png` (the girl, from `girl-work-school-a.png`)
 - Routes: `api/chat.js` (streams `openai/gpt-4.1-mini` through the AI Gateway), `api/chat-learn.js`
 - Index: `node scripts/build-site-index.mjs` → `data/site-index.json`

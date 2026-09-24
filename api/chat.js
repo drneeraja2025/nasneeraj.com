@@ -1,4 +1,4 @@
-const { retrieve } = require("./lib/retrieve");
+const { retrieve, tokens } = require("./lib/retrieve");
 const { loadLearnedChunks } = require("./lib/learned");
 const siteIndex = require("../data/site-index.json");
 
@@ -32,6 +32,23 @@ function excerpts(hits) {
     .join("\n\n");
 }
 
+function replyLanguage(value) {
+  const code = String(value || "en").toLowerCase();
+  if (code === "hi" || code === "hi-in") return "hi";
+  if (code === "mr" || code === "mr-in") return "mr";
+  return "en";
+}
+
+function languageLine(code) {
+  if (code === "hi") {
+    return "Reply in Hindi using Devanagari. Keep paths such as /sislms and the name Saaniya Software LLC in Latin script.";
+  }
+  if (code === "mr") {
+    return "Reply in Marathi using Devanagari. Keep paths such as /sislms and the name Saaniya Software LLC in Latin script.";
+  }
+  return "Reply in English.";
+}
+
 function uniqueSources(hits) {
   const seen = new Set();
   const sources = [];
@@ -49,7 +66,9 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const messages = cleanMessages(readBody(req).messages);
+  const body = readBody(req);
+  const messages = cleanMessages(body.messages);
+  const language = replyLanguage(body.language);
   const last = messages[messages.length - 1];
   if (!last || last.role !== "user") {
     res.status(400).json({ error: "A user message is required" });
@@ -57,7 +76,9 @@ module.exports = async function handler(req, res) {
   }
 
   const learned = await loadLearnedChunks();
-  const hits = retrieve([...(siteIndex.chunks || []), ...learned], queryFrom(messages), 5);
+  let query = queryFrom(messages);
+  if (!tokens(query).length) query = "Saaniya Software products services contact";
+  const hits = retrieve([...(siteIndex.chunks || []), ...learned], query, 5);
   const sources = uniqueSources(hits);
 
   let streamText;
@@ -86,6 +107,7 @@ module.exports = async function handler(req, res) {
         "Do not invent prices, medical advice, or legal advice.",
         "Do not ask for names, emails, or other personal data.",
         "Call the company Saaniya Software LLC. Do not use NAS or a personal founder name.",
+        languageLine(language),
         "",
         excerpts(hits),
       ].join("\n"),
