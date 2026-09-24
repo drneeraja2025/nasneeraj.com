@@ -2,7 +2,7 @@ const { retrieve } = require("./lib/retrieve");
 const { loadLearnedChunks } = require("./lib/learned");
 const siteIndex = require("../data/site-index.json");
 
-const MODEL = "openai/gpt-5.4-mini";
+const MODEL = "openai/gpt-4.1-mini";
 
 function readBody(req) {
   if (req.body && typeof req.body === "object") return req.body;
@@ -92,10 +92,24 @@ module.exports = async function handler(req, res) {
       messages,
     });
 
-    for await (const delta of result.textStream) {
-      if (delta) res.write(`data: ${JSON.stringify({ type: "delta", text: delta })}\n\n`);
+    let wrote = false;
+    for await (const part of result.stream) {
+      if (part.type === "text-delta" && part.text) {
+        wrote = true;
+        res.write(`data: ${JSON.stringify({ type: "delta", text: part.text })}\n\n`);
+      } else if (part.type === "error") {
+        const message = part.error && part.error.message ? part.error.message : String(part.error || "Chat failed");
+        res.write(`data: ${JSON.stringify({ type: "error", error: message.slice(0, 300) })}\n\n`);
+      }
     }
-    res.write(`data: ${JSON.stringify({ type: "done" })}\n\n`);
+    if (!wrote) {
+      const reason = await result.finishReason;
+      res.write(
+        `data: ${JSON.stringify({ type: "error", error: `No reply from the model (${reason || "empty"})` })}\n\n`
+      );
+    } else {
+      res.write(`data: ${JSON.stringify({ type: "done" })}\n\n`);
+    }
   } catch (error) {
     const message = error && error.message ? String(error.message) : "Chat failed";
     res.write(`data: ${JSON.stringify({ type: "error", error: message.slice(0, 300) })}\n\n`);
