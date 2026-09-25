@@ -47,7 +47,8 @@ module.exports = async function handler(req, res) {
       "Cache-Control": "no-store",
     });
     res.end(Buffer.from(bytes));
-  } catch {
+  } catch (error) {
+    console.error("chat-speech", error && error.message ? error.message : error);
     res.status(502).json({ error: "Speech failed" });
   }
 };
