@@ -1,4 +1,8 @@
-const MODEL = "google/gemini-3.8-flash-tts";
+const MODEL = "fish-audio/s2.1-pro-free";
+const VOICE = {
+  female: "933563129e564b19a115bedd57b7406a",
+  male: "536d3a5e000945adb7038665781a4aca",
+};
 
 function languageCode(value) {
   const code = String(value || "en").toLowerCase();
@@ -35,11 +39,10 @@ module.exports = async function handler(req, res) {
     const result = await generateSpeech({
       model: MODEL,
       text,
+      voice: male ? VOICE.male : VOICE.female,
       language,
       outputFormat: "mp3",
-      instructions: male
-        ? "Speak as a calm man in a quiet conversation. Natural pace, warm, not an announcer."
-        : "Speak as a calm woman in a quiet conversation. Natural pace, warm, not an announcer.",
+      instructions: "Calm conversational pace, warm, not an announcer.",
     });
     const bytes = result.audio.uint8Array;
     res.writeHead(200, {
