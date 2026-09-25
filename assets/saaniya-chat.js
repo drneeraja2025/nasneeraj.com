@@ -17,6 +17,19 @@
       female: "Female",
       male: "Male",
     },
+    "es-ES": {
+      greet: "Hola, soy Saaniya. Pregúntame por los productos, los servicios o cómo contactar al equipo de Saaniya Software.",
+      placeholder: "Pregunta por nuestros productos",
+      send: "Enviar",
+      helpful: "Útil",
+      thanks: "Gracias.",
+      saved: "Guardado para el próximo índice.",
+      missing: "No encontré eso en el sitio. Usa /contact.",
+      voiceOn: "Voz activa",
+      voiceOff: "Voz apagada",
+      female: "Mujer",
+      male: "Hombre",
+    },
     "hi-IN": {
       greet: "नमस्ते, मैं सानिया हूँ। Saaniya Software के उत्पादों, सेवाओं या संपर्क के बारे में पूछें।",
       placeholder: "उत्पादों के बारे में पूछें",
@@ -68,6 +81,7 @@
   var busy = false;
   var listening = false;
   var recognition = null;
+  var spoken = null;
 
   var root = el("div", "saaniya-chat");
   var panel = el("section", "saaniya-chat-panel");
@@ -94,6 +108,7 @@
   [
     ["en-US", "EN"],
     ["hi-IN", "HI"],
+    ["es-ES", "ES"],
     ["mr-IN", "MR"],
   ].forEach(function (option) {
     var item = document.createElement("option");
@@ -208,32 +223,61 @@
   }
 
   function stopSpeaking() {
+    if (spoken) {
+      spoken.pause();
+      if (spoken.src) URL.revokeObjectURL(spoken.src);
+      spoken = null;
+    }
     if (window.speechSynthesis) window.speechSynthesis.cancel();
   }
 
-  function speak(text) {
-    if (!voiceEnabled || !window.speechSynthesis || !text) return;
-    stopSpeaking();
+  function browserSpeak(text) {
+    if (!window.speechSynthesis) return;
     var utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = voiceLanguage;
+    utterance.rate = 0.96;
     var voices = window.speechSynthesis.getVoices();
     var prefix = voiceLanguage.split("-")[0];
     var preferred = voices.find(function (voice) {
       var name = voice.name.toLowerCase();
       var matchesLang = voice.lang && voice.lang.toLowerCase().indexOf(prefix) === 0;
       if (!matchesLang) return false;
-      if (voiceType === "female") {
-        return name.indexOf("female") !== -1 || name.indexOf("zira") !== -1 || name.indexOf("heera") !== -1;
-      }
-      return name.indexOf("male") !== -1 || name.indexOf("david") !== -1 || name.indexOf("ravi") !== -1;
+      var natural = name.indexOf("natural") !== -1 || name.indexOf("neural") !== -1 || name.indexOf("google") !== -1;
+      var genderOk = voiceType === "female"
+        ? name.indexOf("male") === -1
+        : name.indexOf("male") !== -1 || name.indexOf("david") !== -1;
+      return natural && genderOk;
     });
-    if (!preferred) {
-      preferred = voices.find(function (voice) {
-        return voice.lang && voice.lang.toLowerCase().indexOf(prefix) === 0;
-      });
-    }
     if (preferred) utterance.voice = preferred;
     window.speechSynthesis.speak(utterance);
+  }
+
+  function speak(text) {
+    if (!voiceEnabled || !text) return;
+    stopSpeaking();
+    fetch("/api/chat-speech", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: text,
+        language: voiceLanguage.slice(0, 2),
+        voiceType: voiceType,
+      }),
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error("speech");
+        return response.blob();
+      })
+      .then(function (blob) {
+        if (!voiceEnabled) return;
+        spoken = new Audio(URL.createObjectURL(blob));
+        spoken.play().catch(function () {
+          browserSpeak(text);
+        });
+      })
+      .catch(function () {
+        browserSpeak(text);
+      });
   }
 
   function setOpen(open) {

@@ -35,6 +35,7 @@ function excerpts(hits) {
 function replyLanguage(value) {
   const code = String(value || "en").toLowerCase();
   if (code === "hi" || code === "hi-in") return "hi";
+  if (code === "es" || code === "es-es" || code === "es-us") return "es";
   if (code === "mr" || code === "mr-in") return "mr";
   return "en";
 }
@@ -42,6 +43,9 @@ function replyLanguage(value) {
 function languageLine(code) {
   if (code === "hi") {
     return "Reply in Hindi using Devanagari. Keep paths such as /sislms and the name Saaniya Software LLC in Latin script.";
+  }
+  if (code === "es") {
+    return "Reply in Spanish. Keep paths such as /sislms and the name Saaniya Software LLC in Latin script.";
   }
   if (code === "mr") {
     return "Reply in Marathi using Devanagari. Keep paths such as /sislms and the name Saaniya Software LLC in Latin script.";
