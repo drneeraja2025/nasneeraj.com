@@ -1,4 +1,4 @@
-const MODEL = "fish-audio/s2.1-pro-free";
+const MODEL = "fish-audio/s2.1-pro";
 const VOICE = {
   female: "933563129e564b19a115bedd57b7406a",
   male: "536d3a5e000945adb7038665781a4aca",
@@ -35,15 +35,26 @@ module.exports = async function handler(req, res) {
     return;
   }
 
+  const speech = {
+    model: MODEL,
+    text,
+    voice: male ? VOICE.male : VOICE.female,
+    language,
+    outputFormat: "mp3",
+    instructions: "Calm conversational pace, warm, not an announcer.",
+  };
+
   try {
-    const result = await generateSpeech({
-      model: MODEL,
-      text,
-      voice: male ? VOICE.male : VOICE.female,
-      language,
-      outputFormat: "mp3",
-      instructions: "Calm conversational pace, warm, not an announcer.",
-    });
+    let result;
+    try {
+      result = await generateSpeech({
+        ...speech,
+        providerOptions: { gateway: { has: ["free"] } },
+      });
+    } catch (freeError) {
+      console.error("chat-speech free", freeError && freeError.message ? freeError.message : freeError);
+      result = await generateSpeech(speech);
+    }
     const bytes = result.audio.uint8Array;
     res.writeHead(200, {
       "Content-Type": "audio/mpeg",
