@@ -1,5 +1,4 @@
-const MODEL = "fish-audio/s2.1-pro";
-const VOICE = {
+const FISH_VOICE = {
   female: "933563129e564b19a115bedd57b7406a",
   male: "536d3a5e000945adb7038665781a4aca",
 };
@@ -35,26 +34,43 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const speech = {
-    model: MODEL,
-    text,
-    voice: male ? VOICE.male : VOICE.female,
-    language,
-    outputFormat: "mp3",
-    instructions: "Calm conversational pace, warm, not an announcer.",
-  };
+  const fishVoice = male ? FISH_VOICE.male : FISH_VOICE.female;
+  const attempts = [
+    {
+      model: "fish-audio/s1",
+      voice: fishVoice,
+      providerOptions: { gateway: { has: ["free"] } },
+    },
+    {
+      model: "fish-audio/s2-pro",
+      voice: fishVoice,
+      providerOptions: { gateway: { has: ["free"] } },
+    },
+    {
+      model: "openai/tts-1",
+      voice: male ? "onyx" : "nova",
+    },
+  ];
 
   try {
     let result;
-    try {
-      result = await generateSpeech({
-        ...speech,
-        providerOptions: { gateway: { has: ["free"] } },
-      });
-    } catch (freeError) {
-      console.error("chat-speech free", freeError && freeError.message ? freeError.message : freeError);
-      result = await generateSpeech(speech);
+    let lastError;
+    for (const attempt of attempts) {
+      try {
+        result = await generateSpeech({
+          ...attempt,
+          text,
+          language,
+          outputFormat: "mp3",
+          instructions: "Calm conversational pace, warm, not an announcer.",
+        });
+        break;
+      } catch (error) {
+        lastError = error;
+        console.error("chat-speech", attempt.model, error && error.message ? error.message : error);
+      }
     }
+    if (!result) throw lastError;
     const bytes = result.audio.uint8Array;
     res.writeHead(200, {
       "Content-Type": "audio/mpeg",

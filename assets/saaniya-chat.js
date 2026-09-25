@@ -238,17 +238,26 @@
     utterance.rate = 0.96;
     var voices = window.speechSynthesis.getVoices();
     var prefix = voiceLanguage.split("-")[0];
-    var preferred = voices.find(function (voice) {
+    var best = null;
+    var bestScore = 0;
+    voices.forEach(function (voice) {
       var name = voice.name.toLowerCase();
-      var matchesLang = voice.lang && voice.lang.toLowerCase().indexOf(prefix) === 0;
-      if (!matchesLang) return false;
-      var natural = name.indexOf("natural") !== -1 || name.indexOf("neural") !== -1 || name.indexOf("google") !== -1;
-      var genderOk = voiceType === "female"
-        ? name.indexOf("male") === -1
-        : name.indexOf("male") !== -1 || name.indexOf("david") !== -1;
-      return natural && genderOk;
+      var lang = (voice.lang || "").toLowerCase();
+      if (lang.indexOf(prefix) !== 0) return;
+      var labeledMale = /(?:^|[^a-z])male(?:[^a-z]|$)/.test(name);
+      var labeledFemale = name.indexOf("female") !== -1;
+      var genderOk = voiceType === "female" ? labeledFemale || !labeledMale : labeledMale;
+      var score = 1;
+      if (name.indexOf("natural") !== -1) score += 4;
+      if (name.indexOf("neural") !== -1) score += 3;
+      if (name.indexOf("google") !== -1) score += 2;
+      if (!genderOk) score -= 6;
+      if (score > bestScore) {
+        bestScore = score;
+        best = voice;
+      }
     });
-    if (preferred) utterance.voice = preferred;
+    if (best) utterance.voice = best;
     window.speechSynthesis.speak(utterance);
   }
 
