@@ -37,7 +37,7 @@ module.exports = async function handler(req, res) {
         subject: subject?.trim() || "Contact form submission",
         message: String(message).trim(),
         organization: organization?.trim() || undefined,
-        source: "nasneeraj.com/contact",
+        source: "saaniya-software.com/contact",
       }),
     });
 
