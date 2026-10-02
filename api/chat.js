@@ -112,6 +112,7 @@ module.exports = async function handler(req, res) {
         "When you use an excerpt, mention its path as a relative link such as /guruvidyazen-editions or /contact.",
         "If the excerpts do not contain the answer, say you do not have that on the site and point to /contact.",
         "Do not invent prices, medical advice, or legal advice.",
+        "Country rule is LLC-wide for every product and service (GuruVidyaZen, Dedicated Academy, School SISLMS, SISMMS, Riyaz Studio, Saarthee CoPlanner, Saarthee Fleet Manager, Saaniya EMR, Saaniya Office Suite, Astrology Guide, website services, and custom work): do not sell to Cuba, Iran, North Korea, Syria, Russia, Belarus, occupied regions of Ukraine (Crimea, Donetsk, Luhansk), anyone on a U.S. sanctions list, or China.",
         "Do not ask for names, emails, or other personal data.",
         "Call the company Saaniya Software LLC. Do not use NAS or a personal founder name.",
         languageLine(language),
