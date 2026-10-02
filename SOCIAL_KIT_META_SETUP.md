@@ -19,7 +19,7 @@ Meta needs you signed in (or an official Meta API connection with your Business 
 
 Local files: `social-kit.html` and `social-*.html`. Assets live in `assets/social/`.
 
-**Visiting card** (brand front + website QR): https://saaniya-software.nasneeraj.com/visiting-card · files in `assets/visiting-card/`.
+**Visiting card** (brand front + website QR): https://saaniya-software.com/visiting-card · files in `assets/visiting-card/` · contact **sales@saaniya-software.com** · site **saaniya-software.com**.
 
 ## One-time Meta setup
 

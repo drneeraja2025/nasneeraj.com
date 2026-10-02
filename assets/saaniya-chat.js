@@ -73,7 +73,13 @@
     }
   }
 
-  var voiceLanguage = stored(LANG_KEY, "en-US");
+  var siteCode = "en";
+  try {
+    siteCode = localStorage.getItem("saaniya-site-lang") || "en";
+  } catch (error) {
+    siteCode = "en";
+  }
+  var voiceLanguage = siteCode === "es" ? "es-ES" : siteCode === "hi" ? "hi-IN" : stored(LANG_KEY, "en-US");
   if (!COPY[voiceLanguage]) voiceLanguage = "en-US";
   var voiceEnabled = stored(VOICE_KEY, "1") !== "0";
   var voiceType = stored(TYPE_KEY, "female") === "male" ? "male" : "female";
@@ -310,6 +316,8 @@
     voiceLanguage = COPY[lang.value] ? lang.value : "en-US";
     remember();
     applyCopy();
+    var site = voiceLanguage === "es-ES" ? "es" : voiceLanguage === "hi-IN" ? "hi" : voiceLanguage === "en-US" ? "en" : "";
+    if (site && window.saaniyaSetSiteLang) window.saaniyaSetSiteLang(site);
   });
   gender.addEventListener("click", function () {
     voiceType = voiceType === "female" ? "male" : "female";

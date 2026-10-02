@@ -25,6 +25,7 @@ function walk(dir, out = []) {
     if (!name.endsWith(".html")) continue;
     if (skipName.test(name)) continue;
     if (rel === "guruvidyazen.html") continue;
+    if (rel === "gurukul.html" || rel === "sislms.html" || rel === "sismms.html" || rel === "compare-gvz.html") continue;
     out.push(full);
   }
   return out;

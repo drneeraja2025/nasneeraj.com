@@ -4,6 +4,10 @@
   "outputDirectory": ".",
   "framework": null,
   "redirects": [
+    { "source": "/gurukul.html", "destination": "/guruvidyazen-editions.html", "permanent": true },
+    { "source": "/sislms.html", "destination": "/guruvidyazen-editions.html#sislms", "permanent": true },
+    { "source": "/sismms.html", "destination": "/guruvidyazen-editions.html#sismms", "permanent": true },
+    { "source": "/compare-gvz.html", "destination": "/guruvidyazen-editions.html", "permanent": true },
     {
       "source": "/",
       "has": [{ "type": "host", "value": "nasneeraj.com" }],
@@ -98,7 +102,7 @@
     },
     {
       "source": "/sislms",
-      "destination": "/sislms.html"
+      "destination": "/guruvidyazen-editions.html"
     },
     {
       "source": "/services",
@@ -266,11 +270,11 @@
     },
     {
       "source": "/compare-gvz",
-      "destination": "/compare-gvz.html"
+      "destination": "/guruvidyazen-editions.html"
     },
     {
       "source": "/sismms",
-      "destination": "/sismms.html"
+      "destination": "/guruvidyazen-editions.html"
     },
     {
       "source": "/pilot",
@@ -310,11 +314,15 @@
     },
     {
       "source": "/gurukul",
-      "destination": "/gurukul.html"
+      "destination": "/guruvidyazen-editions.html"
+    },
+    {
+      "source": "/guruvidyazen-editions",
+      "destination": "/guruvidyazen-editions.html"
     },
     {
       "source": "/studio-tutoring",
-      "destination": "/gurukul.html"
+      "destination": "/guruvidyazen-editions.html"
     }
   ],
   "headers": [

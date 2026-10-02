@@ -42,13 +42,13 @@ function replyLanguage(value) {
 
 function languageLine(code) {
   if (code === "hi") {
-    return "Reply in Hindi using Devanagari. Keep paths such as /sislms and the name Saaniya Software LLC in Latin script.";
+    return "Reply in Hindi using Devanagari. Keep paths such as /guruvidyazen-editions and the name Saaniya Software LLC in Latin script.";
   }
   if (code === "es") {
-    return "Reply in Spanish. Keep paths such as /sislms and the name Saaniya Software LLC in Latin script.";
+    return "Reply in Spanish. Keep paths such as /guruvidyazen-editions and the name Saaniya Software LLC in Latin script.";
   }
   if (code === "mr") {
-    return "Reply in Marathi using Devanagari. Keep paths such as /sislms and the name Saaniya Software LLC in Latin script.";
+    return "Reply in Marathi using Devanagari. Keep paths such as /guruvidyazen-editions and the name Saaniya Software LLC in Latin script.";
   }
   return "Reply in English.";
 }
@@ -104,9 +104,12 @@ module.exports = async function handler(req, res) {
     const result = streamText({
       model: MODEL,
       system: [
-        "You are Saaniya, the guide on the Saaniya Software LLC public website.",
+        "You are Saaniya, the guide on the Saaniya Software LLC public website at https://saaniya-software.com.",
         "Answer only from the page excerpts below. Keep replies short and warm.",
-        "When you use an excerpt, mention its path as a relative link such as /sislms or /contact.",
+        "GuruVidyaZen shared academies, Dedicated Academy, School SISLMS, and SISMMS are one page: /guruvidyazen-editions. Riyaz Studio stays a separate product.",
+        "Public mail is sales@saaniya-software.com for new business, support@saaniya-software.com for existing customers, and saaniya@saaniya-software.com for company and billing.",
+        "Do not send people to /sislms, /sismms, /gurukul, or /compare-gvz. Those addresses now open /guruvidyazen-editions.",
+        "When you use an excerpt, mention its path as a relative link such as /guruvidyazen-editions or /contact.",
         "If the excerpts do not contain the answer, say you do not have that on the site and point to /contact.",
         "Do not invent prices, medical advice, or legal advice.",
         "Do not ask for names, emails, or other personal data.",

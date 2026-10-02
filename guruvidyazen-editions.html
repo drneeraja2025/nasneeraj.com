@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GuruVidyaZen editions | Regular and Dedicated Academy</title>
+  <meta name="description" content="Two GuruVidyaZen editions from Saaniya Software LLC: Regular shared academy software, billed monthly, and GuruVidyaZen Dedicated Academy, a one-time estate with its own database.">
+  <link rel="icon" type="image/png" href="assets/Saaniyalogo.png">
+  <link rel="canonical" href="https://saaniya-software.com/guruvidyazen-editions">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saaniya-software.com/guruvidyazen-editions">
+  <meta property="og:title" content="GuruVidyaZen editions | Saaniya Software LLC">
+  <meta property="og:description" content="Regular shared GuruVidyaZen, or GuruVidyaZen Dedicated Academy with its own database. Pricing by country.">
+  <meta property="og:image" content="https://saaniya-software.com/assets/Saaniyalogo.png">
+  <style>
+    :root {
+      --ink: #10261f;
+      --soft: #3d534a;
+      --muted: #5f7469;
+      --line: #d5e0da;
+      --paper: #f3f7f4;
+      --panel: #ffffff;
+      --forest: #1f5c45;
+      --forest-deep: #0d3326;
+      --gold: #c9a14a;
+      --gold-soft: #f0e2c0;
+      --sky: #e8f2ec;
+      --radius: 1.25rem;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "DM Sans", "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(201, 161, 74, 0.18), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(31, 92, 69, 0.12), transparent 50%),
+        linear-gradient(180deg, #eef5f0 0%, var(--paper) 38%, #f7faf8 100%);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    a { color: inherit; }
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(243, 247, 244, 0.92);
+      border-bottom: 1px solid rgba(213, 224, 218, 0.9);
+      backdrop-filter: blur(14px);
+    }
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.9rem 1.35rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .brand img { width: 3.25rem; height: 3.25rem; object-fit: contain; }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1rem;
+      align-items: center;
+      list-style: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--soft);
+    }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover, .nav-links a.is-active { color: var(--forest); }
+    .nav-drop { position: relative; }
+    .nav-drop > a::after { content: " ▾"; font-size: 0.7rem; }
+    .nav-drop ul {
+      display: none;
+      position: absolute;
+      top: calc(100% - 0.15rem);
+      left: 0;
+      min-width: 14rem;
+      margin: 0;
+      padding: 0.4rem;
+      list-style: none;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+      box-shadow: 0 12px 28px rgba(16, 38, 31, 0.08);
+      z-index: 20;
+    }
+    .nav-drop:hover ul, .nav-drop:focus-within ul { display: grid; }
+    .nav-drop ul a { display: block; padding: 0.5rem 0.7rem; border-radius: 0.45rem; }
+    .nav-drop ul a:hover { background: var(--sky); }
+    .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(13, 51, 38, 0.94) 0%, rgba(31, 92, 69, 0.88) 48%, rgba(16, 38, 31, 0.92) 100%),
+        repeating-linear-gradient(-18deg, transparent, transparent 22px, rgba(255,255,255,0.03) 22px, rgba(255,255,255,0.03) 23px);
+      pointer-events: none;
+    }
+    .hero__inner {
+      position: relative;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: clamp(3.5rem, 8vw, 5.5rem) 1.35rem clamp(3.75rem, 8vw, 5.75rem);
+      color: #f5faf7;
+    }
+    .hero__eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 1rem;
+    }
+    .hero__brand {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 3.75rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      max-width: 18ch;
+      margin-bottom: 1rem;
+    }
+    .hero__support {
+      max-width: 40rem;
+      font-size: 1.1rem;
+      color: rgba(245, 250, 247, 0.88);
+      margin-bottom: 1.25rem;
+    }
+    .hero__support a { color: var(--gold-soft); font-weight: 700; }
+    .hero__art {
+      display: block;
+      width: min(100%, 42rem);
+      margin-bottom: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+    }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .btn-gold { background: var(--gold); color: var(--forest-deep); }
+    .btn-ghost { border: 1px solid rgba(255, 255, 255, 0.35); color: #fff; }
+    .btn-solid { background: var(--forest); color: #fff; }
+    .btn-outline { border: 1px solid var(--forest); color: var(--forest); background: transparent; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: clamp(3rem, 6vw, 4.5rem) 1.35rem; }
+    .section__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 0.65rem;
+    }
+    .section__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 4vw, 2.65rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      max-width: 22ch;
+    }
+    .section__lead { color: var(--soft); font-size: 1.05rem; max-width: 42rem; margin-bottom: 2rem; }
+    .pieces { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.15rem; }
+    .piece {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.4rem;
+      box-shadow: 0 12px 28px rgba(16, 38, 31, 0.05);
+    }
+    .piece__num { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); margin-bottom: 0.35rem; }
+    .piece h3 { font-family: var(--font-display); font-size: 1.45rem; font-weight: 500; margin-bottom: 0.4rem; }
+    .piece img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      height: auto;
+      object-fit: cover;
+      object-position: center 18%;
+      border-radius: 0.85rem;
+      margin-bottom: 0.85rem;
+      background: var(--sky);
+    }
+    .piece p, .piece li { color: var(--soft); font-size: 0.98rem; }
+    .piece ul { margin: 0.75rem 0 1rem 1.1rem; }
+    .piece a { color: var(--forest); font-weight: 700; }
+    .price { font-family: var(--font-display); font-size: 1.35rem; margin: 0.35rem 0; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 1rem; background: #fff; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    table.matrix { font-size: 0.95rem; }
+    th, td { text-align: left; padding: 0.85rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { background: var(--sky); font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--forest); }
+    .field { display: block; font-weight: 700; margin-bottom: 1.25rem; color: var(--ink); }
+    .field select {
+      display: block;
+      margin-top: 0.4rem;
+      min-width: min(100%, 22rem);
+      padding: 0.7rem 0.85rem;
+      border-radius: 0.75rem;
+      border: 1px solid var(--line);
+      font: inherit;
+      background: #fff;
+    }
+    .quote {
+      margin-top: 1rem;
+      background: var(--forest-deep);
+      color: #eef6f1;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .quote h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.6rem; margin-bottom: 0.4rem; }
+    .quote p { color: rgba(238, 246, 241, 0.88); }
+    .note { color: var(--muted); font-size: 0.92rem; margin-top: 1rem; max-width: 46rem; }
+    .footer { border-top: 1px solid var(--line); padding: 2rem 1.35rem 3rem; color: var(--muted); font-size: 0.9rem; }
+    .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; justify-content: space-between; }
+    .footer a { color: var(--forest); font-weight: 600; text-decoration: none; }
+    @media (max-width: 820px) {
+      .pieces { grid-template-columns: 1fr; }
+      .hero__brand { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/Saaniyalogo.png" alt="Saaniya Software LLC Logo">
+        <span>Saaniya Software LLC</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-drop">
+          <a href="#regular">GuruVidyaZen</a>
+          <ul>
+            <li><a href="#regular">Shared academies</a></li>
+            <li><a href="#dedicated">Dedicated Academy</a></li>
+            <li><a href="#sislms">School SISLMS</a></li>
+            <li><a href="#sismms">SISMMS</a></li>
+          </ul>
+        </li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="mailto:sales@saaniya-software.com">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Saaniya Software LLC · Academies</p>
+      <h1 class="hero__brand">Two editions of GuruVidyaZen</h1>
+      <p class="hero__support">One page for the GuruVidyaZen family: shared academies, School SISLMS, SISMMS, and Dedicated Academy. Riyaz Studio stays its own product. Most academies stay on the shared edition. Dedicated Academy is your own brand and your own database, bought once.</p>
+      <img class="hero__art" src="assets/pages/gurukul-hero.png" alt="Saaniya avatar teaching at a chalkboard">
+      <div class="btn-row">
+        <a class="btn btn-gold" href="#pricing">Pricing by country</a>
+        <a class="btn btn-ghost" href="https://guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Open GuruVidyaZen</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap">
+      <p class="section__eyebrow">Two versions</p>
+      <h2 class="section__title">Shared software, or your own estate</h2>
+      <p class="section__lead">Dedicated Academy is not a larger feature list. It is isolation: a separate database and a separate site, with data kept in the academy’s country when that is required. Student fee collection stays a QR code or payment link on both editions.</p>
+      <div class="pieces">
+        <article class="piece" id="regular">
+          <img src="assets/pages/gurukul-mid.png" alt="Saaniya avatar reviewing student workbooks">
+          <h3>GuruVidyaZen</h3>
+          <p>Shared academy software for music, dance, and specialized learning. Many academies on one cloud, separated by tenant controls. Monthly plans, with an annual option.</p>
+          <ul>
+            <li>Starter, Pro, and Enterprise</li>
+            <li>Repertoire, classes, payments, and CCE</li>
+            <li>Live at guruvidyazen.nasneeraj.com</li>
+          </ul>
+          <p class="price" id="regular-price">Starter ₹999 · Pro ₹1,999 · Enterprise ₹3,999 / month</p>
+          <p><a href="https://guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Open the app</a></p>
+        </article>
+        <article class="piece" id="dedicated">
+          <img src="assets/social/shorts/short-guruvidyazen.png" alt="Saaniya avatar at the chalkboard for a dedicated academy">
+          <h3>GuruVidyaZen Dedicated Academy</h3>
+          <p>One academy, one database, one site. Bought once, then a yearly maintenance fee. Cloud hosting is billed separately and is not inside the maintenance fee.</p>
+          <ul>
+            <li>Own branding and own database</li>
+            <li>12-month prepaid maintenance</li>
+            <li>Setup is not a monthly cancel-anytime plan</li>
+          </ul>
+          <p class="price" id="dedicated-price">₹30,000–75,000 buy · ₹20,000 / year</p>
+          <p id="dedicated-small">Small academy guide price: ₹50,000.</p>
+          <p><a href="mailto:sales@saaniya-software.com?subject=GuruVidyaZen%20Dedicated%20Academy">Ask sales for a quote</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="schools" style="padding-top:0">
+      <p class="section__eyebrow">On the same product family</p>
+      <h2 class="section__title">School SISLMS and SISMMS</h2>
+      <p class="section__lead">These are GuruVidyaZen school tools, not separate companies and not Riyaz Studio. Riyaz stays the practice studio on its own site.</p>
+      <div class="pieces">
+        <article class="piece" id="sislms">
+          <img src="assets/pages/sislms-hero.png" alt="Saaniya avatar grading papers for School SISLMS">
+          <h3>School SISLMS</h3>
+          <p>The K–8 school lane: class hub, daily log, assignments, and school signup. Dance, music, and other academy types stay on shared GuruVidyaZen.</p>
+          <ul>
+            <li>Community schools, language programs, small privates</li>
+            <li>School sign-up and school log-in</li>
+          </ul>
+          <p><a href="https://guruvidyazen.nasneeraj.com/gurukul/signup?intent=school_sislms">Start a school space</a> · <a href="https://sislms.guruvidyazen.nasneeraj.com/" target="_blank" rel="noopener noreferrer">Open School SISLMS</a></p>
+        </article>
+        <article class="piece" id="sismms">
+          <img src="assets/pages/sismms-hero.png" alt="Saaniya avatar at a school board for SISMMS">
+          <h3>SISMMS</h3>
+          <p>Student information for Milwaukee Marathi School: enrollment, gradebook, assignments, and parent access on the GuruVidyaZen school foundation.</p>
+          <ul>
+            <li>Student profiles and heritage evaluation</li>
+            <li>Role-based access for staff and guardians</li>
+          </ul>
+          <p><a href="https://sislms.guruvidyazen.nasneeraj.com/auth" target="_blank" rel="noopener noreferrer">Open the MMS portal</a> · <a href="mailto:sales@saaniya-software.com?subject=SISMMS%20demo">Request a demo</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="pricing" style="padding-top:0">
+      <p class="section__eyebrow">Pricing by country</p>
+      <h2 class="section__title">Prices for the country you teach in</h2>
+      <p class="section__lead">Shared GuruVidyaZen is Starter, Pro, and Enterprise, priced in the academy’s currency. Annual is ten months (two months free). Dedicated Academy stays a one-time buy plus yearly maintenance. Taxes are extra. Cloud for a Dedicated estate is about $10 a month on top, paid to the host, not folded into maintenance.</p>
+      <h3 class="section__title" style="font-size:1.6rem;max-width:none">GuruVidyaZen pricing matrix</h3>
+      <label class="field">Country
+        <select id="country" aria-label="Pricing country"></select>
+      </label>
+      <div class="table-wrap" style="margin-bottom:1.75rem">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>Plan</th>
+              <th>Monthly</th>
+              <th>Annual</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Starter</td>
+              <td id="mx-starter-m">₹999</td>
+              <td id="mx-starter-a">₹9,990</td>
+            </tr>
+            <tr>
+              <td>Pro</td>
+              <td id="mx-pro-m">₹1,999</td>
+              <td id="mx-pro-a">₹19,990</td>
+            </tr>
+            <tr>
+              <td>Enterprise</td>
+              <td id="mx-ent-m">₹3,999</td>
+              <td id="mx-ent-a">₹39,990</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note" style="margin-top:0">Starter is up to 25 students, 1 location, and 5 teachers. Pro is up to 50 students, 2 locations, and 15 teachers. Enterprise is up to 100 students, with unlimited locations and teachers. Same figures as the GuruVidyaZen pricing page.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Edition</th>
+              <th>What you pay</th>
+              <th>How it is billed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GuruVidyaZen</td>
+              <td id="table-regular">Starter ₹999 · Pro ₹1,999 · Enterprise ₹3,999 / month</td>
+              <td>Monthly or annual. Annual is ten months of the monthly price.</td>
+            </tr>
+            <tr>
+              <td>Dedicated Academy</td>
+              <td id="table-dedicated">₹30,000–75,000 once, then ₹20,000 / year</td>
+              <td>Buy once. Maintenance is prepaid for 12 months. Cloud is extra.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="quote">
+        <h3 id="quote-title">India</h3>
+        <p id="quote-body">A small academy on Dedicated Academy is guided at ₹50,000 to buy, then ₹20,000 a year. Larger schools are quoted separately.</p>
+      </div>
+      <p class="note">Sold only where Saaniya Software LLC can take the customer. A country not in this list uses the US dollar band until sales confirms it. School SISLMS pricing is the shared GuruVidyaZen school lane, not Dedicated Academy.</p>
+      <div class="btn-row" style="margin-top:1.25rem">
+        <a class="btn btn-solid" href="mailto:sales@saaniya-software.com?subject=GuruVidyaZen%20Dedicated%20Academy">Email sales@saaniya-software.com</a>
+        <a class="btn btn-outline" href="#sislms">School SISLMS</a>
+        <a class="btn btn-outline" href="index.html">Company home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>GuruVidyaZen editions by Saaniya Software LLC</p>
+      <p>
+        <a href="index.html">Home</a> ·
+        <a href="#regular">GuruVidyaZen</a> ·
+        <a href="#sislms">School SISLMS</a> ·
+        <a href="#sismms">SISMMS</a> ·
+        <a href="mailto:sales@saaniya-software.com">sales@saaniya-software.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var markets = [
+        { name: "India", starterM: "₹999", starterA: "₹9,990", proM: "₹1,999", proA: "₹19,990", entM: "₹3,999", entA: "₹39,990", regular: "Starter ₹999 · Pro ₹1,999 · Enterprise ₹3,999 / month", buy: "₹30,000–75,000 once, then ₹20,000 / year", small: "Small academy guide price: ₹50,000.", note: "A small academy on Dedicated Academy is guided at ₹50,000 to buy, then ₹20,000 a year. Larger schools are quoted separately." },
+        { name: "United States", starterM: "$30", starterA: "$300", proM: "$50", proA: "$500", entM: "$80", entA: "$800", regular: "Starter $30 · Pro $50 · Enterprise $80 / month", buy: "$1,200–2,500 once, then $600 / year", small: "Small academy guide price: $1,800.", note: "A small academy on Dedicated Academy is guided at $1,800 to buy, then $600 a year. Larger schools are quoted separately." },
+        { name: "Canada", starterM: "C$40", starterA: "C$400", proM: "C$65", proA: "C$650", entM: "C$105", entA: "C$1,050", regular: "Starter C$40 · Pro C$65 · Enterprise C$105 / month", buy: "C$1,600–3,300 once, then C$800 / year", small: "Dedicated buy is quoted inside the Canada band.", note: "Shared GuruVidyaZen is in Canadian dollars. Dedicated Academy uses the Canada band." },
+        { name: "Eurozone", starterM: "€28", starterA: "€280", proM: "€45", proA: "€450", entM: "€72", entA: "€720", regular: "Starter €28 · Pro €45 · Enterprise €72 / month", buy: "€1,100–2,300 once, then €550 / year", small: "Dedicated buy is quoted inside the euro band.", note: "Shared GuruVidyaZen is in euros. Dedicated Academy uses the euro band." },
+        { name: "United Kingdom", starterM: "£24", starterA: "£240", proM: "£39", proA: "£390", entM: "£65", entA: "£650", regular: "Starter £24 · Pro £39 · Enterprise £65 / month", buy: "£1,000–2,000 once, then £500 / year", small: "Dedicated buy is quoted inside the sterling band.", note: "Shared GuruVidyaZen is in pounds. Dedicated Academy uses the sterling band." },
+        { name: "Australia / New Zealand", starterM: "A$45", starterA: "A$450", proM: "A$75", proA: "A$750", entM: "A$120", entA: "A$1,200", regular: "Starter A$45 · Pro A$75 · Enterprise A$120 / month", buy: "A$1,800–3,600 once, then A$900 / year", small: "Dedicated buy is quoted inside the Australia / NZ band.", note: "Shared GuruVidyaZen uses the Australia list for both countries. Dedicated Academy is in Australian dollars." },
+        { name: "Other eligible", starterM: "$30", starterA: "$300", proM: "$50", proA: "$500", entM: "$80", entA: "$800", regular: "Starter $30 · Pro $50 · Enterprise $80 / month", buy: "$1,200–2,500 once, then $600 / year", small: "Small academy guide price: $1,800.", note: "Until sales confirms the country, Dedicated Academy follows the US dollar band." }
+      ];
+      var select = document.getElementById("country");
+      markets.forEach(function (row) {
+        var opt = document.createElement("option");
+        opt.value = row.name;
+        opt.textContent = row.name;
+        if (row.name === "India") opt.selected = true;
+        select.appendChild(opt);
+      });
+      function render() {
+        var row = markets.filter(function (item) { return item.name === select.value; })[0];
+        document.getElementById("mx-starter-m").textContent = row.starterM;
+        document.getElementById("mx-starter-a").textContent = row.starterA;
+        document.getElementById("mx-pro-m").textContent = row.proM;
+        document.getElementById("mx-pro-a").textContent = row.proA;
+        document.getElementById("mx-ent-m").textContent = row.entM;
+        document.getElementById("mx-ent-a").textContent = row.entA;
+        document.getElementById("regular-price").textContent = row.regular;
+        document.getElementById("dedicated-price").textContent = row.buy;
+        document.getElementById("dedicated-small").textContent = row.small;
+        document.getElementById("table-regular").textContent = row.regular;
+        document.getElementById("table-dedicated").textContent = row.buy;
+        document.getElementById("quote-title").textContent = row.name;
+        document.getElementById("quote-body").textContent = row.note;
+      }
+      select.addEventListener("change", render);
+      render();
+    })();
+  </script>
+<script src="assets/site-lang.js?v=20261002a" defer></script>
+</body>
+</html>

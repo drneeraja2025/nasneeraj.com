@@ -12,14 +12,6 @@
         <priority>1.0</priority>
     </url>
     
-    <!-- SISLMS Product Page -->
-    <url>
-        <loc>https://saaniya-software.com/sislms.html</loc>
-        <lastmod>2026-04-17</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
     <!-- Services -->
     <url>
         <loc>https://saaniya-software.com/services.html</loc>
@@ -190,28 +182,11 @@
 
     <!-- GuruVidyaZen extended info (reference) -->
     <url>
-        <loc>https://saaniya-software.com/gurukul.html</loc>
-        <lastmod>2026-04-17</lastmod>
+        <loc>https://saaniya-software.com/guruvidyazen-editions.html</loc>
+        <lastmod>2026-10-02</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.75</priority>
+        <priority>0.8</priority>
     </url>
-
-    <!-- GuruVidyaZen comparison -->
-    <url>
-        <loc>https://saaniya-software.com/compare-gvz.html</loc>
-        <lastmod>2026-04-17</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.65</priority>
-    </url>
-
-    <!-- SISMMS product page -->
-    <url>
-        <loc>https://saaniya-software.com/sismms.html</loc>
-        <lastmod>2026-04-17</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.65</priority>
-    </url>
-
     <!-- GuruVidyaZen pilot program -->
     <url>
         <loc>https://saaniya-software.com/pilot.html</loc>
