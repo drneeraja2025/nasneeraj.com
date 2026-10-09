@@ -1,6 +1,6 @@
 /* Shared left sidebar navigation for Saaniya Software LLC pages */
 :root {
-    --side-nav-width: 268px;
+    --side-nav-width: 196px;
 }
 
 body {
@@ -81,9 +81,13 @@ nav.navbar .nav-logo {
 }
 
 nav.navbar .nav-logo img {
-    height: 80px !important;
-    width: auto !important;
-    max-width: 100% !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 4.25rem !important;
+    object-fit: contain !important;
+    filter: none !important;
+    animation: none !important;
 }
 
 nav.navbar .nav-logo-text {
@@ -91,9 +95,41 @@ nav.navbar .nav-logo-text {
     font-weight: 700 !important;
     color: #667eea !important;
     line-height: 1.25 !important;
-    white-space: normal !important;
+    white-space: nowrap !important;
     text-align: center !important;
-    width: 100% !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+nav.navbar .nav-logo .site-lang {
+    display: inline-flex !important;
+    flex-flow: row nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.28rem !important;
+    margin: 0.15rem 0 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+    align-self: center !important;
+}
+
+nav.navbar .site-lang__btn {
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 1.7rem !important;
+    height: 0.9rem !important;
+    min-width: 1.7rem !important;
+    max-width: 1.7rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex: 0 0 1.7rem !important;
+    border-radius: 999px !important;
+    font-size: 0.58rem !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
 }
 
 nav.navbar .sidebar-collapse {
@@ -182,19 +218,21 @@ nav.navbar .nav-links {
 }
 
 nav.navbar .nav-links > li {
-    width: 100% !important;
+    width: auto !important;
+    max-width: 100% !important;
 }
 
 nav.navbar .nav-links a {
     display: block !important;
-    width: 100% !important;
+    width: max-content !important;
+    max-width: 100% !important;
     text-decoration: none !important;
     color: #334155 !important;
     font-weight: 600 !important;
     font-size: 0.92rem !important;
     padding: 0.55rem 0.75rem !important;
     border-radius: 10px !important;
-    white-space: normal !important;
+    white-space: nowrap !important;
     line-height: 1.35 !important;
     touch-action: manipulation !important;
 }
@@ -258,6 +296,9 @@ nav.navbar .dropdown-menu.is-open {
 
 nav.navbar .dropdown-menu a {
     display: block !important;
+    width: auto !important;
+    max-width: 100% !important;
+    white-space: normal !important;
     padding: 0.55rem 0.7rem !important;
     font-size: 0.86rem !important;
     font-weight: 500 !important;
@@ -273,24 +314,39 @@ nav.navbar .dropdown-menu a:focus-visible {
 }
 
 /* Floating control to slide the sidebar back in */
+body.nav-collapsed::before {
+    content: '' !important;
+    position: fixed !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 6px !important;
+    background: #667eea !important;
+    z-index: 1090 !important;
+    pointer-events: none !important;
+}
+
 .sidebar-reopen {
     position: fixed !important;
-    top: 1rem !important;
-    left: 1rem !important;
+    top: 1.1rem !important;
+    left: 0 !important;
     z-index: 1100 !important;
     display: none !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 3rem !important;
-    height: 3rem !important;
-    padding: 0 !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 999px !important;
+    gap: 0.45rem !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 2.75rem !important;
+    padding: 0.4rem 0.95rem 0.4rem 0.85rem !important;
+    border: 1px solid #c7d2fe !important;
+    border-left: none !important;
+    border-radius: 0 999px 999px 0 !important;
     background: #ffffff !important;
-    color: #334155 !important;
+    color: #1e293b !important;
     font: inherit !important;
     cursor: pointer !important;
-    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14) !important;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.18) !important;
     transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease !important;
 }
 
@@ -306,10 +362,29 @@ body.nav-collapsed .sidebar-reopen {
     outline: none !important;
 }
 
-.sidebar-reopen img {
-    width: 28px !important;
-    height: 28px !important;
-    object-fit: contain !important;
+.sidebar-reopen-bars {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    width: 16px !important;
+    height: 14px !important;
+    flex: 0 0 16px !important;
+}
+
+.sidebar-reopen-bars span {
+    display: block !important;
+    height: 2px !important;
+    border-radius: 2px !important;
+    background: #4f46e5 !important;
+}
+
+.sidebar-reopen-label {
+    font-size: 0.92rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.01em !important;
+    color: #1e293b !important;
 }
 
 /* Mobile: top bar + slide-out drawer */
@@ -317,6 +392,10 @@ body.nav-collapsed .sidebar-reopen {
     body,
     body.nav-collapsed {
         margin-left: 0 !important;
+    }
+
+    body.nav-collapsed::before {
+        display: none !important;
     }
 
     nav.navbar,
@@ -351,25 +430,51 @@ body.nav-collapsed .sidebar-reopen {
     }
 
     nav.navbar .nav-logo {
-        flex-direction: row !important;
+        display: grid !important;
+        grid-template-columns: 4.6rem auto;
+        grid-template-rows: auto auto;
         align-items: center !important;
-        gap: 0.55rem !important;
+        justify-content: start !important;
+        column-gap: 0.45rem !important;
+        row-gap: 0.12rem !important;
+        flex-direction: unset !important;
+        flex-wrap: unset !important;
         padding: 0 !important;
         border-bottom: none !important;
         text-align: left !important;
         position: relative !important;
         z-index: 1202 !important;
         pointer-events: auto !important;
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
     }
 
     nav.navbar .nav-logo img {
-        height: 52px !important;
+        grid-row: 1 / span 2;
+        height: auto !important;
+        width: 4.6rem !important;
+        max-height: 2.4rem !important;
+        object-fit: contain !important;
     }
 
     nav.navbar .nav-logo-text {
+        grid-column: 2;
         font-size: 0.78rem !important;
         text-align: left !important;
         white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        flex: none !important;
+        min-width: 0 !important;
+        width: auto !important;
+        max-width: calc(100vw - 8.5rem) !important;
+    }
+
+    nav.navbar .nav-logo .site-lang {
+        grid-column: 2;
+        margin: 0 !important;
+        justify-content: flex-start !important;
+        flex: none !important;
     }
 
     nav.navbar .sidebar-collapse,

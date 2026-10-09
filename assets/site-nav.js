@@ -21,7 +21,8 @@
     btn.setAttribute('aria-label', 'Open navigation');
     btn.title = 'Open navigation';
     btn.innerHTML =
-      '<img src="assets/Saaniyalogo.png" alt="" width="28" height="28">';
+      '<span class="sidebar-reopen-bars" aria-hidden="true"><span></span><span></span><span></span></span>' +
+      '<span class="sidebar-reopen-label">Menu</span>';
     document.body.appendChild(btn);
 
     btn.addEventListener('click', function (event) {

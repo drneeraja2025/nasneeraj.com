@@ -64,11 +64,18 @@
       button.className = "site-lang__btn";
       button.textContent = pair[1];
       button.setAttribute("aria-pressed", pair[0] === current ? "true" : "false");
-      button.addEventListener("click", function () {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
         setLang(pair[0]);
       });
       bar.appendChild(button);
     });
+    var logo = document.querySelector(".nav-logo, a.brand, .nav-company");
+    if (logo) {
+      logo.appendChild(bar);
+      return;
+    }
     var slot = document.querySelector(".nav-inner, .nav-container, nav.navbar, nav.nav, header .site-header");
     if (slot) slot.appendChild(bar);
     else document.body.appendChild(bar);
@@ -77,8 +84,8 @@
   function hideBanner() {
     var style = document.createElement("style");
     style.textContent =
-      ".site-lang{display:flex;gap:0.25rem;align-items:center;margin-left:auto}" +
-      ".site-lang__btn{border:1px solid rgba(16,38,31,.25);background:#fff;color:#10261f;border-radius:999px;padding:0.2rem 0.55rem;font:700 0.75rem/1.2 sans-serif;cursor:pointer}" +
+      ".site-lang{display:inline-flex;flex-flow:row nowrap;align-items:center;justify-content:center;gap:0.28rem;margin:0;max-width:100%}" +
+      ".site-lang__btn{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:0.9rem;padding:0;margin:0;flex:0 0 1.7rem;border:1px solid rgba(16,38,31,.25);background:#fff;color:#10261f;border-radius:999px;font:600 0.58rem/1 \"Segoe UI\",sans-serif;cursor:pointer}" +
       ".site-lang__btn[aria-pressed='true']{background:#1f5c45;color:#fff;border-color:#1f5c45}" +
       "iframe.goog-te-banner-frame,.goog-te-banner-frame,.goog-te-balloon-frame,#goog-gt-tt{display:none!important}" +
       "body{top:0!important}" +
