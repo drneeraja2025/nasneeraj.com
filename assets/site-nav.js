@@ -1,4 +1,13 @@
 (function () {
+  // Phase 1: load cookie + GPC consent once for every page that includes site-nav.js
+  if (!window.__saaniyaCookieConsent && !document.querySelector('script[data-saaniya-cookie]')) {
+    var cs = document.createElement('script');
+    cs.src = '/assets/cookie-consent.js?v=20261013a';
+    cs.async = true;
+    cs.setAttribute('data-saaniya-cookie', '1');
+    document.head.appendChild(cs);
+  }
+
   var STORAGE_KEY = 'saaniya-nav-collapsed';
   var navbar = document.querySelector('nav.navbar');
   var menuToggle = document.getElementById('menuToggle');
