@@ -5,7 +5,8 @@
   "description": "Saaniya Software marketing site — static HTML on Vercel",
   "scripts": {
     "phase:deploy": "node scripts/phase-deploy.mjs",
-    "verify:chat": "node scripts/verify-saaniya-chat.mjs"
+    "verify:chat": "node scripts/verify-saaniya-chat.mjs",
+    "audit:deps": "npm audit --omit=dev --audit-level=high"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.0",

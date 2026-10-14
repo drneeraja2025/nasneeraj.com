@@ -85,11 +85,12 @@ Reference implementation: `nasneeraj.com` `vercel.json`.
 
 ## Phase 2 (follow-on)
 
-- Enforcing CSP (not report-only)  
-- WAF: rate-limit APIs + Turnstile on public forms  
-- Attack Challenge Mode when under abuse  
+- CSP **Report-Only** on marketing (`nasneeraj.com` `vercel.json`) → enforce after reports are clean  
+- WAF: rate-limit APIs + Turnstile on public forms (app-level rate limit on `/api/contact` if edge WAF unavailable)  
+- Attack Challenge Mode runbook: `docs/ops/attack-challenge-mode-runbook.md`  
 - Per-product Permissions-Policy for mic/camera  
 - Shared npm/package or gist of headers for Next apps  
+- Per-repo status (marketing): `docs/ops/nasneeraj-security-phases-status.md`  
 
 ---
 
