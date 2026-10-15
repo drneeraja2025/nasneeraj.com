@@ -1,5 +1,10 @@
 .vercel
 node_modules
 
+# Local secrets — never commit
+.env
+.env.*
+!.env*.example
+
 C&N_India_0070(1).jpg
 

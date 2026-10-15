@@ -77,7 +77,7 @@ Reference implementation: `nasneeraj.com` `vercel.json`.
 | Setting | Phase 1 expectation |
 |---------|---------------------|
 | HTTPS / custom domain | Required |
-| Deployment Protection | **Standard Protection** (previews locked) |
+| Deployment Protection | **Standard Protection** on marketing/ops Previews. **Exception:** GuruVidyaZen Preview / `development` is a **live Riyaz Studio** environment — leave unlocked (no Vercel login wall). |
 | Custom WAF rules | Phase 2 (rate-limit `/api/*`, contact forms) |
 | Secrets | Vercel Env only; never commit |
 

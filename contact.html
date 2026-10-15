@@ -450,6 +450,14 @@
                     <textarea id="message" name="message" required></textarea>
                 </div>
 
+                <div class="form-group" id="turnstileWrap">
+                    <div
+                        class="cf-turnstile"
+                        data-sitekey="0x4AAAAAAFXtuOWL1qhs0Ak7"
+                        data-theme="light"
+                    ></div>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
@@ -498,6 +506,7 @@
         </p>
     </footer>
 
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function(event) {
             event.preventDefault();
@@ -512,6 +521,24 @@
             if (successMessage) successMessage.style.display = 'none';
             if (errorMessage) errorMessage.style.display = 'none';
             
+            const turnstileToken =
+                (form.querySelector('[name="cf-turnstile-response"]') || {}).value ||
+                (window.turnstile && typeof window.turnstile.getResponse === 'function'
+                    ? window.turnstile.getResponse()
+                    : '') ||
+                '';
+
+            if (!turnstileToken) {
+                if (errorMessage) {
+                    errorMessage.innerHTML = '<strong>Error:</strong> Please complete the security check, then try again.';
+                    errorMessage.style.display = 'block';
+                    errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert('Please complete the security check, then try again.');
+                }
+                return;
+            }
+
             // Disable submit button
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
@@ -523,6 +550,7 @@
                     subject: form.subject.value.trim(),
                     message: form.message.value.trim(),
                     website: form.website ? form.website.value.trim() : '',
+                    'cf-turnstile-response': turnstileToken,
                 };
 
                 const response = await fetch('/api/contact', {
@@ -544,6 +572,9 @@
                     
                     // Reset form
                     form.reset();
+                    if (window.turnstile && typeof window.turnstile.reset === 'function') {
+                        window.turnstile.reset();
+                    }
                     
                     // Update URL without reload
                     window.history.pushState({}, '', window.location.pathname + '?success=true');
@@ -552,7 +583,11 @@
                 }
             } catch (error) {
                 console.error('Error submitting form:', error);
+                if (window.turnstile && typeof window.turnstile.reset === 'function') {
+                    window.turnstile.reset();
+                }
                 if (errorMessage) {
+                    errorMessage.innerHTML = '<strong>Error:</strong> ' + (error.message || 'There was a problem sending your message. Please try again or email us directly at saaniya@saaniya-software.com');
                     errorMessage.style.display = 'block';
                     errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {

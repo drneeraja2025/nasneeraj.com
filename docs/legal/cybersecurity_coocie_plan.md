@@ -65,7 +65,7 @@ Reference site: `nasneeraj.com` (`vercel.json`, `assets/cookie-consent.js`).
 | Cookie banner | `localStorage saaniya-cookie-consent` = `essential` \| `all`; GPC → essential only |
 | TypeScript | Cast `Navigator` for optional `globalPrivacyControl?: boolean` |
 | Docs in repo | `docs/ops/saaniya-security-cookie-protocol.md` + `.cursor/rules/…mdc` |
-| Preview protection | Standard (confirm dashboard — may lag code ship) |
+| Preview protection | Standard on marketing/ops Previews only — **see exceptions below** |
 
 ### Product exceptions (do not “tighten” blindly)
 
@@ -90,7 +90,7 @@ Reference site: `nasneeraj.com` (`vercel.json`, `assets/cookie-consent.js`).
 |---------|---------|------------|-------|
 | nasneeraj.com / saaniya-software.com | `f77cc67` | `f77cc67` | Static; `cookie-consent.js` via site-nav |
 | milwaukeeshala.org | `834f187` | `21e05be` | GPC typing fix on prod |
-| GuruVidyaZen (Gurukul) | `11f0cb6` (development) | `14d4135` → guruvidyazen.nasneeraj.com | Live prod = Vercel **guruvidyazen**; **guruvidyazen-by-nas** Production often cancels |
+| GuruVidyaZen (Gurukul) | `11f0cb6` (development) | `14d4135` → guruvidyazen.nasneeraj.com | Live prod = Vercel **guruvidyazen**; **Preview/`development` is a live Riyaz Studio branch — do NOT lock with Deployment Protection** |
 | Saarthee Fleet | `5910477` | `4ad5963` → fleet.nasneeraj.com | GPC type fix after failed Preview |
 | Saarthee CoPlanner | `7b9e883` | `645cc08` | Smoke 16/16 |
 | nas-ops-hub / EMR / horoscope / others | Confirm one repo at a time | | Use Phase 1 prompt below |
@@ -103,7 +103,7 @@ Reference site: `nasneeraj.com` (`vercel.json`, `assets/cookie-consent.js`).
 
 | # | Work item | Done when |
 |---|-----------|-----------|
-| 2.1 | Confirm **Preview Deployment Protection = Standard** on every non-prod Vercel project | Dashboard checklist signed off |
+| 2.1 | Confirm **Preview Deployment Protection = Standard** on marketing/ops Previews only | Dashboard checklist; **exclude GuruVidyaZen** (and any other “Preview = live product” env) |
 | 2.2 | CSP **Report-Only** on marketing / simple sites (tighten until clean) | Reports reviewed; no critical breaks |
 | 2.3 | Promote CSP to **enforcing** where safe (Gurukul already has product CSP — reconcile with Zoom/Turnstile needs) | Enforcing on prod without login/media breakage |
 | 2.4 | WAF custom rules: rate-limit `/api/*` + contact/signup forms | Rules live; false-positive rate acceptable |
@@ -160,7 +160,7 @@ Reference site: `nasneeraj.com` (`vercel.json`, `assets/cookie-consent.js`).
 ## Rollout order (recommended)
 
 1. **Finish Phase 1** on any remaining public repos (one at a time).  
-2. **Phase 2.1** — Preview Protection checklist across all Vercel projects.  
+2. **Phase 2.1** — Preview Protection on marketing/ops only (skip Gurukul Riyaz Preview).  
 3. **Phase 2.2–2.4** — CSP Report-Only → WAF rate limits (marketing APIs first, then product `/api/*`).  
 4. **Phase 3** — Turnstile gaps + cookie flag audit + Gurukul Production ownership.  
 5. **Phase 4** — CI when ready; Semgrep only after enrollment.  
@@ -206,7 +206,7 @@ Then /offline-verify-push (build or Vercel build if OneDrive blocks; e2e/smoke i
 Done when: evidence table with SHAs/URLs + headers confirmed on live URL.
 
 PHASE 2 — Edge + CSP (only if PHASES includes 2)
-2.1 Confirm Preview Deployment Protection = Standard (dashboard; report URL/state)
+2.1 Confirm Preview Deployment Protection = Standard on marketing/ops only (dashboard). SKIP GuruVidyaZen — Preview/`development` is live Riyaz Studio and must stay publicly reachable without Vercel login.
 2.2 CSP Report-Only (marketing/simple) or reconcile existing CSP (e.g. Gurukul Zoom/Turnstile)
 2.3 Promote CSP to enforcing only if Report-Only is clean (or product already enforces safely)
 2.4 WAF: rate-limit /api/* + contact/signup forms (document rules)

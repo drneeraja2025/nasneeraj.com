@@ -13,6 +13,6 @@ When editing any public site or Vercel deploy in this org:
 2. Never ship placeholder Google Analytics (`G-XXXXXXXXXX`); gate real analytics behind consent + GPC
 3. Keep / add cookie banner with essential vs analytics; honor `navigator.globalPrivacyControl`
 4. Prefer Vercel Web Analytics over unconsented third-party trackers
-5. Preview deployments should use Vercel Standard Deployment Protection
+5. Preview deployments: Vercel Standard Deployment Protection on marketing/ops. **Exception — GuruVidyaZen:** Preview/`development` is a live Riyaz Studio env — do **not** lock it behind Vercel login.
 
 Do not weaken headers for convenience without documenting an exception (e.g. mic for Riyaz).
